@@ -1,3 +1,9 @@
+import Layout, { siteTitle } from "../components/Layout";
+
 export default function Writing() {
-	return <div>yo</div>;
+	return (
+		<Layout>
+			<div>yo</div>
+		</Layout>
+	);
 }

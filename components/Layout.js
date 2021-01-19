@@ -1,17 +1,16 @@
 import Head from "next/head";
-import utilStyles from "../styles/utils.module.css";
+import utils from "../styles/utils.module.css";
 import Link from "next/link";
 import Image from "next/image";
-
-const name = "Conor";
+import Contact from "./Contact";
+const name = "Conor Barnes";
 export const siteTitle = "Conor Barnes!!!";
-
+export const siteColor = "#fceff9";
 export default function Layout({ children, home }) {
-	// return <div>{children}</div>;
 	return (
 		<div>
 			<Head>
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href="/hammer-outline.svg" />
 				<meta name="description" content="Conor Barnes's site" />
 				<meta
 					property="og:image"
@@ -22,45 +21,49 @@ export default function Layout({ children, home }) {
 				<meta name="og:title" content={siteTitle} />
 				<meta name="twitter:card" content="summary_large_image" />
 			</Head>
-			<header>
-				{home ? (
-					<>
-						<Image
-							src="/images/profile.jpg"
-							alt={name}
-							width={300}
-							height={300}
-						/>
-						<h1>{name}</h1>
-					</>
-				) : (
-					<>
-						<Link href="/">
-							<a>
-								<Image
-									src="/images/profile.jpg"
-									alt={name}
-									width={300}
-									height={300}
-								/>
-							</a>
-						</Link>
-						<h2>
-							<Link href="/">
-								<a>{name}</a>
-							</Link>
-						</h2>
-					</>
-				)}
+			<header className={utils.pad} id="top">
+				<Link href="/">
+					<a className={utils.mrgR}>{name}</a>
+				</Link>
+				<div>
+					<Link href="/portfolio">
+						<a className={utils.mrgR}>Works</a>
+					</Link>
+					<Link href="/blog">
+						<a className={utils.mrgR}>Blog</a>
+					</Link>
+					<a className={utils.mrgR} href="#contact">
+						Contact
+					</a>
+				</div>
 			</header>
 			<main>{children}</main>
-			{!home && (
-				<div>
-					<Link href="/">
-						<a>← Back to home</a>
-					</Link>
-				</div>
-			)}
+
+			<footer className={utils.pad}>
+				<Contact />
+			</footer>
+			<style jsx>{`
+				header {
+					position: sticky;
+					width: 100%;
+					top: 0;
+					left: 0;
+					z-index: 1;
+					justify-content: space-between;
+				}
+
+				header,
+				footer {
+					background-color: ${siteColor};
+					height: 30px;
+					display: flex;
+					align-items: center;
+				}
+
+				footer {
+					height: 200px;
+				}
+			`}</style>
 		</div>
 	);
 }
