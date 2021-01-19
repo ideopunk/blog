@@ -1,52 +1,33 @@
-.heading2Xl {
-    font-size: 2.5rem;
-    line-height: 1.2;
-    font-weight: 800;
-    letter-spacing: -0.05rem;
-    margin: 1rem 0;
-  }
-  
-  .headingXl {
-    font-size: 2rem;
-    line-height: 1.3;
-    font-weight: 800;
-    letter-spacing: -0.05rem;
-    margin: 1rem 0;
-  }
-  
-  .headingLg {
-    font-size: 1.5rem;
-    line-height: 1.4;
-    margin: 1rem 0;
-  }
-  
-  .headingMd {
-    font-size: 1.2rem;
-    line-height: 1.5;
-  }
-  
-  .borderCircle {
-    border-radius: 9999px;
-  }
-  
-  .colorInherit {
-    color: inherit;
-  }
-  
-  .padding1px {
-    padding-top: 1px;
-  }
-  
-  .list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .listItem {
-    margin: 0 0 1.25rem;
-  }
-  
-  .lightText {
-    color: #999;
-  }
+.pad {
+	padding: 1rem;
+}
+
+.padVrt {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.mrg {
+	margin: 1rem;
+}
+
+.mrgBot {
+	margin-bottom: 1rem;
+}
+
+.mrgTop {
+	margin-bottom: 1rem;
+}
+
+.mrgR {
+	margin-right: 1rem;
+}
+
+.mrgVrt {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.rad {
+	border-radius: 10px;
+}

@@ -1,6 +1,7 @@
 // next.config.js
-const withPreact = require('next-plugin-preact');
+const withPrefresh = require("@prefresh/next");
+const withPreact = require("next-plugin-preact");
 
 module.exports = withPreact({
-    /* regular next.js config options here */
+	/* regular next.js config options here */
 });
