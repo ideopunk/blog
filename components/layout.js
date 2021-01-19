@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 const name = "Conor";
 export const siteTitle = "Next.js Sample Website";
@@ -12,10 +13,7 @@ export default function Layout({ children, home }) {
 		<div className={styles.container}>
 			<Head>
 				<link rel="icon" href="/favicon.ico" />
-				<meta
-					name="description"
-					content="Conor Barnes's site"
-				/>
+				<meta name="description" content="Conor Barnes's site" />
 				<meta
 					property="og:image"
 					content={`https://og-image.now.sh/${encodeURI(
@@ -28,10 +26,12 @@ export default function Layout({ children, home }) {
 			<header className={styles.header}>
 				{home ? (
 					<>
-						<img
+						<Image
 							src="/images/profile.jpg"
 							className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
 							alt={name}
+							width={300}
+							height={300}
 						/>
 						<h1 className={utilStyles.heading2Xl}>{name}</h1>
 					</>
@@ -39,10 +39,12 @@ export default function Layout({ children, home }) {
 					<>
 						<Link href="/">
 							<a>
-								<img
+								<Image
 									src="/images/profile.jpg"
 									className={`${styles.headerImage} ${utilStyles.borderCircle}`}
 									alt={name}
+									width={300}
+									height={300}
 								/>
 							</a>
 						</Link>
