@@ -3,7 +3,7 @@ import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
 
 export async function getStaticProps() {
-	const allPostsData = getSortedPostsData();
+	const allPostsData = getSortedPostsData("blogposts");
 	return {
 		props: {
 			allPostsData,
