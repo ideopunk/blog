@@ -1,5 +1,7 @@
 import Layout from "../../components/Layout";
-import utilStyles from "../../styles/utils.module.css";
+import styles from "../../styles/markdown.module.css";
+import utils from "../../styles/utils.module.css";
+
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import Head from "next/head";
 import Date from "../../components/Date";
@@ -27,15 +29,33 @@ export default function Post({ postData }) {
 			<Head>
 				<title>{postData.title}</title>
 			</Head>
-			<article>
-				<h1>{postData.title}</h1>
+			<article className="container">
+				<h1 className={styles.title}>{postData.title}</h1>
 				<br />
-				<div>
+				<div className={utils.spread}>
 					<Date dateString={postData.date} />
+					<small className={styles.status}>Epistemic status: {postData.status}</small>
 				</div>
-				<br />
-				<div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+				<hr />
+
+				<div
+					dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+					className={`${styles.markdown}`}
+				/>
 			</article>
+			<style jsx>
+				{`
+					.container {
+						padding: 1rem;
+						max-width: 600px;
+						text-align: center;
+					}
+
+					.container > * {
+						margin-bottom: 1rem;
+					}
+				`}
+			</style>
 		</Layout>
 	);
 }

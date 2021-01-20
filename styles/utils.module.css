@@ -31,3 +31,9 @@
 .rad {
 	border-radius: 10px;
 }
+
+.spread {
+	display: flex;
+	justify-content: space-between;
+	/* width: 100%; */
+}

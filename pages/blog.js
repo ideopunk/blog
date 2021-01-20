@@ -1,6 +1,7 @@
 import Layout, { siteTitle } from "../components/Layout";
 import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
+import Date from "../components/Date";
 
 export async function getStaticProps() {
 	const allPostsData = getSortedPostsData("blogposts");
@@ -12,6 +13,8 @@ export async function getStaticProps() {
 }
 
 export default function blog({ allPostsData }) {
+	console.log("all post data");
+	console.log(allPostsData);
 	return (
 		<Layout>
 			<div>blog</div>
