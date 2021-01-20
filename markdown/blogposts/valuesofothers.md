@@ -2,9 +2,8 @@
 title: "The Values of Others"
 date: "2020-06-19"
 status: "Mildly confident, not surprised if missing important component"
+preview: "It seems like common-sense to appeal to the values of others, in a Dale Carnegie way. Show people why they should agree with you! People don’t care about your values, they want you to appeal to theirs!"
 ---
-
-**The Values of Others**
 
 _Not to be confused with the value of others!_
 

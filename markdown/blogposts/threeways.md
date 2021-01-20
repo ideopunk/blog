@@ -2,6 +2,7 @@
 title: "Three Ways to Think Less Stupidly About Groups"
 date: "2020-06-24"
 status: "Confident"
+preview: "On simple ways to think better about groups."
 ---
 
 _On simple ways to think better about groups._
@@ -10,7 +11,7 @@ There are three common ways I see people reasoning poorly about groups. Both the
 
 Three dumb ways to think about groups:
 
- **1. “Group opinion is monolithic”**
+**1. “Group opinion is monolithic”**
 
 This sounds obviously and intuitively foolish but I think it’s one of those common-sense things we forget when it’s convenient to forget it. I see this way of thinking often come out politically. Imagine Alice (a liberal) and Bob (a conservative) arguing about Black Lives Matter. At some point Alice, frustrated with Bob, says “You should listen to black people.” This sounds like a pretty big own but it’s more or less dysfunctional. Black people are not a monolith. Obviously they, like any racial group, have a wide range of opinions and beliefs. However, this kind of statement isn’t an uncommon play in debate.
 

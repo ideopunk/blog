@@ -2,6 +2,7 @@
 title: "The Virtues of Melee"
 date: "2020-07-09"
 status: "confident"
+preview: "Two weeks ago, improvements to the netcode for Super Smash Bros Melee (Melee) dramatically expanded the potential for online play."
 ---
 
 This post comes at an awkward time.

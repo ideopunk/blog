@@ -2,6 +2,7 @@
 title: "Pregnancy? Experts Divided."
 date: "2020-08-07"
 status: "still livid"
+preview: "In confronting the problem of mortality and the falling human population, a radical solution has been floated: Allow women to deliberately become pregnant and give birth."
 ---
 
 In confronting the problem of mortality and the falling human population, a radical solution has been floated: Allow women to deliberately become pregnant and give birth. NewLives, an advocacy group in favor of the motion, is coordinating campaigns in multiple countries. It’s not just advocates though--thousands of women have signed up, willing to risk their lives. The campaign has support in over a hundred countries, and multiple national governments are set to debate legalization within the coming months.
@@ -18,10 +19,10 @@ Strickland goes on to detail the potential effects that can result from even a s
 
 McPhearson, for her part, says she knows of and accepts the risks, considering them to be worthwhile compared to the potential gains. NewLife has proposed limiting pregnancy to those in the lowest risk bracket. This means women in their late 20s. It is also formulating what it calls a strong informed consent procedure. “We are very aware of the risk, and we believe that if a volunteer is also fully aware, then it’s their choice to make and we want to advocate for them,” says John Swift, the director of NewLife. “We certainly don’t want to downplay the risk and are working to create a process that would rigorously inform potential volunteers.”
 
-Even so, the fraught history of pregnancy has many observers worried. “There have been many cases in the past where women didn’t know about the risks they were getting into with pregnancy. There wasn’t informed consent. Women have died because of it,” says Strickland. 
+Even so, the fraught history of pregnancy has many observers worried. “There have been many cases in the past where women didn’t know about the risks they were getting into with pregnancy. There wasn’t informed consent. Women have died because of it,” says Strickland.
 
 If childbearing is to become legal, it will only be after concerns like these have been adequately addressed. This means extensive vetting by medical professionals and potentially bitter debate in national legislatures. McPhearson is hopeful that she can ‘conceive’ (become pregnant) by the end of the year. In the meantime, she is planning out what she would do during her pregnancy. She ends our phone call by telling me the probability of twins (0.45%).
 
-* * *
+---
 
 ...Luckily, we live in a world where the idea of pregnancy being illegal is both ridiculous and horrifying. Unfortunately, we live in a world where such a campaign is necessary for [human challenge trials](https://academic.oup.com/jid/article/221/11/1752/5814216), which could help end the pandemic sooner. While we accept that people can take a small risk of death in order to create a life, we are much, much more cautious about letting people try to save lives. If you would like to learn more about advocacy efforts for challenge trial volunteers, please check out [1Day Sooner](https://1daysooner.org/) and consider joining!

@@ -2,6 +2,7 @@
 title: "Second-Order Existential Risk"
 date: "2020-07-01"
 status: "Speculative, low confidence"
+preview: "How important is creating the conditions to fix existential risks versus actually fixing existential risks?"
 ---
 
 _\[I haven’t seen this discussed elsewhere, though there might be overlap with Bostrom’s “crunches” and “shrieks”\]_

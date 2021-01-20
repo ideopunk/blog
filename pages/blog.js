@@ -22,18 +22,37 @@ export default function blog({ allPostsData }) {
 			<section>
 				<h2>Blog</h2>
 				<ul>
-					{allPostsData.map(({ id, date, title }) => (
-						<li key={id}>
+					{allPostsData.map(({ id, date, title, preview }) => (
+						<li key={id} className="blogpost">
 							<Link href={`/posts/${id}`}>
 								<a>{title}</a>
 							</Link>
-							<br />
-							<small>
+							<p>
 								<Date dateString={date} />
-							</small>
+							</p>
+							<p>{preview}</p>
 						</li>
 					))}
 				</ul>
+				<style jsx>{`
+					.blogpost {
+						max-width: 500px;S
+						margin: 1rem;
+						padding: 1rem;
+						border-radius: 3px;
+						border: 1px solid grey;
+						box-shadow: 2px 2px 2px grey;
+						transition: all 0.2s ease-out;
+					}
+
+					.blogpost:hover {
+						background-color: grey;
+					}
+					
+					* {
+						margin-top: 0.5rem;
+					}
+				`}</style>
 			</section>
 		</Layout>
 	);
