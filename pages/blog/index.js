@@ -1,10 +1,19 @@
-import Layout, { siteTitle } from "../components/Layout";
-import { getSortedPostsData } from "../lib/posts";
+import Layout, { siteTitle } from "../../components/Layout";
+import { getSortedPostsData } from "../../lib/posts";
 import Link from "next/link";
-import Date from "../components/Date";
+import Date from "../../components/Date";
+import generateRss from "../../lib/rss";
+import fs from "fs";
+import SubscriptionBox from "../../components/Subscribe";
 
+// generating rss here as side-effect
 export async function getStaticProps() {
 	const allPostsData = getSortedPostsData("blogposts");
+
+	// side effect!!
+	const rss = generateRss(allPostsData);
+	fs.writeFileSync("./public/rss.xml", rss);
+
 	return {
 		props: {
 			allPostsData,
@@ -13,14 +22,13 @@ export async function getStaticProps() {
 }
 
 export default function blog({ allPostsData }) {
-	console.log("all post data");
-	console.log(allPostsData);
 	return (
 		<Layout>
 			<div>blog</div>
 
 			<section>
 				<h2>Blog</h2>
+				<SubscriptionBox />
 				<ul>
 					{allPostsData.map(({ id, date, title, preview }) => (
 						<li key={id} className="blogpost">
@@ -48,7 +56,7 @@ export default function blog({ allPostsData }) {
 					.blogpost:hover {
 						background-color: grey;
 					}
-					
+
 					* {
 						margin-top: 0.5rem;
 					}

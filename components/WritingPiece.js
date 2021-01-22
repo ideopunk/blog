@@ -1,7 +1,6 @@
 import Date from "./Date";
 
 export default function WritingPiece({ title, url, coauthor, date, blurb, status }) {
-	console.log(status);
 	return (
 		<div className="writing-piece">
 			<h2>

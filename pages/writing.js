@@ -5,7 +5,6 @@ import WritingPiece from "../components/WritingPiece";
 
 export async function getStaticProps() {
 	const allPostsData = getSortedPostsData("published-writing");
-	console.log(allPostsData);
 	return {
 		props: {
 			allPostsData,
@@ -14,7 +13,6 @@ export async function getStaticProps() {
 }
 
 export default function Writing({ allPostsData }) {
-	console.log(allPostsData);
 	return (
 		<Layout>
 			<section>

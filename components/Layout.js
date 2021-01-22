@@ -6,11 +6,18 @@ import Contact from "./Contact";
 const name = "Conor Barnes";
 export const siteTitle = "Conor Barnes!!!";
 export const siteColor = "#fceff9";
+
 export default function Layout({ children, home }) {
 	return (
 		<div>
 			<Head>
 				<link rel="icon" href="/hammer-outline.svg" />
+				<link
+					rel="alternate"
+					type="application/rss+xml"
+					title="RSS feed for blog posts"
+					href="https://www.conorbarnes.com/rss.xml"
+				/>
 				<meta name="description" content="Conor Barnes's site" />
 				<meta
 					property="og:image"
