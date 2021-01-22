@@ -36,7 +36,7 @@ export default function blog({ allPostsData }) {
 				</ul>
 				<style jsx>{`
 					.blogpost {
-						max-width: 500px;S
+						max-width: 500px;
 						margin: 1rem;
 						padding: 1rem;
 						border-radius: 3px;
