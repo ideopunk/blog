@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Subscribe() {
+export default function Subscribe({ corner }) {
 	// 1. Create a reference to the input so we can fetch/clear it's value.
 	const [email, setEmail] = useState("");
 	// 2. Hold a message in state to handle the response from our API.
@@ -38,18 +38,39 @@ export default function Subscribe() {
 	};
 
 	return (
-		<form onSubmit={subscribe}>
-			<label htmlFor="email-input">{"Email Address"}</label>
+		<form onSubmit={subscribe} className={`container card ${corner && "corner"}`}>
+			<h2>Subscribe</h2>
 			<input
 				id="email-input"
 				name="email"
 				value={email}
+				placeholder="Email address"
 				required
 				onChange={handleChange}
 				type="email"
 			/>
-			<div>{message ? message : `Subscribe!!!`}</div>
-			<button type="submit">{"Subscribe for new posts"}</button>
+			<div>
+				{message ? message : `Receive notifications of new blog posts and other updates. `}
+			</div>
+			<button type="submit">{"Subscribe"}</button>
+			<style jsx>{`
+				.container {
+					max-width: 500px;
+					height: 200px;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-around;
+				}
+
+				button {
+					background-color: pink;
+					border: 1px solid #e75480;
+				}
+
+				.corner {
+					border-bottom-left-radius: 20px;
+				}
+			`}</style>
 		</form>
 	);
 }

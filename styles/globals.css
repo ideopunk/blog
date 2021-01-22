@@ -32,12 +32,12 @@ body::-webkit-scrollbar-thumb {
 } */
 
 body {
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  scrollbar-width: none;  /* Firefox */
+	-ms-overflow-style: none; /* Internet Explorer 10+ */
+	scrollbar-width: none; /* Firefox */
 }
 
-body::-webkit-scrollbar { 
-  display: none;  /* Safari and Chrome */
+body::-webkit-scrollbar {
+	display: none; /* Safari and Chrome */
 }
 
 a {
@@ -60,13 +60,23 @@ h2 {
 }
 
 hr {
-    border: 0;
-    height: 1px;
-    background: #333;
-    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+	border: 0;
+	height: 1px;
+	background: #333;
+	background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
 
 svg {
 	width: 25px;
 	height: 25px;
+}
+
+.card {
+	border-radius: 3px;
+	border: 1px solid black;
+	margin: 1rem;
+	padding: 1rem;
+	width: 500px;
+	height: 200px;
+	background-color: white;
 }
