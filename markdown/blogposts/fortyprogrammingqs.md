@@ -2,7 +2,7 @@
 title: "40 Programming Questions / 6 Months In"
 date: "2020-08-19"
 status: "in progress"
-preview: "I started teaching myself to program about six months ago "
+preview: "I started teaching myself to program about six months ago."
 ---
 
 I started teaching myself to program about six months ago -- I see I registered for CS50 on March 1st. It's been incredibly rewarding. Part of what I love about it is how endless it is: every question leads to more. So for a few days, I decided to write down my web development questions instead of immediately googling them. In another six months I'll do it again and I'll revisit these, which should be neat.

@@ -49,6 +49,8 @@ export default function Post({ postData }) {
 						padding: 1rem;
 						max-width: 600px;
 						text-align: center;
+						margin-left: auto;
+						margin-right: auto;
 					}
 
 					.container > * {

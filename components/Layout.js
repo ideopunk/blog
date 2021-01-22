@@ -53,6 +53,7 @@ export default function Layout({ children, home }) {
 				header {
 					position: sticky;
 					width: 100%;
+					height: 40px;
 					top: 0;
 					left: 0;
 					z-index: 1;
@@ -62,13 +63,22 @@ export default function Layout({ children, home }) {
 				header,
 				footer {
 					background-color: ${siteColor};
-					height: 30px;
 					display: flex;
 					align-items: center;
+					padding-left: 5rem;
+					padding-right: 5rem;
 				}
 
 				footer {
 					height: 200px;
+				}
+
+				header a {
+					transition: all 0.4s ease-out;
+				}
+
+				header a:hover {
+					color: black;
 				}
 			`}</style>
 		</div>

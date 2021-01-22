@@ -41,12 +41,11 @@ export default function ContactForm() {
 					}
 
 					.linky {
-						padding-left: 2rem;
 						transition: all 0.15s ease-out;
 					}
 
 					.linky:hover {
-						padding-left: 3rem;
+						padding-left: 1rem;
 						color: black;
 					}
 
@@ -58,6 +57,7 @@ export default function ContactForm() {
 
 					.move {
 						position: absolute;
+						left: -2rem;
 					}
 				`}
 			</style>

@@ -24,15 +24,13 @@ export async function getStaticProps() {
 export default function blog({ allPostsData }) {
 	return (
 		<Layout>
-			<div>blog</div>
-
 			<section>
 				<h2>Blog</h2>
 				<SubscriptionBox />
 				<ul>
 					{allPostsData.map(({ id, date, title, preview }) => (
 						<li key={id} className="blogpost">
-							<Link href={`/posts/${id}`}>
+							<Link href={`/blog/${id}`}>
 								<a>{title}</a>
 							</Link>
 							<p>
