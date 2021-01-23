@@ -11,7 +11,6 @@ const bigrad = "20px";
 
 export async function getStaticProps() {
 	const latestPost = getLatestPostData("blogposts");
-	console.log(latestPost);
 	return {
 		props: {
 			latestPost,
@@ -20,14 +19,16 @@ export async function getStaticProps() {
 }
 
 export default function Home({ latestPost }) {
-	console.log(latestPost);
 	return (
 		<Layout home>
 			<Head>
 				<title>{siteTitle}</title>
 			</Head>
 			<section>
+				<div className="background" />
+				<Image src="/headshot.jpeg" alt="headshot" width={500} height={625} />
 				<div className="box ">
+					<h1>Conor Barnes</h1>
 					<Link href="/portfolio">
 						<a>
 							<div className="card front tl">
@@ -36,7 +37,7 @@ export default function Home({ latestPost }) {
 						</a>
 					</Link>
 					<Link href={`/blog/${latestPost.id}`}>
-						<a className={`${utils.mrgBot}`}>
+						<a>
 							<div className={`card front tr`}>
 								<h2 className={`${utils.mrgBot}`}>Latest Blogpost</h2>
 
@@ -48,22 +49,46 @@ export default function Home({ latestPost }) {
 							</div>
 						</a>
 					</Link>
-					<div className="card front bl">
+					{/* <div className="card front bl">
 						<h2>Contact</h2>
 						<p></p>
-					</div>
-					<Subscribe front />
+					</div> */}
+					{/* <Subscribe front /> */}
 				</div>
 			</section>
 
 			<style jsx>
 				{`
 					section {
-						padding: 2rem;
+						margin: 1rem 4rem;
+						display: flex;
+						justify-content: space-between;
+						position: relative;
+					}
+
+					h1 {
+						position: relative;
+						left: -250px;
+						top: -60px;
+					}
+
+					.background {
+						top: 2rem;
+						left: -2rem;
+						position: absolute;
+						width: 95vw;
+						height: 550px;
+						background-color: ${siteColor};
+						z-index: -1;
 					}
 
 					.front {
 						transition: all 0.2s ease-out;
+						color: black;
+					}
+
+					h2 {
+						color: black;
 					}
 
 					.front:hover {
@@ -72,10 +97,13 @@ export default function Home({ latestPost }) {
 
 					.box {
 						display: flex;
-						flex-wrap: wrap;
+						flex-direction: column;
 						justify-content: center;
+						align-items: center;
+						width: 800px;
 					}
-
+					 {
+						/* 
 					.tl {
 						border-top-left-radius: ${bigrad};
 					}
@@ -90,6 +118,25 @@ export default function Home({ latestPost }) {
 
 					.br {
 						border-bottom-right-radius: ${bigrad};
+					}
+
+					@media (max-width: 1000px) {
+						.tl {
+							border-top-right-radius: ${bigrad};
+						}
+
+						.tr {
+							border-radius: 0;
+						}
+
+						.bl {
+							border-radius: 0;
+						}
+
+						.br {
+							border-bottom-left-radius: ${bigrad};
+						}
+					} */
 					}
 				`}
 			</style>

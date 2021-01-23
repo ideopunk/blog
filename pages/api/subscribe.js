@@ -11,7 +11,6 @@ export default async (req, res) => {
 		// 3. Fetch the environment variables.
 		const LIST_ID = process.env.MAILCHIMP_LIST_ID;
 		const API_KEY = process.env.MAILCHIMP_API_KEY;
-		console.log(LIST_ID);
 		// 4. API keys are in the form <key>-us3.
 		const DATACENTER = API_KEY.split("-")[1];
 

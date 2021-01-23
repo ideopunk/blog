@@ -3,10 +3,16 @@ import utils from "../styles/utils.module.css";
 import Head from "next/head";
 import ScrollArrow from "./ScrollArrow";
 
-export default function Project({ color, img, title, text, links, id, bottom }) {
-	const nextifyLink = (link) => {
+export default function Project({ color, img, title, text, links, id, bottom, flip, colorFlip }) {
+	const nextifyLink = (link, colorFlip) => {
 		return (
-			<a className={utils.mrgR} href={link.url} target="_blank" rel="noreferrer">
+			<a
+				className={utils.mrgR}
+				style={{ color: `${colorFlip && "crimson"}` }}
+				href={link.url}
+				target="_blank"
+				rel="noreferrer"
+			>
 				{link.domain}
 			</a>
 		);
@@ -18,9 +24,9 @@ export default function Project({ color, img, title, text, links, id, bottom }) 
 			<div className="text-container">
 				<h2 className={utils.mrgBot}>{title}</h2>
 				<p className={utils.mrgBot}>{text}</p>
-				{links.map((link) => nextifyLink(link))}
+				{links && links.map((link) => nextifyLink(link, colorFlip))}
 			</div>
-			<ScrollArrow to={id+1} bottom={bottom}/>
+			<ScrollArrow to={id + 1} bottom={bottom} />
 			<style jsx>{`
 				.container {
 					background-color: ${color};
@@ -30,6 +36,7 @@ export default function Project({ color, img, title, text, links, id, bottom }) 
 					height: 600px;
 					align-items: center;
 					position: relative;
+					flex-direction: ${flip ? "row-reverse" : "row"};
 				}
 
 				.text-container {

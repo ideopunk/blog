@@ -10,9 +10,18 @@ export default function portfolio() {
 				<Head>
 					<title>Projects</title>
 				</Head>
-				<Resume />
+				{/* <Resume /> */}
 				<Project
-				id={1}
+					id={0}
+					color="white"
+					img="/images/squares/twitterSquare.jpg"
+					title="Testimony"
+					text="Conor is dope. He can use React and Next and Node and Sass and Express and, of course, HTML and CSS."
+					links={[]}
+					flip
+				/>
+				<Project
+					id={1}
 					color="#aefadd"
 					img="/images/squares/twitterSquare.jpg"
 					title="Fake Twitter"
@@ -21,10 +30,11 @@ export default function portfolio() {
 						{ url: "https://github.com/Ideopunk/twitter-clone", domain: "GitHub" },
 						{ url: "https://twitter-clone-12cf9.web.app/", domain: "Live" },
 					]}
+					colorFlip
 				/>
 				<Project
-				id={2}
-				color="#dfeefc"
+					id={2}
+					color="#dfeefc"
 					img="/images/squares/BSSquare.jpg"
 					title="Battleship"
 					text="Battleship game"
@@ -34,9 +44,9 @@ export default function portfolio() {
 					]}
 				/>
 				<Project
-				bottom
-				id={3}
-				color="#eecaa6"
+					bottom
+					id={3}
+					color="#eecaa6"
 					img="/images/squares/WriterSquare.jpg"
 					title="Node Blog"
 					text="Blog practice"

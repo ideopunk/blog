@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { siteColor } from "./Layout";
 
 export default function Subscribe({ front }) {
 	// 1. Create a reference to the input so we can fetch/clear it's value.
@@ -40,6 +41,7 @@ export default function Subscribe({ front }) {
 	return (
 		<form onSubmit={subscribe} className={`container card ${front && "corner"}`}>
 			<h2>Subscribe</h2>
+			<label htmlFor="email-input">Email address</label>
 			<input
 				id="email-input"
 				name="email"
@@ -67,8 +69,36 @@ export default function Subscribe({ front }) {
 					border: 1px solid #e75480;
 				}
 
+				label {
+					visibility: hidden;
+				}
+
+				input {
+					outline: none;
+					border: 2px solid green;
+				}
+
+				input:active,
+				input:focus {
+				}
+
+				button {
+					background-color: ${siteColor};
+					border: 2px solid pink;
+					transition: all 0.2s ease-out;
+				}
+
+				button:hover {
+					background-color: lightpink;
+				}
 				.corner {
 					border-bottom-right-radius: 20px;
+				}
+
+				@media (max-width: 1000px) {
+					.corner {
+						border-bottom-left-radius: 20px;
+					}
 				}
 			`}</style>
 		</form>

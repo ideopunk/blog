@@ -5,7 +5,8 @@ import Image from "next/image";
 import Contact from "./Contact";
 const name = "Conor Barnes";
 export const siteTitle = "Conor Barnes!!!";
-export const siteColor = "#fceff9";
+// export const siteColor = "#fceff9";
+export const siteColor = "#547a84";
 
 export default function Layout({ children, home }) {
 	return (
@@ -18,6 +19,11 @@ export default function Layout({ children, home }) {
 					title="RSS feed for blog posts"
 					href="https://www.conorbarnes.com/rss.xml"
 				/>
+				<link rel="preconnect" href="https://fonts.gstatic.com" />
+				<link
+					href="https://fonts.googleapis.com/css2?family=Cabin+Condensed&display=swap"
+					rel="stylesheet"
+				/>
 				<meta name="description" content="Conor Barnes's site" />
 				<meta
 					property="og:image"
@@ -29,9 +35,9 @@ export default function Layout({ children, home }) {
 				<meta name="twitter:card" content="summary_large_image" />
 			</Head>
 			<header className={utils.pad} id="top">
-				<Link href="/">
+				{/* <Link href="/">
 					<a className={utils.mrgR}>{name}</a>
-				</Link>
+				</Link> */}
 				<div>
 					<Link href="/portfolio">
 						<a className={utils.mrgR}>Works</a>
@@ -50,19 +56,26 @@ export default function Layout({ children, home }) {
 				<Contact />
 			</footer>
 			<style jsx>{`
+				header * {
+					font-size: 1.45rem;
+				}
+
 				header {
 					position: sticky;
 					width: 100%;
 					height: 40px;
+					margin-top: 2rem;
 					top: 0;
 					left: 0;
 					z-index: 1;
-					justify-content: space-between;
+					 {
+						/* justify-content: space-between; */
+					}
+					justify-content: flex-end;
 				}
 
 				header,
 				footer {
-					background-color: ${siteColor};
 					display: flex;
 					align-items: center;
 					padding-left: 5rem;
@@ -70,6 +83,8 @@ export default function Layout({ children, home }) {
 				}
 
 				footer {
+					background-color: ${siteColor};
+
 					height: 200px;
 				}
 
