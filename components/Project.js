@@ -8,7 +8,7 @@ export default function Project({ color, img, title, text, links, id, bottom, fl
 		return (
 			<a
 				className={utils.mrgR}
-				style={{ color: `${colorFlip && "crimson"}` }}
+				style={{ color: `${colorFlip && "green"}` }}
 				href={link.url}
 				target="_blank"
 				rel="noreferrer"
@@ -40,7 +40,9 @@ export default function Project({ color, img, title, text, links, id, bottom, fl
 				}
 
 				.text-container {
-					border: 1px solid grey;
+					 {
+						/* border: 1px solid grey; */
+					}
 					padding: 1rem;
 					border-radius: 5px;
 					width: 300px;

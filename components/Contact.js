@@ -37,7 +37,8 @@ export default function ContactForm() {
 						display: flex;
 						flex-direction: column;
 						justify-content: space-around;
-						height: 100%;
+						height: 180px;
+						width: 50%;
 					}
 
 					.linky {

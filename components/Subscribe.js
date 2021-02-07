@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { siteColor } from "./Layout";
+import utils from "../styles/utils.module.css";
 
-export default function Subscribe({ front }) {
+export default function Subscribe() {
 	// 1. Create a reference to the input so we can fetch/clear it's value.
 	const [email, setEmail] = useState("");
 	// 2. Hold a message in state to handle the response from our API.
@@ -39,8 +40,8 @@ export default function Subscribe({ front }) {
 	};
 
 	return (
-		<form onSubmit={subscribe} className={`container card ${front && "corner"}`}>
-			<h2>Subscribe</h2>
+		<form onSubmit={subscribe} className={`container`}>
+			<h3>Subscribe</h3>
 			<label htmlFor="email-input">Email address</label>
 			<input
 				id="email-input"
@@ -51,10 +52,14 @@ export default function Subscribe({ front }) {
 				onChange={handleChange}
 				type="email"
 			/>
-			<div>
-				{message ? message : `Receive notifications of new blog posts and other updates. `}
-			</div>
-			<button type="submit">{"Subscribe"}</button>
+			<p className={utils.mrgTop}>
+				{message
+					? message
+					: `Receive notifications about new blog posts and other updates.`}
+			</p>
+			<button className={utils.mrgTop} type="submit">
+				{"Subscribe"}
+			</button>
 			<style jsx>{`
 				.container {
 					max-width: 500px;
@@ -62,11 +67,7 @@ export default function Subscribe({ front }) {
 					display: flex;
 					flex-direction: column;
 					justify-content: space-around;
-				}
-
-				button {
-					background-color: pink;
-					border: 1px solid #e75480;
+					padding: 1rem;
 				}
 
 				label {
@@ -75,7 +76,8 @@ export default function Subscribe({ front }) {
 
 				input {
 					outline: none;
-					border: 2px solid green;
+					border: 2px solid ${siteColor};
+					font-size: 1.5rem;
 				}
 
 				input:active,
@@ -83,9 +85,13 @@ export default function Subscribe({ front }) {
 				}
 
 				button {
+					border: 0;
 					background-color: ${siteColor};
-					border: 2px solid pink;
+					font-size: 1.5rem;
 					transition: all 0.2s ease-out;
+					font-weight: 600;
+					letter-spacing: 1px;
+					padding: 0.5rem;
 				}
 
 				button:hover {

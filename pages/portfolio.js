@@ -30,7 +30,6 @@ export default function portfolio() {
 						{ url: "https://github.com/Ideopunk/twitter-clone", domain: "GitHub" },
 						{ url: "https://twitter-clone-12cf9.web.app/", domain: "Live" },
 					]}
-					colorFlip
 				/>
 				<Project
 					id={2}
@@ -55,6 +54,7 @@ export default function portfolio() {
 						{ url: "https://reverent-northcutt-d65fb8.netlify.app/", domain: "Writer" },
 						{ url: "https://reverent-franklin-b97805.netlify.app/", domain: "Reader" },
 					]}
+					colorFlip
 				/>
 			</div>
 		</Layout>

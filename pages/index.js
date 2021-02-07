@@ -49,11 +49,6 @@ export default function Home({ latestPost }) {
 							</div>
 						</a>
 					</Link>
-					{/* <div className="card front bl">
-						<h2>Contact</h2>
-						<p></p>
-					</div> */}
-					{/* <Subscribe front /> */}
 				</div>
 			</section>
 

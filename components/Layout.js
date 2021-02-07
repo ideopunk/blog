@@ -3,6 +3,9 @@ import utils from "../styles/utils.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import Contact from "./Contact";
+import Subscribe from "./Subscribe";
+import Home from "./SVGs/HomeSVG";
+
 const name = "Conor Barnes";
 export const siteTitle = "Conor Barnes!!!";
 // export const siteColor = "#fceff9";
@@ -21,7 +24,7 @@ export default function Layout({ children, home }) {
 				/>
 				<link rel="preconnect" href="https://fonts.gstatic.com" />
 				<link
-					href="https://fonts.googleapis.com/css2?family=Cabin+Condensed&display=swap"
+					href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap"
 					rel="stylesheet"
 				/>
 				<meta name="description" content="Conor Barnes's site" />
@@ -35,9 +38,11 @@ export default function Layout({ children, home }) {
 				<meta name="twitter:card" content="summary_large_image" />
 			</Head>
 			<header className={utils.pad} id="top">
-				{/* <Link href="/">
-					<a className={utils.mrgR}>{name}</a>
-				</Link> */}
+				<Link href="/">
+					<a className={utils.mrgR}>
+						<Home />
+					</a>
+				</Link>
 				<div>
 					<Link href="/portfolio">
 						<a className={utils.mrgR}>Works</a>
@@ -54,12 +59,9 @@ export default function Layout({ children, home }) {
 
 			<footer className={utils.pad}>
 				<Contact />
+				<Subscribe />
 			</footer>
 			<style jsx>{`
-				header * {
-					font-size: 1.45rem;
-				}
-
 				header {
 					position: sticky;
 					width: 100%;
@@ -68,10 +70,15 @@ export default function Layout({ children, home }) {
 					top: 0;
 					left: 0;
 					z-index: 1;
-					 {
-						/* justify-content: space-between; */
-					}
-					justify-content: flex-end;
+					justify-content: space-between;
+					font-weight: 600;
+					background-color: rgba(255, 255, 255, 0.8);
+				}
+
+				footer {
+					justify-content: space-evenly;
+					padding: 2rem;
+					height: fit-content;
 				}
 
 				header,
@@ -80,12 +87,7 @@ export default function Layout({ children, home }) {
 					align-items: center;
 					padding-left: 5rem;
 					padding-right: 5rem;
-				}
-
-				footer {
-					background-color: ${siteColor};
-
-					height: 200px;
+					font-size: 1.45rem;
 				}
 
 				header a {
