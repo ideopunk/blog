@@ -32,7 +32,7 @@ export default function Home({ latestPost }) {
 					<Link href="/portfolio">
 						<a>
 							<div className="card front tl">
-								<h2>Portfolio</h2>
+								<p>Hi there! I'm a web developer.</p>
 							</div>
 						</a>
 					</Link>

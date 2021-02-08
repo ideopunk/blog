@@ -3,7 +3,7 @@ import Arrow from "./SVGs/ArrowSVG";
 
 export default function ScrollArrow({ to, bottom }) {
 	return (
-		<div>
+		<>
 			<a className="arrow" href={bottom ? "#" : `#${to}`}>
 				<Arrow />
 			</a>
@@ -31,6 +31,6 @@ export default function ScrollArrow({ to, bottom }) {
 					background-color: rgba(100, 100, 100, 0.75);
 				}
 			`}</style>
-		</div>
+		</>
 	);
 }

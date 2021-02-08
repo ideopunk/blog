@@ -2,6 +2,46 @@ import Project from "../components/Project";
 import Head from "next/head";
 import Layout, { siteTitle } from "../components/Layout";
 import Resume from "../components/Resume";
+import JS from "../components/SVGs/langs/JS";
+import CSS from "../components/SVGs/langs/CSS";
+import HTML from "../components/SVGs/langs/HTML";
+import ReactIcon from "../components/SVGs/langs/React";
+import NextIcon from "../components/SVGs/langs/Next";
+import Node from "../components/SVGs/langs/Node";
+import Express from "../components/SVGs/langs/Express";
+import Git from "../components/SVGs/langs/Git";
+import Mongo from "../components/SVGs/langs/Mongo";
+
+function Languages() {
+	return (
+		<>
+			<div className="lang">
+				<HTML />
+				<CSS />
+				<JS />
+				<ReactIcon />
+				<NextIcon />
+				<Node />
+				<Express />
+				<Git />
+				<Mongo />
+			</div>
+			<style jsx>
+				{`
+					.lang {
+						display: flex;
+						flex-wrap: wrap;
+						justify-content: center;
+						align-items: center;
+						border: 1px solid red;
+						width: 100px;
+						height: 100px;
+					}
+				`}
+			</style>
+		</>
+	);
+}
 
 export default function portfolio() {
 	return (
@@ -10,15 +50,28 @@ export default function portfolio() {
 				<Head>
 					<title>Projects</title>
 				</Head>
-				{/* <Resume /> */}
+
 				<Project
 					id={0}
 					color="white"
-					img="/images/squares/twitterSquare.jpg"
-					title="Testimony"
-					text="Conor is dope. He can use React and Next and Node and Sass and Express and, of course, HTML and CSS."
+					// img="/images/squares/twitterSquare.jpg"
+					comp={<Languages />}
+					title="Work"
+					text="I'm a front-end engineer at WeFlop. When I'm not doing that, I'm building personal websites for people. If that's something you're interested in, my contact information is below!"
 					links={[]}
 					flip
+				/>
+				<Project
+					id={1}
+					color="#1A2D52"
+					dark
+					img="/images/squares/twitterSquare.jpg"
+					title="WeFlop"
+					text="I'm building the front-end of a betting app in React Native."
+					// links={[
+					// 	{ url: "https://github.com/Ideopunk/twitter-clone", domain: "GitHub" },
+					// 	{ url: "https://twitter-clone-12cf9.web.app/", domain: "Live" },
+					// ]}
 				/>
 				<Project
 					id={1}
