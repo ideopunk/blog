@@ -1,17 +1,11 @@
 import { parseISO, format } from "date-fns";
+import utils from "../styles/utils.module.css";
 
 export default function Date({ dateString }) {
 	const date = parseISO(dateString);
-	console.log(date);
 	return (
-		<time dateTime={dateString}>
+		<time className={utils.txtlil} dateTime={dateString}>
 			{format(date, "LLLL d, yyyy")}
-
-			<style jsx>{`
-				time {
-					font-size: 0.75rem;
-				}
-			`}</style>
 		</time>
 	);
 }

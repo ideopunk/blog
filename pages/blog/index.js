@@ -5,10 +5,12 @@ import Date from "../../components/Date";
 import generateRss from "../../lib/rss";
 import fs from "fs";
 import SubscriptionBox from "../../components/Subscribe";
+import utils from "../../styles/utils.module.css";
 
 // generating rss here as side-effect
 export async function getStaticProps() {
 	const allPostsData = getSortedPostsData("blogposts");
+	const allArticlesData = getSortedPostsData("published-writing");
 
 	// side effect!!
 	const rss = generateRss(allPostsData);
@@ -17,11 +19,12 @@ export async function getStaticProps() {
 	return {
 		props: {
 			allPostsData,
+			allArticlesData,
 		},
 	};
 }
 
-export default function blog({ allPostsData }) {
+export default function blog({ allPostsData, allArticlesData }) {
 	return (
 		<Layout>
 			<section>
@@ -30,7 +33,7 @@ export default function blog({ allPostsData }) {
 						<li>
 							<h3>Blog</h3>
 						</li>
-						{allPostsData.map(({ id, date, title, preview }) => (
+						{allPostsData.map(({ id, date, title, preview, status }) => (
 							<li key={id} className="blogpost">
 								<Link href={`/blog/${id}`}>
 									<a className="title">{title}</a>
@@ -38,11 +41,45 @@ export default function blog({ allPostsData }) {
 								<p>
 									<Date dateString={date} />
 								</p>
-								<p>{preview}</p>
+								<p className={utils.mrgTop}>{preview}</p>
+								<p className={`${utils.txtmed} ${utils.mrgTop}`}>
+									Status: {status}
+								</p>
 							</li>
 						))}
 					</ul>
-					<SubscriptionBox />
+					<div>
+						<SubscriptionBox />
+						<ul className={utils.mrgTop}>
+							<li>
+								<h3>Articles</h3>
+							</li>
+							{allArticlesData.map(
+								({ id, url, date, title, preview, coauthor, status }) => (
+									<li key={id} className="blogpost">
+										<a
+											target="_blank"
+											rel="noopener noreferrer"
+											href={url}
+											className="title"
+										>
+											{title}
+										</a>
+										<p>
+											<Date dateString={date} />
+										</p>
+										{coauthor && (
+											<p className={utils.txtmed}>With {coauthor}</p>
+										)}
+										<p className={utils.mrgTop}>{preview}</p>
+										<p className={`${utils.txtmed} ${utils.mrgTop}`}>
+											Status: {status}
+										</p>
+									</li>
+								)
+							)}
+						</ul>
+					</div>
 				</div>
 				<style jsx>{`
 					h3 {

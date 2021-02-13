@@ -103,3 +103,8 @@ svg {
 .card:hover {
 	background-color: #fceff9;
 }
+
+input[type="text"],
+input[type="email"] {
+	padding-left: 0.75rem;
+}

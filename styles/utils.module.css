@@ -37,3 +37,11 @@
 	justify-content: space-between;
 	/* width: 100%; */
 }
+
+.txtlil {
+	font-size: 0.75rem;
+}
+
+.txtmed {
+	font-size: 1rem;
+}

@@ -1,3 +1,6 @@
+import useState from "react";
+import { siteColor } from "../Layout";
+
 export default function Copy() {
 	return (
 		<svg viewBox="0 0 512 512">
@@ -9,7 +12,6 @@ export default function Copy() {
 				height="336"
 				rx="57"
 				ry="57"
-				fill="none"
 				stroke="currentColor"
 				stroke-linejoin="round"
 				stroke-width="32"
@@ -22,6 +24,16 @@ export default function Copy() {
 				stroke-linejoin="round"
 				stroke-width="32"
 			/>
+			<style jsx>{`
+				rect {
+					fill: #df9c61;
+					transition: all 0.1s linear;
+				}
+
+				rect:hover {
+					fill: ${siteColor};
+				}
+			`}</style>
 		</svg>
 	);
 }

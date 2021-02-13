@@ -1,9 +1,26 @@
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Copy from "./SVGs/CopySVG";
+import { siteColor } from "./Layout";
+
+const test = "red";
+
 export default function ContactForm() {
+	const [toast, setToast] = useState(false);
+
 	const handleClick = async () => {
 		await navigator.clipboard.writeText("conorbarnes93@gmail.com");
+		setToast(true);
 	};
+
+	useEffect(() => {
+		function byebye() {
+			setToast(false);
+		}
+		toast && setTimeout(byebye, 1000);
+
+		return () => clearTimeout(byebye);
+	}, [toast]);
 
 	return (
 		<div className="contact" id="contact">
@@ -27,22 +44,25 @@ export default function ContactForm() {
 			<a className="linky" href="https://github.com/ideopunk">
 				GitHub
 			</a>
-			<a className="linky" href="">
+			<a className="linky" href="https://www.linkedin.com/in/conor-barnes-b49833206/">
 				LinkedIn
 			</a>
+
+			{toast && <p className="toast linky">Copied</p>}
 
 			<style jsx>
 				{`
 					.contact {
 						display: flex;
 						flex-direction: column;
-						justify-content: space-around;
+						justify-content: flex-start;
 						height: 180px;
 						width: 50%;
 					}
 
 					.linky {
 						transition: all 0.15s ease-out;
+						margin-bottom: 0.75rem;
 					}
 
 					.linky:hover {
@@ -59,6 +79,10 @@ export default function ContactForm() {
 					.move {
 						position: absolute;
 						left: -2rem;
+					}
+
+					.toast {
+						color: ${siteColor};
 					}
 				`}
 			</style>
