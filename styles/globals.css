@@ -9,6 +9,7 @@
 		Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
 	font-family: "Cormorant Garamond", serif;
 	scroll-behavior: smooth;
+	transition: all 0.2s ease-out;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -107,4 +108,8 @@ svg {
 input[type="text"],
 input[type="email"] {
 	padding-left: 0.75rem;
+}
+
+input:hover {
+	background-color: wheat;
 }
