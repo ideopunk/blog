@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Layout, { siteColor, siteSecondaryColor } from "../../components/Layout";
 import { getSortedPostsData, getPostData } from "../../lib/posts";
 import Link from "next/link";
@@ -7,6 +8,7 @@ import fs from "fs";
 import SubscriptionBox from "../../components/Subscribe";
 import utils from "../../styles/utils.module.css";
 import styles from "../../styles/markdown.module.css";
+import { useEffect } from "react";
 
 // generating rss here as side-effect
 export async function getStaticProps() {
@@ -17,7 +19,6 @@ export async function getStaticProps() {
 		allPostsData.map(async (post) => getPostData(post.id, "blogposts"))
 	);
 
-	console.log("allPosts", allPostsText);
 	// side effect!!
 	const rss = generateRss(allPostsData);
 	fs.writeFileSync("./public/rss.xml", rss);
@@ -31,7 +32,42 @@ export async function getStaticProps() {
 	};
 }
 
+function Post({ id, date, title, status, lazyHtml }) {
+	return (
+		<li className="container" key={id}>
+			<h1 className={title}>{title}</h1>
+			<br />
+			<div className={utils.spread}>
+				<Date dateString={date} />
+				<small className={styles.status}>Epistemic status: {status}</small>
+			</div>
+			<hr />
+
+			<div
+				dangerouslySetInnerHTML={{ __html: lazyHtml }}
+				className={`${styles.markdown}`}
+			/>
+			<hr className="backup" />
+			<style jsx>{`
+				hr {
+					margin-bottom: 2rem;
+				}
+
+				.backup {
+					margin-top: 2rem;
+					margin-bottom: 4rem;
+				}
+			`}</style>
+		</li>
+	);
+}
 export default function blog({ allPostsData, allArticlesData, allPostsText }) {
+	const [loaded, setLoaded] = useState(false);
+
+	useEffect(() => {
+		setLoaded(true);
+	}, []);
+
 	return (
 		<Layout>
 			<section>
@@ -49,25 +85,30 @@ export default function blog({ allPostsData, allArticlesData, allPostsText }) {
 						))}
 					</ul>
 					<ul className="col-main">
-						{allPostsText.map(({ id, date, title, status, contentHtml }) => (
-							<article className="container" key={id}>
-								<h1 className={title}>{title}</h1>
-								<br />
-								<div className={utils.spread}>
-									<Date dateString={date} />
-									<small className={styles.status}>
-										Epistemic status: {status}
-									</small>
-								</div>
-								<hr />
-
-								<div
-									dangerouslySetInnerHTML={{ __html: contentHtml }}
-									className={`${styles.markdown}`}
+						{allPostsText
+							.slice(0, 1)
+							.map(({ id, date, title, status, lazyHtml }) => (
+								<Post
+									id={id}
+									date={date}
+									title={title}
+									status={status}
+									lazyHtml={lazyHtml}
 								/>
-								<hr className="backup" />
-							</article>
-						))}
+							))}
+
+						{loaded &&
+							allPostsText
+								.slice(1)
+								.map(({ id, date, title, status, lazyHtml }) => (
+									<Post
+										id={id}
+										date={date}
+										title={title}
+										status={status}
+										lazyHtml={lazyHtml}
+									/>
+								))}
 					</ul>
 					<div className="col-side">
 						<div className={utils.mrgTop}>
@@ -103,11 +144,6 @@ export default function blog({ allPostsData, allArticlesData, allPostsText }) {
 						padding-left: 1rem;
 					}
 
-
-					hr {
-						margin-bottom: 1rem
-					}
-					
 					.backup {
 						margin-top: 2rem;
 						margin-bottom: 4rem;
@@ -125,7 +161,6 @@ export default function blog({ allPostsData, allArticlesData, allPostsText }) {
 						display: flex;
 						justify-content: center;
 					}
-
 
 					.title {
 						font-size: 1.5rem;

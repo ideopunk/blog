@@ -3,7 +3,7 @@ import { siteColor } from "../Layout";
 
 export default function Copy() {
 	return (
-		<svg viewBox="0 0 512 512">
+		<svg viewBox="0 0 512 512" width="25px" height="auto">
 			<title>Copy</title>
 			<rect
 				x="128"

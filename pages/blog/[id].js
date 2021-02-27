@@ -39,7 +39,7 @@ export default function Post({ postData }) {
 				<hr />
 
 				<div
-					dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+					dangerouslySetInnerHTML={{ __html: postData.lazyHtml }}
 					className={`${styles.markdown}`}
 				/>
 			</article>
