@@ -1,6 +1,6 @@
 export default function Home() {
 	return (
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="25px" height="25px">
 			<title>Home</title>
 			<path
 				d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212"

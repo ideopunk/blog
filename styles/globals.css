@@ -84,10 +84,10 @@ hr {
 	background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
 
-svg {
+/* svg {
 	width: 25px;
 	height: 25px;
-}
+} */
 
 .card {
 	/* border-radius: 3px; */

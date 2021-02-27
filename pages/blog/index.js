@@ -45,13 +45,6 @@ export default function blog({ allPostsData, allArticlesData, allPostsText }) {
 								<Link href={`/blog/${id}`}>
 									<a className="title">{title}</a>
 								</Link>
-								<p>
-									<Date dateString={date} />
-								</p>
-								<p className={utils.mrgTop}>{preview}</p>
-								<p className={`${utils.txtmed} ${utils.mrgTop}`}>
-									Status: {status}
-								</p>
 							</li>
 						))}
 					</ul>
@@ -72,17 +65,17 @@ export default function blog({ allPostsData, allArticlesData, allPostsText }) {
 									dangerouslySetInnerHTML={{ __html: contentHtml }}
 									className={`${styles.markdown}`}
 								/>
+								<hr className="backup" />
 							</article>
 						))}
 					</ul>
 					<div className="col-side">
-						<SubscriptionBox />
 						<div className={utils.mrgTop}>
 							<h3>Articles</h3>
-							<div className="blogpost">
-								{allArticlesData.map(
-									({ id, url, date, title, preview, coauthor, status }) => (
-										<div key={id} className={utils.mrgBot}>
+							{allArticlesData.map(
+								({ id, url, date, title, preview, coauthor, status }) => (
+									<div className="blogpost">
+										<div key={id}>
 											<a
 												target="_blank"
 												rel="noopener noreferrer"
@@ -98,14 +91,11 @@ export default function blog({ allPostsData, allArticlesData, allPostsText }) {
 												<p className={utils.txtmed}>With {coauthor}</p>
 											)}
 										</div>
-										//								{/* <p className={utils.mrgTop}>{preview}</p> */}
-										// 									{/* <p className={`${utils.txtmed} ${utils.mrgTop}`}>
-										// 											Status: {status}
-										// </p> */}
-									)
-								)}
-							</div>
+									</div>
+								)
+							)}
 						</div>
+						<SubscriptionBox />
 					</div>
 				</div>
 				<style jsx>{`
@@ -113,8 +103,22 @@ export default function blog({ allPostsData, allArticlesData, allPostsText }) {
 						padding-left: 1rem;
 					}
 
+
+					hr {
+						margin-bottom: 1rem
+					}
+					
+					.backup {
+						margin-top: 2rem;
+						margin-bottom: 4rem;
+					}
+
 					section {
 						margin-top: 2rem;
+					}
+
+					.test a {
+						font-size: 1rem;
 					}
 
 					.test {
@@ -122,8 +126,6 @@ export default function blog({ allPostsData, allArticlesData, allPostsText }) {
 						justify-content: center;
 					}
 
-					.test > * {
-					}
 
 					.title {
 						font-size: 1.5rem;
@@ -133,14 +135,10 @@ export default function blog({ allPostsData, allArticlesData, allPostsText }) {
 					.blogpost {
 						max-width: 500px;
 						width: 100%;
-						margin: 1rem;
-						padding: 1rem;
 						border-radius: 3px;
-						border: 1px solid rgba(0, 0, 0, 0.2);
-						box-shadow: 2px 2px 2px grey;
+						padding: 0.5rem;
+						border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 						transition: all 0.2s ease-out;
-						background-color: ${siteSecondaryColor};
-						color: white;
 					}
 
 					.blogpost a {

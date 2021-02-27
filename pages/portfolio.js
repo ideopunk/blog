@@ -20,8 +20,8 @@ function Languages() {
 				<CSS />
 				<JS />
 				<ReactIcon />
-				<NextIcon />
-				<Node />
+				<img src="/images/next.png" width="33%" height="33%"/>
+				<Node /> 
 				<Express />
 				<Git />
 				<Mongo />
@@ -33,9 +33,8 @@ function Languages() {
 						flex-wrap: wrap;
 						justify-content: center;
 						align-items: center;
-						border: 1px solid red;
-						width: 100px;
-						height: 100px;
+						width: 400px;
+						height: 400px;
 					}
 				`}
 			</style>
@@ -65,13 +64,10 @@ export default function portfolio() {
 					id={1}
 					color="#1A2D52"
 					dark
-					img="/images/squares/twitterSquare.jpg"
-					title="WeFlop"
-					text="I'm building the front-end of a betting app in React Native."
-					// links={[
-					// 	{ url: "https://github.com/Ideopunk/twitter-clone", domain: "GitHub" },
-					// 	{ url: "https://twitter-clone-12cf9.web.app/", domain: "Live" },
-					// ]}
+					img="/images/squares/melangesquare.png"
+					title="Melange"
+					text="I'm building the front-end of a social betting app in React Native."
+					links={[{ url: "https://www.melange.io/", domain: "Landing Page" }]}
 				/>
 				<Project
 					id={1}

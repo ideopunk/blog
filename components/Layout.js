@@ -98,6 +98,11 @@ export default function Layout({ children, home }) {
 				header a:hover {
 					color: black;
 				}
+				
+				svg {
+					width: 25px;
+					height: 25px;
+				}
 			`}</style>
 		</div>
 	);
