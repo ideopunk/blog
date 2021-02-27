@@ -1,5 +1,9 @@
 import { useState } from "react";
-import Layout, { siteColor, siteSecondaryColor } from "../../components/Layout";
+import Head from "next/head";
+import Layout from "../components/Layout";
+
+import { siteTitle, siteColor } from "../consts/consts";
+
 import { getSortedPostsData, getPostData } from "../../lib/posts";
 import Link from "next/link";
 import Date from "../../components/Date";
@@ -35,7 +39,11 @@ export async function getStaticProps() {
 function Post({ id, date, title, status, lazyHtml }) {
 	return (
 		<li className="container" key={id}>
-			<h1 className={styles.title}>{title}</h1>
+			<Link href={`/blog/${id}`}>
+				<a>
+					<h1 className={styles.title}>{title}</h1>
+				</a>
+			</Link>
 			<br />
 			<div className={utils.spread}>
 				<Date dateString={date} />
@@ -46,6 +54,10 @@ function Post({ id, date, title, status, lazyHtml }) {
 			<div dangerouslySetInnerHTML={{ __html: lazyHtml }} className={`${styles.markdown}`} />
 			<hr className="backup" />
 			<style jsx>{`
+				h1 {
+					color: black;
+				}
+
 				hr {
 					margin-bottom: 2rem;
 				}
@@ -67,6 +79,9 @@ export default function blog({ allPostsData, allPostsText }) {
 
 	return (
 		<Layout>
+			<Head>
+				<title>Blog</title>
+			</Head>
 			<section>
 				<div className="test">
 					<ul className="col-side">

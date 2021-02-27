@@ -5,12 +5,7 @@ import Image from "next/image";
 import Contact from "./Contact";
 import Subscribe from "./Subscribe";
 import Home from "./SVGs/HomeSVG";
-
-const name = "Conor Barnes";
-export const siteTitle = "Conor Barnes!!!";
-// export const siteColor = "#fceff9";
-export const siteColor = "#547a84";
-export const siteSecondaryColor = "#df9c61";
+import { siteTitle } from "../consts/consts";
 
 export default function Layout({ children, home }) {
 	return (

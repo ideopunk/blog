@@ -11,7 +11,7 @@
 	transition: all 0.2s ease-out;
 }
 
-p {
+p, input, button {
 	font-family: "Spectral", serif;
 }
 

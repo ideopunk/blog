@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { siteColor, siteSecondaryColor } from "./Layout";
+import { siteColor, siteSecondaryColor } from "../consts/consts";
 import utils from "../styles/utils.module.css";
 
 export default function Subscribe() {
@@ -66,7 +66,6 @@ export default function Subscribe() {
 					flex-direction: column;
 					justify-content: space-around;
 					padding: 1rem;
-					background-color: ${siteSecondaryColor};
 					border-radius: 3px;
 				}
 

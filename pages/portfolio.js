@@ -1,7 +1,7 @@
 import Project from "../components/Project";
 import Head from "next/head";
-import Layout, { siteTitle } from "../components/Layout";
-import Resume from "../components/Resume";
+import Layout from "../components/Layout";
+import { siteTitle } from "../consts/consts";
 import JS from "../components/SVGs/langs/JS";
 import CSS from "../components/SVGs/langs/CSS";
 import HTML from "../components/SVGs/langs/HTML";

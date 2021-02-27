@@ -1,6 +1,5 @@
 import Image from "next/image";
 import utils from "../styles/utils.module.css";
-import Head from "next/head";
 import ScrollArrow from "./ScrollArrow";
 
 export default function Project({

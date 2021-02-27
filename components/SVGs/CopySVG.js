@@ -1,5 +1,5 @@
 import useState from "react";
-import { siteColor } from "../Layout";
+import { siteColor } from "../../consts/consts";
 
 export default function Copy() {
 	return (

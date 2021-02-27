@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import Copy from "./SVGs/CopySVG";
-import { siteColor } from "./Layout";
+import { siteColor } from "../consts/consts";
 
-const test = "red";
 
 export default function ContactForm() {
 	const [toast, setToast] = useState(false);
