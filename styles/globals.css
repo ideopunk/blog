@@ -7,9 +7,12 @@
 	margin: 0;
 	/* font-family: apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
 		Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
-	font-family: "Cormorant Garamond", serif;
 	scroll-behavior: smooth;
 	transition: all 0.2s ease-out;
+}
+
+p {
+	font-family: "Spectral", serif;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -69,7 +72,7 @@ h2 {
 }
 
 h3 {
-	font-size: 2rem;
+	font-size: 1.5rem;
 	font-weight: 600;
 }
 
@@ -107,7 +110,8 @@ hr {
 
 input[type="text"],
 input[type="email"] {
-	padding-left: 0.75rem;
+	padding-left: 0.25rem;
+	padding-top: 0.1rem;
 }
 
 input:hover {

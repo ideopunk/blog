@@ -20,9 +20,10 @@ function Languages() {
 				<JS />
 				<ReactIcon />
 				<img src="/images/next.png" width="33%" height="33%" />
+				<Git />
+
 				<Node />
 				<Express />
-				<Git />
 				<Mongo />
 			</div>
 			<style jsx>
@@ -54,7 +55,7 @@ export default function portfolio() {
 					color="white"
 					comp={<Languages />}
 					title="Work"
-					text="I'm a front-end engineer at WeFlop. When I'm not doing that, I'm building personal websites for people. If that's something you're interested in, my contact information is below!"
+					text="I'm a front-end engineer at Melange. When I'm not doing that, I'm building personal websites for people. If that's something you're interested in, my contact information is below!"
 					links={[]}
 					flip
 				/>

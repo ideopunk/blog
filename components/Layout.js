@@ -23,9 +23,10 @@ export default function Layout({ children, home }) {
 					title="RSS feed for blog posts"
 					href="https://www.conorbarnes.com/rss.xml"
 				/>
+
 				<link rel="preconnect" href="https://fonts.gstatic.com" />
 				<link
-					href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap"
+					href="https://fonts.googleapis.com/css2?family=Spectral:wght@300&display=swap"
 					rel="stylesheet"
 				/>
 				<meta name="description" content="Conor Barnes's site" />
@@ -46,7 +47,7 @@ export default function Layout({ children, home }) {
 				</Link>
 				<div>
 					<Link href="/portfolio">
-						<a className={utils.mrgR}>Works</a>
+						<a className={utils.mrgR}>Work</a>
 					</Link>
 					<Link href="/blog">
 						<a className={utils.mrgR}>Blog</a>
@@ -98,7 +99,7 @@ export default function Layout({ children, home }) {
 				header a:hover {
 					color: black;
 				}
-				
+
 				svg {
 					width: 25px;
 					height: 25px;

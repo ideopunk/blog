@@ -35,7 +35,7 @@ export async function getStaticProps() {
 function Post({ id, date, title, status, lazyHtml }) {
 	return (
 		<li className="container" key={id}>
-			<h1 className={title}>{title}</h1>
+			<h1 className={styles.title}>{title}</h1>
 			<br />
 			<div className={utils.spread}>
 				<Date dateString={date} />
@@ -43,10 +43,7 @@ function Post({ id, date, title, status, lazyHtml }) {
 			</div>
 			<hr />
 
-			<div
-				dangerouslySetInnerHTML={{ __html: lazyHtml }}
-				className={`${styles.markdown}`}
-			/>
+			<div dangerouslySetInnerHTML={{ __html: lazyHtml }} className={`${styles.markdown}`} />
 			<hr className="backup" />
 			<style jsx>{`
 				hr {
@@ -61,7 +58,7 @@ function Post({ id, date, title, status, lazyHtml }) {
 		</li>
 	);
 }
-export default function blog({ allPostsData, allArticlesData, allPostsText }) {
+export default function blog({ allPostsData, allPostsText }) {
 	const [loaded, setLoaded] = useState(false);
 
 	useEffect(() => {
@@ -85,17 +82,15 @@ export default function blog({ allPostsData, allArticlesData, allPostsText }) {
 						))}
 					</ul>
 					<ul className="col-main">
-						{allPostsText
-							.slice(0, 1)
-							.map(({ id, date, title, status, lazyHtml }) => (
-								<Post
-									id={id}
-									date={date}
-									title={title}
-									status={status}
-									lazyHtml={lazyHtml}
-								/>
-							))}
+						{allPostsText.slice(0, 1).map(({ id, date, title, status, lazyHtml }) => (
+							<Post
+								id={id}
+								date={date}
+								title={title}
+								status={status}
+								lazyHtml={lazyHtml}
+							/>
+						))}
 
 						{loaded &&
 							allPostsText
@@ -111,7 +106,7 @@ export default function blog({ allPostsData, allArticlesData, allPostsText }) {
 								))}
 					</ul>
 					<div className="col-side">
-						<div className={utils.mrgTop}>
+						{/* <div className={utils.mrgTop}>
 							<h3>Articles</h3>
 							{allArticlesData.map(
 								({ id, url, date, title, preview, coauthor, status }) => (
@@ -135,13 +130,13 @@ export default function blog({ allPostsData, allArticlesData, allPostsText }) {
 									</div>
 								)
 							)}
-						</div>
+						</div> */}
 						<SubscriptionBox />
 					</div>
 				</div>
 				<style jsx>{`
 					h3 {
-						padding-left: 1rem;
+						margin-left: 0.5rem;
 					}
 
 					.backup {
@@ -207,7 +202,6 @@ export default function blog({ allPostsData, allArticlesData, allPostsText }) {
 						padding: 1rem;
 						display: flex;
 						flex-direction: column;
-						align-items: center;
 					}
 				`}</style>
 			</section>

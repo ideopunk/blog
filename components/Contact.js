@@ -35,7 +35,7 @@ export default function ContactForm() {
 					target="_blank"
 					rel="noreferrer"
 				>
-					conorbarnes93@gmail.com
+					Email
 				</a>
 			</div>
 			<a className="linky" href="https://www.twitter.com/ideopunk">

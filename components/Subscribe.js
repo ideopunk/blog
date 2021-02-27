@@ -53,12 +53,10 @@ export default function Subscribe() {
 				type="email"
 			/>
 			<p className={utils.mrgTop}>
-				{message
-					? message
-					: `Receive notifications about new blog posts and other updates.`}
+				{message ? message : `Receive notifications about new blog posts.`}
 			</p>
 			<button className={utils.mrgTop} type="submit">
-				{"Subscribe"}
+				Subscribe
 			</button>
 			<style jsx>{`
 				.container {
@@ -69,6 +67,7 @@ export default function Subscribe() {
 					justify-content: space-around;
 					padding: 1rem;
 					background-color: ${siteSecondaryColor};
+					border-radius: 3px;
 				}
 
 				.container * {
@@ -82,10 +81,7 @@ export default function Subscribe() {
 					outline: none;
 					border: 2px solid ${siteColor};
 					font-size: 1.5rem;
-				}
-
-				input:active,
-				input:focus {
+					height: 1.8rem;
 				}
 
 				button {
@@ -96,19 +92,6 @@ export default function Subscribe() {
 					font-weight: 600;
 					letter-spacing: 1px;
 					padding: 0.5rem;
-				}
-
-				button:hover {
-					background-color: lightpink;
-				}
-				.corner {
-					border-bottom-right-radius: 20px;
-				}
-
-				@media (max-width: 1000px) {
-					.corner {
-						border-bottom-left-radius: 20px;
-					}
 				}
 			`}</style>
 		</form>

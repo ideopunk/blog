@@ -5,6 +5,8 @@ import utils from "../../styles/utils.module.css";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import Head from "next/head";
 import Date from "../../components/Date";
+import commentBox from "commentbox.io";
+import { useEffect } from "react";
 
 export async function getStaticProps({ params }) {
 	const postData = await getPostData(params.id, "blogposts");
@@ -24,6 +26,12 @@ export async function getStaticPaths() {
 }
 
 export default function Post({ postData }) {
+	useEffect(() => {
+		const removeCommentBox = commentBox(postData.id);
+
+		return () => removeCommentBox();
+	}, []);
+
 	return (
 		<Layout>
 			<Head>
@@ -42,12 +50,13 @@ export default function Post({ postData }) {
 					dangerouslySetInnerHTML={{ __html: postData.lazyHtml }}
 					className={`${styles.markdown}`}
 				/>
+				<div className={`commentbox ${utils.mrgBot}`} />
 			</article>
 			<style jsx>
 				{`
 					.container {
 						padding: 1rem;
-						max-width: 600px;
+						max-width: 900px;
 						text-align: center;
 						margin-left: auto;
 						margin-right: auto;
