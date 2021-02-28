@@ -39,6 +39,7 @@ export async function getStaticProps() {
 function PostPreview({ id, date, title, status, preview }) {
 	return (
 		<li className="container" key={id}>
+			
 			<Link href={`/blog/${id}`}>
 				<a>
 					<h3 className={styles.title}>{title}</h3>
@@ -88,7 +89,7 @@ export default function blog({ allPostsData, allPostsText }) {
 	return (
 		<Layout>
 			<Head>
-				<title>Blog</title>
+				<title>Ideopunk</title>
 			</Head>
 			<section>
 				<div className="test">

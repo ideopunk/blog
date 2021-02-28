@@ -1,10 +1,10 @@
-export default function Copy() {
+export default function Arrow() {
 	return (
-		<svg viewBox="0 0 512 512">
+		<svg viewBox="0 0 512 512" stroke="white">
 			<title>Chevron Down</title>
 			<path
 				fill="none"
-				stroke="currentColor"
+				stroke="white"
 				stroke-linecap="round"
 				stroke-linejoin="round"
 				stroke-width="48"

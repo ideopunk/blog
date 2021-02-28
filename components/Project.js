@@ -1,6 +1,21 @@
 import Image from "next/image";
 import utils from "../styles/utils.module.css";
 import ScrollArrow from "./ScrollArrow";
+import useWindowSize from "../lib/useWindowSize";
+
+const nextifyLink = (link, colorFlip) => {
+	return (
+		<a
+			className={utils.mrgR}
+			style={{ color: `${colorFlip && "green"}` }}
+			href={link.url}
+			target="_blank"
+			rel="noreferrer"
+		>
+			{link.domain}
+		</a>
+	);
+};
 
 export default function Project({
 	color,
@@ -15,19 +30,7 @@ export default function Project({
 	colorFlip,
 	dark,
 }) {
-	const nextifyLink = (link, colorFlip) => {
-		return (
-			<a
-				className={utils.mrgR}
-				style={{ color: `${colorFlip && "green"}` }}
-				href={link.url}
-				target="_blank"
-				rel="noreferrer"
-			>
-				{link.domain}
-			</a>
-		);
-	};
+	const { width: size } = useWindowSize();
 
 	return (
 		<div className="container" id={id}>
@@ -42,7 +45,7 @@ export default function Project({
 				<p className={utils.mrgBot}>{text}</p>
 				{links && links.map((link) => nextifyLink(link, colorFlip))}
 			</div>
-			<ScrollArrow to={id + 1} bottom={bottom} />
+			{size > 600 && <ScrollArrow to={id + 1} bottom={bottom} />}
 			<style jsx>{`
 				.container {
 					background-color: ${color};

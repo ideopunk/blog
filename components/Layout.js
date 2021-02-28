@@ -90,6 +90,10 @@ export default function Layout({ children, home }) {
 				}
 
 				@media (max-width: 600px) {
+					header {
+						padding-left: 1rem;
+						padding-right: 0rem;
+					}
 					footer {
 						flex-direction: column;
 					}

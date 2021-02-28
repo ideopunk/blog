@@ -35,7 +35,7 @@ export default function Post({ postData }) {
 	return (
 		<Layout>
 			<Head>
-				<title>{postData.title}</title>
+				<title>{postData.title} / Ideopunk </title>
 			</Head>
 			<article className="container">
 				<h1 className={styles.title}>{postData.title}</h1>

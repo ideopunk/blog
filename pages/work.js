@@ -52,7 +52,7 @@ export default function Work() {
 		<Layout>
 			<div>
 				<Head>
-					<title>Projects</title>
+					<title>Work / {siteTitle}</title>
 				</Head>
 
 				<Project
@@ -71,6 +71,7 @@ export default function Work() {
 					title="Melange"
 					text="I'm building the front-end of a social betting app in React Native."
 					links={[{ url: "https://www.melange.io/", domain: "Landing Page" }]}
+					bottom
 				/>
 			</div>
 		</Layout>

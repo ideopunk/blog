@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Arrow from "./SVGs/ArrowSVG";
 
 export default function ScrollArrow({ to, bottom }) {
