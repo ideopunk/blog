@@ -32,21 +32,21 @@ export default function Home({ latestPost }) {
 					<h1>Conor Barnes</h1>
 					<Link href="/portfolio">
 						<a>
-							<div className="card front tl">
+							<div className="card front">
 								<p>Hi there! I'm a web developer and a writer. Get in touch!</p>
 							</div>
 						</a>
 					</Link>
 					<Link href={`/blog/${latestPost.id}`}>
 						<a>
-							<div className={`card front tr`}>
-								<h2 className={`${utils.mrgBot}`}>Latest Blogpost</h2>
+							<div className={`card front`}>
+								<h3 className={`${utils.mrgBot}`}>Latest Blogpost</h3>
 
 								<h3>{latestPost.title}</h3>
 								<p className={`${utils.mrgBot}`}>
 									<Date dateString={latestPost.date} />
 								</p>
-								<p className={`${utils.mrgBot}`}>{latestPost.preview}</p>
+								<p className={`${utils.mrgBot}`}>{latestPost.preview}..</p>
 							</div>
 						</a>
 					</Link>
@@ -65,7 +65,7 @@ export default function Home({ latestPost }) {
 					h1 {
 						position: relative;
 						left: -250px;
-						top: -60px;
+						top: -10px;
 					}
 
 					.background {
@@ -97,42 +97,6 @@ export default function Home({ latestPost }) {
 						justify-content: center;
 						align-items: center;
 						width: 800px;
-					}
-					 {
-						/* 
-					.tl {
-						border-top-left-radius: ${bigrad};
-					}
-
-					.tr {
-						border-top-right-radius: ${bigrad};
-					}
-
-					.bl {
-						border-bottom-left-radius: ${bigrad};
-					}
-
-					.br {
-						border-bottom-right-radius: ${bigrad};
-					}
-
-					@media (max-width: 1000px) {
-						.tl {
-							border-top-right-radius: ${bigrad};
-						}
-
-						.tr {
-							border-radius: 0;
-						}
-
-						.bl {
-							border-radius: 0;
-						}
-
-						.br {
-							border-bottom-left-radius: ${bigrad};
-						}
-					} */
 					}
 				`}
 			</style>

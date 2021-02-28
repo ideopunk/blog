@@ -19,11 +19,6 @@ export default function Layout({ children, home }) {
 					href="https://www.conorbarnes.com/rss.xml"
 				/>
 
-				<link rel="preconnect" href="https://fonts.gstatic.com" />
-				<link
-					href="https://fonts.googleapis.com/css2?family=Spectral:wght@300&display=swap"
-					rel="stylesheet"
-				/>
 				<meta name="description" content="Conor Barnes's site" />
 				<meta
 					property="og:image"
@@ -34,7 +29,7 @@ export default function Layout({ children, home }) {
 				<meta name="og:title" content={siteTitle} />
 				<meta name="twitter:card" content="summary_large_image" />
 			</Head>
-			<header className={utils.pad} id="top">
+			<header id="top">
 				<Link href="/">
 					<a className={utils.mrgR}>
 						<Home />
@@ -63,18 +58,27 @@ export default function Layout({ children, home }) {
 					position: sticky;
 					width: 100%;
 					height: 40px;
-					margin-top: 2rem;
 					top: 0;
 					left: 0;
 					z-index: 1;
 					justify-content: space-between;
 					font-weight: 600;
 					background-color: rgba(255, 255, 255, 0.8);
+					padding: 2rem;
 				}
 
+				@media (max-width: 600px) {
+					header {
+						position: fixed;
+					}
+				}
+				
 				footer {
 					justify-content: space-evenly;
 					padding: 2rem;
+					padding-left: 5rem;
+					padding-right: 5rem;
+
 					height: fit-content;
 				}
 
@@ -82,9 +86,13 @@ export default function Layout({ children, home }) {
 				footer {
 					display: flex;
 					align-items: center;
-					padding-left: 5rem;
-					padding-right: 5rem;
 					font-size: 1.45rem;
+				}
+
+				@media (max-width: 600px) {
+					footer {
+						flex-direction: column;
+					}
 				}
 
 				header a {

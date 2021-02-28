@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Head from "next/head";
-import Layout from "../components/Layout";
+import Layout from "../../components/Layout";
 
-import { siteTitle, siteColor } from "../consts/consts";
+import { siteTitle, siteColor } from "../../consts/consts";
 
 import { getSortedPostsData, getPostData } from "../../lib/posts";
 import Link from "next/link";
@@ -36,22 +36,21 @@ export async function getStaticProps() {
 	};
 }
 
-function Post({ id, date, title, status, lazyHtml }) {
+function PostPreview({ id, date, title, status, preview }) {
 	return (
 		<li className="container" key={id}>
 			<Link href={`/blog/${id}`}>
 				<a>
-					<h1 className={styles.title}>{title}</h1>
+					<h3 className={styles.title}>{title}</h3>
 				</a>
 			</Link>
 			<br />
-			<div className={utils.spread}>
+			<div className={`${utils.spread} ${utils.mrgBot} bgr`}>
 				<Date dateString={date} />
 				<small className={styles.status}>Epistemic status: {status}</small>
 			</div>
-			<hr />
 
-			<div dangerouslySetInnerHTML={{ __html: lazyHtml }} className={`${styles.markdown}`} />
+			<div style={utils.mrgTop}>{preview}</div>
 			<hr className="backup" />
 			<style jsx>{`
 				h1 {
@@ -62,21 +61,26 @@ function Post({ id, date, title, status, lazyHtml }) {
 					margin-bottom: 2rem;
 				}
 
+				@media (max-width: 600px) {
+					h3 {
+						font-size: 1.25rem;
+					}
+				}
+				
 				.backup {
 					margin-top: 2rem;
 					margin-bottom: 4rem;
+				}
+
+				.bgr {
+					display: flex;
+					flex-direction: column;
 				}
 			`}</style>
 		</li>
 	);
 }
 export default function blog({ allPostsData, allPostsText }) {
-	const [loaded, setLoaded] = useState(false);
-
-	useEffect(() => {
-		setLoaded(true);
-	}, []);
-
 	return (
 		<Layout>
 			<Head>
@@ -84,41 +88,16 @@ export default function blog({ allPostsData, allPostsText }) {
 			</Head>
 			<section>
 				<div className="test">
-					<ul className="col-side">
-						<li>
-							<h3>Blog</h3>
-						</li>
-						{allPostsData.map(({ id, date, title, preview, status }) => (
-							<li key={id} className="blogpost">
-								<Link href={`/blog/${id}`}>
-									<a className="title">{title}</a>
-								</Link>
-							</li>
-						))}
-					</ul>
 					<ul className="col-main">
-						{allPostsText.slice(0, 1).map(({ id, date, title, status, lazyHtml }) => (
-							<Post
+						{allPostsData.map(({ id, date, title, status, preview }) => (
+							<PostPreview
 								id={id}
 								date={date}
 								title={title}
 								status={status}
-								lazyHtml={lazyHtml}
+								preview={preview}
 							/>
 						))}
-
-						{loaded &&
-							allPostsText
-								.slice(1)
-								.map(({ id, date, title, status, lazyHtml }) => (
-									<Post
-										id={id}
-										date={date}
-										title={title}
-										status={status}
-										lazyHtml={lazyHtml}
-									/>
-								))}
 					</ul>
 					<div className="col-side">
 						{/* <div className={utils.mrgTop}>
@@ -208,7 +187,6 @@ export default function blog({ allPostsData, allPostsText }) {
 						padding: 1rem;
 						display: flex;
 						flex-direction: column;
-						align-items: center;
 					}
 
 					.col-side {
@@ -217,6 +195,12 @@ export default function blog({ allPostsData, allPostsText }) {
 						padding: 1rem;
 						display: flex;
 						flex-direction: column;
+					}
+
+					@media (max-width: 600px) {
+						.col-side {
+							display: none;
+						}
 					}
 				`}</style>
 			</section>

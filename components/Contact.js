@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import Copy from "./SVGs/CopySVG";
 import { siteColor } from "../consts/consts";
 
-
 export default function ContactForm() {
 	const [toast, setToast] = useState(false);
 
@@ -36,13 +35,28 @@ export default function ContactForm() {
 					Email
 				</a>
 			</div>
-			<a className="linky" href="https://www.twitter.com/ideopunk">
+			<a
+				className="linky"
+				target="_blank"
+				rel="noopener noreferrer"
+				href="https://www.twitter.com/ideopunk"
+			>
 				Twitter
 			</a>
-			<a className="linky" href="https://github.com/ideopunk">
+			<a
+				className="linky"
+				target="_blank"
+				rel="noopener noreferrer"
+				href="https://github.com/ideopunk"
+			>
 				GitHub
 			</a>
-			<a className="linky" href="https://www.linkedin.com/in/conor-barnes-b49833206/">
+			<a
+				className="linky"
+				target="_blank"
+				rel="noopener noreferrer"
+				href="https://www.linkedin.com/in/conor-barnes-b49833206/"
+			>
 				LinkedIn
 			</a>
 
@@ -81,6 +95,29 @@ export default function ContactForm() {
 
 					.toast {
 						color: ${siteColor};
+					}
+
+					@media (max-width: 600px) {
+						.contact {
+							flex-direction: row;
+							flex-wrap: wrap;
+							width: 100%;
+						}
+
+						.contact > * {
+							width: 50%;
+							text-align: center;
+						}
+
+						.email {
+							display: flex;
+							justify-content: center;
+							align-items: flex-start;
+						}
+
+						.move {
+							left: 2rem;
+						}
 					}
 				`}
 			</style>
