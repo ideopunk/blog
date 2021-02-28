@@ -65,6 +65,7 @@ export default function Layout({ children, home }) {
 					font-weight: 600;
 					background-color: rgba(255, 255, 255, 0.8);
 					padding: 2rem;
+					align-items: center;
 				}
 
 				@media (max-width: 600px) {
@@ -85,7 +86,6 @@ export default function Layout({ children, home }) {
 				header,
 				footer {
 					display: flex;
-					align-items: center;
 					font-size: 1.45rem;
 				}
 

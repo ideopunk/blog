@@ -64,8 +64,6 @@ export default function Subscribe() {
 					height: 200px;
 					display: flex;
 					flex-direction: column;
-					justify-content: space-around;
-					padding: 1rem;
 					border-radius: 3px;
 				}
 

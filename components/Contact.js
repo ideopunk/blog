@@ -107,17 +107,17 @@ export default function ContactForm() {
 
 						.contact > * {
 							width: 50%;
-							text-align: center;
+							text-align: start;
 						}
 
 						.email {
 							display: flex;
-							justify-content: center;
+							justify-content: flex-start;
 							align-items: flex-start;
 						}
 
 						.move {
-							left: 0rem;
+							left: -2rem;
 						}
 					}
 				`}

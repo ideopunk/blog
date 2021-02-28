@@ -30,7 +30,7 @@ export default function Home({ latestPost }) {
 				<Image src="/headshot.jpeg" alt="headshot" width={500} height={625} />
 				<div className="box ">
 					<h1>Conor Barnes</h1>
-					<Link href="/portfolio">
+					<Link href="/work">
 						<a>
 							<div className="card front">
 								<p>Hi there! I'm a web developer and a writer. Get in touch!</p>
@@ -97,6 +97,23 @@ export default function Home({ latestPost }) {
 						justify-content: center;
 						align-items: center;
 						width: 800px;
+					}
+
+					@media (max-width: 900px) {
+						section {
+							flex-direction: column;
+							align-items: center;
+						}
+
+						.box {
+							width: 100%;
+						}
+
+						h1 {
+							position: static;
+							padding-top: 1rem;
+							padding-bottom: 1rem;
+						}
 					}
 				`}
 			</style>

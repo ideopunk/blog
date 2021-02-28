@@ -31,7 +31,6 @@ button {
 	}
 }
 
-
 /* body::-webkit-scrollbar {
   background-color: rgba(0 0, 0, 0);
 	width: 1em;
@@ -93,9 +92,7 @@ hr {
 	background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
 
-
 .card {
-
 	margin: 1rem;
 	padding: 1rem;
 	width: 450px;
@@ -106,6 +103,13 @@ hr {
 
 .card:hover {
 	background-color: #fceff9;
+}
+
+@media (max-width: 600px) {
+	.card {
+		width: 100%;
+		height: fit-content;
+	}
 }
 
 input[type="text"],
