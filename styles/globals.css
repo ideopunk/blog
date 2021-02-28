@@ -93,14 +93,8 @@ hr {
 	background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
 
-/* svg {
-	width: 25px;
-	height: 25px;
-} */
 
 .card {
-	/* border-radius: 3px; */
-	/* border: 2px solid pink; */
 
 	margin: 1rem;
 	padding: 1rem;

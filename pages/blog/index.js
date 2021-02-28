@@ -66,7 +66,7 @@ function PostPreview({ id, date, title, status, preview }) {
 						font-size: 1.25rem;
 					}
 				}
-				
+
 				.backup {
 					margin-top: 2rem;
 					margin-bottom: 4rem;
@@ -185,6 +185,8 @@ export default function blog({ allPostsData, allPostsText }) {
 						flex: 5;
 						margin: 1rem;
 						padding: 1rem;
+						padding-left: 4rem;
+						padding-right: 4rem;
 						display: flex;
 						flex-direction: column;
 					}
@@ -198,6 +200,13 @@ export default function blog({ allPostsData, allPostsText }) {
 					}
 
 					@media (max-width: 600px) {
+						.col-main {
+							padding: 0;
+							margin-top: 0;
+							padding-left: 0.5rem;
+							padding-right: 0.5rem;
+						}
+
 						.col-side {
 							display: none;
 						}

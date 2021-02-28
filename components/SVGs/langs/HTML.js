@@ -1,6 +1,6 @@
-export default function HTML() {
+export default function HTML({ size }) {
 	return (
-		<svg width="33%" height="33%">
+		<svg width={size} height={size} viewBox="0 0 128 128">
 			<path
 				fill="#E44D26"
 				d="M19.037 113.876l-10.005-112.215h109.936l-10.016 112.198-45.019 12.48z"

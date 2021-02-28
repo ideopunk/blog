@@ -1,6 +1,6 @@
-export default function JS() {
+export default function JS({ size }) {
 	return (
-		<svg width="33%" height="33%">
+		<svg width={size} height={size} viewBox="0 0 128 128">
 			<path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185h-125.184z"></path>
 			<path
 				fill="#323330"

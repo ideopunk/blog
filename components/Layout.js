@@ -36,7 +36,7 @@ export default function Layout({ children, home }) {
 					</a>
 				</Link>
 				<div>
-					<Link href="/portfolio">
+					<Link href="/work">
 						<a className={utils.mrgR}>Work</a>
 					</Link>
 					<Link href="/blog">
@@ -69,10 +69,10 @@ export default function Layout({ children, home }) {
 
 				@media (max-width: 600px) {
 					header {
-						position: fixed;
+						position: static;
 					}
 				}
-				
+
 				footer {
 					justify-content: space-evenly;
 					padding: 2rem;

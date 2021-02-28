@@ -116,7 +116,7 @@ export default function ContactForm() {
 						}
 
 						.move {
-							left: 2rem;
+							left: 0rem;
 						}
 					}
 				`}

@@ -1,6 +1,6 @@
-export default function Mongo() {
+export default function Mongo({ size }) {
 	return (
-		<svg width="33%" height="33%">
+		<svg width={size} height={size} viewBox="0 0 128 128">
 			<path
 				fill-rule="evenodd"
 				clip-rule="evenodd"
