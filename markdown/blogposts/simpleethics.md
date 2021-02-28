@@ -2,7 +2,7 @@
 title: "A Simple Ethics Model"
 date: "2021-01-22"
 status: "Medium confidence, not surprised if I'm missing something important"
-preview: "This year sucked! However, I was lucky to spend most of it learning."
+preview: "I’ve been thinking about normative ethics lately."
 ---
 
 Hi! This is probably the last post of mine you’ll read on WordPress, I’m halfway done moving this blog over to a personal site. Subscriptions should transfer over cleanly. 
