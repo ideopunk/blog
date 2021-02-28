@@ -102,6 +102,7 @@ export default function ContactForm() {
 							flex-direction: row;
 							flex-wrap: wrap;
 							width: 100%;
+							height: 100px;
 						}
 
 						.contact > * {

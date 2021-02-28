@@ -61,12 +61,6 @@ function PostPreview({ id, date, title, status, preview }) {
 					margin-bottom: 2rem;
 				}
 
-				@media (max-width: 600px) {
-					h3 {
-						font-size: 1.25rem;
-					}
-				}
-
 				.backup {
 					margin-top: 2rem;
 					margin-bottom: 4rem;
@@ -75,6 +69,16 @@ function PostPreview({ id, date, title, status, preview }) {
 				.bgr {
 					display: flex;
 					flex-direction: column;
+				}
+
+				@media (max-width: 600px) {
+					h3 {
+						font-size: 1.25rem;
+					}
+
+					.backup {
+						margin-bottom: 1rem;
+					}
 				}
 			`}</style>
 		</li>
@@ -100,31 +104,6 @@ export default function blog({ allPostsData, allPostsText }) {
 						))}
 					</ul>
 					<div className="col-side">
-						{/* <div className={utils.mrgTop}>
-							<h3>Articles</h3>
-							{allArticlesData.map(
-								({ id, url, date, title, preview, coauthor, status }) => (
-									<div className="blogpost">
-										<div key={id}>
-											<a
-												target="_blank"
-												rel="noopener noreferrer"
-												href={url}
-												className="title"
-											>
-												{title}
-											</a>
-											<p>
-												<Date dateString={date} />
-											</p>
-											{coauthor && (
-												<p className={utils.txtmed}>With {coauthor}</p>
-											)}
-										</div>
-									</div>
-								)
-							)}
-						</div> */}
 						<SubscriptionBox />
 					</div>
 				</div>

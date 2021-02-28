@@ -31,8 +31,12 @@ export default function Project({
 
 	return (
 		<div className="container" id={id}>
-			{img && <Image className={utils.rad} src={img} width={400} height={400} alt={title} />}
-			{comp && comp}
+			<span>
+				{img && (
+					<Image className={utils.rad} src={img} width={400} height={400} alt={title} />
+				)}
+				{comp && comp}
+			</span>
 			<div className="text-container">
 				<h2 className={utils.mrgBot}>{title}</h2>
 				<p className={utils.mrgBot}>{text}</p>
@@ -73,10 +77,20 @@ export default function Project({
 				@media (max-width: 600px) {
 					.container {
 						flex-direction: column;
+						height: fit-content;
+					}
+
+					.container > * {
+						margin: 1rem;
+						margin-top: 2rem;
 					}
 
 					.text-container {
-						width: 400px;
+						padding: 1rem;
+						width: 100%;
+						margin-top: 0;
+						padding-top: 0;
+						padding-bottom: 4rem;
 					}
 				}
 			`}</style>

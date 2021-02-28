@@ -17,18 +17,21 @@ import useWindowSize from "../lib/useWindowSize";
 
 function Languages() {
 	const { width: size } = useWindowSize();
+
+	const mobileRatio = size <= 600 ? 6 : 12;
+
 	return (
 		<>
-			<div className="lang" style={{ width: size / 4 }}>
-				<HTML size={size / 12} />
-				<CSS size={size / 12} />
-				<JS size={size / 12} />
-				<ReactIcon size={size / 12} />
-				<NextIcon size={size / 12} />
-				<Git size={size / 12} />
-				<Node size={size / 12} />
-				<Express size={size / 12} />
-				<Mongo size={size / 12} />
+			<div className="lang" style={{ width: size / (mobileRatio / 3) }}>
+				<HTML size={size / mobileRatio} />
+				<CSS size={size / mobileRatio} />
+				<JS size={size / mobileRatio} />
+				<ReactIcon size={size / mobileRatio} />
+				<NextIcon size={size / mobileRatio} />
+				<Git size={size / mobileRatio} />
+				<Node size={size / mobileRatio} />
+				<Express size={size / mobileRatio} />
+				<Mongo size={size / mobileRatio} />
 			</div>
 			<style jsx>
 				{`
