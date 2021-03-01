@@ -8,7 +8,6 @@ import Date from "../components/Date";
 import utils from "../styles/utils.module.css";
 import Subscribe from "../components/Subscribe";
 
-
 export async function getStaticProps() {
 	const latestPost = getLatestPostData("blogposts");
 	return {
@@ -26,7 +25,7 @@ export default function Home({ latestPost }) {
 			</Head>
 			<section>
 				<div className="background" />
-				<Image src="/headshot.jpeg" alt="headshot" width={500} height={625} />
+				<Image src="/headshot.jpeg" alt="headshot" width={500} height={625} priority />
 				<div className="box ">
 					<h1>Conor Barnes</h1>
 					<Link href="/work">
