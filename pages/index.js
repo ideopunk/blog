@@ -8,7 +8,6 @@ import Date from "../components/Date";
 import utils from "../styles/utils.module.css";
 import Subscribe from "../components/Subscribe";
 
-const bigrad = "20px";
 
 export async function getStaticProps() {
 	const latestPost = getLatestPostData("blogposts");
@@ -32,7 +31,7 @@ export default function Home({ latestPost }) {
 					<h1>Conor Barnes</h1>
 					<Link href="/work">
 						<a>
-							<div className="card front">
+							<div className="card front prev">
 								<p>Hi there! I'm a web developer and a writer. Get in touch!</p>
 							</div>
 						</a>
@@ -97,6 +96,11 @@ export default function Home({ latestPost }) {
 						justify-content: center;
 						align-items: center;
 						width: 800px;
+					}
+
+					.prev {
+						display: flex;
+						align-items: center;
 					}
 
 					@media (max-width: 900px) {
