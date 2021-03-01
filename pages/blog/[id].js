@@ -62,6 +62,13 @@ export default function Post({ postData }) {
 						margin-right: auto;
 					}
 
+					@media (max-width: 600px) {
+						.container {
+							margin-left: 1rem;
+							margin-right: 1rem;
+						}
+					}
+					
 					.container > * {
 						margin-bottom: 1rem;
 					}

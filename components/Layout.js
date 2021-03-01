@@ -22,7 +22,7 @@ export default function Layout({ children, home }) {
 				<meta name="description" content="Conor Barnes's site" />
 				<meta
 					property="og:image"
-					content={`http://www.artnet.com/WebServices/images/ll00762lldjkYGFgFaECfDrCWvaHBOc4uYC/nobuyoshi-araki-flowers.jpg`}
+					content="http://www.artnet.com/WebServices/images/ll00762lldjkYGFgFaECfDrCWvaHBOc4uYC/nobuyoshi-araki-flowers.jpg"
 				/>
 				<meta name="og:title" content={siteTitle} />
 				<meta name="twitter:card" content="summary_large_image" />
