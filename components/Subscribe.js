@@ -31,12 +31,11 @@ export default function Subscribe() {
 		if (error) {
 			// 4. If there was an error, update the message in state.
 			setMessage(error);
-			return;
+		} else {
+			// 5. Clear the input value and show a success message.
+			setEmail("");
+			setMessage("Success! 🎉 You are now subscribed to the newsletter.");
 		}
-
-		// 5. Clear the input value and show a success message.
-		setEmail("");
-		setMessage("Success! 🎉 You are now subscribed to the newsletter.");
 	};
 
 	return (

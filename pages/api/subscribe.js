@@ -33,10 +33,18 @@ export default async (req, res) => {
 			}
 		);
 
+		const rj = await response.json();
+
+		if (rj.title === "Member Exists") {
+			return res.json({
+				error:
+					"It looks like you're already subscribed, probably via the old wordpress blog! ",
+			});
+		}
 		// 7. Swallow any errors from Mailchimp and return a better error message.
 		if (response.status >= 400) {
 			return res.status(400).json({
-				error: `There was an error subscribing to the newsletter. Email me at [conorbarnes93@gmail.com] and I'll figure it out!`,
+				error: `There was an error subscribing to the newsletter. Email me at conorbarnes93@gmail.com and I'll figure it out!`,
 			});
 		}
 
