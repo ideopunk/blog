@@ -19,7 +19,7 @@ export default function Layout({ children, home }) {
 					href="https://www.conorbarnes.com/rss.xml"
 				/>
 
-				<meta name="description" content="Conor Barnes's site" />
+				<meta name="description" content="ball hard fall hard" />
 				<meta
 					property="og:image"
 					content="http://www.artnet.com/WebServices/images/ll00762lldjkYGFgFaECfDrCWvaHBOc4uYC/nobuyoshi-araki-flowers.jpg"
