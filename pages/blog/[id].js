@@ -26,8 +26,9 @@ export async function getStaticPaths() {
 }
 
 export default function Post({ postData }) {
+	console.log(postData)
 	useEffect(() => {
-		const removeCommentBox = commentBox(postData.id);
+		const removeCommentBox = commentBox("5634391980113920-proj");
 
 		return () => removeCommentBox();
 	}, []);
