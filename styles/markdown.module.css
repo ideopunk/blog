@@ -64,6 +64,10 @@
 	margin-right: auto;
 }
 
+.markdown sup {
+	font-size: 14px;
+}
+
 @media (max-width: 600px) {
 	.markdown p,
 	.markdown li {
