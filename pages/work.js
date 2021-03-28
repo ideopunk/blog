@@ -12,7 +12,7 @@ import NextIcon from "../components/SVGs/langs/NextIcon";
 import Express from "../components/SVGs/langs/Express";
 import Git from "../components/SVGs/langs/Git";
 import Mongo from "../components/SVGs/langs/Mongo";
-import { useState } from "react";
+import TS from "../components/SVGs/langs/TS";
 import useWindowSize from "../lib/useWindowSize";
 
 function Languages() {
@@ -28,10 +28,10 @@ function Languages() {
 				<JS size={size / mobileRatio} />
 				<ReactIcon size={size / mobileRatio} />
 				<NextIcon size={size / mobileRatio} />
-				<Git size={size / mobileRatio} />
+				<TS size={size / mobileRatio} />
 				<Node size={size / mobileRatio} />
 				<Express size={size / mobileRatio} />
-				<Mongo size={size / mobileRatio} />
+				<Git size={size / mobileRatio} />
 			</div>
 			<style jsx>
 				{`
@@ -59,7 +59,7 @@ export default function Work() {
 					id={0}
 					color="white"
 					comp={<Languages />}
-					text="I'm a front-end engineer at Melange. When I'm not doing that, I'm building personal websites for people. If that's something you're interested in, my contact information is below!"
+					text="I'm a front-end engineer at Melange. When I'm not doing that, I'm teaching myself Rust. If you ever want to talk programming, my contact information is below!"
 					links={[]}
 					flip
 				/>
