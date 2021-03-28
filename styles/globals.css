@@ -1,14 +1,14 @@
 :root {
 	--secondary-color: #df9c61;
 }
-
+/* 
 @font-face {
 	font-family: "Spectral";
 	font-style: normal;
 	font-weight: 300;
 	font-display: swap;
-	src: local("Spectral"), url("/fonts/Spectra-Light.ttf") format("ttf");
-}
+	src: local("Spectral"), url("/fonts/Spectral-Light.ttf") format("ttf");
+} */
 
 * {
 	padding: 0;
@@ -16,6 +16,8 @@
 	scroll-behavior: smooth;
 	box-sizing: border-box;
 	transition: all 0.2s ease-out;
+	font-family: "Spectral", serif;
+
 }
 
 p,

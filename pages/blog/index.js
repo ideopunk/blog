@@ -12,7 +12,6 @@ import fs from "fs";
 import SubscriptionBox from "../../components/Subscribe";
 import utils from "../../styles/utils.module.css";
 import styles from "../../styles/markdown.module.css";
-import { useEffect } from "react";
 
 // generating rss here as side-effect
 export async function getStaticProps() {
