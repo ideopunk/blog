@@ -47,8 +47,9 @@ Could you be working on them?
 
 ---
 
-1. https://www.e-flux.com/journal/46/60088/maximum-jailbreak/
-"Fedorov understood the single common nemesis of all human beings to be death, and that getting rid of it could serve as a common rallying point around which all human beings could agree."
+1. [https://www.e-flux.com/journal/46/60088/maximum-jailbreak/](https://www.e-flux.com/journal/46/60088/maximum-jailbreak/)
+
+_"Fedorov understood the single common nemesis of all human beings to be death, and that getting rid of it could serve as a common rallying point around which all human beings could agree."_
 
 My examples here are "futurist"-y to demonstrate the scope of progressivism, but I think there are plenty of short-term goals for progressives. I also would identify as a progressive before identifying as a futurist because I think the humanist associations with progressivism are important.
 
