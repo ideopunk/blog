@@ -21,7 +21,10 @@ function Languages() {
 
 	return (
 		<>
-			<div className="lang" style={{ width: size / (mobileRatio / 3) }}>
+			<div
+				className="flex flex-wrap items-center justify-center"
+				style={{ width: size / (mobileRatio / 3) }}
+			>
 				<HTML size={size / mobileRatio} />
 				<CSS size={size / mobileRatio} />
 				<JS size={size / mobileRatio} />
@@ -32,16 +35,6 @@ function Languages() {
 				<Express size={size / mobileRatio} />
 				<Git size={size / mobileRatio} />
 			</div>
-			<style jsx>
-				{`
-					.lang {
-						display: flex;
-						flex-wrap: wrap;
-						justify-content: center;
-						align-items: center;
-					}
-				`}
-			</style>
 		</>
 	);
 }

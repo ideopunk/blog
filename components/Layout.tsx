@@ -1,13 +1,13 @@
 import Head from "next/head";
-import utils from "../styles/utils.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import Contact from "./Contact";
 import Subscribe from "./Subscribe";
 import Home from "./SVGs/HomeSVG";
 import { siteTitle } from "../consts/consts";
+import { ReactNode } from "react";
 
-export default function Layout({ children }) {
+export default function Layout({ children }: { children: ReactNode }) {
 	return (
 		<div>
 			<Head>
@@ -27,89 +27,33 @@ export default function Layout({ children }) {
 				<meta name="og:title" content={siteTitle} />
 				<meta name="twitter:card" content="summary_large_image" />
 			</Head>
-			<header id="top">
+			<header
+				id="top"
+				className="flex text-lg static sm:sticky w-full h-10 top-0 left-0 z-10 justify-between font-semibold backdrop-opacity-80 pl-4 pr-0 sm:pl-0 p-8 items-center"
+			>
 				<Link href="/">
-					<a className={utils.mrgR}>
+					<a className="mr-4 transition ease-out hover:text-black">
 						<Home />
 					</a>
 				</Link>
 				<div>
 					<Link href="/work">
-						<a className={utils.mrgR}>Work</a>
+						<a className="mr-4 transition ease-out hover:text-black">Work</a>
 					</Link>
 					<Link href="/blog">
-						<a className={utils.mrgR}>Blog</a>
+						<a className="mr-4 transition ease-out hover:text-black">Blog</a>
 					</Link>
-					<a className={utils.mrgR} href="#contact">
+					<a className="mr-4 transition ease-out hover:text-black" href="#contact">
 						Contact
 					</a>
 				</div>
 			</header>
 			<main>{children}</main>
 
-			<footer className={utils.pad}>
+			<footer className="p-4 flex text-lg flex-col sm:flex-row justify-evenly py-8 px-20">
 				<Contact />
 				<Subscribe />
 			</footer>
-			<style jsx>{`
-				header {
-					position: sticky;
-					width: 100%;
-					height: 40px;
-					top: 0;
-					left: 0;
-					z-index: 1;
-					justify-content: space-between;
-					font-weight: 600;
-					background-color: rgba(255, 255, 255, 0.8);
-					padding: 2rem;
-					align-items: center;
-				}
-
-				@media (max-width: 600px) {
-					header {
-						position: static;
-					}
-				}
-
-				footer {
-					justify-content: space-evenly;
-					padding: 2rem;
-					padding-left: 5rem;
-					padding-right: 5rem;
-
-					height: fit-content;
-				}
-
-				header,
-				footer {
-					display: flex;
-					font-size: 1.45rem;
-				}
-
-				@media (max-width: 600px) {
-					header {
-						padding-left: 1rem;
-						padding-right: 0rem;
-					}
-					footer {
-						flex-direction: column;
-					}
-				}
-
-				header a {
-					transition: all 0.4s ease-out;
-				}
-
-				header a:hover {
-					color: black;
-				}
-
-				svg {
-					width: 25px;
-					height: 25px;
-				}
-			`}</style>
 		</div>
 	);
 }

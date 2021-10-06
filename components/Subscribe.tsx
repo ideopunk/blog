@@ -1,6 +1,5 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 import { siteColor, siteSecondaryColor } from "../consts/consts";
-import utils from "../styles/utils.module.css";
 
 export default function Subscribe() {
 	// 1. Create a reference to the input so we can fetch/clear it's value.
@@ -17,12 +16,8 @@ export default function Subscribe() {
 
 		// 3. Send a request to our API with the user's email address.
 		const res = await fetch("/api/subscribe", {
-			body: JSON.stringify({
-				email: email,
-			}),
-			headers: {
-				"Content-Type": "application/json",
-			},
+			body: JSON.stringify({ email: email }),
+			headers: { "Content-Type": "application/json" },
 			method: "POST",
 		});
 
@@ -39,9 +34,11 @@ export default function Subscribe() {
 	}
 
 	return (
-		<form onSubmit={subscribe} className={`container`}>
+		<form onSubmit={subscribe} className="h-48 flex flex-col rounded max-w-lg">
 			<h3>Subscribe</h3>
-			<label htmlFor="email-input">Email address</label>
+			<label className="invisible" htmlFor="email-input">
+				Email address
+			</label>
 			<input
 				id="email-input"
 				name="email"
@@ -49,47 +46,18 @@ export default function Subscribe() {
 				placeholder="Email address"
 				required
 				onChange={handleChange}
+				className="outline-none border-2 text-xl h-7 border-primary"
 				type="email"
 			/>
-			<p className={utils.mrgTop}>
+			<p className="mt-4">
 				{message ? message : `Receive notifications about new blog posts.`}
 			</p>
-			<button className={utils.mrgTop} type="submit">
+			<button
+				className="mt-4 border-0 text-xl transition ease-out font-semibold tracking-wide p-2 bg-primary"
+				type="submit"
+			>
 				Subscribe
 			</button>
-			<style jsx>{`
-				.container {
-					max-width: 500px;
-					height: 200px;
-					display: flex;
-					flex-direction: column;
-					border-radius: 3px;
-				}
-
-				.container * {
-					font-size: 1.2rem;
-				}
-				label {
-					visibility: hidden;
-				}
-
-				input {
-					outline: none;
-					border: 2px solid ${siteColor};
-					font-size: 1.5rem;
-					height: 1.8rem;
-				}
-
-				button {
-					border: 0;
-					background-color: ${siteColor};
-					font-size: 1.5rem;
-					transition: all 0.2s ease-out;
-					font-weight: 600;
-					letter-spacing: 1px;
-					padding: 0.5rem;
-				}
-			`}</style>
 		</form>
 	);
 }

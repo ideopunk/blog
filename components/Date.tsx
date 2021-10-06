@@ -1,10 +1,9 @@
 import { parseISO, format } from "date-fns";
-import utils from "../styles/utils.module.css";
 
-export default function Date({ dateString }) {
+export default function Date({ dateString }: { dateString: string }) {
 	const date = parseISO(dateString);
 	return (
-		<time className={utils.txtlil} dateTime={dateString}>
+		<time className="text-sm" dateTime={dateString}>
 			{format(date, "LLLL d, yyyy")}
 		</time>
 	);

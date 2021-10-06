@@ -1,6 +1,5 @@
 import Layout from "../../components/Layout";
 import styles from "../../styles/markdown.module.css";
-import utils from "../../styles/utils.module.css";
 
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import Head from "next/head";
@@ -30,43 +29,21 @@ export default function Post({ postData }) {
 			<Head>
 				<title>{postData.title} / Ideopunk </title>
 			</Head>
-			<article className="container">
-				<h1 className={styles.title}>{postData.title}</h1>
+			<article className="mx-4 sm:mx-auto max-w-4xl text-center p-4">
+				<h1 className="text-2xl mb-4">{postData.title}</h1>
 				<br />
-				<div className={utils.spread}>
+				<div className="flex justify-between mb-4">
 					<Date dateString={postData.date} />
-					<small className={styles.status}>Epistemic status: {postData.status}</small>
+					<small className="italic">Epistemic status: {postData.status}</small>
 				</div>
 				<hr />
 
 				<div
 					dangerouslySetInnerHTML={{ __html: postData.lazyHtml }}
-					className={`${styles.markdown}`}
+					className={`${styles.markdown} mb-4`}
 				/>
-				<div className={`commentbox ${utils.mrgBot}`} />
+				<div className={`commentbox mb-4`} />
 			</article>
-			<style jsx>
-				{`
-					.container {
-						padding: 1rem;
-						max-width: 900px;
-						text-align: center;
-						margin-left: auto;
-						margin-right: auto;
-					}
-
-					@media (max-width: 600px) {
-						.container {
-							margin-left: 1rem;
-							margin-right: 1rem;
-						}
-					}
-
-					.container > * {
-						margin-bottom: 1rem;
-					}
-				`}
-			</style>
 		</Layout>
 	);
 }

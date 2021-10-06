@@ -19,103 +19,35 @@ export default function Home({ latestPost }) {
 			<Head>
 				<title>{siteTitle}</title>
 			</Head>
-			<section>
-				<div className="background" />
+			<section className="flex flex-col md:flex-row items-center mx-4 my-16 justify-between relative">
+				<div className="top-8 -left-8 absolute w-[95vw] h-[550px] bg-primary z-0" />
 				<Image src="/headshot.jpeg" alt="headshot" width={500} height={625} priority />
-				<div className="box ">
-					<h1>Conor Barnes</h1>
+				<div className="w-full md:w-[800px] flex flex-col justify-center items-center">
+					<h1 className="static py-4 md:py-0 -left-64 -top-2.5 md:relative">
+						Conor Barnes
+					</h1>
 					<Link href="/work">
 						<a>
-							<div className="card front prev">
+							<div className="transition ease-out text-black hover:bg-primary flex items-center">
 								<p>Hi there! I'm a web developer and a writer. Get in touch!</p>
 							</div>
 						</a>
 					</Link>
 					<Link href={`/blog/${latestPost.id}`}>
 						<a>
-							<div className={`card front`}>
-								<h3 className={`${utils.mrgBot}`}>Latest Blogpost</h3>
+							<div className={`transition ease-out text-black hover:bg-primary`}>
+								<h3 className="mb-4">Latest Blogpost</h3>
 
 								<h3>{latestPost.title}</h3>
-								<p className={`${utils.mrgBot}`}>
+								<p className="mb-4">
 									<Date dateString={latestPost.date} />
 								</p>
-								<p className={`${utils.mrgBot}`}>{latestPost.preview}..</p>
+								<p className="mb-4">{latestPost.preview}..</p>
 							</div>
 						</a>
 					</Link>
 				</div>
 			</section>
-
-			<style jsx>
-				{`
-					section {
-						margin: 1rem 4rem;
-						display: flex;
-						justify-content: space-between;
-						position: relative;
-					}
-
-					h1 {
-						position: relative;
-						left: -250px;
-						top: -10px;
-					}
-
-					.background {
-						top: 2rem;
-						left: -2rem;
-						position: absolute;
-						width: 95vw;
-						height: 550px;
-						background-color: ${siteColor};
-						z-index: -1;
-					}
-
-					.front {
-						transition: all 0.2s ease-out;
-						color: black;
-					}
-
-					h2 {
-						color: black;
-					}
-
-					.front:hover {
-						background-color: ${siteColor};
-					}
-
-					.box {
-						display: flex;
-						flex-direction: column;
-						justify-content: center;
-						align-items: center;
-						width: 800px;
-					}
-
-					.prev {
-						display: flex;
-						align-items: center;
-					}
-
-					@media (max-width: 900px) {
-						section {
-							flex-direction: column;
-							align-items: center;
-						}
-
-						.box {
-							width: 100%;
-						}
-
-						h1 {
-							position: static;
-							padding-top: 1rem;
-							padding-bottom: 1rem;
-						}
-					}
-				`}
-			</style>
 		</Layout>
 	);
 }

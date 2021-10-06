@@ -1,5 +1,4 @@
 import Image from "next/image";
-import utils from "../styles/utils.module.css";
 import ScrollArrow from "./ScrollArrow";
 import useWindowSize from "../lib/useWindowSize";
 
@@ -8,7 +7,7 @@ type Lank = { url: string; domain: string };
 const nextifyLink = (link: Lank, colorFlip: boolean) => {
 	return (
 		<a
-			className={utils.mrgR}
+			className="mr-4"
 			style={{ color: `${colorFlip && "green"}` }}
 			href={link.url}
 			target="_blank"
@@ -48,70 +47,25 @@ export default function Project({
 	const { width: size } = useWindowSize();
 
 	return (
-		<div className="container" id={String(id)}>
-			<span>
+		<div
+			style={{ backgroundColor: color }}
+			className={`flex flex-col sm:flex-row justify-around w-full h-[600px] items-center relative ${
+				flip ? "flex-row" : "flex-row-reverse"
+			}`}
+			id={String(id)}
+		>
+			<span className="m-4 mt-8 sm:m-0">
 				{img && (
-					<Image className={utils.rad} src={img} width={400} height={400} alt={title} />
+					<Image className="rounded-lg" src={img} width={400} height={400} alt={title} />
 				)}
 				{comp && comp}
 			</span>
-			<div className="text-container">
-				<h2 className={utils.mrgBot}>{title}</h2>
-				<p className={utils.mrgBot}>{text}</p>
+			<div className="m-4 mt-8 pt-0 px-4 pb-16 sm:p-4 sm:rounded w-full sm:w-96  sm:m-0">
+				<h2 className={`mb-4 ${dark ? "text-white" : ""}`}>{title}</h2>
+				<p className={`mb-4 ${dark ? "text-white" : ""}`}>{text}</p>
 				{links?.length && links.map((link) => nextifyLink(link, colorFlip))}
 			</div>
 			{size > 600 && <ScrollArrow to={id + 1} bottom={bottom} />}
-			<style jsx>{`
-				.container {
-					background-color: ${color};
-					display: flex;
-					justify-content: space-around;
-					width: 100%;
-					height: 600px;
-					align-items: center;
-					position: relative;
-					flex-direction: ${flip ? "row-reverse" : "row"};
-				}
-
-				p,
-				h2 {
-					color: ${dark && "white"};
-				}
-
-				.text-container {
-					 {
-						/* border: 1px solid grey; */
-					}
-					padding: 1rem;
-					border-radius: 5px;
-					width: 400px;
-				}
-
-				.imj {
-					border-radius: 15px;
-					opacity: 0.5;
-				}
-
-				@media (max-width: 600px) {
-					.container {
-						flex-direction: column;
-						height: fit-content;
-					}
-
-					.container > * {
-						margin: 1rem;
-						margin-top: 2rem;
-					}
-
-					.text-container {
-						padding: 1rem;
-						width: 100%;
-						margin-top: 0;
-						padding-top: 0;
-						padding-bottom: 4rem;
-					}
-				}
-			`}</style>
 		</div>
 	);
 }

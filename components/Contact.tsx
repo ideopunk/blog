@@ -2,6 +2,19 @@ import { useState, useEffect } from "react";
 import Copy from "./SVGs/CopySVG";
 import { siteColor } from "../consts/consts";
 
+function Linky({ text, href }: { text: string; href: string }) {
+	return (
+		<a
+			href={href}
+			className="mb-3 transition ease-out hover:pl-4 hover:text-black w-1/2 text-left"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			{text}
+		</a>
+	);
+}
+
 export default function ContactForm() {
 	const [toast, setToast] = useState(false);
 
@@ -22,108 +35,26 @@ export default function ContactForm() {
 	}, [toast]);
 
 	return (
-		<div className="contact" id="contact">
-			<div className="email">
-				<div className="move" onClick={handleClick}>
+		<div
+			className="flex sm:flex-col flex-wrap sm:flex-nowrap justify-start h-24 sm:h-44 w-full sm:w-1/2"
+			id="contact"
+		>
+			<div className="flex items-start sm:items-center relative w-1/2 text-left">
+				<div className="absolute -left-8" onClick={handleClick}>
 					<Copy />
 				</div>
 
-				<a
-					className="linky"
-					href="mailto:conorbarnes93@gmail.com"
-					target="_blank"
-					rel="noreferrer"
-				>
-					Email
-				</a>
+				<Linky text="Email" href="mailto:conorbarnes93@gmail.com" />
 			</div>
-			<a
-				className="linky"
-				target="_blank"
-				rel="noopener noreferrer"
-				href="https://www.twitter.com/ideopunk"
-			>
-				Twitter
-			</a>
-			<a
-				className="linky"
-				target="_blank"
-				rel="noopener noreferrer"
-				href="https://github.com/ideopunk"
-			>
-				GitHub
-			</a>
-			<a
-				className="linky"
-				target="_blank"
-				rel="noopener noreferrer"
-				href="https://www.linkedin.com/in/conor-barnes-b49833206/"
-			>
-				LinkedIn
-			</a>
+			<Linky text="Twitter" href="https://www.twitter.com/ideopunk" />
+			<Linky text="GitHub" href="https://github.com/ideopunk" />
+			<Linky text="LinkedIn" href="https://www.linkedin.com/in/conor-barnes-b49833206/" />
 
-			{toast && <p className="toast linky">Copied</p>}
-
-			<style jsx>
-				{`
-					.contact {
-						display: flex;
-						flex-direction: column;
-						justify-content: flex-start;
-						height: 180px;
-						width: 50%;
-					}
-
-					.linky {
-						transition: all 0.15s ease-out;
-						margin-bottom: 0.75rem;
-					}
-
-					.linky:hover {
-						padding-left: 1rem;
-						color: black;
-					}
-
-					.email {
-						display: flex;
-						align-items: center;
-						position: relative;
-					}
-
-					.move {
-						position: absolute;
-						left: -2rem;
-					}
-
-					.toast {
-						color: ${siteColor};
-					}
-
-					@media (max-width: 600px) {
-						.contact {
-							flex-direction: row;
-							flex-wrap: wrap;
-							width: 100%;
-							height: 100px;
-						}
-
-						.contact > * {
-							width: 50%;
-							text-align: start;
-						}
-
-						.email {
-							display: flex;
-							justify-content: flex-start;
-							align-items: flex-start;
-						}
-
-						.move {
-							left: -2rem;
-						}
-					}
-				`}
-			</style>
+			{toast && (
+				<p className="toast mb-3 transition ease-out hover:pl-4 hover:text-black w-1/2 text-left text-primary">
+					Copied
+				</p>
+			)}
 		</div>
 	);
 }

@@ -10,8 +10,6 @@ import Date from "../../components/Date";
 import generateRss from "../../lib/rss";
 import fs from "fs";
 import SubscriptionBox from "../../components/Subscribe";
-import utils from "../../styles/utils.module.css";
-import styles from "../../styles/markdown.module.css";
 import { GetStaticProps } from "next";
 
 // generating rss here as side-effect
@@ -40,65 +38,36 @@ type PostPre = { id: string; date: string; title: string; status: string; previe
 
 function PostPreview({ id, date, title, status, preview }: PostPre) {
 	return (
-		<li className="container" key={id}>
+		<li>
 			<Link href={`/blog/${id}`}>
 				<a>
-					<h3 className={styles.title}>{title}</h3>
+					<h3 className="text-lg sm:text-3xl">{title}</h3>
 				</a>
 			</Link>
 			<br />
-			<div className={`${utils.spread} ${utils.mrgBot} bgr`}>
+			<div className={`flex justify-between mb-4 flex-col`}>
 				<Date dateString={date} />
-				<small className={styles.status}>Epistemic status: {status}</small>
+				<small className="italic">Epistemic status: {status}</small>
 			</div>
-
-			<div style={utils.mrgTop}>{preview}</div>
-			<hr className="backup" />
-			<style jsx>{`
-				h1 {
-					color: black;
-				}
-
-				hr {
-					margin-bottom: 2rem;
-				}
-
-				.backup {
-					margin-top: 2rem;
-					margin-bottom: 4rem;
-				}
-
-				.bgr {
-					display: flex;
-					flex-direction: column;
-				}
-
-				@media (max-width: 600px) {
-					h3 {
-						font-size: 1.25rem;
-					}
-
-					.backup {
-						margin-bottom: 1rem;
-					}
-				}
-			`}</style>
+			<div className="mt-4">{preview}</div>
+			<hr className="mb-8" />
 		</li>
 	);
 }
 
-export default function blog({ allPostsData, allPostsText }) {
+export default function blog({ allPostsData }) {
 	return (
 		<Layout>
 			<Head>
 				<title>Ideopunk</title>
 			</Head>
-			<section>
-				<div className="test">
-					<ul className="col-main">
+			<section className="mt-8">
+				<div className="flex justify-center">
+					<ul className="flex-[5] m-4 mt-0 sm:mt-4 py-0 px-2 sm:py-4 sm:px-16 flex flex-col">
 						{allPostsData.map(({ id, date, title, status, preview }) => (
 							<PostPreview
 								id={id}
+								key={id}
 								date={date}
 								title={title}
 								status={status}
@@ -106,94 +75,10 @@ export default function blog({ allPostsData, allPostsText }) {
 							/>
 						))}
 					</ul>
-					<div className="col-side">
+					<div className="hidden sm:flex flex-col p-4 m-4 flex-1">
 						<SubscriptionBox />
 					</div>
 				</div>
-				<style jsx>{`
-					h3 {
-						margin-left: 0.5rem;
-					}
-
-					.backup {
-						margin-top: 2rem;
-						margin-bottom: 4rem;
-					}
-
-					section {
-						margin-top: 2rem;
-					}
-
-					.test a {
-						font-size: 1rem;
-					}
-
-					.test {
-						display: flex;
-						justify-content: center;
-					}
-
-					.title {
-						font-size: 1.5rem;
-						font-weight: 600;
-					}
-
-					.blogpost {
-						max-width: 500px;
-						width: 100%;
-						border-radius: 3px;
-						padding: 0.5rem;
-						border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-						transition: all 0.2s ease-out;
-					}
-
-					.blogpost a {
-						color: ${siteColor};
-					}
-
-					.blogpost:hover {
-						background-color: grey;
-					}
-
-					li {
-						margin-top: 0.5rem;
-					}
-
-					li:first-child {
-						margin: 0;
-					}
-
-					.col-main {
-						flex: 5;
-						margin: 1rem;
-						padding: 1rem;
-						padding-left: 4rem;
-						padding-right: 4rem;
-						display: flex;
-						flex-direction: column;
-					}
-
-					.col-side {
-						margin: 1rem;
-						flex: 1;
-						padding: 1rem;
-						display: flex;
-						flex-direction: column;
-					}
-
-					@media (max-width: 600px) {
-						.col-main {
-							padding: 0;
-							margin-top: 0;
-							padding-left: 0.5rem;
-							padding-right: 0.5rem;
-						}
-
-						.col-side {
-							display: none;
-						}
-					}
-				`}</style>
 			</section>
 		</Layout>
 	);
