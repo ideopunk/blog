@@ -5,7 +5,6 @@ import { getLatestPostData } from "../lib/posts";
 import Layout from "../components/Layout";
 import { siteTitle, siteColor } from "../consts/consts";
 import Date from "../components/Date";
-import utils from "../styles/utils.module.css";
 import Subscribe from "../components/Subscribe";
 
 export async function getStaticProps() {

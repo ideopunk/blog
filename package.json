@@ -10,7 +10,6 @@
 	"dependencies": {
 		"@plaiceholder/css": "^1.0.0",
 		"commentbox.io": "^2.0.0",
-		"date-fns": "^2.16.1",
 		"gray-matter": "^4.0.2",
 		"marked": "^3.0.4",
 		"marked-plaintext": "0.0.2",

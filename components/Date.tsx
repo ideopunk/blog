@@ -1,10 +1,17 @@
-import { parseISO, format } from "date-fns";
+export default function DateComponent({ dateString }: { dateString: string }) {
+	const parsedDate = new Date(dateString);
+	const date = `${parsedDate.toLocaleTimeString(["en-CA"], {
+		hour: "2-digit",
+		minute: "2-digit",
+	})} - ${parsedDate.toLocaleDateString(["en-CA"], {
+		month: "short",
+		day: "numeric",
+		year: "numeric",
+	})}`;
 
-export default function Date({ dateString }: { dateString: string }) {
-	const date = parseISO(dateString);
 	return (
 		<time className="text-sm" dateTime={dateString}>
-			{format(date, "LLLL d, yyyy")}
+			{date}
 		</time>
 	);
 }
