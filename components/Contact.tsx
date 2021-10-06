@@ -14,16 +14,18 @@ export default function ContactForm() {
 		function byebye() {
 			setToast(false);
 		}
-		toast && setTimeout(byebye, 1000);
 
-		return () => clearTimeout(byebye);
+		let timeout;
+		toast ? (timeout = setTimeout(byebye, 1000)) : null;
+
+		return () => clearTimeout(timeout);
 	}, [toast]);
 
 	return (
 		<div className="contact" id="contact">
 			<div className="email">
 				<div className="move" onClick={handleClick}>
-					<Copy width={20} height={20} />
+					<Copy />
 				</div>
 
 				<a

@@ -5,7 +5,7 @@ import remark from "remark";
 import html from "remark-html";
 const rootDirectory = path.join(process.cwd(), "markdown/");
 
-export function getSortedPostsData(subfolder) {
+export function getSortedPostsData(subfolder: string) {
 	const postsDirectory = rootDirectory + subfolder;
 	const fileNames = fs.readdirSync(postsDirectory);
 
@@ -53,7 +53,7 @@ export async function getPostData(id, subfolder) {
 	const fileContents = fs.readFileSync(fullPath, "utf8");
 
 	const matterResult = matter(fileContents);
-
+	
 	const processedContent = await remark().use(html).process(matterResult.content);
 	const contentHtml = processedContent.toString();
 	const lazyHtml = contentHtml.replace("<img", "<img loading='lazy'");

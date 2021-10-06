@@ -7,7 +7,7 @@ import Subscribe from "./Subscribe";
 import Home from "./SVGs/HomeSVG";
 import { siteTitle } from "../consts/consts";
 
-export default function Layout({ children, home }) {
+export default function Layout({ children }) {
 	return (
 		<div>
 			<Head>

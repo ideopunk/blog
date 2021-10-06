@@ -7,29 +7,21 @@ import Head from "next/head";
 import Date from "../../components/Date";
 import commentBox from "commentbox.io";
 import { useEffect } from "react";
+import { GetStaticPaths, GetStaticProps } from "next";
 
-export async function getStaticProps({ params }) {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
 	const postData = await getPostData(params.id, "blogposts");
-	return {
-		props: {
-			postData,
-		},
-	};
-}
+	return { props: { postData } };
+};
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
 	const paths = getAllPostIds("blogposts");
-	return {
-		paths,
-		fallback: false,
-	};
-}
+	return { paths, fallback: false };
+};
 
 export default function Post({ postData }) {
-	// console.log(postData)
 	useEffect(() => {
 		const removeCommentBox = commentBox("5634391980113920-proj");
-
 		return () => removeCommentBox();
 	}, []);
 
@@ -69,7 +61,7 @@ export default function Post({ postData }) {
 							margin-right: 1rem;
 						}
 					}
-					
+
 					.container > * {
 						margin-bottom: 1rem;
 					}

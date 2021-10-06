@@ -1,6 +1,6 @@
 import Arrow from "./SVGs/ArrowSVG";
 
-export default function ScrollArrow({ to, bottom }) {
+export default function ScrollArrow({ to, bottom }: { to: number; bottom: boolean }) {
 	return (
 		<>
 			<a className="arrow" href={bottom ? "#" : `#${to}`}>

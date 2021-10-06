@@ -12,9 +12,10 @@ import fs from "fs";
 import SubscriptionBox from "../../components/Subscribe";
 import utils from "../../styles/utils.module.css";
 import styles from "../../styles/markdown.module.css";
+import { GetStaticProps } from "next";
 
 // generating rss here as side-effect
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
 	const allPostsData = getSortedPostsData("blogposts");
 	const allArticlesData = getSortedPostsData("published-writing");
 
@@ -33,12 +34,13 @@ export async function getStaticProps() {
 			allPostsText,
 		},
 	};
-}
+};
 
-function PostPreview({ id, date, title, status, preview }) {
+type PostPre = { id: string; date: string; title: string; status: string; preview: string };
+
+function PostPreview({ id, date, title, status, preview }: PostPre) {
 	return (
 		<li className="container" key={id}>
-			
 			<Link href={`/blog/${id}`}>
 				<a>
 					<h3 className={styles.title}>{title}</h3>
@@ -84,6 +86,7 @@ function PostPreview({ id, date, title, status, preview }) {
 		</li>
 	);
 }
+
 export default function blog({ allPostsData, allPostsText }) {
 	return (
 		<Layout>

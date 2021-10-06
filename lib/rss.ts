@@ -1,6 +1,8 @@
 // confirm these properties are correct
 
-const generateRssItem = (post) => `
+type Post = { id: string; title: string; preview: string; date: string };
+
+const generateRssItem = (post: Post) => `
   <item>
     <guid>https://ideopunk.com/blog/${post.id}</guid>
     <title>${post.title}</title>
@@ -9,7 +11,7 @@ const generateRssItem = (post) => `
     <pubDate>${new Date(post.date).toUTCString()}</pubDate>
   </item>`;
 
-const generateRss = (posts) => `
+const generateRss = (posts: Post[]) => `
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
       <title>Blog - Conor Barnes</title>

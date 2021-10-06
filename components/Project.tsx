@@ -3,7 +3,9 @@ import utils from "../styles/utils.module.css";
 import ScrollArrow from "./ScrollArrow";
 import useWindowSize from "../lib/useWindowSize";
 
-const nextifyLink = (link, colorFlip) => {
+type Lank = { url: string; domain: string };
+
+const nextifyLink = (link: Lank, colorFlip: boolean) => {
 	return (
 		<a
 			className={utils.mrgR}
@@ -17,6 +19,19 @@ const nextifyLink = (link, colorFlip) => {
 	);
 };
 
+type Proj = {
+	color: string;
+	text: string;
+	id: number;
+	img?: string;
+	comp?: JSX.Element;
+	title?: string;
+	links?: Lank[];
+	bottom?: boolean;
+	flip?: boolean;
+	colorFlip?: boolean;
+	dark?: boolean;
+};
 export default function Project({
 	color,
 	img,
@@ -29,11 +44,11 @@ export default function Project({
 	flip,
 	colorFlip,
 	dark,
-}) {
+}: Proj) {
 	const { width: size } = useWindowSize();
 
 	return (
-		<div className="container" id={id}>
+		<div className="container" id={String(id)}>
 			<span>
 				{img && (
 					<Image className={utils.rad} src={img} width={400} height={400} alt={title} />
@@ -43,7 +58,7 @@ export default function Project({
 			<div className="text-container">
 				<h2 className={utils.mrgBot}>{title}</h2>
 				<p className={utils.mrgBot}>{text}</p>
-				{links && links.map((link) => nextifyLink(link, colorFlip))}
+				{links?.length && links.map((link) => nextifyLink(link, colorFlip))}
 			</div>
 			{size > 600 && <ScrollArrow to={id + 1} bottom={bottom} />}
 			<style jsx>{`

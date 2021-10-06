@@ -11,7 +11,6 @@ import Node from "../components/SVGs/langs/Node";
 import NextIcon from "../components/SVGs/langs/NextIcon";
 import Express from "../components/SVGs/langs/Express";
 import Git from "../components/SVGs/langs/Git";
-import Mongo from "../components/SVGs/langs/Mongo";
 import TS from "../components/SVGs/langs/TS";
 import useWindowSize from "../lib/useWindowSize";
 
@@ -60,7 +59,6 @@ export default function Work() {
 					color="white"
 					comp={<Languages />}
 					text="I'm a front-end engineer at Melange. When I'm not doing that, I'm teaching myself Rust. If you ever want to talk programming, my contact information is below!"
-					links={[]}
 					flip
 				/>
 				<Project

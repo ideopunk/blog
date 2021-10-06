@@ -10,16 +10,12 @@ import Subscribe from "../components/Subscribe";
 
 export async function getStaticProps() {
 	const latestPost = getLatestPostData("blogposts");
-	return {
-		props: {
-			latestPost,
-		},
-	};
+	return { props: { latestPost } };
 }
 
 export default function Home({ latestPost }) {
 	return (
-		<Layout home>
+		<Layout>
 			<Head>
 				<title>{siteTitle}</title>
 			</Head>

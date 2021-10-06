@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 import { siteColor, siteSecondaryColor } from "../consts/consts";
 import utils from "../styles/utils.module.css";
 
@@ -8,11 +8,11 @@ export default function Subscribe() {
 	// 2. Hold a message in state to handle the response from our API.
 	const [message, setMessage] = useState("");
 
-	const handleChange = (e) => {
+	function handleChange(e: ChangeEvent<HTMLInputElement>) {
 		setEmail(e.target.value);
-	};
+	}
 
-	const subscribe = async (e) => {
+	async function subscribe(e: FormEvent) {
 		e.preventDefault();
 
 		// 3. Send a request to our API with the user's email address.
@@ -36,7 +36,7 @@ export default function Subscribe() {
 			setEmail("");
 			setMessage("Success! 🎉 You are now subscribed to the newsletter.");
 		}
-	};
+	}
 
 	return (
 		<form onSubmit={subscribe} className={`container`}>
