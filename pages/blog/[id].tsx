@@ -6,7 +6,6 @@ import commentBox from "commentbox.io";
 
 import styles from "../../public/style/markdown.module.css";
 import { getAllPostIds, getPostData } from "../../lib/posts";
-import Layout from "../../components/Layout";
 import Date from "../../components/Date";
 
 type ParsedPostData = {
@@ -41,25 +40,23 @@ export default function Post({ parsedPostData }: { parsedPostData: ParsedPostDat
 	}, []);
 
 	return (
-		<Layout>
+		<article className="mx-4 sm:mx-auto max-w-4xl text-center p-4">
 			<Head>
-				<title>{parsedPostData.title} / Ideopunk </title>
+				<title>{parsedPostData.title} / Conor Barnes </title>
 			</Head>
-			<article className="mx-4 sm:mx-auto max-w-4xl text-center p-4">
-				<h1 className="text-2xl mb-4">{parsedPostData.title}</h1>
-				<br />
-				<div className="flex justify-between mb-4">
-					<Date dateString={parsedPostData.date} />
-					<small className="italic">Epistemic status: {parsedPostData.status}</small>
-				</div>
-				<hr />
+			<h1 className="text-2xl mb-4">{parsedPostData.title}</h1>
+			<br />
+			<div className="flex justify-between mb-4">
+				<Date dateString={parsedPostData.date} />
+				<small className="italic">Epistemic status: {parsedPostData.status}</small>
+			</div>
+			<hr />
 
-				<div
-					dangerouslySetInnerHTML={{ __html: parsedPostData.lazyHtml }}
-					className={`${styles.markdown} mb-4`}
-				/>
-				<div className={`commentbox mb-4`} />
-			</article>
-		</Layout>
+			<div
+				dangerouslySetInnerHTML={{ __html: parsedPostData.lazyHtml }}
+				className={`${styles.markdown} mb-4`}
+			/>
+			<div className={`commentbox mb-4`} />
+		</article>
 	);
 }

@@ -1,6 +1,5 @@
 import Project from "../components/Project";
 import Head from "next/head";
-import Layout from "../components/Layout";
 import Image from "next/image";
 import JS from "../components/SVGs/langs/JS";
 import CSS from "../components/SVGs/langs/CSS";
@@ -40,30 +39,28 @@ function Languages() {
 
 export default function Work() {
 	return (
-		<Layout>
-			<div>
-				<Head>
-					<title>Work / Conor Barnes</title>
-				</Head>
+		<div>
+			<Head>
+				<title>Work / Conor Barnes</title>
+			</Head>
 
-				<Project
-					id={0}
-					color="white"
-					comp={<Languages />}
-					text="I'm a front-end engineer at Melange. When I'm not doing that, I'm teaching myself Rust. If you ever want to talk programming, my contact information is below!"
-					flip
-				/>
-				<Project
-					id={1}
-					color="#1A2D52"
-					dark
-					img="/images/squares/melangesquare.png"
-					title="Melange"
-					text="I'm building the front-end of a social betting app in React Native."
-					links={[{ url: "https://www.melange.io/", domain: "Landing Page" }]}
-					bottom
-				/>
-			</div>
-		</Layout>
+			<Project
+				id={0}
+				color="white"
+				comp={<Languages />}
+				text="I'm a front-end engineer at Melange. When I'm not doing that, I'm teaching myself Rust. If you ever want to talk programming, my contact information is below!"
+				flip
+			/>
+			<Project
+				id={1}
+				color="#1A2D52"
+				dark
+				img="/images/squares/melangesquare.png"
+				title="Melange"
+				text="I'm building the front-end of a social betting app in React Native."
+				links={[{ url: "https://www.melange.io/", domain: "Landing Page" }]}
+				bottom
+			/>
+		</div>
 	);
 }

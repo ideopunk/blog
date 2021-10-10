@@ -1,11 +1,12 @@
-import Layout from "../components/Layout";
+import Head from "next/head";
 
 export default function Custom404() {
 	return (
-		<Layout>
-			<div className="p-20 h-[60vh]">
-				<p className="text-center">404 - Page Not Found</p>
-			</div>
-		</Layout>
+		<div className="p-20 h-[60vh]">
+			<Head>
+				<title>404 / Conor Barnes</title>
+			</Head>
+			<p className="text-center">404 - Page Not Found</p>
+		</div>
 	);
 }
