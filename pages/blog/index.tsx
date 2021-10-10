@@ -2,8 +2,6 @@ import { useState } from "react";
 import Head from "next/head";
 import Layout from "../../components/Layout";
 
-import { siteTitle, siteColor } from "../../consts/consts";
-
 import { getSortedPostsData, getPostData } from "../../lib/posts";
 import Link from "next/link";
 import Date from "../../components/Date";
@@ -59,7 +57,7 @@ export default function blog({ allPostsData }) {
 	return (
 		<Layout>
 			<Head>
-				<title>Ideopunk</title>
+				<title>Conor Barnes / Blog</title>
 			</Head>
 			<section className="mt-8">
 				<div className="flex justify-center">

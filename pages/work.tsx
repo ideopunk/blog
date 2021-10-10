@@ -1,7 +1,6 @@
 import Project from "../components/Project";
 import Head from "next/head";
 import Layout from "../components/Layout";
-import { siteTitle } from "../consts/consts";
 import Image from "next/image";
 import JS from "../components/SVGs/langs/JS";
 import CSS from "../components/SVGs/langs/CSS";
@@ -44,7 +43,7 @@ export default function Work() {
 		<Layout>
 			<div>
 				<Head>
-					<title>Work / {siteTitle}</title>
+					<title>Work / Conor Barnes</title>
 				</Head>
 
 				<Project

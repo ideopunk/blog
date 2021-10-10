@@ -21,6 +21,7 @@ class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Spectral:wght@300&display=swap"
             media="print"
+            //@ts-ignore uh.
             onLoad="this.media='all'"
           />
           <noscript>

@@ -4,7 +4,6 @@ import Image from "next/image";
 import Contact from "./Contact";
 import Subscribe from "./Subscribe";
 import Home from "./SVGs/HomeSVG";
-import { siteTitle } from "../consts/consts";
 import { ReactNode } from "react";
 
 export default function Layout({ children }: { children: ReactNode }) {
@@ -24,7 +23,6 @@ export default function Layout({ children }: { children: ReactNode }) {
 					property="og:image"
 					content="http://www.artnet.com/WebServices/images/ll00762lldjkYGFgFaECfDrCWvaHBOc4uYC/nobuyoshi-araki-flowers.jpg"
 				/>
-				<meta name="og:title" content={siteTitle} />
 				<meta name="twitter:card" content="summary_large_image" />
 			</Head>
 			<header

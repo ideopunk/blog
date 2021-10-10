@@ -1,8 +1,9 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import remark from "remark";
+import { remark } from "remark";
 import html from "remark-html";
+
 const rootDirectory = path.join(process.cwd(), "markdown/");
 
 export function getSortedPostsData(subfolder: string) {
@@ -15,11 +16,9 @@ export function getSortedPostsData(subfolder: string) {
 		const fullPath = path.join(postsDirectory, fileName);
 		const fileContents = fs.readFileSync(fullPath, "utf8");
 
-		const matterResult = matter(fileContents);
-		return {
-			id,
-			...matterResult.data,
-		};
+		const { data } = matter(fileContents);
+
+		return { id, ...(data as PostData) };
 	});
 
 	return allPostsData.sort((a, b) => {
@@ -31,21 +30,17 @@ export function getSortedPostsData(subfolder: string) {
 	});
 }
 
-export function getAllPostIds(subfolder) {
+export function getAllPostIds(subfolder: string) {
 	const postsDirectory = rootDirectory + subfolder;
 
 	const fileNames = fs.readdirSync(postsDirectory);
 
 	return fileNames.map((fileName) => {
-		return {
-			params: {
-				id: fileName.replace(/\.md$/, ""),
-			},
-		};
+		return { params: { id: fileName.replace(/\.md$/, "") } };
 	});
 }
 
-export async function getPostData(id, subfolder) {
+export async function getPostData(id: string, subfolder: string) {
 	const postsDirectory = rootDirectory + subfolder;
 
 	const fullPath = path.join(postsDirectory, `${id}.md`);
@@ -53,19 +48,15 @@ export async function getPostData(id, subfolder) {
 	const fileContents = fs.readFileSync(fullPath, "utf8");
 
 	const matterResult = matter(fileContents);
-	
+
 	const processedContent = await remark().use(html).process(matterResult.content);
 	const contentHtml = processedContent.toString();
 	const lazyHtml = contentHtml.replace("<img", "<img loading='lazy'");
 
-	return {
-		id,
-		lazyHtml,
-		...matterResult.data,
-	};
+	return { id, lazyHtml, ...(matterResult.data as PostData) };
 }
 
-export function getLatestPostData(subfolder) {
+export function getLatestPostData(subfolder: string) {
 	const allPostsData = getSortedPostsData(subfolder);
 	return allPostsData[0];
 }

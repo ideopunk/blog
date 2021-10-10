@@ -1,16 +1,32 @@
-import Layout from "../../components/Layout";
-import styles from "../../styles/markdown.module.css";
-
-import { getAllPostIds, getPostData } from "../../lib/posts";
-import Head from "next/head";
-import Date from "../../components/Date";
-import commentBox from "commentbox.io";
 import { useEffect } from "react";
 import { GetStaticPaths, GetStaticProps } from "next";
+import Head from "next/head";
+import type { ParsedUrlQuery } from "querystring";
+import commentBox from "commentbox.io";
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-	const postData = await getPostData(params.id, "blogposts");
-	return { props: { postData } };
+import styles from "../../public/style/markdown.module.css";
+import { getAllPostIds, getPostData } from "../../lib/posts";
+import Layout from "../../components/Layout";
+import Date from "../../components/Date";
+
+type ParsedPostData = {
+	title: string;
+	date: string;
+	preview: string;
+	status: string;
+	id: string;
+	lazyHtml: string;
+};
+
+type Props = { parsedPostData: ParsedPostData };
+
+interface Params extends ParsedUrlQuery {
+	id: string;
+}
+
+export const getStaticProps: GetStaticProps<Props, Params> = async ({ params }) => {
+	const parsedPostData = await getPostData(params.id, "blogposts");
+	return { props: { parsedPostData } };
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -18,7 +34,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 	return { paths, fallback: false };
 };
 
-export default function Post({ postData }) {
+export default function Post({ parsedPostData }: { parsedPostData: ParsedPostData }) {
 	useEffect(() => {
 		const removeCommentBox = commentBox("5634391980113920-proj");
 		return () => removeCommentBox();
@@ -27,19 +43,19 @@ export default function Post({ postData }) {
 	return (
 		<Layout>
 			<Head>
-				<title>{postData.title} / Ideopunk </title>
+				<title>{parsedPostData.title} / Ideopunk </title>
 			</Head>
 			<article className="mx-4 sm:mx-auto max-w-4xl text-center p-4">
-				<h1 className="text-2xl mb-4">{postData.title}</h1>
+				<h1 className="text-2xl mb-4">{parsedPostData.title}</h1>
 				<br />
 				<div className="flex justify-between mb-4">
-					<Date dateString={postData.date} />
-					<small className="italic">Epistemic status: {postData.status}</small>
+					<Date dateString={parsedPostData.date} />
+					<small className="italic">Epistemic status: {parsedPostData.status}</small>
 				</div>
 				<hr />
 
 				<div
-					dangerouslySetInnerHTML={{ __html: postData.lazyHtml }}
+					dangerouslySetInnerHTML={{ __html: parsedPostData.lazyHtml }}
 					className={`${styles.markdown} mb-4`}
 				/>
 				<div className={`commentbox mb-4`} />

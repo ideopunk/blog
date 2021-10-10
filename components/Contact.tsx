@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import Copy from "./SVGs/CopySVG";
-import { siteColor } from "../consts/consts";
 
 function Linky({ text, href }: { text: string; href: string }) {
 	return (

@@ -1,5 +1,4 @@
 import { ChangeEvent, FormEvent, useState } from "react";
-import { siteColor, siteSecondaryColor } from "../consts/consts";
 
 export default function Subscribe() {
 	// 1. Create a reference to the input so we can fetch/clear it's value.

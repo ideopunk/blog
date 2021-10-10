@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { getLatestPostData } from "../lib/posts";
 import Layout from "../components/Layout";
-import { siteTitle, siteColor } from "../consts/consts";
 import Date from "../components/Date";
 import Subscribe from "../components/Subscribe";
 
@@ -16,7 +15,7 @@ export default function Home({ latestPost }) {
 	return (
 		<Layout>
 			<Head>
-				<title>{siteTitle}</title>
+				<title>Conor Barnes</title>
 			</Head>
 			<section className="flex flex-col md:flex-row items-center mx-4 my-16 justify-between relative">
 				<div className="top-8 -left-8 absolute w-[95vw] h-[550px] bg-primary z-0" />
