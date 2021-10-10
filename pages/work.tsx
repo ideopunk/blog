@@ -6,11 +6,11 @@ import CSS from "../components/SVGs/langs/CSS";
 import HTML from "../components/SVGs/langs/HTML";
 import ReactIcon from "../components/SVGs/langs/React";
 import Node from "../components/SVGs/langs/Node";
-import NextIcon from "../components/SVGs/langs/NextIcon";
-import Express from "../components/SVGs/langs/Express";
+import NextIcon from "../components/SVGs/langs/Next";
 import Git from "../components/SVGs/langs/Git";
 import TS from "../components/SVGs/langs/TS";
 import useWindowSize from "../lib/useWindowSize";
+import Rust from "../components/SVGs/langs/Rust";
 
 function Languages() {
 	const { width: size } = useWindowSize();
@@ -30,7 +30,7 @@ function Languages() {
 				<NextIcon size={size / mobileRatio} />
 				<TS size={size / mobileRatio} />
 				<Node size={size / mobileRatio} />
-				<Express size={size / mobileRatio} />
+				<Rust size={size / mobileRatio} />
 				<Git size={size / mobileRatio} />
 			</div>
 		</>

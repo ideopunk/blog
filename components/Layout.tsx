@@ -19,6 +19,17 @@ function HeaderLink({ children, href }: { children: ReactNode; href?: string }) 
 }
 
 export default function Layout({ children }: { children: ReactNode }) {
+	function toggleDarkMode() {
+		localStorage.theme === "dark"
+			? (localStorage.theme = "light")
+			: (localStorage.theme = "light");
+
+		// Whenever the user explicitly chooses dark mode
+		localStorage.theme = "dark";
+
+		// Whenever the user explicitly chooses to respect the OS preference
+		localStorage.removeItem("theme");
+	}
 	return (
 		<div>
 			<header
@@ -39,6 +50,9 @@ export default function Layout({ children }: { children: ReactNode }) {
 			<footer className="p-4 flex text-lg flex-col sm:flex-row justify-evenly py-8 px-20">
 				<Contact />
 				<Subscribe />
+				<button onClick={toggleDarkMode} className="w-10 h-10 hover:bg-gray-600">
+					Toggle dark mode :)
+				</button>
 			</footer>
 		</div>
 	);

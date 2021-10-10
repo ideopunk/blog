@@ -1,17 +1,17 @@
 module.exports = {
 	mode: "jit",
 	purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
-	darkMode: false, // or 'media' or 'class'
+	darkMode: "class", // or 'media' or false
 	theme: {
 		extend: {
 			colors: {
-				"primary": "#547a84",
-				"secondary": "#df9c61",
+				primary: "#547a84",
+				secondary: "#df9c61",
 			},
 		},
 	},
 	variants: {
 		extend: {},
 	},
-	plugins: [],
+	plugins: [require("@tailwindcss/typography")],
 };

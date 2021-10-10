@@ -40,7 +40,7 @@ export default function Post({ parsedPostData }: { parsedPostData: ParsedPostDat
 	}, []);
 
 	return (
-		<article className="mx-4 sm:mx-auto max-w-4xl text-center p-4">
+		<article className="mx-4 sm:mx-auto max-w-4xl  p-4">
 			<Head>
 				<title>{parsedPostData.title} / Conor Barnes </title>
 			</Head>
@@ -54,7 +54,7 @@ export default function Post({ parsedPostData }: { parsedPostData: ParsedPostDat
 
 			<div
 				dangerouslySetInnerHTML={{ __html: parsedPostData.lazyHtml }}
-				className={`${styles.markdown} mb-4`}
+				className={`prose prose-sm max-w-none my-4`}
 			/>
 			<div className={`commentbox mb-4`} />
 		</article>
