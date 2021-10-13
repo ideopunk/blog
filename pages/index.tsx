@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { getLatestPostData } from "../lib/posts";
 import Date from "../components/Date";
-import profilePic from "../public/images/headshot.jpg";
+import profkilePic from "../public/images/headshot.jpg";
 
 export async function getStaticProps() {
 	const latestPost = getLatestPostData("blogposts");
@@ -17,14 +17,16 @@ export default function Home({ latestPost }) {
 				<title>Conor Barnes</title>
 			</Head>
 			<div className="top-8 -left-12 absolute w-[95vw] h-[550px] bg-primary z-0" />
-			<Image
+			<Image src="/images/headshot.jpeg" alt="headshot" width={500} height={625} priority />
+
+			{/* <Image
 				src={profilePic}
 				alt="headshot"
 				width={500}
 				height={625}
 				priority
 				placeholder="blur"
-			/>
+			/> */}
 			<div className="w-full md:w-[800px] z-10 bg-secondary hover:bg-primary">
 				<div className="transition ease-out p-4 text-black  flex items-center hover:bg-black hover:text-white">
 					<Link href="/work">
