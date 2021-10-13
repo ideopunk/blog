@@ -12,22 +12,17 @@ class MyDocument extends Document {
 				<Head>
 					<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
 
+					<link rel="preconnect" href="https://fonts.googleapis.com" />
+
 					<link
-						rel="preload"
-						as="style"
-						href="https://fonts.googleapis.com/css2?family=Spectral:wght@300&display=swap"
-					/>
-					<link
+						href="https://fonts.googleapis.com/css2?family=Merriweather:wght400&family=Work+Sans:wght@600&family=Anton&display=swap"
 						rel="stylesheet"
-						href="https://fonts.googleapis.com/css2?family=Spectral:wght@300&display=swap"
-						media="print"
-						//@ts-ignore uh.
-						onLoad="this.media='all'"
 					/>
+
 					<noscript>
 						<link
+							href="https://fonts.googleapis.com/css2?family=Merriweather:wght400&family=Work+Sans:wght@600&family=Anton&display=swap"
 							rel="stylesheet"
-							href="https://fonts.googleapis.com/css2?family=Spectral:wght@300&display=swap"
 						/>
 					</noscript>
 

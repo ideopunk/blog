@@ -48,15 +48,15 @@ export default function Post({ parsedPostData }: { parsedPostData: ParsedPostDat
 			<br />
 			<div className="flex flex-col md:flex-row justify-between mb-4">
 				<Date dateString={parsedPostData.date} />
-				<p className="text-sm md:text-base font-light">
+				<span className="text-sm md:text-base font-light">
 					Epistemic status: {parsedPostData.status}
-				</p>
+				</span>
 			</div>
 			<hr />
 
 			<article
 				dangerouslySetInnerHTML={{ __html: parsedPostData.lazyHtml }}
-				className={`prose prose-sm md:prose-md max-w-none my-4`}
+				className={`prose prose-sm md:prose-md max-w-none my-4 `}
 			/>
 			<div className={`commentbox mb-4`} />
 		</article>

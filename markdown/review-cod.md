@@ -40,7 +40,7 @@ _“How?” he asked. “Unless you understand that Time isn’t what it appears
 
 Kind of boring, isn't it? You want your hero to be transformed through the story. Yeah yeah, Leto transforms -- but in a way he entirely expects (no spoilers!). Herbert tries to shoehorn tension in by not telling us what the Golden Path is, but it doesn't really hold a candle to the tension in Dune of not knowing whether Paul can prevent the jihad or not.
 
-**9th-dimensional chess**
+**9th-Dimensional Chess**
 
 Eventually, in this life, you hopefully become skilled at noticing when somebody is trying to impress you by how they talk. They might say meaningful things, they might say meaningless things -- whatever it is, it's beyond you, and the point is to grind into you the fact that it's beyond you.
 
@@ -62,7 +62,7 @@ Neat, eh?
 
 When I was younger, I _did_ find it neat. I was sure it indicated some deficiency in me that I didn't understand any of it, and I should just enjoy the feeling of ignorance while words flashed past me. Now I get to say: no thank you, I'm no longer impressed by being confused.
 
-**Something will happen soon**
+**Something Will Happen Soon**
 
 Characters must do things in order to be interesting. Sometimes they can also _think_ about doing things, _discuss_ doing things, and _reflect_ on things that were done. Sure! But characters must _do_ things. If they don't, a story sags. It's that simple.
 
@@ -103,7 +103,7 @@ across the skies above his ancestral palace on Caladan._
 
 You get the idea.
 
-**The good stuff**
+**The Good Stuff**
 
 It goes without saying -- the final quarter of the book is thrilling! The payoff is huge (no spoilers!).
 

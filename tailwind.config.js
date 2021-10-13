@@ -1,3 +1,5 @@
+const { fontFamily } = require("tailwindcss/defaultTheme");
+
 module.exports = {
 	mode: "jit",
 	purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
@@ -10,16 +12,24 @@ module.exports = {
 				// primary: "#724f74",
 				// secondary: "#fa4d5e",
 			},
+			fontFamily: {
+				...fontFamily,
+				serif: ["Merriweather", "serif"],
+				sans: ["Anton", "sans-serif"],
+			},
 			typography: (theme) => ({
 				DEFAULT: {
 					css: {
 						color: theme("colors.black"),
+						fontFamily: ["Merriweather"],
 						a: {
 							color: theme("colors.primary"),
 							"&:hover": {
 								color: theme("colors.secondary"),
 							},
+							fontWeight: 400,
 						},
+						em: {},
 					},
 				},
 			}),
