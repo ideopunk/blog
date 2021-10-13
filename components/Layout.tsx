@@ -23,7 +23,7 @@ export default function Layout({ children }: { children: ReactNode }) {
 		<div>
 			<header
 				id="top"
-				className="flex text-lg static sm:sticky w-full h-10 top-0 left-0 z-10 justify-between font-semibold backdrop-opacity-80 pl-4 pr-0 sm:pl-0 p-8 items-center"
+				className="flex text-lg static sm:sticky w-full h-10 top-0 left-0 z-10 justify-between font-semibold backdrop-opacity-80 pl-4 p-8 items-center"
 			>
 				<HeaderLink>
 					<Home />

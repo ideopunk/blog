@@ -11,17 +11,17 @@ export async function getStaticProps() {
 
 export default function Home({ latestPost }) {
 	return (
-		<section className="flex flex-col md:flex-row items-center mx-4 my-16 justify-between relative">
+		<section className="flex flex-col-reverse md:flex-row items-center mx-12 mb-16 justify-between relative">
 			<Head>
 				<title>Conor Barnes</title>
 			</Head>
-			<div className="top-8 -left-8 absolute w-[95vw] h-[550px] bg-primary z-0" />
+			<div className="top-8 -left-12 absolute w-[95vw] h-[550px] bg-primary z-0" />
 			<Image src="/images/headshot.jpeg" alt="headshot" width={500} height={625} priority />
-			<div className="w-full md:w-[800px] flex flex-col justify-center items-center z-10">
-				<h1 className="static py-4 md:py-0 -left-64 -top-2.5 md:relative">Conor Barnes</h1>
+			<div className="w-full md:w-[800px] flex flex-col p-4 z-10 bg-secondary">
 				<Link href="/work">
-					<a>
-						<div className="transition ease-out text-black hover:bg-primary flex items-center">
+					<a className="hover:bg-primary mb-4">
+						<h1 className="static py-4 md:py-0 text-black ">Conor Barnes</h1>
+						<div className="transition ease-out text-black  flex items-center">
 							<p>Hi there! I'm a web developer and a writer. Get in touch!</p>
 						</div>
 					</a>
