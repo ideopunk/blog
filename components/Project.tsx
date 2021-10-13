@@ -60,10 +60,10 @@ export default function Project({
 				)}
 				{comp && comp}
 			</span>
-			<a href={link} className="w-96 sm:mb-20 md:mb-0border-4">
+			<a href={link} className="w-96 sm:mb-20 md:mb-0 ">
 				<div className="m-4 mt-8 pt-0 px-4 pb-16 sm:p-4 sm:rounded w-full sm:w-96  sm:m-0">
-					<h2 className={`mb-4 ${dark ? "text-white" : ""}`}>{title}</h2>
-					<p className={`mb-4 ${dark ? "text-white" : ""}`}>{text}</p>
+					<h2 className={`mb-4 text-5xl ${dark ? "text-white" : ""}`}>{title}</h2>
+					<p className={`mb-4 text-2xl ${dark ? "text-white" : ""}`}>{text}</p>
 				</div>
 			</a>
 			{size > 600 && <ScrollArrow to={id + 1} bottom={bottom} />}

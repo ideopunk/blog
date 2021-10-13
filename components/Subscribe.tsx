@@ -33,8 +33,8 @@ export default function Subscribe() {
 	}
 
 	return (
-		<form onSubmit={subscribe} className="h-48 flex flex-col rounded max-w-lg">
-			<h3>Subscribe</h3>
+		<form onSubmit={subscribe} className="flex flex-col max-w-lg bg-primary p-2">
+			<h3 className="font-bold">Subscribe</h3>
 			<label className="invisible" htmlFor="email-input">
 				Email address
 			</label>
@@ -45,7 +45,7 @@ export default function Subscribe() {
 				placeholder="Email address"
 				required
 				onChange={handleChange}
-				className="outline-none border-2 text-xl h-7 border-primary appearance-none rounded-none"
+				className="outline-none text-xl h-7 appearance-none rounded-none w-full"
 				type="email"
 			/>
 			<p className="mt-4">

@@ -21,8 +21,8 @@ function Languages() {
 	return (
 		<>
 			<div
-				className="flex flex-wrap items-center justify-center"
-				style={{ width: size / (mobileRatio / 3) }}
+				className="flex flex-wrap items-center justify-between  "
+				style={{ width: size / (mobileRatio / 3) + 20 }}
 			>
 				<HTML size={size / mobileRatio} />
 				<CSS size={size / mobileRatio} />

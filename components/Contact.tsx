@@ -35,7 +35,7 @@ export default function ContactForm() {
 
 	return (
 		<div
-			className="flex sm:flex-col flex-wrap sm:flex-nowrap justify-start h-24 sm:h-44 w-full sm:w-1/2"
+			className="flex sm:flex-col flex-wrap sm:flex-nowrap justify-start  w-full sm:w-1/2 "
 			id="contact"
 		>
 			<div className="flex items-start sm:items-center relative w-1/2 text-left">
