@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { getLatestPostData } from "../lib/posts";
 import Date from "../components/Date";
+import profilePic from "../public/images/headshot.jpg";
 
 export async function getStaticProps() {
 	const latestPost = getLatestPostData("blogposts");
@@ -11,34 +12,41 @@ export async function getStaticProps() {
 
 export default function Home({ latestPost }) {
 	return (
-		<section className="flex flex-col md:flex-row items-center mx-4 my-16 justify-between relative">
+		<section className="flex flex-col md:flex-row items-center ml-12 md:mr-24 mb-16 mt-8 justify-between relative">
 			<Head>
 				<title>Conor Barnes</title>
 			</Head>
-			<div className="top-8 -left-8 absolute w-[95vw] h-[550px] bg-primary z-0" />
-			<Image src="/images/headshot.jpeg" alt="headshot" width={500} height={625} priority />
-			<div className="w-full md:w-[800px] flex flex-col justify-center items-center z-10">
-				<h1 className="static py-4 md:py-0 -left-64 -top-2.5 md:relative">Conor Barnes</h1>
-				<Link href="/work">
-					<a>
-						<div className="transition ease-out text-black hover:bg-primary flex items-center">
+			<div className="top-8 -left-12 absolute w-[95vw] h-[550px] bg-primary z-0" />
+			<Image
+				src={profilePic}
+				alt="headshot"
+				width={500}
+				height={625}
+				priority
+				placeholder="blur"
+			/>
+			<div className="w-full md:w-[800px] z-10 bg-secondary hover:bg-primary">
+				<div className="transition ease-out p-4 text-black  flex items-center hover:bg-black hover:text-white">
+					<Link href="/work">
+						<a>
+							<h1 className="pt-4 md:py-0  md:relative">Conor Barnes</h1>
 							<p>Hi there! I'm a web developer and a writer. Get in touch!</p>
-						</div>
-					</a>
-				</Link>
-				<Link href={`/blog/${latestPost.id}`}>
-					<a>
-						<div className={`transition ease-out text-black hover:bg-primary`}>
-							<h3 className="mb-4">Latest Blogpost</h3>
+						</a>
+					</Link>
+				</div>
+				<div className="transition ease-out text-black  p-4 hover:bg-black hover:text-white">
+					<Link href={`/blog/${latestPost.id}`}>
+						<a>
+							<h3 className="mt-4">Latest Blogpost</h3>
 
 							<h3>{latestPost.title}</h3>
 							<p className="mb-4">
 								<Date dateString={latestPost.date} />
 							</p>
 							<p className="mb-4">{latestPost.preview}..</p>
-						</div>
-					</a>
-				</Link>
+						</a>
+					</Link>
+				</div>
 			</div>
 		</section>
 	);

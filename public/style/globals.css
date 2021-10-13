@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-	--secondary-color: #df9c61;
-}
 /* 
 @font-face {
 	font-family: "Spectral";
@@ -20,14 +17,13 @@
 	scroll-behavior: smooth;
 	box-sizing: border-box;
 	transition: all 0.2s ease-out;
-	font-family: "Spectral", serif;
-
+	font-family: "Spectral", sans-serif;
 }
 
 p,
 input,
 button {
-	font-family: "Spectral", serif;
+	font-family: "Spectral", sans-serif;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -60,7 +56,6 @@ body::-webkit-scrollbar {
 }
 
 a {
-	color: var(--secondary-color);
 	text-decoration: none;
 }
 
@@ -98,25 +93,6 @@ hr {
 	background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
 
-.card {
-	margin: 1rem;
-	padding: 1rem;
-	width: 450px;
-	height: 200px;
-	background-color: var(--secondary-color);
-	transition: all 0.2s ease-out;
-}
-
-.card:hover {
-	background-color: #fceff9;
-}
-
-@media (max-width: 600px) {
-	.card {
-		width: 100%;
-		height: fit-content;
-	}
-}
 
 input[type="text"],
 input[type="email"] {

@@ -52,7 +52,7 @@ export default function Subscribe() {
 				{message ? message : `Receive notifications about new blog posts.`}
 			</p>
 			<button
-				className="mt-4 border-0 text-xl transition ease-out font-semibold tracking-wide p-2 bg-primary"
+				className="mt-4 border-0 text-xl transition-all ease-out font-semibold tracking-wide p-2 bg-secondary hover:bg-black text-white"
 				type="submit"
 			>
 				Subscribe

@@ -6,12 +6,15 @@ import { ReactNode } from "react";
 
 function HeaderLink({ children, href }: { children: ReactNode; href?: string }) {
 	return href ? (
-		<a className="mr-4 transition ease-out hover:text-black" href={href}>
+		<a className="mr-4 transition ease-out text-secondary hover:text-black" href={href}>
 			{children}
 		</a>
 	) : (
 		<Link href={typeof children === "string" ? `/${children.toLowerCase()}` : "/"}>
-			<a className="mr-4 transition ease-out hover:text-black cursor-pointer" href={href}>
+			<a
+				className="mr-4 transition ease-out text-secondary hover:text-black cursor-pointer"
+				href={href}
+			>
 				{children}
 			</a>
 		</Link>
@@ -34,7 +37,7 @@ export default function Layout({ children }: { children: ReactNode }) {
 		<div>
 			<header
 				id="top"
-				className="flex text-lg static sm:sticky w-full h-10 top-0 left-0 z-10 justify-between font-semibold backdrop-opacity-80 pl-4 pr-0 sm:pl-0 p-8 items-center"
+				className="flex text-lg static sm:sticky w-full  h-10 top-0 left-0 z-20 justify-between font-semibold backdrop-opacity-80 p-8 items-center bg-opacity-50 bg-white"
 			>
 				<HeaderLink>
 					<Home />
