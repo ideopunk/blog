@@ -15,6 +15,7 @@ import Rust from "../components/SVGs/langs/Rust";
 function Languages() {
 	const { width: size } = useWindowSize();
 
+	// const mobileRatio = 12;
 	const mobileRatio = size <= 600 ? 6 : 12;
 
 	return (
@@ -58,7 +59,7 @@ export default function Work() {
 				img="/images/squares/melangesquare.png"
 				title="Melange"
 				text="I'm building the front-end of a social betting app in React Native."
-				links={[{ url: "https://www.melange.io/", domain: "Landing Page" }]}
+				link="https://www.melange.io/"
 				bottom
 			/>
 		</div>

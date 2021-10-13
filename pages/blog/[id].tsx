@@ -44,17 +44,19 @@ export default function Post({ parsedPostData }: { parsedPostData: ParsedPostDat
 			<Head>
 				<title>{parsedPostData.title} / Conor Barnes </title>
 			</Head>
-			<h1 className="text-2xl mb-4">{parsedPostData.title}</h1>
+			<h1 className="text-xl font-bold md:text-2xl mb-4">{parsedPostData.title}</h1>
 			<br />
-			<div className="flex justify-between mb-4">
+			<div className="flex flex-col md:flex-row justify-between mb-4">
 				<Date dateString={parsedPostData.date} />
-				<small className="italic">Epistemic status: {parsedPostData.status}</small>
+				<p className="text-sm md:text-base font-light">
+					Epistemic status: {parsedPostData.status}
+				</p>
 			</div>
 			<hr />
 
-			<div
+			<article
 				dangerouslySetInnerHTML={{ __html: parsedPostData.lazyHtml }}
-				className={`prose prose-sm max-w-none my-4`}
+				className={`prose prose-sm md:prose-md max-w-none my-4`}
 			/>
 			<div className={`commentbox mb-4`} />
 		</article>

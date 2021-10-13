@@ -45,7 +45,7 @@ export default function Subscribe() {
 				placeholder="Email address"
 				required
 				onChange={handleChange}
-				className="outline-none border-2 text-xl h-7 border-primary"
+				className="outline-none border-2 text-xl h-7 border-primary appearance-none rounded-none"
 				type="email"
 			/>
 			<p className="mt-4">

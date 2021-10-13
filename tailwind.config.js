@@ -5,9 +5,24 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				primary: "#724f74",
-				secondary: "#fa4d5e",
+				primary: "#547a84",
+				secondary: "#df9c61",
+				// primary: "#724f74",
+				// secondary: "#fa4d5e",
 			},
+			typography: (theme) => ({
+				DEFAULT: {
+					css: {
+						color: theme("colors.black"),
+						a: {
+							color: theme("colors.primary"),
+							"&:hover": {
+								color: theme("colors.secondary"),
+							},
+						},
+					},
+				},
+			}),
 		},
 	},
 	variants: {

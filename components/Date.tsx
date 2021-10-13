@@ -6,5 +6,9 @@ export default function DateComponent({ dateString }: { dateString: string }) {
 		year: "numeric",
 	})}`;
 
-	return <time className="text-base" dateTime={dateString}>{date}</time>;
+	return (
+		<time className="text-sm md:text-base font-light" dateTime={dateString}>
+			{date}
+		</time>
+	);
 }
