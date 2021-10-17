@@ -15,6 +15,7 @@ export default function Home({ latestPost }) {
 		<section className="flex flex-col-reverse md:flex-row items-center px-12 md:px-0 md:ml-12 md:mr-24 mb-16 md:mt-8 justify-between relative">
 			<Head>
 				<title>Conor Barnes</title>
+				<meta name="description" content="Ideopunk" />
 			</Head>
 			<div className="-top-1/3 md:top-1/4 lg:top-8 md:-left-12 absolute  md:w-[95vw] md:h-1/2 lg:h-5/6 bg-primary z-0" />
 			<Image src="/images/headshot.jpg" alt="headshot" width={400} height={500} priority />
@@ -28,7 +29,7 @@ export default function Home({ latestPost }) {
 				placeholder="blur"
 			/> */}
 			<div className="w-full sm:w-[640px] md:w-[767px] z-10 max-w-prose md:ml-8 mb-10 md:mb-0">
-				<div className="transition-colors p-4 text-black bg-secondary  flex items-center hover:bg-pink-300  ">
+				<div className="transition-colors p-4 text-black bg-secondary  flex items-center hover:bg-tertiary  ">
 					<Link href="/work">
 						<a>
 							<h1 className="pt-4 md:py-0 text-3xl font-bold md:text-4xl mb-2 md:relative">
@@ -40,7 +41,7 @@ export default function Home({ latestPost }) {
 						</a>
 					</Link>
 				</div>
-				<div className="transition-colors text-black bg-secondary p-4 hover:bg-pink-300 ">
+				<div className="transition-colors text-black bg-secondary p-4 hover:bg-tertiary ">
 					<Link href={`/blog/${latestPost.id}`}>
 						<a>
 							<h3 className="text-2xl font-bold">{latestPost.title}</h3>

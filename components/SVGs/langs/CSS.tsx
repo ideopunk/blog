@@ -6,6 +6,7 @@ export default function CSS({ size }) {
 			viewBox="0 0 128 128"
 			className={`${size ? "visible" : "hidden"}`}
 		>
+			<title>CSS</title>
 			<path
 				fill="#1572B6"
 				d="M18.814 114.123l-10.054-112.771h110.48l-10.064 112.754-45.243 12.543-45.119-12.526z"

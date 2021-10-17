@@ -21,15 +21,25 @@ function Languages() {
 	return (
 		<>
 			<div
-				className="flex flex-wrap items-center justify-between  "
+				className="flex items-center justify-between  "
 				style={{ width: size / (mobileRatio / 3) + 20 }}
 			>
 				<HTML size={size / mobileRatio} />
 				<CSS size={size / mobileRatio} />
 				<JS size={size / mobileRatio} />
+			</div>
+			<div
+				className="flex flex-wrap items-center justify-between  my-2"
+				style={{ width: size / (mobileRatio / 3) + 20 }}
+			>
 				<ReactIcon size={size / mobileRatio} />
 				<NextIcon size={size / mobileRatio} />
 				<TS size={size / mobileRatio} />
+			</div>
+			<div
+				className="flex flex-wrap items-center justify-between  "
+				style={{ width: size / (mobileRatio / 3) + 20 }}
+			>
 				<Node size={size / mobileRatio} />
 				<Rust size={size / mobileRatio} />
 				<Git size={size / mobileRatio} />
@@ -43,6 +53,7 @@ export default function Work() {
 		<div>
 			<Head>
 				<title>Work / Conor Barnes</title>
+				<meta name="description" content="Projects" />
 			</Head>
 
 			<Project

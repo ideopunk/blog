@@ -39,7 +39,7 @@ export default function ContactForm() {
 			id="contact"
 		>
 			<div className="flex items-start sm:items-center relative w-1/2 text-left">
-				<div className="absolute -left-8" onClick={handleClick}>
+				<div className="absolute -left-8 top-0" onClick={handleClick}>
 					<Copy />
 				</div>
 

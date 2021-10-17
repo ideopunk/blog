@@ -55,6 +55,7 @@ export default function blog({ allPostsData }: { allPostsData: PostWithID[] }) {
 		<section className="mt-8">
 			<Head>
 				<title>Conor Barnes / Blog</title>
+				<meta name="description" content="Writing" />
 			</Head>
 			<div className="flex justify-center">
 				<ul className="flex-[5] m-4 mt-0 sm:mt-4 py-0 px-2 sm:py-4 sm:px-16 flex flex-col">

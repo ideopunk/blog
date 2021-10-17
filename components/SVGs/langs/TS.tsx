@@ -6,6 +6,7 @@ export default function TS({ size }) {
 			viewBox="0 0 128 128"
 			className={`${size ? "visible" : "hidden"}`}
 		>
+			<title>TypeScript</title>
 			<g id="original">
 				<rect fill="#fff" x="22.67" y="47" width="99.67" height="73.67"></rect>
 				<path

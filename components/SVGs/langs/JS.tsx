@@ -6,6 +6,7 @@ export default function JS({ size }) {
 			viewBox="0 0 128 128"
 			className={`${size ? "visible" : "hidden"}`}
 		>
+			<title>JavaScript</title>
 			<path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185h-125.184z"></path>
 			<path
 				fill="#323330"

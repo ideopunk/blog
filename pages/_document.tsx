@@ -10,18 +10,17 @@ class MyDocument extends Document {
 		return (
 			<Html lang="en">
 				<Head>
-					<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+					{/* <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" /> */}
 
-					<link rel="preconnect" href="https://fonts.googleapis.com" />
+					{/* <link rel="preconnect" href="https://fonts.googleapis.com" /> */}
 
 					<link
-						href="https://fonts.googleapis.com/css2?family=Merriweather:wght400&family=Work+Sans:wght@600&family=Anton&display=swap"
+						href="https://fonts.googleapis.com/css2?family=Anton&family=Merriweather&family=Merriweather+Sans:wght@500;800&display=swap"
 						rel="stylesheet"
 					/>
-
 					<noscript>
 						<link
-							href="https://fonts.googleapis.com/css2?family=Merriweather:wght400&family=Work+Sans:wght@600&family=Anton&display=swap"
+							href="https://fonts.googleapis.com/css2?family=Anton&family=Merriweather&family=Merriweather+Sans:wght@500;800&display=swap"
 							rel="stylesheet"
 						/>
 					</noscript>
@@ -46,7 +45,7 @@ class MyDocument extends Document {
 					<meta name="theme-color" content="#FFFFFF" />
 					<meta property="og:image:width" content="500" />
 					<meta property="og:image:height" content="340" />
-					<script
+					{/* <script
 						id="check-dark-mode"
 						dangerouslySetInnerHTML={{
 							__html: `
@@ -56,7 +55,7 @@ class MyDocument extends Document {
 								document.documentElement.classList.remove("dark")
 							}`,
 						}}
-					></script>
+					></script> */}
 				</Head>
 				<body className="dark:bg-black">
 					<Main />

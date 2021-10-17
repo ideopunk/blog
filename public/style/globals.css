@@ -52,24 +52,6 @@ img {
 	display: block;
 }
 
-/* h1 {
-	font-size: 4rem;
-}
-
-h2 {
-	font-size: 3rem;
-	font-weight: 700;
-}
-
-h3 {
-	font-size: 1.5rem;
-	font-weight: 600;
-}
-
-p {
-	font-size: 1.5rem;
-} */
-
 hr {
 	border: 0;
 	height: 1px;
@@ -81,8 +63,4 @@ input[type="text"],
 input[type="email"] {
 	padding-left: 0.25rem;
 	padding-top: 0.1rem;
-}
-
-input:hover {
-	background-color: wheat;
 }
