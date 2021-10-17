@@ -10,24 +10,18 @@ class MyDocument extends Document {
 		return (
 			<Html lang="en">
 				<Head>
-					<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+					{/* <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" /> */}
+
+					{/* <link rel="preconnect" href="https://fonts.googleapis.com" /> */}
 
 					<link
-						rel="preload"
-						as="style"
-						href="https://fonts.googleapis.com/css2?family=Spectral:wght@300&display=swap"
-					/>
-					<link
+						href="https://fonts.googleapis.com/css2?family=Anton&family=Merriweather&family=Merriweather+Sans:wght@500;800&display=swap"
 						rel="stylesheet"
-						href="https://fonts.googleapis.com/css2?family=Spectral:wght@300&display=swap"
-						media="print"
-						//@ts-ignore uh.
-						onLoad="this.media='all'"
 					/>
 					<noscript>
 						<link
+							href="https://fonts.googleapis.com/css2?family=Anton&family=Merriweather&family=Merriweather+Sans:wght@500;800&display=swap"
 							rel="stylesheet"
-							href="https://fonts.googleapis.com/css2?family=Spectral:wght@300&display=swap"
 						/>
 					</noscript>
 
@@ -51,8 +45,19 @@ class MyDocument extends Document {
 					<meta name="theme-color" content="#FFFFFF" />
 					<meta property="og:image:width" content="500" />
 					<meta property="og:image:height" content="340" />
+					{/* <script
+						id="check-dark-mode"
+						dangerouslySetInnerHTML={{
+							__html: `
+							if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+								document.documentElement.classList.add("dark")} 
+							else {
+								document.documentElement.classList.remove("dark")
+							}`,
+						}}
+					></script> */}
 				</Head>
-				<body>
+				<body className="dark:bg-black">
 					<Main />
 					<NextScript />
 				</body>

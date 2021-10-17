@@ -5,7 +5,7 @@ function Linky({ text, href }: { text: string; href: string }) {
 	return (
 		<a
 			href={href}
-			className="mb-3 transition ease-out hover:pl-4 hover:text-black w-1/2 text-left"
+			className="mb-3 transition-all ease-out hover:pl-4 font-semibold text-primary hover:text-secondary w-1/2 text-left"
 			target="_blank"
 			rel="noopener noreferrer"
 		>
@@ -35,11 +35,11 @@ export default function ContactForm() {
 
 	return (
 		<div
-			className="flex sm:flex-col flex-wrap sm:flex-nowrap justify-start h-24 sm:h-44 w-full sm:w-1/2"
+			className="flex sm:flex-col flex-wrap sm:flex-nowrap justify-start  w-full sm:w-1/2 "
 			id="contact"
 		>
 			<div className="flex items-start sm:items-center relative w-1/2 text-left">
-				<div className="absolute -left-8" onClick={handleClick}>
+				<div className="absolute -left-8 top-0" onClick={handleClick}>
 					<Copy />
 				</div>
 
@@ -50,7 +50,7 @@ export default function ContactForm() {
 			<Linky text="LinkedIn" href="https://www.linkedin.com/in/conor-barnes-b49833206/" />
 
 			{toast && (
-				<p className="toast mb-3 transition ease-out hover:pl-4 hover:text-black w-1/2 text-left text-primary">
+				<p className="toast mb-3 transition-all ease-out transform hover:translate-x-4 w-1/2 text-left text-primary hover:text-black ">
 					Copied
 				</p>
 			)}

@@ -33,8 +33,8 @@ export default function Subscribe() {
 	}
 
 	return (
-		<form onSubmit={subscribe} className="h-48 flex flex-col rounded max-w-lg">
-			<h3>Subscribe</h3>
+		<form onSubmit={subscribe} className="flex flex-col max-w-lg bg-primary p-3">
+			<h3 className="font-bold text-white text-2xl font-sans">Subscribe</h3>
 			<label className="invisible" htmlFor="email-input">
 				Email address
 			</label>
@@ -45,14 +45,14 @@ export default function Subscribe() {
 				placeholder="Email address"
 				required
 				onChange={handleChange}
-				className="outline-none border-2 text-xl h-7 border-primary"
+				className="outline-none text-xl h-7 appearance-none rounded-none w-full hover:bg-tertiary focus:bg-tertiary"
 				type="email"
 			/>
-			<p className="mt-4">
+			<p className="mt-4 text-white">
 				{message ? message : `Receive notifications about new blog posts.`}
 			</p>
 			<button
-				className="mt-4 border-0 text-xl transition ease-out font-semibold tracking-wide p-2 bg-primary"
+				className="mt-4 border-0 text-xl transition-all ease-out font-semibold tracking-wide p-2 bg-secondary hover:bg-tertiary  text-black hover:text-black"
 				type="submit"
 			>
 				Subscribe

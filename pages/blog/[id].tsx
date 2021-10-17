@@ -40,23 +40,24 @@ export default function Post({ parsedPostData }: { parsedPostData: ParsedPostDat
 	}, []);
 
 	return (
-		<article className="mx-4 sm:mx-auto max-w-4xl text-center p-4">
+		<div className="sm:mx-auto text-xl max-w-prose px-2">
 			<Head>
 				<title>{parsedPostData.title} / Conor Barnes </title>
 			</Head>
-			<h1 className="text-2xl mb-4">{parsedPostData.title}</h1>
-			<br />
-			<div className="flex justify-between mb-4">
+			<h1 className="text-xl font-bold md:text-2xl mb-4 md:mb-6">{parsedPostData.title}</h1>
+			<div className="flex flex-col md:flex-row justify-between mb-4">
 				<Date dateString={parsedPostData.date} />
-				<small className="italic">Epistemic status: {parsedPostData.status}</small>
+				<span className="text-sm md:text-base font-light">
+					Epistemic status: {parsedPostData.status}
+				</span>
 			</div>
 			<hr />
 
-			<div
+			<article
 				dangerouslySetInnerHTML={{ __html: parsedPostData.lazyHtml }}
-				className={`${styles.markdown} mb-4`}
+				className={`prose prose-lg max-w-none md:prose-xl my-4 `}
 			/>
 			<div className={`commentbox mb-4`} />
-		</article>
+		</div>
 	);
 }

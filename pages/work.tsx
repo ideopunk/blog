@@ -6,31 +6,42 @@ import CSS from "../components/SVGs/langs/CSS";
 import HTML from "../components/SVGs/langs/HTML";
 import ReactIcon from "../components/SVGs/langs/React";
 import Node from "../components/SVGs/langs/Node";
-import NextIcon from "../components/SVGs/langs/NextIcon";
-import Express from "../components/SVGs/langs/Express";
+import NextIcon from "../components/SVGs/langs/Next";
 import Git from "../components/SVGs/langs/Git";
 import TS from "../components/SVGs/langs/TS";
 import useWindowSize from "../lib/useWindowSize";
+import Rust from "../components/SVGs/langs/Rust";
 
 function Languages() {
 	const { width: size } = useWindowSize();
 
+	// const mobileRatio = 12;
 	const mobileRatio = size <= 600 ? 6 : 12;
 
 	return (
 		<>
 			<div
-				className="flex flex-wrap items-center justify-center"
-				style={{ width: size / (mobileRatio / 3) }}
+				className="flex items-center justify-between  "
+				style={{ width: size / (mobileRatio / 3) + 20 }}
 			>
 				<HTML size={size / mobileRatio} />
 				<CSS size={size / mobileRatio} />
 				<JS size={size / mobileRatio} />
+			</div>
+			<div
+				className="flex flex-wrap items-center justify-between  my-2"
+				style={{ width: size / (mobileRatio / 3) + 20 }}
+			>
 				<ReactIcon size={size / mobileRatio} />
 				<NextIcon size={size / mobileRatio} />
 				<TS size={size / mobileRatio} />
+			</div>
+			<div
+				className="flex flex-wrap items-center justify-between  "
+				style={{ width: size / (mobileRatio / 3) + 20 }}
+			>
 				<Node size={size / mobileRatio} />
-				<Express size={size / mobileRatio} />
+				<Rust size={size / mobileRatio} />
 				<Git size={size / mobileRatio} />
 			</div>
 		</>
@@ -42,6 +53,7 @@ export default function Work() {
 		<div>
 			<Head>
 				<title>Work / Conor Barnes</title>
+				<meta name="description" content="Projects" />
 			</Head>
 
 			<Project
@@ -58,7 +70,7 @@ export default function Work() {
 				img="/images/squares/melangesquare.png"
 				title="Melange"
 				text="I'm building the front-end of a social betting app in React Native."
-				links={[{ url: "https://www.melange.io/", domain: "Landing Page" }]}
+				link="https://www.melange.io/"
 				bottom
 			/>
 		</div>
