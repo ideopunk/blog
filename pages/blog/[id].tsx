@@ -44,7 +44,7 @@ export default function Post({ parsedPostData }: { parsedPostData: ParsedPostDat
 			<NextSeo
 				title={parsedPostData.title}
 				description={parsedPostData.preview}
-				openGraph={{ title: parsedPostData.title, description: parsedPostData.title }}
+				openGraph={{ title: parsedPostData.title, description: parsedPostData.preview }}
 			/>
 			<h1 className="text-xl font-bold md:text-2xl mb-4 md:mb-6">{parsedPostData.title}</h1>
 			<div className="flex flex-col md:flex-row justify-between mb-4">
