@@ -11,6 +11,7 @@ import Git from "../components/SVGs/langs/Git";
 import TS from "../components/SVGs/langs/TS";
 import useWindowSize from "../lib/useWindowSize";
 import Rust from "../components/SVGs/langs/Rust";
+import { NextSeo } from "next-seo";
 
 function Languages() {
 	const { width: size } = useWindowSize();
@@ -51,11 +52,14 @@ function Languages() {
 export default function Work() {
 	return (
 		<div>
-			<Head>
-				<title>Work / Conor Barnes</title>
-				<meta name="description" content="Projects" />
-			</Head>
-
+			<NextSeo
+				title="Work"
+				description="Projects"
+				openGraph={{
+					title: "Work",
+					description: "Projects",
+				}}
+			/>
 			<Project
 				id={0}
 				color="white"

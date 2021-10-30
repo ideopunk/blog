@@ -33,18 +33,7 @@ class MyDocument extends Document {
 						href="https://www.ideopunk.com/rss.xml"
 					/>
 
-					<meta
-						property="og:image"
-						content="http://www.artnet.com/WebServices/images/ll00762lldjkYGFgFaECfDrCWvaHBOc4uYC/nobuyoshi-araki-flowers.jpg"
-					/>
-					<meta name="twitter:card" content="summary_large_image" />
-					<meta name="twitter:site" content="@ideopunk" />
-					<meta name="twitter:creator" content="@ideopunk" />
-					<meta property="og:locale" content="en_CA" />
-					<meta property="og:type" content="website" />
 					<meta name="theme-color" content="#FFFFFF" />
-					<meta property="og:image:width" content="500" />
-					<meta property="og:image:height" content="340" />
 					{/* <script
 						id="check-dark-mode"
 						dangerouslySetInnerHTML={{

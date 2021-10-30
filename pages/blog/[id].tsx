@@ -6,6 +6,7 @@ import commentBox from "commentbox.io";
 
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import Date from "../../components/Date";
+import { NextSeo } from "next-seo";
 
 type ParsedPostData = {
 	title: string;
@@ -40,9 +41,11 @@ export default function Post({ parsedPostData }: { parsedPostData: ParsedPostDat
 
 	return (
 		<div className="sm:mx-auto text-xl max-w-prose px-2">
-			<Head>
-				<title>{parsedPostData.title} / Conor Barnes </title>
-			</Head>
+			<NextSeo
+				title={parsedPostData.title}
+				description={parsedPostData.preview}
+				openGraph={{ title: parsedPostData.title, description: parsedPostData.title }}
+			/>
 			<h1 className="text-xl font-bold md:text-2xl mb-4 md:mb-6">{parsedPostData.title}</h1>
 			<div className="flex flex-col md:flex-row justify-between mb-4">
 				<Date dateString={parsedPostData.date} />

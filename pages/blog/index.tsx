@@ -8,6 +8,7 @@ import generateRss from "../../lib/rss";
 import fs from "fs";
 import SubscriptionBox from "../../components/Subscribe";
 import { GetStaticProps } from "next";
+import { NextSeo } from "next-seo";
 
 interface PostWithID extends PostData {
 	id: string;
@@ -53,10 +54,11 @@ function PostPreview({ id, date, title, status, preview }: PostWithID) {
 export default function blog({ allPostsData }: { allPostsData: PostWithID[] }) {
 	return (
 		<section className="mt-8">
-			<Head>
-				<title>Conor Barnes / Blog</title>
-				<meta name="description" content="Writing" />
-			</Head>
+			<NextSeo
+				title="Blog"
+				description="Fire Diamonds"
+				openGraph={{ title: "Blog", description: "Fire Diamonds" }}
+			/>
 			<div className="flex justify-center">
 				<ul className="flex-[5] m-4 mt-0 sm:mt-4 py-0 px-2 sm:py-4 sm:px-16 flex flex-col">
 					{allPostsData.map(({ id, date, title, status, preview }) => (
