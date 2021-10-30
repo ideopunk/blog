@@ -84,7 +84,7 @@ _This was what his grandmother and the Sisterhood sought! He knew it. His awaren
 
 We humans are a form of colony organism! _he thought._
 
-Neat! And while some chapters are better than others, the epigraphs are hopelessly given over to it, so chapters start listlessly:
+Golly. And while some chapters are better than others, the epigraphs are hopelessly given over to it, so chapters start listlessly:
 
 _The life of a single human, as the life of a family or an entire people, persists as memory. My people must come to see this as part of their maturing process. They are people as organism, and in this persistent memory they store more and more experiences in a subliminal reservoir. Humankind hopes to call upon this material if it is needed for a changing universe. But much that is stored can be lost in that chance play of accident which we call “fate.” Much may not be integrated into evolutionary relationships, and thus may not be evaluated and keyed into activity by those ongoing environmental changes which inflict themselves upon flesh. The species can forget! This is the special value of the Kwisatz Haderach which the Bene Gesserits never suspected: the Kwisatz Haderach cannot forget._
 
@@ -107,7 +107,7 @@ You get the idea.
 
 It goes without saying -- the final quarter of the book is thrilling! The payoff is huge (no spoilers!).
 
-The first quarter is excellent as well, though. Herbert knows how to set the stage. The first chapter is a perfect reintroduction to the world. Jessica's return puts the plot in motion clealy. The stage is set for a great story: Jessica's return, Alia and the Corrinos as villains arrayed against our heros, the twins' struggle against possession, the question mark of the Preacher. The middle of the book doesn't do much with these great pieces, but it's still a pleasure seeing them set up.
+The first quarter is excellent as well, though. Herbert knows how to begin a book. The first chapter is a perfect reintroduction to the world. Jessica's return puts the plot in motion clealy. The stage is set for a great story: Jessica's return, Alia and the Corrinos as villains arrayed against our heros, the twins' struggle against possession, the question mark of the Preacher. The middle of the book doesn't do much with these great pieces, but it's still a pleasure seeing them set up.
 
 A lot of the imagery is also excellent. The twins escaping through the qanat because Fremen can't quite imagine risking drowning, the planet transforming into a paradise, the evolving mythology around Paul:
 
@@ -121,6 +121,6 @@ There's a great adaptation somewhere in here. I haven't seen the mini-series ada
 
 **Recommendation**
 
-Though CoD's ending is excellent, the book isn't quite worth it. If you're going to read it, keep going, to the blissfully weird God Emperor of Dune. If you don't feel like reading four books, end at Messiah.
+Though CoD's ending is excellent, the book isn't quite worth it unless you're planning on reading the blissfully weird God Emperor of Dune. If you don't feel like reading four books, end at Messiah.
 
 _6/10_
