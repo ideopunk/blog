@@ -47,8 +47,6 @@ will return inferior results compared to:
 
 _img html -w3_
 
-
-
 [15.](https://www.gwern.net/Search#preparation) You can automate mundane computer tasks with Autohotkey (or AppleScript). If you keep doing a sequence “so simple a computer can do it”, make the computer do it.
 
 16\. Learn keyboard shortcuts. They’re easy to learn and you’ll get tasks done faster and easier.
@@ -234,7 +232,7 @@ DO NOT TALK TO COPS.
 
 [97.](https://www.lesswrong.com/posts/HmfxSWnqnK265GEFM/are-wireheads-happy) Liking and wanting things are different. There are things like junk food that you want beyond enjoyment. But you can also like things (like reading) without wanting them. If you remember enjoying something but don't feel a desire for it now, try pushing yourself.
 
-[98.](https://www.lesswrong.com/posts/HmfxSWnqnK265GEFM/are-wireheads-happy) People don’t realize how much they hate commuting. A nice house farther from work is not worth the fraction of your life you are giving to boredom and fatigue.
+[98.](https://www.greaterwrong.com/posts/YSWa8rYeD3aDaofSP/rational-home-buying) People don’t realize how much they hate commuting. A nice house farther from work is not worth the fraction of your life you are giving to boredom and fatigue.
 
 [99.](https://psycnet.apa.org/record/2019-43492-001) There’s some evidence that introverts and extroverts both benefit from being pushed to be more extroverted. Consider this the next time you aren’t sure if you feel like going out.
 

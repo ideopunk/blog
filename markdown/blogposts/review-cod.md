@@ -1,11 +1,11 @@
 ---
 title: "Book Review: Children of Dune"
-date: "2021-10-10"
+date: "2021-10-30"
 status: "Strong beliefs, loosely held"
 preview: "Characters must do things in order to be interesting."
 ---
 
-[Peter Sanfilippo](https://twitter.com/petesanf?lang=en) and I recently did a two-person Children of Dune book club. I didn't quite like CoD when I read it a decade ago, but in preparation for the new Dune movie, I decided to reread the first four books. So, inspired by the reread and our conversations around it, here are some thoughts! Minor spoilers throughout, with major spoilers for Dune and Dune Messiah.
+I recently reread the first three Dune books, in preparation for the new Dune movie (which was excellent!). Unfortunately, Children of Dune (CoD) stuck out for its drop-off in quality. So, inspired by the reread and conversations with [Peter Sanfilippo](https://twitter.com/petesanf?lang=en), here are some thoughts! Minor spoilers throughout, with major spoilers for Dune and Dune Messiah.
 
 First and foremost, I was struck by how much it borrows from its predecessors. From Dune: A coming-of-age story, the protagonist escaping into the desert, intersecting plots from our villains (the Baron and the Corrinos!). From Dune Messiah: the transformation of Arrakis and the decay of the empire.
 

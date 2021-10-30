@@ -48,7 +48,10 @@ export async function getPostData(id: string, subfolder: string) {
 	const fileContents = fs.readFileSync(fullPath, "utf8");
 
 	const matterResult = matter(fileContents);
-
+	const data = matterResult.data as PostData;
+	const parsedDate = new Date(data.date);
+	parsedDate.setDate(parsedDate.getDate() + 1);
+	data.date = parsedDate.toDateString();
 	const processedContent = await remark().use(html).process(matterResult.content);
 	const contentHtml = processedContent.toString();
 	const lazyHtml = contentHtml.replace("<img", "<img loading='lazy'");

@@ -4,7 +4,6 @@ import Head from "next/head";
 import type { ParsedUrlQuery } from "querystring";
 import commentBox from "commentbox.io";
 
-import styles from "../../public/style/markdown.module.css";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import Date from "../../components/Date";
 
