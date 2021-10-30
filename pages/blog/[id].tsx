@@ -34,8 +34,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export default function Post({ parsedPostData }: { parsedPostData: ParsedPostData }) {
 	useEffect(() => {
-		const removeCommentBox = commentBox("5726574024327168-proj");
-		// const removeCommentBox = commentBox("5634391980113920-proj");
+		const removeCommentBox = commentBox("5634391980113920-proj");
 		return () => removeCommentBox();
 	}, []);
 
