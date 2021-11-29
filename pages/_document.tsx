@@ -30,7 +30,7 @@ class MyDocument extends Document {
 						rel="alternate"
 						type="application/rss+xml"
 						title="RSS feed for blog posts"
-						href="https://www.ideopunk.com/rss.xml"
+						href="https://www.conorbarnes.com/rss.xml"
 					/>
 
 					<meta name="theme-color" content="#FFFFFF" />
