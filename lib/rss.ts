@@ -1,5 +1,3 @@
-// confirm these properties are correct
-
 type Post = { id: string; title: string; preview: string; date: string };
 
 const generateRssItem = (post: Post) => `
