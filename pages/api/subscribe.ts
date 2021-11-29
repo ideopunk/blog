@@ -32,7 +32,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
 		if (rj.title === "Member Exists") {
 			return res.json({
-				error: "It looks like you're already subscribed, probably via the old wordpress blog! ",
+				error: "It looks like you're already subscribed, perhaps via the old wordpress blog! ",
 			});
 		}
 		// 7. Swallow any errors from Mailchimp and return a better error message.

@@ -1,1 +1,1 @@
-me :)))
+[my blog](conorbarnes.com)
