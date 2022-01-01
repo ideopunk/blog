@@ -29,6 +29,7 @@ export function getSortedPostsData(subfolder: string) {
 		}
 	});
 
+	// gotta do this after sorting or it gets confused.
 	return allPostsData.map((post) => {
 		const parsedDate = new Date(post.date);
 		parsedDate.setDate(parsedDate.getDate() + 1);
