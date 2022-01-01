@@ -21,12 +21,19 @@ export function getSortedPostsData(subfolder: string) {
 		return { id, ...(data as PostData) };
 	});
 
-	return allPostsData.sort((a, b) => {
+	allPostsData.sort((a, b) => {
 		if (a.date < b.date) {
 			return 1;
 		} else {
 			return -1;
 		}
+	});
+
+	return allPostsData.map((post) => {
+		const parsedDate = new Date(post.date);
+		parsedDate.setDate(parsedDate.getDate() + 1);
+		post.date = parsedDate.toDateString();
+		return post;
 	});
 }
 
