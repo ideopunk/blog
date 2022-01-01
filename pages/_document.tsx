@@ -25,7 +25,7 @@ class MyDocument extends Document {
 						/>
 					</noscript>
 
-					<link rel="icon" href="/hammer-outline.svg" />
+					<link rel="icon" href="/hammer.svg" />
 					<link
 						rel="alternate"
 						type="application/rss+xml"
