@@ -45,7 +45,7 @@ export default function Subscribe() {
 				placeholder="Email address"
 				required
 				onChange={handleChange}
-				className="outline-none text-xl h-7 appearance-none rounded-none w-full hover:bg-tertiary focus:bg-tertiary transition-colors"
+				className="outline-none text-xl h-7 appearance-none rounded-none w-full hover:bg-tertiary focus:bg-tertiary transition-colors pt-[2px] pl-1"
 				type="email"
 			/>
 			<p className="mt-4 text-white">
