@@ -50,7 +50,7 @@ export default function Post({ parsedPostData }: { parsedPostData: ParsedPostDat
 			<div className="flex flex-col md:flex-row justify-between mb-4">
 				<Date dateString={parsedPostData.date} />
 				<span className="text-sm md:text-base font-light">
-					Epistemic status: {parsedPostData.status}
+					{parsedPostData.status ? `Epistemic status: ${parsedPostData.status}` : ""}
 				</span>
 			</div>
 			<hr />
