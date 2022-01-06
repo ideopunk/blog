@@ -14,7 +14,7 @@ export default function Subscribe() {
 		e.preventDefault();
 
 		// 3. Send a request to our API with the user's email address.
-		const res = await fetch("/api/subscribe", {
+		const res = await fetch("/api/moosend", {
 			body: JSON.stringify({ email: email }),
 			headers: { "Content-Type": "application/json" },
 			method: "POST",
