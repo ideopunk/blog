@@ -5,15 +5,36 @@
       <link>https://conorbarnes.com/blog</link>
       <description>Conor Barnes's home page and blog.</description>
       <language>en</language>
-      <lastBuildDate>Sun, 02 Jan 2022 04:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Sat, 08 Jan 2022 04:00:00 GMT</lastBuildDate>
       <atom:link href="https://conorbarnes.com/rss.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://conorbarnes.com/blog/simplecreation</guid>
+    <title>The Simplest Way to Start Creating</title>
+    <link>https://conorbarnes.com/blog/simplecreation</link>
+    <description>Just build what you want to exist</description>
+    <pubDate>Sat, 08 Jan 2022 04:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <guid>https://conorbarnes.com/blog/mrsfields</guid>
+    <title>Mrs. Fields</title>
+    <link>https://conorbarnes.com/blog/mrsfields</link>
+    <description>Mrs. Fields is very worried.</description>
+    <pubDate>Tue, 04 Jan 2022 04:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <guid>https://conorbarnes.com/blog/boycott</guid>
+    <title>The Boycott</title>
+    <link>https://conorbarnes.com/blog/boycott</link>
+    <description>It started when my friend said he’s never seen Star Wars and never will.</description>
+    <pubDate>Sun, 02 Jan 2022 04:00:00 GMT</pubDate>
+  </item>
   <item>
     <guid>https://conorbarnes.com/blog/2022quests</guid>
     <title>My 2022 Quests</title>
     <link>https://conorbarnes.com/blog/2022quests</link>
     <description>What would be awesome this year?</description>
-    <pubDate>Sun, 02 Jan 2022 04:00:00 GMT</pubDate>
+    <pubDate>Sat, 01 Jan 2022 04:00:00 GMT</pubDate>
   </item>
   <item>
     <guid>https://conorbarnes.com/blog/2021</guid>
