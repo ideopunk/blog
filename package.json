@@ -8,7 +8,6 @@
 		"start": "next start"
 	},
 	"dependencies": {
-		"@plaiceholder/css": "^1.0.0",
 		"commentbox.io": "^2.0.0",
 		"gray-matter": "^4.0.2",
 		"next": "^12.0.8",

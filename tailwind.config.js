@@ -22,7 +22,7 @@ module.exports = {
 				DEFAULT: {
 					css: {
 						color: theme("colors.black"),
-						fontFamily: ["Merriweather"],
+						fontFamily: "Merriweather",
 						a: {
 							color: theme("colors.primary"),
 							"&:hover": {
