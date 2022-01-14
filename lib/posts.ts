@@ -12,7 +12,7 @@ export function getSortedPostsData(subfolder: string) {
 
 	const allPostsData = fileNames.map((fileName) => {
 		const id = fileName.replace(/\.md$/, "");
-
+		
 		const fullPath = path.join(postsDirectory, fileName);
 		const fileContents = fs.readFileSync(fullPath, "utf8");
 

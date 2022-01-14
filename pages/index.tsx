@@ -40,7 +40,7 @@ export default function Home({ latestPost }) {
 							<p className="mb-4">
 								<Date dateString={latestPost.date} />
 							</p>
-							<p className="mb-4">{latestPost.preview}..</p>
+							<p className="mb-4">{latestPost.preview}</p>
 						</a>
 					</Link>
 				</div>

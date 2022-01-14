@@ -3,6 +3,7 @@ import Contact from "./Contact";
 import Subscribe from "./Subscribe";
 import Home from "./SVGs/HomeSVG";
 import { ReactNode } from "react";
+import { useRouter } from "next/router";
 
 function HeaderLink({ children, href }: { children: ReactNode; href?: string }) {
 	return href ? (
@@ -25,17 +26,11 @@ function HeaderLink({ children, href }: { children: ReactNode; href?: string }) 
 }
 
 export default function Layout({ children }: { children: ReactNode }) {
-	// function toggleDarkMode() {
-	// 	localStorage.theme === "dark"
-	// 		? (localStorage.theme = "light")
-	// 		: (localStorage.theme = "light");
+	const router = useRouter();
 
-	// 	// Whenever the user explicitly chooses dark mode
-	// 	localStorage.theme = "dark";
-
-	// 	// Whenever the user explicitly chooses to respect the OS preference
-	// 	localStorage.removeItem("theme");
-	// }
+	if (router.pathname.includes("coriolis")) {
+		return <div>{children}</div>;
+	}
 	return (
 		<div>
 			<header
