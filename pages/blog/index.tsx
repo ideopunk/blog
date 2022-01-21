@@ -41,7 +41,6 @@ function PostPreview({ id, date, title, status, preview }: PostWithID) {
 
 					<div className={`flex justify-between mb-4 flex-col`}>
 						<Date dateString={date} />
-						<small className="italic">Epistemic status: {status}</small>
 					</div>
 					<div className="mt-4 mb-2">{preview}</div>
 				</a>
