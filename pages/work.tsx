@@ -64,17 +64,34 @@ export default function Work() {
 				id={0}
 				color="white"
 				comp={<Languages />}
-				text="I'm a front-end engineer at Melange. When I'm not doing that, I'm teaching myself Rust. If you ever want to talk programming, my contact information is below!"
+				text="I'm a front-end engineer at Melange. When I'm not doing that, I'm building projects in Rust or JavaScript. If you ever want to talk programming, my contact information is below!"
 				flip
 			/>
 			<Project
 				id={1}
 				color="#1A2D52"
 				dark
-				img="/images/squares/melangesquare.png"
+				img="/images/squares/melangepic.png"
 				title="Melange"
-				text="I'm building the front-end of a social betting app in React Native."
+				text="I'm building the front-end of a social betting app in React Native and NextJS."
 				link="https://www.melange.io/"
+			/>
+			<Project
+				id={2}
+				color="#6cb6e0"
+				dark
+				img="/images/squares/starrynightglitchedsquare.png"
+				title="Pixel Sorter"
+				text="Create glitch art through pixel sorting! All processing is done in-browser."
+				link="https://www.pixel-sorter.com"
+			/>
+			<Project
+				id={3}
+				color="#F5CBF3"
+				img="/images/squares/tdpic.png"
+				title="Tonal Distancing"
+				text="This web app uses a Rust server to highlight word proximity."
+				link="https://tonal-distancing-client.vercel.app/"
 				bottom
 			/>
 		</div>
