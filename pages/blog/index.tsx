@@ -34,18 +34,18 @@ export const getStaticProps: GetStaticProps<Props, {}> = async () => {
 
 function PostPreview({ id, date, title, status, preview }: PostWithID) {
 	return (
-		<li className="hover:bg-primary pt-6 border-b-2 p-2">
-			<Link href={`/blog/${id}`}>
-				<a className="h-full w-full ">
+		<Link href={`/blog/${id}`}>
+			<a className="h-full w-full ">
+				<li className="hover:bg-primary pt-6 border-b-2 p-2">
 					<h3 className="text-lg sm:text-3xl">{title}</h3>
 
 					<div className={`flex justify-between mb-4 flex-col`}>
 						<Date dateString={date} />
 					</div>
 					<div className="mt-4 mb-2">{preview}</div>
-				</a>
-			</Link>
-		</li>
+				</li>
+			</a>
+		</Link>
 	);
 }
 

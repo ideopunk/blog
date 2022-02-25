@@ -4,8 +4,6 @@ date: "2022-01-02"
 preview: "It started when my friend said he’s never seen Star Wars and never will."
 ---
 
-The Boycott
-
 It started when my friend said he’s never seen Star Wars and never will. I thought that was really funny. I realized I wanted to boycott something too. You know, people try to do a lot. They try to fit everything into their life. So it's a nice change to not do something.
 
 The fun is in not breaking the boycott. You know people break promises all the time. They get bored. Every day the boycott goes on the more fun it is.
