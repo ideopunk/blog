@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 import type { ParsedUrlQuery } from "querystring";
-import commentBox from "commentbox.io";
+// import commentBox from "commentbox.io";
 
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import Date from "../../components/Date";
@@ -34,13 +34,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export default function Post({ parsedPostData }: { parsedPostData: ParsedPostData }) {
-	useEffect(() => {
-		const removeCommentBox = commentBox("5634391980113920-proj");
-		return () => removeCommentBox();
-	}, []);
+	// useEffect(() => {
+	// 	const removeCommentBox = commentBox("5634391980113920-proj");
+	// 	return () => removeCommentBox();
+	// }, []);
 
 	return (
-		<div className="sm:mx-auto text-xl max-w-prose px-2">
+		<div className="sm:mx-auto text-xl max-w-prose px-2 min-h-screen">
 			<NextSeo
 				title={parsedPostData.title}
 				description={parsedPostData.preview}
@@ -59,7 +59,7 @@ export default function Post({ parsedPostData }: { parsedPostData: ParsedPostDat
 				dangerouslySetInnerHTML={{ __html: parsedPostData.lazyHtml }}
 				className={`prose prose-lg max-w-none md:prose-xl my-4 `}
 			/>
-			<div className={`commentbox mb-4`} />
+			{/* <div className={`commentbox mb-4`} /> */}
 		</div>
 	);
 }
