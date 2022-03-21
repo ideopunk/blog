@@ -8,7 +8,6 @@
 		"start": "next start"
 	},
 	"dependencies": {
-		"commentbox.io": "^2.0.0",
 		"gray-matter": "^4.0.2",
 		"next": "^12.1.0",
 		"next-seo": "^4.28.1",
