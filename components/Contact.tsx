@@ -15,6 +15,7 @@ function Linky({ text, href }: { text: string; href: string }) {
 }
 
 export default function ContactForm() {
+	
 	const [toast, setToast] = useState(false);
 
 	const handleClick = async () => {
