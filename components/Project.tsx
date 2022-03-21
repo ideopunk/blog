@@ -49,16 +49,16 @@ export default function Project({
 			<a href={link} className="w-96 sm:mb-20 md:mb-0 group">
 				<div className="m-4 mt-8 pt-0 px-4 pb-16 sm:p-4 sm:rounded  w-full  sm:m-0">
 					<h2
-						className={`mb-4 text-5xl transition-colors group-hover:text-secondary ${
-							dark ? "text-white" : ""
-						}`}
+						className={`mb-4 text-5xl transition-colors ${
+							link ? "group-hover:text-secondary " : ""
+						} ${dark ? "text-white" : ""}`}
 					>
 						{title}
 					</h2>
 					<p
-						className={`mb-4 text-2xl group-hover:text-secondary transition-colors ${
-							dark ? "text-white " : ""
-						}`}
+						className={`mb-4 text-2xl ${
+							link ? "group-hover:text-secondary" : ""
+						} transition-colors ${dark ? "text-white " : ""}`}
 					>
 						{text}
 					</p>

@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import Head from "next/head";
 import { AppProps } from "next/app";
 import { DefaultSeo } from "next-seo";
+import { Toaster } from "react-hot-toast";
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
@@ -34,6 +35,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 				}}
 			/>
 			<Component {...pageProps} />
+			<Toaster position="bottom-center" />
 		</Layout>
 	);
 }
