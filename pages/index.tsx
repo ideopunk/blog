@@ -19,7 +19,7 @@ export default function Home({ latestPost }) {
 				openGraph={{ title: "Conor Barnes", description: "Ideopunk" }}
 			/>
 			<div className="-top-1/3 md:top-1/4 lg:top-8 md:-left-12 absolute  md:w-[95vw] md:h-1/2 lg:h-5/6 bg-primary z-0 " />
-			<div className="md:max-h-[500px] overflow-hidden">
+			{/* <div className="md:max-h-[500px] overflow-hidden">
 				<Image
 					src={profilePic}
 					placeholder="blur"
@@ -27,7 +27,7 @@ export default function Home({ latestPost }) {
 					priority
 					// className="max-h-[450px]"
 				/>
-			</div>
+			</div> */}
 			<div className="w-full sm:w-[400px] md:w-[500px] z-10 max-w-prose md:ml-8 mb-10 md:mb-0">
 				<div className="transition-colors p-4 text-black bg-secondary  flex items-center hover:bg-tertiary  ">
 					<Link href="/work">

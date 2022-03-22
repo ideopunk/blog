@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import toast from "react-hot-toast";
 import Copy from "./SVGs/CopySVG";
 
 function Linky({ text, href }: { text: string; href: string }) {
@@ -15,28 +16,14 @@ function Linky({ text, href }: { text: string; href: string }) {
 }
 
 export default function ContactForm() {
-	
-	const [toast, setToast] = useState(false);
-
 	const handleClick = async () => {
 		await navigator.clipboard.writeText("conorbarnes93@gmail.com");
-		setToast(true);
+		toast("Copied email address!")
 	};
-
-	useEffect(() => {
-		function byebye() {
-			setToast(false);
-		}
-
-		let timeout;
-		toast ? (timeout = setTimeout(byebye, 1000)) : null;
-
-		return () => clearTimeout(timeout);
-	}, [toast]);
 
 	return (
 		<div
-			className="flex sm:flex-col flex-wrap sm:flex-nowrap justify-start  w-full sm:w-1/2 "
+			className="border-transparent transition-colors border-2 target:border-secondary target:rounded-md flex sm:flex-col flex-wrap sm:flex-nowrap justify-start  w-min p-4 pl-12 sm:w-1/2 "
 			id="contact"
 		>
 			<div className="flex items-start sm:items-center relative w-1/2 text-left">
@@ -49,12 +36,6 @@ export default function ContactForm() {
 			<Linky text="Twitter" href="https://www.twitter.com/ideopunk" />
 			<Linky text="GitHub" href="https://github.com/ideopunk" />
 			<Linky text="LinkedIn" href="https://www.linkedin.com/in/conor-barnes-b49833206/" />
-
-			{toast && (
-				<p className="toast mb-3 transition-all ease-out transform hover:translate-x-4 w-1/2 text-left text-primary hover:text-black ">
-					Copied
-				</p>
-			)}
 		</div>
 	);
 }

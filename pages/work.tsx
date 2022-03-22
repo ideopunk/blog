@@ -64,7 +64,7 @@ export default function Work() {
 				id={0}
 				color="white"
 				comp={<Languages />}
-				text="I'm a front-end engineer at Melange. When I'm not doing that, I'm building projects in Rust or JavaScript. If you ever want to talk programming, my contact information is below!"
+				text="I'm a front-end engineer at Melange. When I'm not doing that, I'm building projects in Go or JavaScript. If you ever want to talk programming, my contact information is below!"
 				flip
 			/>
 			<Project
