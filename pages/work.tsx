@@ -12,10 +12,10 @@ import TS from "../components/SVGs/langs/TS";
 import useWindowSize from "../lib/useWindowSize";
 import Rust from "../components/SVGs/langs/Rust";
 import { NextSeo } from "next-seo";
+import { useTheme } from "next-themes";
 
 function Languages() {
 	const { width: size } = useWindowSize();
-
 	// const mobileRatio = 12;
 	const mobileRatio = size <= 600 ? 6 : 12;
 
@@ -50,6 +50,8 @@ function Languages() {
 }
 
 export default function Work() {
+	const {theme} = useTheme()
+	const light = theme === "light"
 	return (
 		<div>
 			<NextSeo
@@ -62,14 +64,14 @@ export default function Work() {
 			/>
 			<Project
 				id={0}
-				color="white"
+				color={light ? "white" : "black"}
 				comp={<Languages />}
 				text="I'm a front-end engineer at Melange. When I'm not doing that, I'm building projects in Go or JavaScript. If you ever want to talk programming, my contact information is below!"
 				flip
 			/>
 			<Project
 				id={1}
-				color="#1A2D52"
+				color={theme === "light" ? "#1A2D52": "#57534e"}
 				dark
 				img="/images/squares/melangepic.png"
 				title="Melange"
@@ -78,7 +80,7 @@ export default function Work() {
 			/>
 			<Project
 				id={2}
-				color="#6cb6e0"
+				color={light ? "#6cb6e0" : "#1e3a8a"}
 				dark
 				img="/images/squares/starrynightglitchedsquare.png"
 				title="Pixel Sorter"
@@ -87,7 +89,7 @@ export default function Work() {
 			/>
 			<Project
 				id={3}
-				color="#F5CBF3"
+				color={light ? "#F5CBF3" : "#bd93f9"}
 				img="/images/squares/tdpic.png"
 				title="Tonal Distancing"
 				text="This web app uses a Rust server to highlight word proximity."

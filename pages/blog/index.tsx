@@ -37,16 +37,16 @@ function PostPreview({ id, date, title, status, preview }: PostWithID) {
 		<Link href={`/blog/${id}`}>
 			<a className="h-full w-full ">
 				<li className="group  pt-6 border-b-2 p-2">
-					<h3 className="text-lg group-hover:text-secondary transition-colors sm:text-3xl">
+					<h3 className="text-lg group-hover:text-secondary dark:group-hover:text-secondaryDark transition-colors sm:text-3xl">
 						{title}
 					</h3>
 
 					<div
-						className={`flex justify-between mb-4 group-hover:text-secondary transition-colors flex-col`}
+						className={`flex justify-between mb-4 group-hover:text-secondary dark:group-hover:text-secondaryDark transition-colors flex-col`}
 					>
 						<Date dateString={date} />
 					</div>
-					<p className="mt-4 mb-2 group-hover:text-secondary transition-colors">
+					<p className="mt-4 mb-2 group-hover:text-secondary dark:group-hover:text-secondaryDark transition-colors">
 						{preview}
 					</p>
 				</li>

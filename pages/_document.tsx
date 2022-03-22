@@ -46,7 +46,7 @@ class MyDocument extends Document {
 						}}
 					></script> */}
 				</Head>
-				<body>
+				<body className="dark:bg-black">
 					{/* <body className="dark:bg-black"> */}
 					<Main />
 					<NextScript />

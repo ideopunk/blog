@@ -1,4 +1,5 @@
 import "../public/style/globals.css";
+import { ThemeProvider } from 'next-themes';
 import Layout from "../components/Layout";
 import Head from "next/head";
 import { AppProps } from "next/app";
@@ -7,6 +8,7 @@ import { Toaster } from "react-hot-toast";
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
+		<ThemeProvider attribute="class">
 		<Layout>
 			<Head>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -37,6 +39,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 			<Component {...pageProps} />
 			<Toaster position="bottom-center" />
 		</Layout>
+		</ThemeProvider>
 	);
 }
 

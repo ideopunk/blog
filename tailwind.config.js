@@ -2,14 +2,15 @@ const { fontFamily } = require("tailwindcss/defaultTheme");
 
 module.exports = {
 	content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+	darkMode: "class",
 	theme: {
 		extend: {
 			colors: {
 				primary: "#137f94",
 				secondary: "#df5c61",
-				tertiary: "#CFB3CD",
-				// primary: "#724f74",
-				// secondary: "#fa4d5e",
+				primaryLight: "hsl(190, 77%, 80%)",
+				primaryDark: "hsl(230, 15%, 30%)",
+				secondaryDark: "hsl(358, 785%, 45%)",
 			},
 			fontFamily: {
 				...fontFamily,
