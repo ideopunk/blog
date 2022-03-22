@@ -83,7 +83,7 @@ export default function Work() {
 				img="/images/squares/starrynightglitchedsquare.png"
 				title="Pixel Sorter"
 				text="Create glitch art through pixel sorting! All processing is done in-browser."
-				link="https://www.pixel-sorter.com"
+				link="https://pixel-sorter.com/"
 			/>
 			<Project
 				id={3}
