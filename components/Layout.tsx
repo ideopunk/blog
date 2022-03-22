@@ -32,12 +32,12 @@ export default function Layout({ children }: { children: ReactNode }) {
 		return <div>{children}</div>;
 	}
 	return (
-		<div>
+		<div className="min-h-screen flex flex-col">
 			<header
 				id="top"
 				className="flex text-lg static sm:sticky w-full  
-						h-10 top-0 left-0 z-20 justify-between font-semibold 
-						backdrop-opacity-80 py-8 px-2 md:px-8 items-center bg-opacity-50 bg-white"
+		h-10 top-0 left-0 z-20 justify-between font-semibold 
+		backdrop-opacity-80 py-8 px-2 md:px-8 items-center bg-opacity-50 bg-white"
 			>
 				<HeaderLink>
 					<Home />
@@ -48,14 +48,14 @@ export default function Layout({ children }: { children: ReactNode }) {
 					<HeaderLink href="#contact">Contact</HeaderLink>
 				</div>
 			</header>
-			<main>{children}</main>
+			<main className="flex-1">{children}</main>
 
-			<footer className=" flex text-lg flex-col sm:flex-row justify-evenly py-6 px-20 items-center">
+			<footer className="mt-auto flex text-lg flex-col sm:flex-row justify-evenly py-6 px-20 items-center">
 				<Contact />
 				<Subscribe />
 				{/* <button onClick={toggleDarkMode} className="w-10 h-10 hover:bg-gray-600">
-					Toggle dark mode :)
-				</button> */}
+	Toggle dark mode :)
+</button> */}
 			</footer>
 		</div>
 	);

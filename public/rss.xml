@@ -5,29 +5,22 @@
       <link>https://conorbarnes.com/blog</link>
       <description>Conor Barnes's home page and blog.</description>
       <language>en</language>
-      <lastBuildDate>Mon, 28 Feb 2022 04:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Wed, 02 Mar 2022 04:00:00 GMT</lastBuildDate>
       <atom:link href="https://conorbarnes.com/rss.xml" rel="self" type="application/rss+xml"/>
       
-  <item>
-    <guid>https://conorbarnes.com/blog/afterthefire</guid>
-    <title>After The Fire</title>
-    <link>https://conorbarnes.com/blog/afterthefire</link>
-    <description></description>
-    <pubDate>Mon, 28 Feb 2022 04:00:00 GMT</pubDate>
-  </item>
-  <item>
-    <guid>https://conorbarnes.com/blog/mrsfields</guid>
-    <title>Mrs. Fields</title>
-    <link>https://conorbarnes.com/blog/mrsfields</link>
-    <description>Mrs. Fields is very worried.</description>
-    <pubDate>Sat, 08 Jan 2022 04:00:00 GMT</pubDate>
-  </item>
   <item>
     <guid>https://conorbarnes.com/blog/theagent</guid>
     <title>The Agent</title>
     <link>https://conorbarnes.com/blog/theagent</link>
     <description>Before the war I didn't really think about anything.</description>
     <pubDate>Wed, 02 Mar 2022 04:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <guid>https://conorbarnes.com/blog/afterthefire</guid>
+    <title>After The Fire</title>
+    <link>https://conorbarnes.com/blog/afterthefire</link>
+    <description></description>
+    <pubDate>Sun, 27 Feb 2022 04:00:00 GMT</pubDate>
   </item>
   <item>
     <guid>https://conorbarnes.com/blog/thechristian</guid>
@@ -63,6 +56,13 @@
     <link>https://conorbarnes.com/blog/simplecreation</link>
     <description>Just build what you want to exist</description>
     <pubDate>Fri, 07 Jan 2022 04:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <guid>https://conorbarnes.com/blog/mrsfields</guid>
+    <title>Mrs. Fields</title>
+    <link>https://conorbarnes.com/blog/mrsfields</link>
+    <description>Mrs. Fields is very worried.</description>
+    <pubDate>Tue, 04 Jan 2022 04:00:00 GMT</pubDate>
   </item>
   <item>
     <guid>https://conorbarnes.com/blog/boycott</guid>
