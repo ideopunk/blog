@@ -14,7 +14,7 @@ export async function getStaticProps() {
 export default function Home({ latestPost }) {
 	return (
 		<section
-			className="flex flex-col-reverse md:flex-row items-center justify-between relative bg-primary bg-opacity-30 lg:pl-12 py-12"
+			className="flex flex-col-reverse md:flex-row items-center justify-between relative bg-primary bg-opacity-30 px-6 lg:pl-12 py-12"
 		
 		>
 			<NextSeo
