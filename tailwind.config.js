@@ -9,7 +9,7 @@ module.exports = {
 				primary: "#137f94",
 				secondary: "#df5c61",
 				primaryLight: "hsl(190, 77%, 80%)",
-				primaryDark: "hsl(230, 15%, 30%)",
+				primaryDark: "hsl(230, 15%, 70%)",
 				secondaryDark: "hsl(358, 785%, 45%)",
 			},
 			fontFamily: {

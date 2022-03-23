@@ -13,6 +13,7 @@ import useWindowSize from "../lib/useWindowSize";
 import Rust from "../components/SVGs/langs/Rust";
 import { NextSeo } from "next-seo";
 import { useTheme } from "next-themes";
+import Go from "../components/SVGs/langs/Go";
 
 function Languages() {
 	const { width: size } = useWindowSize();
@@ -42,8 +43,9 @@ function Languages() {
 				style={{ width: size / (mobileRatio / 3) + 20 }}
 			>
 				<Node size={size / mobileRatio} />
+				<Go size={size/mobileRatio}/>
 				<Rust size={size / mobileRatio} />
-				<Git size={size / mobileRatio} />
+				{/* <Git size={size / mobileRatio} /> */}
 			</div>
 		</>
 	);

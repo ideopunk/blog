@@ -46,9 +46,8 @@ class MyDocument extends Document {
 						}}
 					></script> */}
 				</Head>
-				<body className="dark:bg-black">
-					{/* <body className="dark:bg-black"> */}
-					<Main />
+				<body className="min-h-screen dark:bg-slate-900">
+					<Main />	
 					<NextScript />
 				</body>
 			</Html>

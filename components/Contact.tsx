@@ -6,11 +6,13 @@ function Linky({ text, href }: { text: string; href: string }) {
 	return (
 		<a
 			href={href}
-			className="mb-3 transition-all ease-out hover:translate-x-4 font-semibold text-primary hover:text-secondary dark:text-primaryDark dark:hover:text-secondaryDark w-1/2 text-left"
+			className="mb-3 group font-semibold  w-1/2 text-left"
 			target="_blank"
 			rel="noopener noreferrer"
 		>
+			<p className="transition-all ease-out group-hover:translate-x-4 text-primary hover:text-secondary dark:text-primaryDark dark:hover:text-secondaryDark">
 			{text}
+			</p>
 		</a>
 	);
 }
