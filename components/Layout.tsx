@@ -2,7 +2,7 @@ import Link from "next/link";
 import Contact from "./Contact";
 import Subscribe from "./Subscribe";
 import Home from "./SVGs/HomeSVG";
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { useTheme } from "next-themes";
 import Sun from "./SVGs/Sun";
@@ -29,12 +29,18 @@ function HeaderLink({ children, href }: { children: ReactNode; href?: string }) 
 }
 
 export default function Layout({ children }: { children: ReactNode }) {
+	const [mounted, setMounted] = useState(false);
 	const { theme, setTheme } = useTheme();
+
+	// When mounted on client, now we can show the icon
+	useEffect(() => setMounted(true), []);
+
 	const router = useRouter();
 
 	if (router.pathname.includes("coriolis")) {
 		return <div>{children}</div>;
 	}
+
 	return (
 		<div className="min-h-screen flex flex-col">
 			<header
@@ -49,7 +55,7 @@ export default function Layout({ children }: { children: ReactNode }) {
 						onClick={() => setTheme(theme === "light" ? "dark" : "light")}
 						className="w-8 ml-8 text-secondary dark:text-secondaryDark hover:text-primary dark:hover:text-primaryDark transition-colors outline-none focus:border-2 border-current rounded-full"
 					>
-						{theme === "light" ? <Sun /> : <Moon />}
+						{!mounted ? null : theme === "light" ? <Sun /> : <Moon />}
 					</button>
 				</div>
 				<div className="divide-x-8 md:divide-x-[2rem] divide-transparent">
