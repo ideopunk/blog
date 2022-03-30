@@ -63,9 +63,6 @@ export default function Layout({ children }: { children: ReactNode }) {
 			<footer className="mt-auto flex text-lg flex-col sm:flex-row justify-evenly py-6 px-20 items-center">
 				<Contact />
 				<Subscribe />
-				{/* <button onClick={toggleDarkMode} className="w-10 h-10 hover:bg-gray-600">
-	Toggle dark mode :)
-</button> */}
 			</footer>
 		</div>
 	);

@@ -4,6 +4,7 @@ import Head from "next/head";
 import type { ParsedUrlQuery } from "querystring";
 
 import { NextSeo } from "next-seo";
+import Link from "next/link";
 
 type ParsedPostData = {
 	title: string;
@@ -18,7 +19,7 @@ type Props = { parsedPostData: ParsedPostData };
 
 export default function Post() {
 	return (
-		<div className="sm:mx-auto text-xl max-w-prose px-2 min-h-screen">
+		<div className="sm:mx-auto text-xl max-w-prose px-2">
 			<NextSeo
 				title={"Conor Barnes"}
 				description={"About me"}
@@ -28,8 +29,23 @@ export default function Post() {
 				<h1 className="text-xl font-bold md:text-2xl mb-4 md:mb-6">About me</h1>
 			</div>
 
-			<article className={`prose prose-lg max-w-none md:prose-xl my-4 `}>
-				<p></p>
+			<article className={`max-w-none prose md:prose-xl mt-4 `}>
+				<p>Hi! I'm Conor Barnes, a developer and writer living in Halifax.</p>
+				<p>
+					I like writing stories. This year I'm writing a hundred and I started with the
+					Boycott. Sometimes they're 'speculative fiction' or 'magical realism' and mostly
+					they're short.
+				</p>
+				<p>
+					I like programming things for friends, like Pixel Sorter. You do not have to be
+					a friend to make a request. The easiest way to get a 'yes' is to ask me for
+					something that will delight people (including myself).
+				</p>
+				<p>
+					I occassionally like writing non-fiction, like 100 Tips For a Better Life. If
+					you've tried them all and are still unhappy please let me know and I will find
+					more tips for you.
+				</p>
 			</article>
 		</div>
 	);
