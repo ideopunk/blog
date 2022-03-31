@@ -29,22 +29,33 @@ export default function Post() {
 				<h1 className="text-xl font-bold md:text-2xl mb-4 md:mb-6">About me</h1>
 			</div>
 
-			<article className={`max-w-none prose md:prose-xl mt-4 `}>
+			<article
+				className={`max-w-none prose md:prose-xl mt-4 dark:prose-p:text-white prose-a:text-secondary dark:prose-a:text-secondaryDark `}
+			>
 				<p>Hi! I'm Conor Barnes, a developer and writer living in Halifax.</p>
 				<p>
-					I like writing stories. This year I'm writing a hundred and I started with the
-					Boycott. Sometimes they're 'speculative fiction' or 'magical realism' and mostly
+					I like writing stories. This year I'm writing a hundred and I started with{" "}
+					<Link href="/blog/boycott">
+						<a className="text-secondary">The Boycott</a>
+					</Link>
+					. Sometimes they're 'speculative fiction' or 'magical realism' and mostly
 					they're short.
 				</p>
 				<p>
-					I like programming things for friends, like Pixel Sorter. You do not have to be
-					a friend to make a request. The easiest way to get a 'yes' is to ask me for
-					something that will delight people (including myself).
+					I like programming things for friends, like{" "}
+					<Link href="/work#2">
+						<a>Pixel Sorter</a>
+					</Link>
+					. You do not have to be a friend to make a request. The easiest way to get a
+					'yes' is to ask me for something that will delight people (including myself).
 				</p>
 				<p>
-					I occassionally like writing non-fiction, like 100 Tips For a Better Life. If
-					you've tried them all and are still unhappy please let me know and I will find
-					more tips for you.
+					I occassionally like writing non-fiction, like{" "}
+					<Link href="/blog/tipsforabetterlife">
+						<a>100 Tips For a Better Life</a>
+					</Link>
+					. If you've tried them all and are still unhappy please let me know and I will
+					find more tips for you.
 				</p>
 			</article>
 		</div>

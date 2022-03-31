@@ -24,13 +24,13 @@ module.exports = {
 					css: {
 						color: theme("colors.black"),
 						fontFamily: "Merriweather",
-						a: {
-							color: theme("colors.primary"),
-							"&:hover": {
-								color: theme("colors.secondary"),
-							},
-							fontWeight: 400,
-						},
+						// a: {
+						// 	color: theme("colors.primary"),
+						// 	"&:hover": {
+						// 		color: theme("colors.secondary"),
+						// 	},
+						// 	fontWeight: 400,
+						// },
 						em: {},
 					},
 				},

@@ -9,22 +9,27 @@ import Sun from "./SVGs/Sun";
 import Moon from "./SVGs/Moon";
 
 function HeaderLink({ children, href }: { children: ReactNode; href?: string }) {
-	return href ? (
-		<a
-			className="transition-colors ease-out text-secondary dark:text-secondaryDark hover:text-primary dark:hover:text-primaryDark outline-none focus:text-primary"
-			href={href}
-		>
-			{children}
-		</a>
-	) : (
-		<Link href={typeof children === "string" ? `/${children.toLowerCase()}` : "/"}>
-			<a
-				className="ease-out text-secondary dark:text-secondaryDark transition-colors hover:text-primary dark:hover:text-primaryDark cursor-pointer outline-none focus:text-primary"
-				href={href}
-			>
-				{children}
-			</a>
-		</Link>
+	const itsAString = typeof children === "string";
+	return (
+		<div className={`group relative ${itsAString && "top-1"}`}>
+			{href ? (
+				<a
+					className="transition-colors ease-out text-secondary dark:text-secondaryDark group-hover:text-primary dark:group-hover:text-primaryDark outline-none focus:text-primary"
+					href={href}
+				>
+					{children}
+				</a>
+			) : (
+				<Link href={itsAString ? `/${children.toLowerCase()}` : "/"}>
+					<a className="ease-out block text-secondary dark:text-secondaryDark transition-colors group-hover:text-primary dark:group-hover:text-primaryDark cursor-pointer outline-none focus:text-primary">
+						{children}
+					</a>
+				</Link>
+			)}
+			{itsAString && (
+				<div className="w-full bg-primary dark:bg-primaryDark h-0.5 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 group-hover:duration-300" />
+			)}
+		</div>
 	);
 }
 
@@ -58,7 +63,8 @@ export default function Layout({ children }: { children: ReactNode }) {
 						{!mounted ? null : theme === "light" ? <Sun /> : <Moon />}
 					</button>
 				</div>
-				<div className="divide-x-8 md:divide-x-[2rem] divide-transparent">
+				<div className="divide-x-8 flex items-center md:divide-x-[2rem] divide-transparent">
+					<HeaderLink>About</HeaderLink>
 					<HeaderLink>Work</HeaderLink>
 					<HeaderLink>Blog</HeaderLink>
 					<HeaderLink href="#contact">Contact</HeaderLink>

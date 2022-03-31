@@ -45,9 +45,13 @@ export default function Subscribe() {
 				className="outline-none border-b-2 bg-transparent border-secondary dark:border-secondaryDark placeholder:opacity-50 hover:placeholder:opacity-75 focus:placeholder:opacity-75 placeholder:text-primary dark:placeholder:text-white text-xl h-7 appearance-none rounded-none w-full  transition-colors py-4"
 				type="email"
 			/>
-			<p className="mt-4 text-primary dark:text-secondaryDark">Receive notifications about new blog posts.</p>
+			<p className="mt-4 text-primary dark:text-secondaryDark">
+				Receive notifications about new blog posts.
+			</p>
 			<button
-				className="mt-4  text-xl transition-all ease-out font-semibold tracking-wide p-2 rounded-lg bg-secondary dark:bg-secondaryDark hover:bg-secondaryDark  text-white dark:text-stone-300 hover:scale-105 hover:-translate-y-0.5 active:scale-95 active:translate-y-0 outline-none"
+				className="mt-4  text-xl transition-all ease-out font-semibold tracking-wide p-2 rounded-lg 
+				bg-secondary dark:bg-secondaryDark hover:bg-secondaryDark  text-white dark:text-stone-300 
+				 hover:-translate-y-0.5 active:translate-y-0.5 outline-none"
 				type="submit"
 			>
 				Subscribe
