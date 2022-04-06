@@ -9,6 +9,7 @@ import Sun from "./SVGs/Sun";
 import Moon from "./SVGs/Moon";
 
 function HeaderLink({ children, href }: { children: ReactNode; href?: string }) {
+	const { pathname } = useRouter();
 	const itsAString = typeof children === "string";
 	return (
 		<div className={`group relative ${itsAString && "top-1"}`}>
@@ -55,12 +56,36 @@ export default function Layout({ children }: { children: ReactNode }) {
 				<div className="flex items-center">
 					<HeaderLink>
 						<Home />
+
+						{/* <div className="w-10 h-10 group"> */}
+
+						{/* <img
+								src="/dark_house_filled.PNG"
+								className={`object-contain opacity-0 group-hover:opacity-100 ${
+									router.pathname === "/" && "opacity-100"
+								} absolute transition-opacity`}
+							/>
+							<img src="/dark_house_outline.PNG" className="object-contain" /> */}
+						{/* </div> */}
 					</HeaderLink>
 					<button
 						onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-						className="w-8 ml-8 text-secondary dark:text-secondaryDark hover:text-primary dark:hover:text-primaryDark transition-colors outline-none focus:border-2 border-current rounded-full"
+						className="w-8 ml-8 text-secondary dark:text-secondaryDark hover:text-primary dark:hover:text-primaryDark outline-none border-current rounded-full relative"
 					>
-						{!mounted ? null : theme === "light" ? <Sun /> : <Moon />}
+						{/* <div className="w-8 h-8 group"> */}
+						{!mounted ? null : theme === "light" ? (
+							// <>
+							// 	<img
+							// 		src="/sun_filled.PNG"
+							// 		className="object-contain opacity-0 group-hover:opacity-100 absolute transition-opacity"
+							// 	/>
+							// 	<img src="/sun_outline.PNG" className="object-contain" />
+							// </>
+							<Sun />
+						) : (
+							<Moon />
+						)}
+						{/* </div> */}
 					</button>
 				</div>
 				<div className="divide-x-8 flex items-center md:divide-x-[2rem] divide-transparent">

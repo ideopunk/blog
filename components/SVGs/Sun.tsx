@@ -4,7 +4,8 @@ export default function Sun() {
 			<title>Sunny</title>
 			<path
 				fill="none"
-				stroke="currentColor"
+				// stroke="currentColor"
+				className="stroke-current transition-colors"
 				strokeLinecap="round"
 				strokeMiterlimit="10"
 				strokeWidth="32"
@@ -15,7 +16,7 @@ export default function Sun() {
 				cy="256"
 				r="80"
 				fill="none"
-				stroke="currentColor"
+				className="stroke-current transition-colors"
 				strokeLinecap="round"
 				strokeMiterlimit="10"
 				strokeWidth="32"
