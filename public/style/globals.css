@@ -17,18 +17,7 @@
 	}
 }
 
-/* body::-webkit-scrollbar {
-  background-color: rgba(0 0, 0, 0);
-	width: 1em;
-}
 
-body::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-
-body::-webkit-scrollbar-thumb {
-	background-color: pink;
-} */
 
 body {
 	-ms-overflow-style: none; /* Internet Explorer 10+ */
@@ -42,10 +31,6 @@ body::-webkit-scrollbar {
 a {
 	text-decoration: none;
 }
-
-/* a:hover {
-  text-decoration: underline;
-} */
 
 img {
 	max-width: 100%;

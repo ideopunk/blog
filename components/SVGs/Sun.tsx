@@ -5,7 +5,7 @@ export default function Sun() {
 			<path
 				fill="none"
 				// stroke="currentColor"
-				className="stroke-current transition-colors"
+				className="transition-colors stroke-secondary dark:stroke-secondaryDark group-hover:stroke-primary dark:group-hover:stroke-primaryDark duration-300"
 				strokeLinecap="round"
 				strokeMiterlimit="10"
 				strokeWidth="32"
@@ -16,7 +16,7 @@ export default function Sun() {
 				cy="256"
 				r="80"
 				fill="none"
-				className="stroke-current transition-colors"
+				className="transition-colors stroke-secondary dark:stroke-secondaryDark group-hover:stroke-primary dark:group-hover:stroke-primaryDark duration-300"
 				strokeLinecap="round"
 				strokeMiterlimit="10"
 				strokeWidth="32"

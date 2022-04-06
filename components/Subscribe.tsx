@@ -42,7 +42,7 @@ export default function Subscribe() {
 				placeholder="Email address"
 				required
 				onChange={handleChange}
-				className="outline-none border-b-2 bg-transparent border-secondary dark:border-secondaryDark placeholder:opacity-50 hover:placeholder:opacity-75 focus:placeholder:opacity-75 placeholder:text-primary dark:placeholder:text-white text-xl h-7 appearance-none rounded-none w-full  transition-colors py-4"
+				className="outline-none border-2 bg-transparent border-transparent hover:border-secondary dark:hover:border-secondaryDark focus:border-secondary dark:focus:border-secondaryDark border-b-secondary dark:border-b-secondaryDark placeholder:opacity-50 placeholder:text-primary dark:placeholder:text-white text-xl h-7 appearance-none rounded-sm w-full  transition-all py-4"
 				type="email"
 			/>
 			<p className="mt-4 text-primary dark:text-secondaryDark">

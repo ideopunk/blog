@@ -29,26 +29,25 @@ export default function Home({ latestPost }) {
 				/>
 			</div> */}
 			<div className="w-full  justify-around  z-10  md:ml-8 mb-10 md:mb-0">
-				<div className="py-4  group  flex items-center   ">
-					<Link href="/work">
-						<a>
+				<Link href="/work">
+					<a className="group">
+						<div className="py-4   ">
 							<h1 className="pt-4 md:py-0 text-3xl text-secondary dark:text-secondaryDark group-hover:text-black dark:group-hover:text-white transition-colors font-bold md:text-4xl mb-2 md:relative">
 								Conor Barnes
 							</h1>
-							<p className="text-xl font-medium text-secondary dark:text-secondaryDark group-hover:text-black dark:group-hover:text-white transition-colors transition-colors">
+							<p className="text-xl font-medium text-secondary dark:text-secondaryDark group-hover:text-black dark:group-hover:text-white transition-colors">
 								Hi there! I'm a web developer and a writer. Get in touch!
 							</p>
-						</a>
-					</Link>
-				</div>
+						</div>
+					</a>
+				</Link>
 
-				<div className="group">
-					<h3 className="text-xl mt-8 font-bold text-black dark:text-black group-hover:text-black dark:group-hover:text-white transition-colors">
-						Latest Work
-					</h3>
-
+				<div>
 					<Link href={`/blog/${latestPost.id}`}>
-						<a>
+						<a className="group">
+							<h3 className="text-xl mt-8 font-bold text-black dark:text-primaryDark transition-colors">
+								Latest Work
+							</h3>
 							<h3 className="text-2xl font-bold text-secondary dark:text-secondaryDark group-hover:text-black dark:group-hover:text-white transition-colors">
 								{latestPost.title}
 							</h3>

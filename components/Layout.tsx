@@ -70,7 +70,7 @@ export default function Layout({ children }: { children: ReactNode }) {
 					</HeaderLink>
 					<button
 						onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-						className="w-8 ml-8 text-secondary dark:text-secondaryDark hover:text-primary dark:hover:text-primaryDark outline-none border-current rounded-full relative"
+						className="w-8 ml-8 group outline-none border-current rounded-full relative"
 					>
 						{/* <div className="w-8 h-8 group"> */}
 						{!mounted ? null : theme === "light" ? (

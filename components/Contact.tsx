@@ -10,7 +10,7 @@ function Linky({ text, href, right }: { text: string; href: string; right?: bool
 			target="_blank"
 			rel="noopener noreferrer"
 		>
-			<p className="transition-all  ease-out group-hover:translate-x-4 text-primary hover:text-secondary dark:text-primaryDark dark:hover:text-secondaryDark">
+			<p className="transition-all  ease-out group-hover:translate-x-4 text-primary group-hover:text-secondary dark:text-primaryDark dark:group-hover:text-secondaryDark">
 				{text}
 			</p>
 		</a>
