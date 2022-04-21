@@ -68,7 +68,7 @@ export default function Work() {
 				id={0}
 				color={light ? "white" : "black"}
 				comp={<Languages />}
-				text="I'm a front-end engineer at Melange. When I'm not doing that, I'm building projects in Go or JavaScript. If you ever want to talk programming, my contact information is below!"
+				text="I'm currently job hunting! When I'm not doing that, I'm building projects in Go or JavaScript. If you'd like to chat, my contact information is below!"
 				flip
 			/>
 			<Project
@@ -77,7 +77,7 @@ export default function Work() {
 				dark
 				img="/images/squares/melangepic.png"
 				title="Melange"
-				text="I'm building the front-end of a social betting app in React Native and NextJS."
+				text="From 2021 to 2022, I worked on the front-end of a betting app in React Native and NextJS."
 				link="https://www.melange.io/"
 			/>
 			<Project
