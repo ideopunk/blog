@@ -5,16 +5,15 @@ import useWindowSize from "../lib/useWindowSize";
 type Lank = { url: string; domain: string };
 
 type Proj = {
-	color: string;
 	text: string;
 	id: number;
+	color?: string;
 	img?: string;
 	comp?: JSX.Element;
 	title?: string;
 	link?: string;
 	bottom?: boolean;
 	flip?: boolean;
-	colorFlip?: boolean;
 	dark?: boolean;
 };
 export default function Project({
@@ -27,14 +26,13 @@ export default function Project({
 	id,
 	bottom,
 	flip,
-	colorFlip,
 	dark,
 }: Proj) {
 	const { width: size } = useWindowSize();
 
 	return (
 		<div
-			style={{ backgroundColor: color }}
+			style={!!color ? { backgroundColor: color } : undefined}
 			className={`flex flex-col md:flex-row justify-around w-full md:h-[600px] items-center relative ${
 				flip ? "flex-row" : "flex-row-reverse"
 			}`}

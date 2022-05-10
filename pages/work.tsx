@@ -43,7 +43,7 @@ function Languages() {
 				style={{ width: size / (mobileRatio / 3) + 20 }}
 			>
 				<Node size={size / mobileRatio} />
-				<Go size={size/mobileRatio}/>
+				<Go size={size / mobileRatio} />
 				<Rust size={size / mobileRatio} />
 				{/* <Git size={size / mobileRatio} /> */}
 			</div>
@@ -52,8 +52,8 @@ function Languages() {
 }
 
 export default function Work() {
-	const {theme} = useTheme()
-	const light = theme === "light"
+	const { theme } = useTheme();
+	const light = theme === "light";
 	return (
 		<div>
 			<NextSeo
@@ -66,14 +66,14 @@ export default function Work() {
 			/>
 			<Project
 				id={0}
-				color={light ? "white" : "black"}
+				// color={light ? "white" : "hsl(190, 77%, 80%)"}
 				comp={<Languages />}
 				text="I'm currently job hunting! When I'm not doing that, I'm building projects in Go or JavaScript. If you'd like to chat, my contact information is below!"
 				flip
 			/>
 			<Project
 				id={1}
-				color={theme === "light" ? "#1A2D52": "#57534e"}
+				color={theme === "light" ? "#1A2D52" : "#57534e"}
 				dark
 				img="/images/squares/melangepic.png"
 				title="Melange"

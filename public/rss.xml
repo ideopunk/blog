@@ -5,43 +5,22 @@
       <link>https://conorbarnes.com/blog</link>
       <description>Conor Barnes's home page and blog.</description>
       <language>en</language>
-      <lastBuildDate>Thu, 03 Mar 2022 04:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Sun, 01 May 2022 03:00:00 GMT</lastBuildDate>
       <atom:link href="https://conorbarnes.com/rss.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://conorbarnes.com/blog/whitewall2022</guid>
+    <title>Three Stories at White Wall Review</title>
+    <link>https://conorbarnes.com/blog/whitewall2022</link>
+    <description>I'm published!</description>
+    <pubDate>Sun, 01 May 2022 03:00:00 GMT</pubDate>
+  </item>
   <item>
     <guid>https://conorbarnes.com/blog/theagent</guid>
     <title>The Agent</title>
     <link>https://conorbarnes.com/blog/theagent</link>
     <description>Before the war I didn't really think about anything.</description>
-    <pubDate>Thu, 03 Mar 2022 04:00:00 GMT</pubDate>
-  </item>
-  <item>
-    <guid>https://conorbarnes.com/blog/2020</guid>
-    <title>let's go 2020 woooo</title>
-    <link>https://conorbarnes.com/blog/2020</link>
-    <description>This year sucked! However, I was lucky to spend most of it learning.</description>
-    <pubDate>Thu, 31 Dec 2020 04:00:00 GMT</pubDate>
-  </item>
-  <item>
-    <guid>https://conorbarnes.com/blog/review-cod</guid>
-    <title>Book Review: Children of Dune</title>
-    <link>https://conorbarnes.com/blog/review-cod</link>
-    <description>Characters must do things in order to be interesting.</description>
-    <pubDate>Sun, 31 Oct 2021 03:00:00 GMT</pubDate>
-  </item>
-  <item>
-    <guid>https://conorbarnes.com/blog/2022quests</guid>
-    <title>My 2022 Quests</title>
-    <link>https://conorbarnes.com/blog/2022quests</link>
-    <description>What would be awesome this year?</description>
-    <pubDate>Sun, 02 Jan 2022 04:00:00 GMT</pubDate>
-  </item>
-  <item>
-    <guid>https://conorbarnes.com/blog/odin</guid>
-    <title>The Odin Project: Review</title>
-    <link>https://conorbarnes.com/blog/odin</link>
-    <description>A year ago, I had zero programming experience.</description>
-    <pubDate>Sat, 13 Mar 2021 04:00:00 GMT</pubDate>
+    <pubDate>Wed, 02 Mar 2022 04:00:00 GMT</pubDate>
   </item>
   <item>
     <guid>https://conorbarnes.com/blog/afterthefire</guid>
@@ -100,11 +79,25 @@
     <pubDate>Sun, 02 Jan 2022 04:00:00 GMT</pubDate>
   </item>
   <item>
+    <guid>https://conorbarnes.com/blog/2022quests</guid>
+    <title>My 2022 Quests</title>
+    <link>https://conorbarnes.com/blog/2022quests</link>
+    <description>What would be awesome this year?</description>
+    <pubDate>Sat, 01 Jan 2022 04:00:00 GMT</pubDate>
+  </item>
+  <item>
     <guid>https://conorbarnes.com/blog/2021</guid>
     <title>2020-1</title>
     <link>https://conorbarnes.com/blog/2021</link>
     <description>better than the last, wooo!</description>
     <pubDate>Fri, 31 Dec 2021 04:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <guid>https://conorbarnes.com/blog/review-cod</guid>
+    <title>Book Review: Children of Dune</title>
+    <link>https://conorbarnes.com/blog/review-cod</link>
+    <description>Characters must do things in order to be interesting.</description>
+    <pubDate>Sat, 30 Oct 2021 03:00:00 GMT</pubDate>
   </item>
   <item>
     <guid>https://conorbarnes.com/blog/progress</guid>
@@ -114,11 +107,25 @@
     <pubDate>Sun, 13 Jun 2021 03:00:00 GMT</pubDate>
   </item>
   <item>
+    <guid>https://conorbarnes.com/blog/odin</guid>
+    <title>The Odin Project: Review</title>
+    <link>https://conorbarnes.com/blog/odin</link>
+    <description>A year ago, I had zero programming experience.</description>
+    <pubDate>Fri, 12 Mar 2021 04:00:00 GMT</pubDate>
+  </item>
+  <item>
     <guid>https://conorbarnes.com/blog/simpleethics</guid>
     <title>A Simple Ethics Model</title>
     <link>https://conorbarnes.com/blog/simpleethics</link>
     <description>I’ve been thinking about normative ethics lately.</description>
     <pubDate>Fri, 22 Jan 2021 04:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <guid>https://conorbarnes.com/blog/2020</guid>
+    <title>let's go 2020 woooo</title>
+    <link>https://conorbarnes.com/blog/2020</link>
+    <description>This year sucked! However, I was lucky to spend most of it learning.</description>
+    <pubDate>Wed, 30 Dec 2020 04:00:00 GMT</pubDate>
   </item>
   <item>
     <guid>https://conorbarnes.com/blog/tipsforabetterlife</guid>
