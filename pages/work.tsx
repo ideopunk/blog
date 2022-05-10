@@ -69,7 +69,7 @@ export default function Work() {
 				// color={light ? "white" : "hsl(190, 77%, 80%)"}
 				comp={<Languages />}
 				title="Resume"
-				link="/2022_Resume.pdf"
+				link="/conor_barnes_resume.pdf"
 				text="I'm currently job hunting! Click here to download my resume."
 				flip
 			/>
