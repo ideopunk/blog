@@ -68,7 +68,9 @@ export default function Work() {
 				id={0}
 				// color={light ? "white" : "hsl(190, 77%, 80%)"}
 				comp={<Languages />}
-				text="I'm currently job hunting! When I'm not doing that, I'm building projects in Go or JavaScript. If you'd like to chat, my contact information is below!"
+				title="Resume"
+				link="/2022_Resume.pdf"
+				text="I'm currently job hunting! Click here to download my resume."
 				flip
 			/>
 			<Project

@@ -44,7 +44,11 @@ export default function Project({
 				)}
 				{comp && comp}
 			</span>
-			<a href={link} className="w-96 sm:mb-20 md:mb-0 group">
+			<a
+				href={link}
+				download={!link.includes("http")}
+				className="w-96 sm:mb-20 md:mb-0 group"
+			>
 				<div className="m-4 mt-8 pt-0 px-4 pb-16 sm:p-4 sm:rounded  w-full  sm:m-0">
 					<h2
 						className={`mb-4 text-5xl transition-colors ${
