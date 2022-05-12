@@ -46,7 +46,7 @@ export default function Home({ latestPost }) {
 					<Link href={`/blog/${latestPost.id}`}>
 						<a className="group">
 							<h3 className="text-xl mt-8 font-bold text-black dark:text-primaryDark transition-colors">
-								Latest Work
+								Latest Writing
 							</h3>
 							<h3 className="text-2xl font-bold text-secondary dark:text-secondaryDark group-hover:text-black dark:group-hover:text-white transition-colors">
 								{latestPost.title}
