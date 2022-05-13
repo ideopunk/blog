@@ -5,9 +5,23 @@
       <link>https://conorbarnes.com/blog</link>
       <description>Conor Barnes's home page and blog.</description>
       <language>en</language>
-      <lastBuildDate>Sun, 01 May 2022 03:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Fri, 13 May 2022 03:00:00 GMT</lastBuildDate>
       <atom:link href="https://conorbarnes.com/rss.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://conorbarnes.com/blog/whitestag</guid>
+    <title>The White Stag</title>
+    <link>https://conorbarnes.com/blog/whitestag</link>
+    <description>They slew a white stag on my eighteenth birthday that had wandered into the park behind the high school.</description>
+    <pubDate>Fri, 13 May 2022 03:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <guid>https://conorbarnes.com/blog/jobhunt_2022</guid>
+    <title>Job Hunt</title>
+    <link>https://conorbarnes.com/blog/jobhunt_2022</link>
+    <description>Hire me!</description>
+    <pubDate>Thu, 12 May 2022 03:00:00 GMT</pubDate>
+  </item>
   <item>
     <guid>https://conorbarnes.com/blog/whitewall2022</guid>
     <title>Three Stories at White Wall Review</title>
