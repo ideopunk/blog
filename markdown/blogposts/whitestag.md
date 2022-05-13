@@ -1,12 +1,12 @@
 ---
 title: "The White Stag"
 date: "2022-05-13"
-preview: "They slew a white stag on my eighteenth birthday"
+preview: "They slew a white stag on my eighteenth birthday that had wandered into the park behind the high school."
 ---
 
 They slew a white stag on my eighteenth birthday that had wandered into the park behind the high school. We watched from the window and one girl fainted when they swung the axe and nobody knew why they hadn't just ushered it back into the woods. The principal said they had to because it was a hazard. 
 
-It's the neighborhood park I used to walk through to get home and when I walked through it that day all that was left was blood and it was already beginning to rain, siphoning away the pool of blood down the path down into the woods. I followed it. I noticed, perpendicular to this path, the line in the dirt the axe had made as it was dragged. The sound and the force of the axe played in my head over and over and when I finally looked up I wasn't sure where I was. Somewhere in the woods. 
+It's the neighborhood park I used to walk through to get home. When I walked through it that day all that was left was blood and it was already beginning to rain, siphoning away the pool of blood down the path down into the woods. I followed it. I noticed, perpendicular to this path, the line in the dirt the axe had made as it was dragged. The sound and the force of the axe played in my head over and over and when I finally looked up I wasn't sure where I was. Somewhere in the woods. 
 
 I almost turned back in the violet and rose twilight but I heard a cry from deeper in and saw a woman smaller than me shivering under one of the old trees. She was repeating something to herself. I crept closer. 
 
