@@ -1,7 +1,7 @@
 ---
 title: "The Christian"
 date: "2022-02-17"
-status: "fiction"
+status: "FICTION"
 preview: "I am going to love everybody in the world, like a Christian."
 ---
 

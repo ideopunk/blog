@@ -17,7 +17,6 @@ export function getSortedPostsData(subfolder: string) {
 		const fileContents = fs.readFileSync(fullPath, "utf8");
 
 		const { data } = matter(fileContents);
-		console.log(data.title, data.date);
 
 		return { id, ...(data as PostData) };
 	});
@@ -33,12 +32,8 @@ export function getSortedPostsData(subfolder: string) {
 	// gotta do this after sorting or it gets confused.
 	return allPostsData.map((post) => {
 		const parsedDate = new Date(post.date);
-		console.log(parsedDate, post.title);
-
 		// parsedDate.setDate(parsedDate.getDate() + 1);
-		console.log(parsedDate, post.title);
 		post.date = parsedDate.toDateString();
-		console.log(post.date)
 		return post;
 	});
 }
