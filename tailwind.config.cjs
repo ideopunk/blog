@@ -1,7 +1,11 @@
 const { fontFamily } = require("tailwindcss/defaultTheme");
 
 module.exports = {
-	content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+	content: [
+		"./pages/**/*.{js,ts,jsx,tsx}",
+		"./components/**/*.{js,ts,jsx,tsx}",
+		"./src/**/*.{html,js,svelte,ts}"
+	],
 	darkMode: "class",
 	theme: {
 		extend: {
@@ -10,14 +14,14 @@ module.exports = {
 				secondary: "#df5c61",
 				primaryLight: "hsl(190, 77%, 80%)",
 				primaryDark: "hsl(230, 15%, 70%)",
-				secondaryDark: "hsl(358, 785%, 45%)",
+				secondaryDark: "hsl(358, 785%, 45%)"
 			},
 			fontFamily: {
 				...fontFamily,
 				serif: ["Merriweather", "serif"],
 				sans: ["Merriweather Sans", "sans-serif"],
 				test: ["Anton"],
-				fake: "Anton",
+				fake: "Anton"
 			},
 			typography: (theme) => ({
 				DEFAULT: {
@@ -31,11 +35,11 @@ module.exports = {
 						// 	},
 						// 	fontWeight: 400,
 						// },
-						em: {},
-					},
-				},
-			}),
-		},
+						em: {}
+					}
+				}
+			})
+		}
 	},
-	plugins: [require("@tailwindcss/typography")],
+	plugins: [require("@tailwindcss/typography")]
 };
