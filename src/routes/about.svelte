@@ -1,4 +1,3 @@
-
 <div class="sm:mx-auto text-xl max-w-prose px-2">
 	<!-- <NextSeo
         title={"Conor Barnes"}

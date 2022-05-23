@@ -1,10 +1,34 @@
 <script>
+	import SvelteTheme from "svelte-themes/SvelteTheme.svelte";
 	import Subscribe from "../components/Subscribe.svelte";
 
 	import "../app.css";
 	import Contact from "../components/Contact.svelte";
 	import HeaderLink from "../components/HeaderLink.svelte";
+
+	import themeStore, { setTheme } from "svelte-themes";
+	import Sun from "../components/svgs/Sun.svelte";
+	import Moon from "../components/svgs/Moon.svelte";
+
+	function updateTheme() {
+		setTheme($themeStore.theme === "light" ? "dark" : "light");
+	}
 </script>
+
+<SvelteTheme attribute="class" />
+
+<svelte:head>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Anton&family=Merriweather&family=Merriweather+Sans:wght@500;800&display=swap"
+		rel="stylesheet"
+	/>
+	<noscript>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Anton&family=Merriweather&family=Merriweather+Sans:wght@500;800&display=swap"
+			rel="stylesheet"
+		/>
+	</noscript>
+</svelte:head>
 
 <div class="min-h-screen flex flex-col">
 	<header
@@ -15,19 +39,18 @@
 			<HeaderLink />
 			<!-- <Home /> -->
 			<!-- </HeaderLink> -->
-			<!-- <button
-				onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+			<button
+				on:click={updateTheme}
 				class="w-8 ml-8 group outline-none border-current rounded-full relative"
 			>
-				{#if mounted && theme === "light"}
+				{#if $themeStore.theme === "light"}
+					<!-- {#if mounted && $themeStore.theme === "light"} -->
 					<Sun />
-				{/if}
-
-				{#if mounted && theme === "dark"}
+				{:else if $themeStore.theme === "dark"}
+					<!-- {#if mounted && $themeStore.theme === "dark"} -->
 					<Moon />
 				{/if}
-
-			</button> -->
+			</button>
 		</div>
 		<div class="divide-x-8 flex items-center md:divide-x-[2rem] divide-transparent">
 			<HeaderLink text="About" />
