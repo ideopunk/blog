@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 import type { ParsedUrlQuery } from "querystring";
@@ -34,7 +34,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export default function Post({ parsedPostData }: { parsedPostData: ParsedPostData }) {
-	const { theme } = useTheme();
+	const [mounted, setMounted] = useState(false);
+	const { theme, setTheme } = useTheme();
+	console.log({ theme });
+	// When mounted on client, now we can show the icon
+	useEffect(() => setMounted(true), []);
+
 	return (
 		<div className="sm:mx-auto text-xl max-w-prose px-2 min-h-screen">
 			<NextSeo
@@ -55,7 +60,7 @@ export default function Post({ parsedPostData }: { parsedPostData: ParsedPostDat
 				dangerouslySetInnerHTML={{ __html: parsedPostData.lazyHtml }}
 				// for some reason including prose prevents prose-invert from working in dark mode ¯\_(ツ)_/¯
 				className={`prose-lg max-w-none md:prose-xl my-4 prose-a:text-secondary  dark:prose-a:text-secondaryDark group  prose-li:list-disc prose ${
-					theme === "dark" ? "text-white" : ""
+					!mounted ? "invisible" : theme === "dark" ? "text-white" : ""
 				}`}
 			/>
 		</div>
