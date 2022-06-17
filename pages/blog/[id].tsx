@@ -54,8 +54,8 @@ export default function Post({ parsedPostData }: { parsedPostData: ParsedPostDat
 			<article
 				dangerouslySetInnerHTML={{ __html: parsedPostData.lazyHtml }}
 				// for some reason including prose prevents prose-invert from working in dark mode ¯\_(ツ)_/¯
-				className={`prose-lg max-w-none md:prose-xl my-4 prose-a:text-secondary  dark:prose-a:text-secondaryDark group  prose-li:list-disc ${
-					theme === "light" ? "prose" : "text-white prose"
+				className={`prose-lg max-w-none md:prose-xl my-4 prose-a:text-secondary  dark:prose-a:text-secondaryDark group  prose-li:list-disc prose ${
+					theme === "dark" ? "text-white" : ""
 				}`}
 			/>
 		</div>
