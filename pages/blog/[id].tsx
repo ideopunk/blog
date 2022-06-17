@@ -35,8 +35,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export default function Post({ parsedPostData }: { parsedPostData: ParsedPostData }) {
 	const [mounted, setMounted] = useState(false);
-	const { theme, setTheme } = useTheme();
-	console.log({ theme });
+	const { resolvedTheme } = useTheme();
 	// When mounted on client, now we can show the icon
 	useEffect(() => setMounted(true), []);
 
@@ -60,7 +59,7 @@ export default function Post({ parsedPostData }: { parsedPostData: ParsedPostDat
 				dangerouslySetInnerHTML={{ __html: parsedPostData.lazyHtml }}
 				// for some reason including prose prevents prose-invert from working in dark mode ¯\_(ツ)_/¯
 				className={`prose-lg max-w-none md:prose-xl my-4 prose-a:text-secondary  dark:prose-a:text-secondaryDark group  prose-li:list-disc prose ${
-					!mounted ? "invisible" : theme === "dark" ? "text-white" : ""
+					!mounted ? "invisible" : resolvedTheme === "dark" ? "text-white" : ""
 				}`}
 			/>
 		</div>

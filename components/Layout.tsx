@@ -36,13 +36,13 @@ function HeaderLink({ children, href }: { children: ReactNode; href?: string }) 
 
 export default function Layout({ children }: { children: ReactNode }) {
 	const [mounted, setMounted] = useState(false);
-	const { theme, setTheme } = useTheme();
+	const { resolvedTheme, setTheme } = useTheme();
 
 	// When mounted on client, now we can show the icon
 	useEffect(() => setMounted(true), []);
+	console.log({ resolvedTheme });
 
 	const router = useRouter();
-
 	if (router.pathname.includes("coriolis")) {
 		return <div>{children}</div>;
 	}
@@ -69,11 +69,11 @@ export default function Layout({ children }: { children: ReactNode }) {
 						{/* </div> */}
 					</HeaderLink>
 					<button
-						onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+						onClick={() => setTheme(resolvedTheme === "light" ? "dark" : "light")}
 						className="w-8 ml-8 group outline-none border-current rounded-full relative"
 					>
 						{/* <div className="w-8 h-8 group"> */}
-						{!mounted ? null : theme === "light" ? (
+						{!mounted || !resolvedTheme ? null : resolvedTheme === "light" ? (
 							// <>
 							// 	<img
 							// 		src="/sun_filled.PNG"
