@@ -23,9 +23,9 @@
 	}`}
 	id={stringId}
 >
-	<span class="m-4 pt-8 sm:m-0">
+	<span class="m-4 w-[404px] pt-8 sm:m-0">
 		{#if img}
-			<img class="rounded-lg" src={img} width={400} height={400} alt={title} />
+			<img class="rounded-lg w-[400px] h-[400px]" src={img} width={400} height={400} alt={title} />
 		{/if}
 		<slot />
 	</span>

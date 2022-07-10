@@ -20,8 +20,6 @@ module.exports = {
 				...fontFamily,
 				serif: ["Merriweather", "serif"],
 				sans: ["Merriweather Sans", "sans-serif"],
-				test: ["Anton"],
-				fake: "Anton"
 			},
 			typography: (theme) => ({
 				DEFAULT: {

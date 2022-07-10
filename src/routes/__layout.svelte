@@ -9,6 +9,7 @@
 	import themeStore, { setTheme } from "svelte-themes";
 	import Sun from "../components/svgs/Sun.svelte";
 	import Moon from "../components/svgs/Moon.svelte";
+	import Home from "../components/svgs/Home.svelte";
 
 	function updateTheme() {
 		setTheme($themeStore.theme === "light" ? "dark" : "light");
@@ -19,26 +20,26 @@
 
 <svelte:head>
 	<link
-		href="https://fonts.googleapis.com/css2?family=Anton&family=Merriweather&family=Merriweather+Sans:wght@500;800&display=swap"
+		href="https://fonts.googleapis.com/css2?family=Merriweather&family=Merriweather+Sans:wght@500;800&display=swap"
 		rel="stylesheet"
 	/>
 	<noscript>
 		<link
-			href="https://fonts.googleapis.com/css2?family=Anton&family=Merriweather&family=Merriweather+Sans:wght@500;800&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Merriweather&family=Merriweather+Sans:wght@500;800&display=swap"
 			rel="stylesheet"
 		/>
 	</noscript>
 </svelte:head>
 
-<div class="min-h-screen flex flex-col">
+<div class="min-h-screen  dark:bg-slate-900  flex flex-col">
 	<header
 		id="top"
 		class="flex text-lg static sm:sticky w-full h-10 top-0 left-0 z-20 justify-between font-semibold backdrop-opacity-80 py-8 px-2 md:px-8 items-center bg-white dark:bg-opacity-100 dark:bg-slate-900 bg-opacity-50"
 	>
 		<div class="flex items-center">
-			<HeaderLink />
-			<!-- <Home /> -->
-			<!-- </HeaderLink> -->
+			<HeaderLink>
+				<Home />
+			</HeaderLink>
 			<button
 				on:click={updateTheme}
 				class="w-8 ml-8 group outline-none border-current rounded-full relative"

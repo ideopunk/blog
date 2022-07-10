@@ -5,15 +5,14 @@
 	import Project from "../components/Project.svelte";
 </script>
 
+<svelte:head>
+	<title>Work | Conor Barnes</title>
+	<meta name="description" content="Projects" />
+	<meta property="og:title" content="Work | Conor Barnes" />
+	<meta property="og:description" content="Projects" />
+</svelte:head>
+
 <div>
-	<!-- <NextSeo
-        title="Work"
-        description="Projects"
-        openGraph={{
-            title: "Work",
-            description: "Projects",
-        }}
-    /> -->
 	<Project
 		id={0}
 		title="Resume"

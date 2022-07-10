@@ -1,4 +1,4 @@
-<div class="sm:mx-auto text-xl max-w-prose px-2">
+<div class="sm:mx-auto text-xl  max-w-prose px-2">
 	<!-- <NextSeo
         title={"Conor Barnes"}
         description={"About me"}
@@ -14,28 +14,24 @@
 		<p>Hi! I'm Conor Barnes, a developer and writer living in Halifax.</p>
 		<p>
 			I like writing stories. This year I'm writing a hundred and I started with{" "}
-			<!-- <Link href="/blog/boycott"> -->
 			<a
 				href="/blog/boycott"
+				sveltekit:prefetch
 				class="hover:text-secondaryDark transition-colors dark:hover:text-secondary"
 			>
-				The Boycott
-			</a>
-			<!-- </Link> -->
-			. Sometimes they're 'speculative fiction' or 'magical realism' and mostly they're short.
+				The Boycott</a
+			>. Sometimes they're 'speculative fiction' or 'magical realism' and mostly they're short.
 		</p>
 		<p>
 			I like programming things for friends, like{" "}
-			<!-- <Link > -->
 			<a
 				href="/work#2"
+				sveltekit:prefetch
 				class="hover:text-secondaryDark transition-colors dark:hover:text-secondary"
 			>
-				Pixel Sorter
-			</a>
-			<!-- </Link> -->
-			. You do not have to be a friend to make a request. The easiest way to get a 'yes' is to ask me
-			for something that will delight people (including myself).
+				Pixel Sorter</a
+			>. You do not have to be a friend to make a request. The easiest way to get a 'yes' is to ask
+			me for something that will delight people (including myself).
 		</p>
 		<p>
 			I occassionally like writing non-fiction, like{" "}
@@ -43,12 +39,11 @@
 			<a
 				href="/blog/tipsforabetterlife"
 				class="hover:text-secondaryDark transition-colors dark:hover:text-secondary"
+				sveltekit:prefetch
 			>
-				100 Tips For a Better Life
-			</a>
-			<!-- </Link> -->
-			. If you've tried them all and are still unhappy please let me know and I will find more tips for
-			you.
+				100 Tips For a Better Life</a
+			>. If you've tried them all and are still unhappy please let me know and I will find more tips
+			for you.
 		</p>
 	</article>
 </div>
