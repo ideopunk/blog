@@ -9,6 +9,8 @@ node_modules
 
 .next
 .vscode
-publishedwriting
 drafts
 todo.txt
+publishedwriting
+
+.svelte-kit
