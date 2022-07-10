@@ -1,8 +1,4 @@
 <script context="module" lang="ts">
-	export type Post = {
-		meta: { title: string; date: string; status?: string; preview: string };
-		path: string;
-	};
 	export const load = async ({ fetch }: { fetch: any }) => {
 		const posts = await fetch("/api/posts.json");
 		const allPosts: Post[] = await posts.json();

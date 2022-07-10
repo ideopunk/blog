@@ -8,3 +8,8 @@ declare namespace App {
 	// interface Session {}
 	// interface Stuff {}
 }
+
+type Post = {
+	meta: { title: string; date: string; status?: string; preview: string };
+	path: string;
+};
