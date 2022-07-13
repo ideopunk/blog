@@ -54,6 +54,8 @@
 				<Home />
 			</HeaderLink>
 			<button
+				aria-label="Toggle Theme"
+				name="Toggle Theme"
 				on:click={updateTheme}
 				class="w-8 ml-8 group outline-none border-current rounded-full relative"
 			>

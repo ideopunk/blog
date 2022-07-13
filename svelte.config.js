@@ -10,7 +10,11 @@ const config = {
 	extensions: [".svelte", ".md", ".svx"],
 
 	preprocess: [
-		mdsvex({ extensions: [".md"], layout: { blog: "src/routes/blog/_post.svelte" } }),
+		mdsvex({
+			extensions: [".md"],
+			layout: { blog: "src/routes/blog/_post.svelte" },
+			smartypants: { quotes: false }
+		}),
 		preprocess({ postcss: true })
 	],
 

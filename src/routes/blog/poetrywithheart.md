@@ -5,9 +5,9 @@ status: "speculative"
 preview: "Do we like bad writing? Does it have heart?"
 ---
 
-![](/images/blogimages/kaurcrop-2.jpg)
+![Photo of a Rupi Kaur poem: on the last day of love; my heart cracked inside my body; -rupi kaur](/images/blogimages/kaurcrop-2.jpg)
 
-![](/images/blogimages/hitamarocrop-1.jpg)
+![Photo of a Hitomaro poem: May those who are born after me; Never travel such roads of love.; Ware yu nochi; Umaremu hito wa; Waga gotoku; Koi suru michi ni; Ai kosu na yume; Hitomaro](/images/blogimages/hitamarocrop-1.jpg)
 
 Kakinomoto no Hitomaro was a Japanese waka (tanka) poet who lived during the late 7th century. Wikipedia says he was known for his elegies for imperial princes but his poems within [_100 Poems from the Japanese_](https://smile.amazon.com/100-Poems-Japanese-Kenneth-Rexroth/dp/0811201813) are by and large about love, loss, and longing. He is considered one of the great Japanese poets.
 

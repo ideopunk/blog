@@ -47,10 +47,10 @@ Catch yourself doing this and catch parts of your beliefs that rely on this way 
 
 I think this is one is hard to stop using. You have to stop treating political labels as information-rich and consistent. If you don’t know what I mean, here are a few examples:
 
--   “Like all utilitarians, he’s short-sighted.”
--   “You’re a conservative, so you hate poor people.”
--   “Socialism is just communism in disguise. You want to take away my rights.”
--   Bonus: Being confused about why a conservative supports a liberal policy.
+- “Like all utilitarians, he’s short-sighted.”
+- “You’re a conservative, so you hate poor people.”
+- “Socialism is just communism in disguise. You want to take away my rights.”
+- Bonus: Being confused about why a conservative supports a liberal policy.
 
 All of these are ridiculous, and few would actually think them out loud, but I think it’s largely implicit. I suspect that most people feel they’ve learned a lot as soon as they’ve heard somebody name their political belief system. This is a mistake. People have complex (or confused!) definitions of their identities and complex (or confused!) reasons for why they chose that identity! Even if they were simple and straight-forward, they could vary wildly from one person to the next.
 
@@ -58,13 +58,13 @@ I’m not saying that you’ve learned nothing upon hearing that a person identi
 
 Like I wrote at the beginning, these are all related, and sometimes they intersect in the most annoying ways. Consider this combination of #1 and #3:
 
-![](https://lh4.googleusercontent.com/SzRgQVmmKtq2wvAAH-y5goiYad1aZO76Z7HSugKGMuItCQSK6MZbKFtg8v6vEVEl_jpe1z2OR_5rGO1TJy3izFe4WDfKqcw5jKdUgh6i_23bTj9jBGmlimxaTwkPaXFB6NoUC23C)
+![Meme. Man screaming at security guards. Text: `Conservatives: Respect Law Enforcement. Conservatives: Don't panic during covid-19. Also conservatives:`. ](https://lh4.googleusercontent.com/SzRgQVmmKtq2wvAAH-y5goiYad1aZO76Z7HSugKGMuItCQSK6MZbKFtg8v6vEVEl_jpe1z2OR_5rGO1TJy3izFe4WDfKqcw5jKdUgh6i_23bTj9jBGmlimxaTwkPaXFB6NoUC23C)
 
 The idea is that the outgroup’s beliefs are modified or put away when it becomes inconvenient. One reason I find this template so frustrating is that it so neatly parallels one of my favorite gotchas: barefaced personal hypocrisy. For example:
 
-![](https://lh6.googleusercontent.com/jrQEXYX4S95ZOReLKRxJXnT9hnDj7r0mUE82bpHaE1Btl7eT8Qr-g0Xdszv7s2UkWRGtSavTY8c-Qm2fJyaJctcANrfzKALt0xAVHQgFHJ1bBMhLcg-AKuiypl0FND69MSCDfkYw)
+![Newspaper headline. Headline: This Time the Numbers Show We Can't Be Too Careful. Subheading: Hard-headed cost-benefit analysis usually confirms that it's dangerous to be overcautious. The coronavirus is different. Author: Cass R. Sunstein. Date: March 26, 2020](https://lh6.googleusercontent.com/jrQEXYX4S95ZOReLKRxJXnT9hnDj7r0mUE82bpHaE1Btl7eT8Qr-g0Xdszv7s2UkWRGtSavTY8c-Qm2fJyaJctcANrfzKALt0xAVHQgFHJ1bBMhLcg-AKuiypl0FND69MSCDfkYw)
 
-![](https://lh6.googleusercontent.com/0EBBT4yZseX785_b6CzC0Hj7AMJP4vVusXSoKvyp7Ch3HnTqa94cbJQS3Ryoya0GhmJhId93T4KZkTvcPbo7X0581a9_3BDfnnNeNXJ1I0h1FT6qVTPb6R-DsYprqmsXp24hfzEd)
+![Newspaper headline. Headline: The Cognitive Bias That Makes Us Panic About Coronavirus. Subheading: Feeling anxious? Blame 'probability neglect'. Auhor: Cass R. Sunstein. Date: February 28, 2020](https://lh6.googleusercontent.com/0EBBT4yZseX785_b6CzC0Hj7AMJP4vVusXSoKvyp7Ch3HnTqa94cbJQS3Ryoya0GhmJhId93T4KZkTvcPbo7X0581a9_3BDfnnNeNXJ1I0h1FT6qVTPb6R-DsYprqmsXp24hfzEd)
 
 _\[Via_ [_Ari Schulman_](https://twitter.com/AriSchulman/status/1243502730200653826)_\]_
 

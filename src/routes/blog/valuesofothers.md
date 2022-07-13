@@ -17,7 +17,7 @@ Is that the right call? It seems like common-sense to appeal to the values of ot
 
 On the other hand…
 
-![](https://lh4.googleusercontent.com/425OSouwlyB9DI56Z1rMZV9i_h4klBHiSSD82PB9HVlXqt4sw7Yu0bnw6yy4W2jrfs5ZvOsgi6I3rwhulImkVWpJkGhb7zvkRkATTgrGKFUYlXf98edACojOv70S0VnWly39kgQ0)
+![Meme showing smug man. Text: you should let in more refugees because jesus said to be compassionate in the bible somewhere. no i'm not a christian and i have nothing but contempt for your backwards religious beliefs. so yeah, this argument wouldn't work on me but maybe if i use it on you, you'll do what i want](https://lh4.googleusercontent.com/425OSouwlyB9DI56Z1rMZV9i_h4klBHiSSD82PB9HVlXqt4sw7Yu0bnw6yy4W2jrfs5ZvOsgi6I3rwhulImkVWpJkGhb7zvkRkATTgrGKFUYlXf98edACojOv70S0VnWly39kgQ0)
 
 Interactions this condescending don’t happen often outside of memes but I think it points to something in how we try to talk across political tribes. I feel less and less convinced by this approach and more concerned that it’s slimy.
 
