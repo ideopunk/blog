@@ -1,3 +1,10 @@
+<svelte:head>
+	<title>Conor Barnes</title>
+	<meta name="description" content="Ideopunk" />
+	<meta property="og:title" content="Conor Barnes" />
+	<meta property="og:description" content="Ideopunk" />
+</svelte:head>
+
 <section
 	class="flex flex-col-reverse md:flex-row items-center justify-between relative bg-primaryLight dark:bg-gray-800 bg-opacity-30 px-6 lg:pl-12 py-12"
 >
@@ -14,7 +21,7 @@
     </div> */} -->
 	<div class="w-full  justify-around  z-10  md:ml-8 mb-10 md:mb-0">
 		<!-- <Link > -->
-		<a href="/work" class="group">
+		<a sveltekit:prefetch href="/work" class="group">
 			<div class="py-4   ">
 				<h1
 					class="pt-4 md:py-0 text-3xl text-secondary dark:text-secondaryDark group-hover:text-black dark:group-hover:text-white transition-colors font-bold md:text-4xl mb-2 md:relative"

@@ -10,6 +10,7 @@
 <div class={`group relative ${text && "top-1"}`}>
 	{#if href}
 		<a
+			sveltekit:prefetch
 			class="transition-colors ease-out text-secondary dark:text-secondaryDark group-hover:text-primary dark:group-hover:text-primaryDark outline-none focus:text-primary"
 			{href}
 		>
@@ -21,6 +22,7 @@
 		</a>
 	{:else}
 		<a
+			sveltekit:prefetch
 			href={nextref}
 			class="ease-out block text-secondary dark:text-secondaryDark transition-colors
 			group-hover:text-primary dark:group-hover:text-primaryDark cursor-pointer outline-none

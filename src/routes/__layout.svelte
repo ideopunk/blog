@@ -29,6 +29,19 @@
 			rel="stylesheet"
 		/>
 	</noscript>
+
+	<meta property="og:type" content="website" />
+	<meta property="og:locale" content="en_CA" />
+	<meta property="og:url" content="https://www.conorbarnes.com" />
+	<meta property="og:site_name" content="Conor Barnes" />
+	<meta
+		property="og:image"
+		content="http://www.artnet.com/WebServices/images/ll00762lldjkYGFgFaECfDrCWvaHBOc4uYC/nobuyoshi-araki-flowers.jpg"
+	/>
+
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:handle" content="@ideopunk" />
+	<meta property="twitter:site" content="@ideopunk" />
 </svelte:head>
 
 <div class="min-h-screen  dark:bg-slate-900  flex flex-col">
