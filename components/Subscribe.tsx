@@ -14,10 +14,10 @@ export default function Subscribe() {
 		const res = await fetch("/api/subscribe", {
 			body: JSON.stringify({ email: email }),
 			headers: { "Content-Type": "application/json" },
-			method: "POST",
+			method: "POST"
 		});
 
-		const { error } = await res.json();
+		const { error }: { error?: string } = await res.json();
 
 		if (error) {
 			toast(error);

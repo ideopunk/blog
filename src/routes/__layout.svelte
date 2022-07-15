@@ -11,6 +11,8 @@
 	import Moon from "../components/svgs/Moon.svelte";
 	import Home from "../components/svgs/Home.svelte";
 
+	import { SvelteToast } from "@zerodevx/svelte-toast";
+
 	function updateTheme() {
 		setTheme($themeStore.theme === "light" ? "dark" : "light");
 	}
@@ -83,4 +85,8 @@
 		<Contact />
 		<Subscribe />
 	</footer>
+
+	<div class="absolute bottom-0 right-0 border-4 border-red-500 w-40 h-40">
+		<SvelteToast />
+	</div>
 </div>

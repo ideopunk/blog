@@ -1,9 +1,7 @@
 <script lang="ts">
-	// const [email, setEmail] = useState("");
+	import { toast } from "@zerodevx/svelte-toast";
+
 	let email = "";
-	// function handleChange(e: ChangeEvent<HTMLInputElement>) {
-	// 	setEmail(e.target.value);
-	// }
 
 	async function subscribe(e: SubmitEvent) {
 		const res = await fetch("/api/subscribe", {
@@ -12,15 +10,27 @@
 			method: "POST"
 		});
 
-		const { error } = await res.json();
+		const { error }: { error?: string } = await res.json();
 
 		if (error) {
-			// toast(error);
-			alert(error);
+			toast.push(error, {
+				theme: {
+					"--toastContainerBottom": "2rem",
+					"--toastContainerTop": "auto",
+					"--toastBackground": "hsla(190, 77%, 80%, 50%)",
+					"--toastColor": "black"
+				}
+			});
 		} else {
 			email = "";
-			alert("Success! 🎉 You are now subscribed to the newsletter.");
-			// toast("Success! 🎉 You are now subscribed to the newsletter.");
+			toast.push("Success! 🎉 You are now subscribed to the newsletter.", {
+				theme: {
+					"--toastContainerBottom": "2rem",
+					"--toastContainerTop": "auto",
+					"--toastBackground": "hsla(190, 77%, 80%, 50%)",
+					"--toastColor": "black"
+				}
+			});
 		}
 	}
 </script>

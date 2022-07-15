@@ -261,6 +261,11 @@
     "@typescript-eslint/types" "5.25.0"
     eslint-visitor-keys "^3.3.0"
 
+"@zerodevx/svelte-toast@^0.7.2":
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/@zerodevx/svelte-toast/-/svelte-toast-0.7.2.tgz#904610b7d99d099bcdb83a005ee32e0b3351c909"
+  integrity sha512-vWiY6IqsstcOoQ8PFBuFuxgPkj1JFAGhUF9gC7wLx7c5A9SSfdtxWs/39ekGSIeyJK0yqWhTcmzGrCEWSELzDw==
+
 acorn-jsx@^5.3.2:
   version "5.3.2"
   resolved "https://registry.yarnpkg.com/acorn-jsx/-/acorn-jsx-5.3.2.tgz#7ed5bb55908b3b2f1bc55c6af1653bada7f07937"
@@ -516,6 +521,11 @@ doctrine@^3.0.0:
   integrity sha512-yS+Q5i3hBf7GBkd4KG8a7eBNNWNGLTaEwwYWUijIYM7zrlYDM0BFXHjjPWlWZ1Rg7UaddZeIDmi9jF3HmqiQ2w==
   dependencies:
     esutils "^2.0.2"
+
+dotenv@^16.0.1:
+  version "16.0.1"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.0.1.tgz#8f8f9d94876c35dac989876a5d3a82a267fdce1d"
+  integrity sha512-1K6hR6wtk2FviQ4kEiSjFiH5rpzEVi8WW0x96aztHVMhEspNpc4DVOUTEHtEva5VThQ8IaBX1Pe4gSzpVVUsKQ==
 
 electron-to-chromium@^1.4.118:
   version "1.4.137"
