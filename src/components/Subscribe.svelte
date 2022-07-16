@@ -54,8 +54,10 @@
 	</p>
 	<button
 		class="mt-4  text-xl transition-all ease-out font-semibold tracking-wide p-2 rounded-lg 
-				bg-secondary dark:bg-secondaryDark hover:bg-secondaryDark  text-white dark:text-stone-300 
-				 hover:-translate-y-0.5 active:translate-y-0.5 outline-none"
+				bg-secondary dark:bg-secondaryDark hover:bg-secondaryDark dark:hover:bg-black  text-white dark:text-stone-300 
+				 hover:-translate-y-0.5 active:translate-y-0.5 focus:-translate-y-0.5 focus:bg-secondaryDark dark:focus:bg-black
+				 
+				 outline-none"
 		type="submit"
 	>
 		Subscribe

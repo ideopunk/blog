@@ -1,8 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-	<title>Sunny</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="stroke-current">
+	<title>Change to dark theme</title>
 	<path
 		fill="none"
-		class="transition-colors stroke-secondary dark:stroke-secondaryDark group-hover:stroke-primary dark:group-hover:stroke-primaryDark duration-300"
 		stroke-linecap="round"
 		stroke-miterlimit="10"
 		stroke-width="32"
@@ -13,7 +12,6 @@
 		cy="256"
 		r="80"
 		fill="none"
-		class="transition-colors stroke-secondary dark:stroke-secondaryDark group-hover:stroke-primary dark:group-hover:stroke-primaryDark duration-300"
 		stroke-linecap="round"
 		stroke-miterlimit="10"
 		stroke-width="32"

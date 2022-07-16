@@ -8,36 +8,22 @@
 </script>
 
 <div class={`group relative ${text && "top-1"}`}>
-	{#if href}
-		<a
-			sveltekit:prefetch
-			class="transition-colors ease-out text-secondary dark:text-secondaryDark group-hover:text-primary dark:group-hover:text-primaryDark outline-none focus:text-primary"
-			{href}
-		>
-			{#if text}
-				{text}
-			{:else}
-				<slot />
-			{/if}
-		</a>
-	{:else}
-		<a
-			sveltekit:prefetch
-			href={nextref}
-			class="ease-out block text-secondary dark:text-secondaryDark transition-colors
-			group-hover:text-primary dark:group-hover:text-primaryDark cursor-pointer outline-none
-			focus:text-primary"
-		>
-			{#if text}
-				{text}
-			{:else}
-				<slot />
-			{/if}
-		</a>
-	{/if}
+	<a
+		sveltekit:prefetch
+		href={href || nextref}
+		class="ease-out block text-secondary dark:text-secondaryDark transition-colors
+			group-hover:text-primary dark:group-hover:text-primaryDark
+			focus:text-primary dark:focus:text-primaryDark outline-inherit"
+	>
+		{#if text}
+			{text}
+		{:else}
+			<slot />
+		{/if}
+	</a>
 	{#if text}
 		<div
-			class="w-full bg-primary dark:bg-primaryDark h-0.5 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 group-hover:duration-300"
+			class="w-full bg-secondary dark:bg-secondaryDark group-hover:bg-primary dark:group-hover:bg-primaryDark h-0.5 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 group-hover:duration-300"
 		/>
 	{/if}
 </div>

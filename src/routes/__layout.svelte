@@ -59,7 +59,10 @@
 				aria-label="Toggle Theme"
 				name="Toggle Theme"
 				on:click={updateTheme}
-				class="w-8 ml-8 group outline-none border-current rounded-full relative"
+				tabindex="0"
+				class="w-8 ml-8 group border-current relative  text-secondary dark:text-secondaryDark transition-colors
+				hover:text-primary dark:hover:text-primaryDark focus:text-primary dark:focus:text-primaryDark
+				 outline-current"
 			>
 				{#if $themeStore.theme === "light"}
 					<!-- {#if mounted && $themeStore.theme === "light"} -->
@@ -86,7 +89,7 @@
 		<Subscribe />
 	</footer>
 
-	<div class="absolute bottom-0 right-0 border-4 border-red-500 w-40 h-40">
+	<!-- <div class="absolute bottom-0 right-0 border-4 border-red-500 w-40 h-40"> -->
 		<SvelteToast />
-	</div>
+	<!-- </div> -->
 </div>
