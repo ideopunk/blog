@@ -1,5 +1,4 @@
 <script>
-	import { toasts } from "svelte-toasts";
 
 	import ContactLink from "./ContactLink.svelte";
 	import Copy from "./svgs/Copy.svelte";

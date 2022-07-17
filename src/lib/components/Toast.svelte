@@ -3,10 +3,6 @@
 	import { fly } from "svelte/transition";
 	import { notifications } from "../funcs/notification";
 
-	export let themes = {
-		error: "#f0ad4e",
-		default: "#aaaaaa"
-	};
 </script>
 
 <div

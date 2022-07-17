@@ -1,6 +1,5 @@
 <script>
 	import SvelteTheme from "svelte-themes/SvelteTheme.svelte";
-	import { ToastContainer, FlatToast } from "svelte-toasts";
 
 	import Subscribe from "../lib/components/Subscribe.svelte";
 
@@ -13,7 +12,7 @@
 	import Moon from "../lib/components/svgs/Moon.svelte";
 	import Home from "../lib/components/svgs/Home.svelte";
 	import { onMount } from "svelte";
-import Toast from "$lib/components/Toast.svelte";
+	import Toast from "$lib/components/Toast.svelte";
 
 	let mounted = false;
 	onMount(() => {
@@ -94,19 +93,5 @@ import Toast from "$lib/components/Toast.svelte";
 		<Subscribe />
 	</footer>
 
-	<ToastContainer placement="bottom-center" let:data theme="light">
-		<div class="bg-white">
-			<FlatToast {data} />
-		</div>
-	</ToastContainer>
 	<Toast />
-	<!-- Provider template for your toasts -->
 </div>
-<!-- options={{
-	theme: {
-		"--toastContainerBottom": "2rem",
-		"--toastContainerTop": "auto",
-		"--toastBackground": "hsla(190, 77%, 80%, 50%)",
-		"--toastColor": "black"
-	}
-}} -->

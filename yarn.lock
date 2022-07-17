@@ -1514,11 +1514,6 @@ svelte-themes@^0.0.98:
   resolved "https://registry.yarnpkg.com/svelte-themes/-/svelte-themes-0.0.98.tgz#1d9ae0baec2b59107e702ea11b61f5e87cecef7d"
   integrity sha512-nW0H0frcFKbtchGHNqchTleRW/zzEjgBgQRR3IRzayMuQsQC93KzW7ZHrR6zbQGnQh9SFg0H6hsJQPnGkf2ieQ==
 
-svelte-toasts@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/svelte-toasts/-/svelte-toasts-1.1.2.tgz#6ba590d27a9eb4cf164ea2efe5a5f1afac6de008"
-  integrity sha512-m+yL4eEKXyJoyjTYaH1j1GFwF0Pi8YDqnVfwWPDmwi4712iZesv+TNCmToSNlav3R5Vkmc8ZBRkT8DOcu3sywQ==
-
 svelte@^3.44.0:
   version "3.48.0"
   resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.48.0.tgz#f98c866d45e155bad8e1e88f15f9c03cd28753d3"
