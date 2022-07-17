@@ -12,8 +12,6 @@ function createNotificationStore() {
 		});
 	}
 
-	// let timers = [];
-
 	const notifications: Readable<{ type: MessageType; message: string; id: string }[]> = derived(
 		_notifications,
 		($_notifications, set) => {

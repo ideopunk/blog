@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { notifications } from "../funcs/notification";
 
+	export let side = false;
 	let email = "";
 
 	async function subscribe(e: SubmitEvent) {
@@ -27,7 +28,7 @@
 >
 	<label class="invisible" for="email-input"> Email address </label>
 	<input
-		id="email-input"
+		id={`email-input-${side ? "side" : ""}`}
 		name="email"
 		bind:value={email}
 		placeholder="Email address"

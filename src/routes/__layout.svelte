@@ -28,12 +28,12 @@
 
 <svelte:head>
 	<link
-		href="https://fonts.googleapis.com/css2?family=Merriweather&family=Merriweather+Sans:wght@500;800&display=swap"
+		href="https://fonts.googleapis.com/css2?family=Merriweather&family=Merriweather+Sans:wght@500;800&display=swap&text=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-%3D%21%40%23%24%25%5E%26*%28%29_%2B%5B%5D%5C%7B%7D%7C%3B%27%3A%22%3C%3E%3F%2C.%2F"
 		rel="stylesheet"
 	/>
 	<noscript>
 		<link
-			href="https://fonts.googleapis.com/css2?family=Merriweather&family=Merriweather+Sans:wght@500;800&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Merriweather&family=Merriweather+Sans:wght@500;800&display=swap&text=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-%3D%21%40%23%24%25%5E%26*%28%29_%2B%5B%5D%5C%7B%7D%7C%3B%27%3A%22%3C%3E%3F%2C.%2F"
 			rel="stylesheet"
 		/>
 	</noscript>

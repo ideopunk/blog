@@ -36,7 +36,7 @@
 			{/each}
 		</ul>
 		<div class="hidden sm:flex flex-col p-4 m-4 flex-1">
-			<Subscribe />
+			<Subscribe side />
 		</div>
 	</div>
 </section>
