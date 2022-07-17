@@ -23,7 +23,7 @@ export const get = async () => {
 			// gotta do this after sorting or it gets confused.
 
 			const parsedDate = new Date(post.meta.date);
-			parsedDate.setDate(parsedDate.getDate() + 1);
+			// parsedDate.setDate(parsedDate.getDate() + 1);
 			post.meta.date = parsedDate.toDateString();
 			return post;
 		})
