@@ -1,5 +1,7 @@
 <script>
 	import SvelteTheme from "svelte-themes/SvelteTheme.svelte";
+	import { toasts, ToastContainer, FlatToast, BootstrapToast } from "svelte-toasts";
+
 	import Subscribe from "../components/Subscribe.svelte";
 
 	import "../app.css";
@@ -89,9 +91,13 @@
 		<Subscribe />
 	</footer>
 
-	<!-- <div class="absolute bottom-0 right-0 border-4 border-red-500 w-40 h-40"> -->
-	<SvelteToast />
-	<!-- </div> -->
+	<ToastContainer placement="bottom-center" let:data theme="light">
+		<div class="bg-white">
+			<FlatToast {data} />
+		</div>
+	</ToastContainer>
+
+	<!-- Provider template for your toasts -->
 </div>
 <!-- options={{
 	theme: {

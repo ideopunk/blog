@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { toast } from "@zerodevx/svelte-toast";
+	import { toasts, ToastContainer, FlatToast, BootstrapToast } from "svelte-toasts";
 
 	let email = "";
 
@@ -13,10 +13,10 @@
 		const { error }: { error?: string } = await res.json();
 
 		if (error) {
-			toast.push(error);
+			toasts.error(error);
 		} else {
 			email = "";
-			toast.push("Success! 🎉 You are now subscribed to the newsletter.");
+			toasts.success("Success! 🎉 You are now subscribed to the newsletter.");
 		}
 	}
 </script>

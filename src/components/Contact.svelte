@@ -1,16 +1,21 @@
 <script>
-	import { toast } from "@zerodevx/svelte-toast";
+	// import { toast } from "@zerodevx/svelte-toast";
+	import { toasts, ToastContainer, FlatToast, BootstrapToast } from "svelte-toasts";
+
 	import ContactLink from "./ContactLink.svelte";
 	import Copy from "./svgs/Copy.svelte";
 
 	async function handleClick() {
 		console.log("handle click");
 		await navigator.clipboard.writeText("conorbarnes93@gmail.com");
-		toast.push("Copied email address!");
+		toasts.success("Copied email address!");
 	}
 </script>
 
-<div class=" border-black transition-colors flex lg:flex-col justify-center mr-6 lg:mr-8  w-52  " id="contact">
+<div
+	class=" border-black transition-colors flex lg:flex-col justify-center mr-6 lg:mr-8  w-52  "
+	id="contact"
+>
 	<div class="flex   w-1/2 lg:w-full">
 		<div class="flex justify-end items-start   lg:w-1/2 px-2">
 			<button class="" on:click={handleClick}>
