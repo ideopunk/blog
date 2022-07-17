@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { toasts, ToastContainer, FlatToast, BootstrapToast } from "svelte-toasts";
+	import { toasts } from "svelte-toasts";
 
 	let email = "";
 

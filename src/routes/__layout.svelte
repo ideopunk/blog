@@ -1,6 +1,6 @@
 <script>
 	import SvelteTheme from "svelte-themes/SvelteTheme.svelte";
-	import { toasts, ToastContainer, FlatToast, BootstrapToast } from "svelte-toasts";
+	import { ToastContainer, FlatToast } from "svelte-toasts";
 
 	import Subscribe from "../components/Subscribe.svelte";
 
@@ -12,8 +12,6 @@
 	import Sun from "../components/svgs/Sun.svelte";
 	import Moon from "../components/svgs/Moon.svelte";
 	import Home from "../components/svgs/Home.svelte";
-
-	import { SvelteToast } from "@zerodevx/svelte-toast";
 
 	function updateTheme() {
 		setTheme($themeStore.theme === "light" ? "dark" : "light");
