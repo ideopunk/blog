@@ -64,10 +64,10 @@
 				hover:text-primary dark:hover:text-primaryDark focus:text-primary dark:focus:text-primaryDark
 				 outline-current"
 			>
-				{#if $themeStore.theme === "light"}
+				{#if $themeStore.resolvedTheme === "light"}
 					<!-- {#if mounted && $themeStore.theme === "light"} -->
 					<Sun />
-				{:else if $themeStore.theme === "dark"}
+				{:else if $themeStore.resolvedTheme === "dark"}
 					<!-- {#if mounted && $themeStore.theme === "dark"} -->
 					<Moon />
 				{/if}

@@ -22,7 +22,7 @@
 	>
 	<Project
 		id={1}
-		color={$themeStore.theme === "light" ? "#1A2D52" : "#57534e"}
+		color={$themeStore.resolvedTheme === "light" ? "#1A2D52" : "#57534e"}
 		dark
 		img="images/squares/melangepic.png"
 		title="Melange"
@@ -31,7 +31,7 @@
 	/>
 	<Project
 		id={2}
-		color={$themeStore.theme === "light" ? "#6cb6e0" : "#1e3a8a"}
+		color={$themeStore.resolvedTheme === "light" ? "#6cb6e0" : "#1e3a8a"}
 		dark
 		img="images/squares/starrynightglitchedsquare.png"
 		title="Pixel Sorter"
@@ -40,7 +40,7 @@
 	/>
 	<Project
 		id={3}
-		color={$themeStore.theme === "light" ? "#F5CBF3" : "#bd93f9"}
+		color={$themeStore.resolvedTheme === "light" ? "#F5CBF3" : "#bd93f9"}
 		img="images/squares/tdpic.png"
 		title="Tonal Distancing"
 		text="This web app uses a Rust server to highlight word proximity."
