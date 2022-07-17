@@ -2,17 +2,18 @@
 	import SvelteTheme from "svelte-themes/SvelteTheme.svelte";
 	import { ToastContainer, FlatToast } from "svelte-toasts";
 
-	import Subscribe from "../components/Subscribe.svelte";
+	import Subscribe from "../lib/components/Subscribe.svelte";
 
 	import "../app.css";
-	import Contact from "../components/Contact.svelte";
-	import HeaderLink from "../components/HeaderLink.svelte";
+	import Contact from "../lib/components/Contact.svelte";
+	import HeaderLink from "../lib/components/HeaderLink.svelte";
 
 	import themeStore, { setTheme } from "svelte-themes";
-	import Sun from "../components/svgs/Sun.svelte";
-	import Moon from "../components/svgs/Moon.svelte";
-	import Home from "../components/svgs/Home.svelte";
+	import Sun from "../lib/components/svgs/Sun.svelte";
+	import Moon from "../lib/components/svgs/Moon.svelte";
+	import Home from "../lib/components/svgs/Home.svelte";
 	import { onMount } from "svelte";
+import Toast from "$lib/components/Toast.svelte";
 
 	let mounted = false;
 	onMount(() => {
@@ -98,7 +99,7 @@
 			<FlatToast {data} />
 		</div>
 	</ToastContainer>
-
+	<Toast />
 	<!-- Provider template for your toasts -->
 </div>
 <!-- options={{

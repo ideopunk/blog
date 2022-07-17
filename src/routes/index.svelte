@@ -7,7 +7,7 @@
 </script>
 
 <script lang="ts">
-	import Date from "../components/Date.svelte";
+	import Date from "../lib/components/Date.svelte";
 
 	export let latestPost: Post;
 </script>

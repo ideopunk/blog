@@ -10,8 +10,8 @@
 </script>
 
 <script lang="ts">
-	import PostPreview from "../../components/PostPreview.svelte";
-	import Subscribe from "../../components/Subscribe.svelte";
+	import PostPreview from "../../lib/components/PostPreview.svelte";
+	import Subscribe from "../../lib/components/Subscribe.svelte";
 
 	export let posts: Post[];
 </script>

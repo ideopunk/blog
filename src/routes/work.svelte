@@ -1,8 +1,8 @@
 <script>
-	import Languages from "../components/Languages.svelte";
+	import Languages from "../lib/components/Languages.svelte";
 	import themeStore, { setTheme } from "svelte-themes";
 
-	import Project from "../components/Project.svelte";
+	import Project from "../lib/components/Project.svelte";
 </script>
 
 <svelte:head>

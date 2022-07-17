@@ -1,5 +1,5 @@
 <script>
-	import Date from "../../components/Date.svelte";
+	import Date from "../../lib/components/Date.svelte";
 
 	export let title = "";
 	export let preview = "";

@@ -3,11 +3,12 @@
 
 	import ContactLink from "./ContactLink.svelte";
 	import Copy from "./svgs/Copy.svelte";
+	import { notifications } from "../funcs/notification";
 
 	async function handleClick() {
 		console.log("handle click");
 		await navigator.clipboard.writeText("conorbarnes93@gmail.com");
-		toasts.success("Copied email address!");
+		notifications.send("Copied email address!");
 	}
 </script>
 
