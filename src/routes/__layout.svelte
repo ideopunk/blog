@@ -12,7 +12,13 @@
 	import Sun from "../components/svgs/Sun.svelte";
 	import Moon from "../components/svgs/Moon.svelte";
 	import Home from "../components/svgs/Home.svelte";
+	import { onMount } from "svelte";
 
+	let mounted = false;
+	onMount(() => {
+		mounted = true;
+	});
+	
 	function updateTheme() {
 		setTheme($themeStore.theme === "light" ? "dark" : "light");
 	}
@@ -64,11 +70,9 @@
 				hover:text-primary dark:hover:text-primaryDark focus:text-primary dark:focus:text-primaryDark
 				 outline-current"
 			>
-				{#if $themeStore.resolvedTheme === "light"}
-					<!-- {#if mounted && $themeStore.theme === "light"} -->
+				{#if mounted && $themeStore.theme === "light"}
 					<Sun />
-				{:else if $themeStore.resolvedTheme === "dark"}
-					<!-- {#if mounted && $themeStore.theme === "dark"} -->
+				{:else if mounted && $themeStore.theme === "dark"}
 					<Moon />
 				{/if}
 			</button>
