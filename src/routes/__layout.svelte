@@ -18,7 +18,7 @@
 	onMount(() => {
 		mounted = true;
 	});
-	
+
 	function updateTheme() {
 		setTheme($themeStore.theme === "light" ? "dark" : "light");
 	}
@@ -70,10 +70,10 @@
 				hover:text-primary dark:hover:text-primaryDark focus:text-primary dark:focus:text-primaryDark
 				 outline-current"
 			>
-				{#if mounted && $themeStore.theme === "light"}
-					<Sun />
-				{:else if mounted && $themeStore.theme === "dark"}
+				{#if mounted && $themeStore.resolvedTheme === "dark"}
 					<Moon />
+				{:else if mounted}
+					<Sun />
 				{/if}
 			</button>
 		</div>
