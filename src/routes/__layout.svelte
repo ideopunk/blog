@@ -84,12 +84,20 @@
 		<slot />
 	</main>
 
-	<footer class="mt-auto flex text-lg flex-col sm:flex-row justify-evenly py-6 px-20 items-center">
+	<footer class="mt-auto flex text-lg flex-col lg:flex-row justify-evenly py-6 px-20 items-center">
 		<Contact />
 		<Subscribe />
 	</footer>
 
 	<!-- <div class="absolute bottom-0 right-0 border-4 border-red-500 w-40 h-40"> -->
-		<SvelteToast />
+	<SvelteToast />
 	<!-- </div> -->
 </div>
+<!-- options={{
+	theme: {
+		"--toastContainerBottom": "2rem",
+		"--toastContainerTop": "auto",
+		"--toastBackground": "hsla(190, 77%, 80%, 50%)",
+		"--toastColor": "black"
+	}
+}} -->

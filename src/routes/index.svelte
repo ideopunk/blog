@@ -40,8 +40,8 @@
 		</a>
 		<!-- </Link> -->
 
-		<div>
-			<a href={latestPost.path} class="group">
+		<a href={latestPost.path} class="group">
+			<div>
 				<h3 class="text-xl mt-8 font-bold text-black dark:text-primaryDark transition-colors">
 					Latest Writing
 				</h3>
@@ -60,7 +60,7 @@
 				>
 					{latestPost.meta.preview}
 				</p>
-			</a>
-		</div>
+			</div>
+		</a>
 	</div>
 </section>

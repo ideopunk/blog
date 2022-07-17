@@ -13,24 +13,10 @@
 		const { error }: { error?: string } = await res.json();
 
 		if (error) {
-			toast.push(error, {
-				theme: {
-					"--toastContainerBottom": "2rem",
-					"--toastContainerTop": "auto",
-					"--toastBackground": "hsla(190, 77%, 80%, 50%)",
-					"--toastColor": "black"
-				}
-			});
+			toast.push(error);
 		} else {
 			email = "";
-			toast.push("Success! 🎉 You are now subscribed to the newsletter.", {
-				theme: {
-					"--toastContainerBottom": "2rem",
-					"--toastContainerTop": "auto",
-					"--toastBackground": "hsla(190, 77%, 80%, 50%)",
-					"--toastColor": "black"
-				}
-			});
+			toast.push("Success! 🎉 You are now subscribed to the newsletter.");
 		}
 	}
 </script>

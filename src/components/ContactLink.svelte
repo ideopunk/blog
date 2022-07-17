@@ -5,7 +5,7 @@
 
 <a
 	{href}
-	class={`mb-3 group font-semibold  w-28 text-primary hover:text-secondary dark:text-primaryDark dark:hover:text-secondaryDark outline-current`}
+	class={`mb-3 group font-semibold block  w-28 text-primary hover:text-secondary dark:text-primaryDark dark:hover:text-secondaryDark outline-current`}
 	target="_blank"
 	rel="external noopener noreferrer"
 >

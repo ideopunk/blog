@@ -38,6 +38,7 @@
   "type": "module",
   "dependencies": {
     "dotenv": "^16.0.1",
-    "svelte-themes": "^0.0.98"
+    "svelte-themes": "^0.0.98",
+    "svelte-toasts": "^1.1.2"
   }
 }
