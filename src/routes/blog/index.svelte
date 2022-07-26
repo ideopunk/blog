@@ -2,7 +2,6 @@
 	export const load = async ({ fetch }: { fetch: any }) => {
 		const posts = await fetch("/api/posts.json");
 		const allPosts: Post[] = await posts.json();
-		console.log(allPosts);
 		return {
 			props: { posts: allPosts }
 		};

@@ -37,7 +37,6 @@ export async function post({ request }: { request: Request }): Promise<RequestHa
 			context: { [key: string]: any };
 		} = await response.json();
 
-		console.log(rj);
 		if (rj.Error) return { status: 500, body: { error: rj.Error } };
 
 		// 8. If we made it this far, it was a success!

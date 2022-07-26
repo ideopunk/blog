@@ -5,7 +5,6 @@
 	import { notifications } from "../funcs/notification";
 
 	async function handleClick() {
-		console.log("handle click");
 		await navigator.clipboard.writeText("conorbarnes93@gmail.com");
 		notifications.send("Copied email address!");
 	}
