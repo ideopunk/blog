@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	import { notifications } from "../funcs/notification";
 
 	export let side = false;
@@ -49,4 +49,4 @@
 	>
 		Subscribe
 	</button>
-</form>
+</form> -->

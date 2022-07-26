@@ -10,8 +10,10 @@
 	}
 </script>
 
+<!-- class=" border-black transition-colors flex lg:flex-col justify-center mr-6 lg:mr-8  w-52  " -->
+
 <div
-	class=" border-black transition-colors flex lg:flex-col justify-center mr-6 lg:mr-8  w-52  "
+	class=" border-black transition-colors flex  justify-center mr-6  w-52  "
 	id="contact"
 >
 	<div class="flex   w-1/2 lg:w-full">
