@@ -16,7 +16,7 @@
 	<Project
 		id={0}
 		title="Resume"
-		link="conor_barnes_resume_brief.pdf"
+		link="conor_barnes_resume.pdf"
 		text="I'm currently job hunting! Click here to download my resume."
 		flip><Languages /></Project
 	>
