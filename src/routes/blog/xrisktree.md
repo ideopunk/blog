@@ -6,7 +6,7 @@ preview: "Technical details"
 
 I just published a [site](https://x-risk-tree.com/) to promote an EA alternative to the Doomsday Clock! 
 
-For an explanation of the reasoning behind the project, see [my post on the EA forum](LINK). Code is [here](https://github.com/ideopunk/x-risk-tree/). For the technical details:
+For an explanation of the reasoning behind the project, see [my post on the EA forum](https://forum.effectivealtruism.org/posts/8ZT5kkA8jufKpRFKA/announcing-the-x-risk-tree). Code is [here](https://github.com/ideopunk/x-risk-tree/). For the technical details:
 
 #### Tasks
 
@@ -35,7 +35,7 @@ My solution is to rebuild the site daily. At first this was done through a Verce
 
 #### Visualization
 
-I went with D3. I honestly didn't explore alternatives that much, I'd seen the [Radial Cluster Tree structure](https://observablehq.com/@d3/radial-cluster) before and thought it was the perfect fit for the data. The structure worked swimmingly and I was able to quickly move to animating it. Unfortunately, one can't assign Svelte's animation directives as D3 attributes (though if there's a hack to do so, I'd love to know!). I started with D3's animations, but as they're JS-based, it required a lot of work to animate so many elements (100, 200) simultaneously. Moving them over to CSS animations solved this. Much later I found that on the Collection page there was still a choppy performance (300, 600 simultaneous elements). In the interest of time, I just disabled animations on the Collection page via the `.instant` class you can see in `app.css` LINK and in use in `collection.css`. 
+I went with D3. I honestly didn't explore alternatives that much, I'd seen the [Radial Cluster Tree structure](https://observablehq.com/@d3/radial-cluster) before and thought it was the perfect fit for the data. The structure worked swimmingly and I was able to quickly move to animating it. Unfortunately, one can't assign Svelte's animation directives as D3 attributes (though if there's a hack to do so, I'd love to know!). I started with D3's animations, but as they're JS-based, it required a lot of work to animate so many elements (100, 200) simultaneously. Moving them over to CSS animations solved this. Much later I found that on the Collection page there was still a choppy performance (300, 600 simultaneous elements). In the interest of time, I just disabled animations on the Collection page via the `.instant` class you can see in `app.css` and in use in `collection.css`. 
 
 This had the helpful side-effect of providing a means to disable animations for users with the `prefers-reduced-motion` media feature enabled. To my understanding, that feature is particularly important for animations like scaling, but I suspect the tree's animation can feel pretty 'motion-y'.
 
