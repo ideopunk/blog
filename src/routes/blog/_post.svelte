@@ -1,11 +1,17 @@
 <script>
-	import Date from "../../lib/components/Date.svelte";
+	import DateText from "../../lib/components/Date.svelte";
 
 	export let title = "";
 	export let preview = "";
 	export let status = "";
 	export let date = "";
+	let trueDate = "";
+	$: {
+		let parsedDate = new Date(date);
+		parsedDate.setDate(parsedDate.getDate() + 1);
 
+		trueDate = parsedDate.toDateString();
+	}
 	import themeStore, { setTheme } from "svelte-themes";
 </script>
 
@@ -19,7 +25,7 @@
 <div class="sm:mx-auto text-xl max-w-prose px-2 min-h-screen">
 	<h1 class="text-xl font-bold md:text-2xl mb-4 md:mb-6">{title}</h1>
 	<div class="flex flex-col md:flex-row justify-between mb-4">
-		<Date dateString={date} />
+		<DateText dateString={trueDate} />
 		<span class="text-sm md:text-base font-light">
 			{status ? `Epistemic status: ${status}` : ""}
 		</span>
