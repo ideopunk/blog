@@ -35,7 +35,15 @@
 			{/each}
 		</ul>
 		<div class="hidden sm:flex flex-col p-4 m-4 flex-1">
-			<Subscribe side />
+			<a
+				href="/rss.xml"
+				sveltekit:prefetch
+				class="ease-out block text-secondary dark:text-secondaryDark transition-colors
+	group-hover:text-primary dark:group-hover:text-primaryDark
+	focus:text-primary dark:focus:text-primaryDark outline-inherit text-lg sm:text-3xl"
+				><span class="text-black dark:text-white">{"| "}</span>RSS</a
+			>
+			<!-- <Subscribe side /> -->
 		</div>
 	</div>
 </section>
