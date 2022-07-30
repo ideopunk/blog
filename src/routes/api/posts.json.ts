@@ -1,6 +1,6 @@
 import { post } from "./subscribe";
 
-export const GET = async () => {
+export const get = async () => {
 	const allPostFiles = import.meta.glob("../blog/*.md");
 	const iterablePostFiles = Object.entries(allPostFiles);
 

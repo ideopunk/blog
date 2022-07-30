@@ -3,7 +3,7 @@ import type { RequestHandlerOutput } from "@sveltejs/kit";
 import "dotenv/config";
 
 /** @type {import('@sveltejs/kit').RequestHandler} */
-export async function POST({ request }: { request: Request }): Promise<RequestHandlerOutput> {
+export async function post({ request }: { request: Request }): Promise<RequestHandlerOutput> {
 	const { email } = await request.json();
 
 	if (!email) {
