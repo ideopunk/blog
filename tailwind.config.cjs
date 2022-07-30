@@ -26,6 +26,14 @@ module.exports = {
 					css: {
 						color: theme("colors.black"),
 						fontFamily: "Merriweather",
+						code: {
+							"&::before": {
+								display: "none"
+							},
+							"&::after": {
+								display: "none"
+							}
+						},
 						// a: {
 						// 	color: theme("colors.primary"),
 						// 	"&:hover": {

@@ -18,49 +18,34 @@
 <svelte:window bind:innerWidth={size} />
 {#if size}
 	<div
-		class="flex items-center justify-center  "
+		class="flex items-center justify-center  gap-2"
 		style={"width: " + (size / (mobileRatio / 3) + 20)}
 	>
-		<div class="mx-1 lg:mx-0">
-			<Html size={size / mobileRatio} />
-		</div>
-		<div class="mx-1 lg:mx-0">
-			<Css size={size / mobileRatio} />
-		</div>
-		<div class="mx-1 lg:mx-0">
-			<Js size={size / mobileRatio} />
-		</div>
+		<Html size={size / mobileRatio} />
+
+		<Css size={size / mobileRatio} />
+
+		<Js size={size / mobileRatio} />
 	</div>
 	<div
-		class="flex flex-wrap items-center justify-center  my-2"
+		class="flex flex-wrap items-center justify-center  my-2 gap-2"
 		style={"width: " + (size / (mobileRatio / 3) + 20)}
 	>
-		<div class="mx-1 lg:mx-0">
-			<React size={size / mobileRatio} />
-		</div>
-		<div class="mx-1 lg:mx-0">
-			<Next size={size / mobileRatio} />
-		</div>
+		<React size={size / mobileRatio} />
 
-		<div class="mx-1 lg:mx-0">
-			<Ts size={size / mobileRatio} />
-		</div>
+		<Next size={size / mobileRatio} />
+
+		<Ts size={size / mobileRatio} />
 	</div>
 	<div
-		class="flex flex-wrap items-center justify-center  "
+		class="flex flex-wrap items-center justify-center  gap-2"
 		style={"width: " + (size / (mobileRatio / 3) + 20)}
 	>
-		<div class="mx-1 lg:mx-0">
-			<Node size={size / mobileRatio} />
-		</div>
+		<Node size={size / mobileRatio} />
 
-		<div class="mx-1 lg:mx-0">
-			<Go size={size / mobileRatio} />
-		</div>
+		<Go size={size / mobileRatio} />
 
-		<div class="mx-1 lg:mx-0">
-			<Rust size={size / mobileRatio} />
-		</div>
+		<Rust size={size / mobileRatio} />
 	</div>
 {:else}
 	<div class="flex items-center justify-between w-full" />

@@ -70,7 +70,7 @@
 				hover:text-primary dark:hover:text-primaryDark focus:text-primary dark:focus:text-primaryDark
 				 outline-current"
 			>
-				{#if mounted && $themeStore.resolvedTheme === "dark"}
+				{#if mounted && $themeStore.theme === "dark"}
 					<Moon />
 				{:else if mounted}
 					<Sun />
