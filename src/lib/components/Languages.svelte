@@ -18,47 +18,47 @@
 <svelte:window bind:innerWidth={size} />
 {#if size}
 	<div
-		class="flex items-center justify-center  "
+		class="flex items-center justify-center  gap-2"
 		style={"width: " + (size / (mobileRatio / 3) + 20)}
 	>
-		<div class="mx-1 lg:mx-0">
+		<div class=" ">
 			<Html size={size / mobileRatio} />
 		</div>
-		<div class="mx-1 lg:mx-0">
+		<div class=" ">
 			<Css size={size / mobileRatio} />
 		</div>
-		<div class="mx-1 lg:mx-0">
+		<div class=" ">
 			<Js size={size / mobileRatio} />
 		</div>
 	</div>
 	<div
-		class="flex flex-wrap items-center justify-center  my-2"
+		class="flex flex-wrap items-center justify-center  my-2 gap-2"
 		style={"width: " + (size / (mobileRatio / 3) + 20)}
 	>
-		<div class="mx-1 lg:mx-0">
+		<div class=" ">
 			<React size={size / mobileRatio} />
 		</div>
-		<div class="mx-1 lg:mx-0">
+		<div class=" ">
 			<Next size={size / mobileRatio} />
 		</div>
 
-		<div class="mx-1 lg:mx-0">
+		<div class=" ">
 			<Ts size={size / mobileRatio} />
 		</div>
 	</div>
 	<div
-		class="flex flex-wrap items-center justify-center  "
+		class="flex flex-wrap items-center justify-center  gap-2"
 		style={"width: " + (size / (mobileRatio / 3) + 20)}
 	>
-		<div class="mx-1 lg:mx-0">
+		<div class=" ">
 			<Node size={size / mobileRatio} />
 		</div>
 
-		<div class="mx-1 lg:mx-0">
+		<div class=" ">
 			<Go size={size / mobileRatio} />
 		</div>
 
-		<div class="mx-1 lg:mx-0">
+		<div class=" ">
 			<Rust size={size / mobileRatio} />
 		</div>
 	</div>
