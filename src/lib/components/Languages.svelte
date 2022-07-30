@@ -21,46 +21,25 @@
 		class="flex items-center justify-center  gap-2"
 		style={"width: " + (size / (mobileRatio / 3) + 20)}
 	>
-		<div class=" ">
-			<Html size={size / mobileRatio} />
-		</div>
-		<div class=" ">
-			<Css size={size / mobileRatio} />
-		</div>
-		<div class=" ">
-			<Js size={size / mobileRatio} />
-		</div>
+		<Html size={size / mobileRatio} />
+		<Css size={size / mobileRatio} />
+		<Js size={size / mobileRatio} />
 	</div>
 	<div
 		class="flex flex-wrap items-center justify-center  my-2 gap-2"
 		style={"width: " + (size / (mobileRatio / 3) + 20)}
 	>
-		<div class=" ">
-			<React size={size / mobileRatio} />
-		</div>
-		<div class=" ">
-			<Next size={size / mobileRatio} />
-		</div>
-
-		<div class=" ">
-			<Ts size={size / mobileRatio} />
-		</div>
+		<React size={size / mobileRatio} />
+		<Next size={size / mobileRatio} />
+		<Ts size={size / mobileRatio} />
 	</div>
 	<div
 		class="flex flex-wrap items-center justify-center  gap-2"
 		style={"width: " + (size / (mobileRatio / 3) + 20)}
 	>
-		<div class=" ">
-			<Node size={size / mobileRatio} />
-		</div>
-
-		<div class=" ">
-			<Go size={size / mobileRatio} />
-		</div>
-
-		<div class=" ">
-			<Rust size={size / mobileRatio} />
-		</div>
+		<Node size={size / mobileRatio} />
+		<Go size={size / mobileRatio} />
+		<Rust size={size / mobileRatio} />
 	</div>
 {:else}
 	<div class="flex items-center justify-between w-full" />

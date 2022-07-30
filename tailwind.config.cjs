@@ -19,13 +19,21 @@ module.exports = {
 			fontFamily: {
 				...fontFamily,
 				serif: ["Merriweather", "serif"],
-				sans: ["Merriweather Sans", "sans-serif"],
+				sans: ["Merriweather Sans", "sans-serif"]
 			},
 			typography: (theme) => ({
 				DEFAULT: {
 					css: {
 						color: theme("colors.black"),
 						fontFamily: "Merriweather",
+						code: {
+							"&::before": {
+								display: "none"
+							},
+							"&::after": {
+								display: "none"
+							}
+						},
 						// a: {
 						// 	color: theme("colors.primary"),
 						// 	"&:hover": {

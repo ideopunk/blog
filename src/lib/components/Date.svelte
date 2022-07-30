@@ -7,9 +7,9 @@
 		year: "numeric"
 	})}`;
 
-	$: {
-		console.log(date);
-	}
+	// $: {
+	// 	console.log(date);
+	// }
 </script>
 
 <time class="text-sm md:text-base font-light" dateTime={dateString}>
