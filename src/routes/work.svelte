@@ -29,7 +29,7 @@
 		link="https://x-risk-tree.com/"
 	/> -->
 	<Project
-		id={2}
+		id={1}
 		color={$themeStore.theme === "light" ? "#1A2D52" : "#57534e"}
 		dark
 		img="images/squares/melangepic.png"
@@ -38,7 +38,7 @@
 		link="https://www.melange.io/"
 	/>
 	<Project
-		id={3}
+		id={2}
 		color={$themeStore.theme === "light" ? "#6cb6e0" : "#1e3a8a"}
 		dark
 		img="images/squares/starrynightglitchedsquare.png"
@@ -47,7 +47,7 @@
 		link="https://pixel-sorter.com/"
 	/>
 	<Project
-		id={4}
+		id={3}
 		color={$themeStore.theme === "light" ? "#F5CBF3" : "#bd93f9"}
 		img="images/squares/tdpic.png"
 		title="Tonal Distancing"
