@@ -3,6 +3,7 @@
 	import themeStore, { setTheme } from "svelte-themes";
 
 	import Project from "../lib/components/Project.svelte";
+	console.log($themeStore.resolvedTheme);
 </script>
 
 <svelte:head>
@@ -22,7 +23,15 @@
 	>
 	<Project
 		id={1}
-		color={$themeStore.resolvedTheme === "light" ? "#1A2D52" : "#57534e"}
+		color={$themeStore.theme === "light" ? "#5BC26A" : "#014421"}
+		img="images/squares/tree-sample.png"
+		title="The X-Risk Tree"
+		text="In July 2022, I built an existential risk visualizer."
+		link="https://x-risk-tree.com/"
+	/>
+	<Project
+		id={2}
+		color={$themeStore.theme === "light" ? "#1A2D52" : "#57534e"}
 		dark
 		img="images/squares/melangepic.png"
 		title="Melange"
@@ -30,8 +39,8 @@
 		link="https://www.melange.io/"
 	/>
 	<Project
-		id={2}
-		color={$themeStore.resolvedTheme === "light" ? "#6cb6e0" : "#1e3a8a"}
+		id={3}
+		color={$themeStore.theme === "light" ? "#6cb6e0" : "#1e3a8a"}
 		dark
 		img="images/squares/starrynightglitchedsquare.png"
 		title="Pixel Sorter"
@@ -39,8 +48,8 @@
 		link="https://pixel-sorter.com/"
 	/>
 	<Project
-		id={3}
-		color={$themeStore.resolvedTheme === "light" ? "#F5CBF3" : "#bd93f9"}
+		id={4}
+		color={$themeStore.theme === "light" ? "#F5CBF3" : "#bd93f9"}
 		img="images/squares/tdpic.png"
 		title="Tonal Distancing"
 		text="This web app uses a Rust server to highlight word proximity."

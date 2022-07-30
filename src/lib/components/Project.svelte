@@ -32,6 +32,7 @@
 	<a
 		href={link}
 		rel="external"
+		target="_blank"
 		download={!link.includes("http")}
 		class="w-96 sm:mb-20 md:mb-0 group"
 	>
