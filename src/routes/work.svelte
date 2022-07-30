@@ -20,14 +20,14 @@
 		text="I'm currently job hunting! Click here to download my resume."
 		flip><Languages /></Project
 	>
-	<Project
+	<!-- <Project
 		id={1}
 		color={$themeStore.theme === "light" ? "#5BC26A" : "#014421"}
 		img="images/squares/tree-sample.png"
 		title="The X-Risk Tree"
 		text="In July 2022, I built an existential risk visualizer."
 		link="https://x-risk-tree.com/"
-	/>
+	/> -->
 	<Project
 		id={2}
 		color={$themeStore.theme === "light" ? "#1A2D52" : "#57534e"}

@@ -32,7 +32,7 @@
 	<a
 		href={link}
 		rel="external"
-		download={!link.includes("http")}
+		download={!link.includes("http") ? link : false}
 		class="w-96 sm:mb-20 md:mb-0 group"
 	>
 		<div class="m-4 mt-8 pt-0 px-4 pb-16 sm:p-4 sm:rounded  w-full  sm:m-0">
