@@ -8,7 +8,7 @@
 </script>
 
 <li class="group  pt-6 border-b-2 p-2">
-	<a href={path} sveltekit:prefetch class="h-full w-full ">
+	<a href={path} sveltekit:prefetch class="text-black dark:text-white h-full w-full ">
 		<h3
 			class="text-lg group-hover:text-secondary dark:group-hover:text-secondaryDark transition-colors sm:text-3xl"
 		>
