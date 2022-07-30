@@ -3,7 +3,6 @@
 	import themeStore, { setTheme } from "svelte-themes";
 
 	import Project from "../lib/components/Project.svelte";
-	console.log($themeStore.resolvedTheme);
 </script>
 
 <svelte:head>
