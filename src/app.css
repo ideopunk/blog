@@ -52,6 +52,22 @@ body::-webkit-scrollbar {
 
 a {
 	text-decoration: none;
+	color: #df5c61;
+	transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 150ms;
+}
+
+a:hover {
+	color: hsl(358, 785%, 45%);
+}
+
+.dark a {
+	color: hsl(358, 785%, 45%);
+}
+
+.dark a:hover {
+	color: #df5c61;
 }
 
 img {

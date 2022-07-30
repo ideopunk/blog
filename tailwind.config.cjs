@@ -19,7 +19,7 @@ module.exports = {
 			fontFamily: {
 				...fontFamily,
 				serif: ["Merriweather", "serif"],
-				sans: ["Merriweather Sans", "sans-serif"],
+				sans: ["Merriweather Sans", "sans-serif"]
 			},
 			typography: (theme) => ({
 				DEFAULT: {
@@ -37,9 +37,9 @@ module.exports = {
 						// a: {
 						// 	color: theme("colors.primary"),
 						// 	"&:hover": {
-						// 		color: theme("colors.secondary"),
+						// 		color: theme("colors.secondaryDark")
 						// 	},
-						// 	fontWeight: 400,
+						// 	fontWeight: 400
 						// },
 						em: {}
 					}
