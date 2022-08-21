@@ -15,6 +15,7 @@
 <div>
 	<Project
 		id={0}
+		dark={$themeStore.theme !== "light"}
 		title="Resume"
 		link="conor_barnes_resume.pdf"
 		text="I'm currently job hunting! Click here to download my resume."
@@ -23,6 +24,7 @@
 	<Project
 		id={1}
 		color={$themeStore.theme === "light" ? "#5BC26A" : "#014421"}
+		dark={$themeStore.theme !== "light"}
 		img="images/squares/tree-sample.png"
 		title="The X-Risk Tree"
 		text="In July 2022, I built an existential risk visualizer."
