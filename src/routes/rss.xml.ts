@@ -2,7 +2,7 @@ const siteURL = "https://conorbarnes.com";
 const siteTitle = "Conor Barnes";
 const siteDescription = "Stories and Portfolio";
 
-export const get = async () => {
+export const GET = async () => {
 	const posts: (Post["meta"] & { slug: string })[] = await Promise.all(
 		Object.entries(import.meta.glob("./blog/*.md")).map(async ([path, resolver]) => {
 			const { metadata } = await resolver();

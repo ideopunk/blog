@@ -38,14 +38,14 @@
 		<div class="m-4 mt-8 pt-0 px-4 pb-16 sm:p-4 sm:rounded  w-full  sm:m-0">
 			<h2
 				class={`mb-4 text-5xl transition-colors ${link ? "group-hover:text-secondary " : ""} ${
-					dark ? "text-white" : ""
+					dark ? "text-white" : "text-black"
 				}`}
 			>
 				{title}
 			</h2>
 			<p
 				class={`mb-4 text-2xl ${link ? "group-hover:text-secondary" : ""} transition-colors ${
-					dark ? "text-white " : ""
+					dark ? "text-white " : "text-black"
 				}`}
 			>
 				{text}
