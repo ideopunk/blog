@@ -26,7 +26,7 @@
 		color={$themeStore.theme === "light" ? "#5BC26A" : "#014421"}
 		dark={$themeStore.theme !== "light"}
 		img="images/squares/tree-sample.png"
-		title="The X-Risk Tree"
+		title="The Possible Worlds Tree"
 		text="In July 2022, I built an existential risk visualizer."
 		link="https://possibleworldstree.com/"
 	/>
