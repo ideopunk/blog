@@ -1,20 +1,19 @@
-<!-- <script lang="ts">
+<script lang="ts">
 	import { notifications } from "../funcs/notification";
 
 	export let side = false;
 	let email = "";
 
 	async function subscribe(e: SubmitEvent) {
-		const res = await fetch("/api/subscribe", {
-			body: JSON.stringify({ email: email }),
+		const res = await fetch("https://subscribe.ideopunk.workers.dev", {
+			body: JSON.stringify({ email }),
 			headers: { "Content-Type": "application/json" },
 			method: "POST"
 		});
 
-		const { error }: { error?: string } = await res.json();
-
-		if (error) {
-			notifications.send(error, "error");
+		const bod = await res.text();
+		if (res.status >= 400) {
+			notifications.send(bod, "error");
 		} else {
 			email = "";
 			notifications.send("Success! 🎉 You are now subscribed to the newsletter.");
@@ -49,4 +48,4 @@
 	>
 		Subscribe
 	</button>
-</form> -->
+</form>

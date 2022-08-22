@@ -18,7 +18,7 @@
 		dark={$themeStore.theme !== "light"}
 		title="Resume"
 		link="conor_barnes_resume.pdf"
-		text="I'm currently job hunting! Click here to download my resume."
+		text="I'm currently job hunting and freelancing! Click here to download my resume."
 		flip><Languages /></Project
 	>
 	<Project
