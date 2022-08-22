@@ -5,6 +5,7 @@
 	let email = "";
 
 	async function subscribe(e: SubmitEvent) {
+		e.preventDefault();
 		const res = await fetch("https://subscribe.ideopunk.workers.dev", {
 			body: JSON.stringify({ email }),
 			headers: { "Content-Type": "application/json" },
