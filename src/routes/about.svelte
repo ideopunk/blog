@@ -5,7 +5,7 @@
 	<meta property="og:description" content="About me" />
 </svelte:head>
 
-<div class="sm:mx-auto text-xl  max-w-prose px-2">
+<div class="sm:mx-auto text-xl  max-w-[60ch] px-2">
 	<!-- <NextSeo
         title={"Conor Barnes"}
         description={"About me"}
@@ -16,7 +16,7 @@
 	</div>
 
 	<article
-		class={`max-w-none prose md:prose-xl mt-4  dark:prose-p:text-white prose-a:text-secondary  dark:prose-a:text-secondaryDark `}
+		class={`max-w-[60ch] prose md:prose-xl mt-4  dark:prose-p:text-white prose-a:text-secondary  dark:prose-a:text-secondaryDark `}
 	>
 		<p>Hi! I'm Conor Barnes, a developer and writer living in Halifax.</p>
 		<p>

@@ -22,7 +22,7 @@
 	<meta property="og:description" content={preview} />
 </svelte:head>
 
-<div class="sm:mx-auto text-xl max-w-prose px-2 min-h-screen">
+<div class="sm:mx-auto text-xl max-w-[60ch] px-2 min-h-screen">
 	<h1 class="text-xl font-bold md:text-2xl mb-4 md:mb-6">{title}</h1>
 	<div class="flex flex-col md:flex-row justify-between mb-4">
 		<DateText dateString={trueDate} />
@@ -33,10 +33,11 @@
 	<hr />
 
 	<!-- for some reason we need both prose-invert and the themeStore stuff for dark mode to work ¯\_(ツ)_/¯ -->
+	<!-- ${	!$themeStore.theme ? "invisible" : $themeStore.theme === "dark" ? "text-white" : ""} -->
 	<article
-		class={`prose-lg max-w-none md:prose-xl dark:prose-invert my-4 group  prose-li:list-disc prose ${
-			!$themeStore.theme ? "invisible" : $themeStore.theme === "dark" ? "text-white" : ""
-		}`}
+		class={`prose-lg max-w-[60ch] md:prose-xl dark:prose-invert my-4 group  prose-li:list-disc prose
+		
+		`}
 	>
 		<slot />
 	</article>
