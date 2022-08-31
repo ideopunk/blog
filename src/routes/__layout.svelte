@@ -7,7 +7,7 @@
 	import Contact from "../lib/components/Contact.svelte";
 	import HeaderLink from "../lib/components/HeaderLink.svelte";
 
-	import themeStore, { setTheme } from "svelte-themes";
+	// import themeStore, { setTheme } from "svelte-themes";
 	import Sun from "../lib/components/svgs/Sun.svelte";
 	import Moon from "../lib/components/svgs/Moon.svelte";
 	import Home from "../lib/components/svgs/Home.svelte";
@@ -19,12 +19,12 @@
 		mounted = true;
 	});
 
-	function updateTheme() {
-		setTheme($themeStore.theme === "light" ? "dark" : "light");
-	}
+	// function updateTheme() {
+	// 	setTheme($themeStore.theme === "light" ? "dark" : "light");
+	// }
 </script>
 
-<SvelteTheme attribute="class" />
+<!-- <SvelteTheme attribute="class" /> -->
 
 <svelte:head>
 	<!-- <link
@@ -61,7 +61,7 @@
 			<HeaderLink>
 				<Home />
 			</HeaderLink>
-			<button
+			<!-- <button
 				aria-label="Toggle Theme"
 				name="Toggle Theme"
 				on:click={updateTheme}
@@ -75,7 +75,7 @@
 				{:else if mounted}
 					<Sun />
 				{/if}
-			</button>
+			</button> -->
 		</div>
 		<div class="divide-x-8 flex items-center md:divide-x-[2rem] divide-transparent">
 			<HeaderLink text="About" />

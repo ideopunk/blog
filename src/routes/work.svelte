@@ -15,7 +15,7 @@
 <div>
 	<Project
 		id={0}
-		dark={$themeStore.theme !== "light"}
+		dark={$themeStore.theme === "dark"}
 		title="Resume"
 		link="conor_barnes_resume.pdf"
 		text="I'm currently job hunting and freelancing! Click here to download my resume."
@@ -23,8 +23,8 @@
 	>
 	<Project
 		id={1}
-		color={$themeStore.theme === "light" ? "#5BC26A" : "#014421"}
-		dark={$themeStore.theme !== "light"}
+		color={$themeStore.theme === "dark" ? "#014421" : "#5BC26A"}
+		dark={$themeStore.theme === "dark"}
 		img="images/squares/tree-sample.png"
 		title="The Possible Worlds Tree"
 		text="In July 2022, I built an existential risk visualizer."
@@ -32,7 +32,7 @@
 	/>
 	<Project
 		id={1}
-		color={$themeStore.theme === "light" ? "#1A2D52" : "#57534e"}
+		color={$themeStore.theme === "dark" ? "#57534e" : "#1A2D52"}
 		dark
 		img="images/squares/melangepic.png"
 		title="Melange"
@@ -41,8 +41,7 @@
 	/>
 	<Project
 		id={2}
-		color={$themeStore.theme === "light" ? "#6cb6e0" : "#1e3a8a"}
-		dark
+		color={$themeStore.theme === "dark" ? "#1e3a8a" : "#6cb6e0"}
 		img="images/squares/starrynightglitchedsquare.png"
 		title="Pixel Sorter"
 		text="Create glitch art through pixel sorting! All processing is done in-browser."
@@ -50,7 +49,7 @@
 	/>
 	<Project
 		id={3}
-		color={$themeStore.theme === "light" ? "#F5CBF3" : "#bd93f9"}
+		color={$themeStore.theme === "dark" ? "#bd93f9" : "#F5CBF3"}
 		img="images/squares/tdpic.png"
 		title="Tonal Distancing"
 		text="This web app uses a Rust server to highlight word proximity."
