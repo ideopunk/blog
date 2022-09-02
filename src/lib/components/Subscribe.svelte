@@ -35,7 +35,7 @@
 			bind:value={email}
 			placeholder="Email address"
 			required
-			class="outline-none peer border-b-2 pl-2 bg-transparent border-secondary text-xl appearance-none rounded-sm w-full  transition-all pb-1 pt-2"
+			class="outline-none peer border-b-2 pl-2 bg-transparent border-secondary text-xl appearance-none rounded-sm w-full  transition-all pb-1 pt-2 h-[42px]"
 			type="email"
 		/>
 

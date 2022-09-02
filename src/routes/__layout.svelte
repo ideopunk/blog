@@ -42,10 +42,7 @@
 	<meta property="og:locale" content="en_CA" />
 	<meta property="og:url" content="https://www.conorbarnes.com" />
 	<meta property="og:site_name" content="Conor Barnes" />
-	<meta
-		property="og:image"
-		content="http://www.artnet.com/WebServices/images/ll00762lldjkYGFgFaECfDrCWvaHBOc4uYC/nobuyoshi-araki-flowers.jpg"
-	/>
+	<meta property="og:image" content="https://conorbarnes.com/images/the-painter.png" />
 
 	<meta property="twitter:card" content="summary_large_image" />
 	<meta property="twitter:handle" content="@ideopunk" />
