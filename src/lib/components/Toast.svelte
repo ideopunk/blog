@@ -11,10 +11,10 @@
 	{#each $notifications as notification (notification.id)}
 		<div
 			animate:flip
-			class={`flex-auto mb-2 ${notification.type === "default" ? "bg-primary" : "bg-red-500"}`}
-			transition:fly={{ y: 30 }}
+			class={`flex-auto mb-2 ${notification.type === "default" ? "bg-primary shadow-teal-800 shadow-md" : "bg-red-500"}`}
+			transition:fly={{ y: 40 }}
 		>
-			<div class="p-2 block text-white">{notification.message}</div>
+			<div class="p-4 block text-lg text-white">{notification.message}</div>
 		</div>
 	{/each}
 </div>

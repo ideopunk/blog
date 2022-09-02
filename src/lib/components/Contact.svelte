@@ -6,7 +6,7 @@
 
 	async function handleClick() {
 		await navigator.clipboard.writeText("conorbarnes93@gmail.com");
-		notifications.send("Copied email address!");
+		notifications.send("Email address copied!");
 	}
 </script>
 

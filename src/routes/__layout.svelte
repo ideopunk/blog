@@ -4,6 +4,7 @@
 	import Subscribe from "../lib/components/Subscribe.svelte";
 
 	import "../app.css";
+	import "../marquee.css";
 	import Contact from "../lib/components/Contact.svelte";
 	import HeaderLink from "../lib/components/HeaderLink.svelte";
 
