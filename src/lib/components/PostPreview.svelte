@@ -10,7 +10,7 @@
 <li class="group  pt-6 bg-secondary-grey p-6 rounded-sm">
 	<a href={path} sveltekit:prefetch class="text-black dark:text-white h-full w-full ">
 		<h3
-			class="text-lg group-hover:text-secondary dark:group-hover:text-secondaryDark transition-colors sm:text-2xl"
+			class="text-lg group-hover:text-secondary dark:group-hover:text-secondaryDark transition-colors sm:text-xl font-bold"
 		>
 			{title}
 		</h3>
