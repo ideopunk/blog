@@ -10,7 +10,7 @@
 	$: lowerCaseText = text.toLowerCase();
 	export let href = "";
 	$: nextref = text ? `/${lowerCaseText}` : "/";
-	$: curr = pathname.includes(lowerCaseText);
+	$: curr = lowerCaseText ? pathname.includes(lowerCaseText) : pathname === "/";
 </script>
 
 <div class={`group relative ${text && "top-1"}`}>
