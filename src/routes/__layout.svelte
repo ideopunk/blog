@@ -14,10 +14,10 @@
 	import { onMount } from "svelte";
 	import Toast from "$lib/components/Toast.svelte";
 
-	let mounted = false;
-	onMount(() => {
-		mounted = true;
-	});
+	// let mounted = false;
+	// onMount(() => {
+	// 	mounted = true;
+	// });
 
 	// function updateTheme() {
 	// 	setTheme($themeStore.theme === "light" ? "dark" : "light");
@@ -82,6 +82,8 @@
 			<HeaderLink text="Work" />
 			<HeaderLink text="Blog" />
 			<HeaderLink href="#contact" text="Contact" />
+			<HeaderLink href="/rss.xml" text="RSS" />
+
 		</div>
 	</header>
 	<main class="flex-1">
