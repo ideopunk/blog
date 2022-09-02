@@ -8,6 +8,6 @@
 	})}`;
 </script>
 
-<time class="text-sm md:text-base font-light" dateTime={dateString}>
+<time class="text-sm font-light" dateTime={dateString}>
 	{date}
 </time>

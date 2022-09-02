@@ -13,8 +13,10 @@ module.exports = {
 				primary: "#137f94",
 				secondary: "#df5c61",
 				primaryLight: "hsl(190, 77%, 80%)",
+				primaryXLight: "hsl(190, 67%, 92%)",
 				primaryDark: "hsl(230, 15%, 70%)",
-				secondaryDark: "hsl(358, 785%, 45%)"
+				secondaryDark: "hsl(358, 785%, 45%)",
+				"secondary-grey": "hsl(358, 16%, 95%)",
 			},
 			fontFamily: {
 				...fontFamily,

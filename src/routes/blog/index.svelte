@@ -23,8 +23,8 @@
 </svelte:head>
 
 <section class="mt-8">
-	<div class="flex justify-center">
-		<ul class="flex-[5] m-4 mt-0 sm:mt-4 py-0 px-2 sm:py-4 sm:px-16 flex flex-col">
+	<div class="flex justify-between w-full">
+		<ul class="flex-[5] m-4 mt-0 sm:mt-4 py-0 px-2 max-w-3xl gap-8	 sm:py-4 sm:px-16 flex flex-col">
 			{#each posts as post}
 				<PostPreview
 					path={post.path}
@@ -34,7 +34,7 @@
 				/>
 			{/each}
 		</ul>
-		<div class="hidden sm:flex flex-col p-4 m-4 flex-1">
+		<div class="hidden sm:flex flex-col p-4 m-4">
 			<Subscribe side />
 		</div>
 	</div>

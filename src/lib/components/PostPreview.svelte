@@ -7,16 +7,16 @@
 	export let preview = "";
 </script>
 
-<li class="group  pt-6 border-b-2 p-2">
+<li class="group  pt-6 bg-secondary-grey p-6 rounded-sm">
 	<a href={path} sveltekit:prefetch class="text-black dark:text-white h-full w-full ">
 		<h3
-			class="text-lg group-hover:text-secondary dark:group-hover:text-secondaryDark transition-colors sm:text-3xl"
+			class="text-lg group-hover:text-secondary dark:group-hover:text-secondaryDark transition-colors sm:text-2xl"
 		>
 			{title}
 		</h3>
 
 		<div
-			class={`flex justify-between mb-4 group-hover:text-secondary dark:group-hover:text-secondaryDark transition-colors flex-col`}
+			class={`flex justify-between mb-4 text-stone-500 group-hover:text-secondary dark:group-hover:text-secondaryDark transition-colors flex-col`}
 		>
 			<Date dateString={date} />
 		</div>

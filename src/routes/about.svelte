@@ -12,11 +12,11 @@
         openGraph={{ title: "Conor Barnes", description: "About me" }}
     /> -->
 	<div class="border-b-2 border-b-stone-500">
-		<h1 class="text-xl font-bold md:text-2xl mb-4 md:mb-6">About me</h1>
+		<h1 class="text-xl font-bold md:text-2xl mb-4 md:mb-6">About Me</h1>
 	</div>
 
 	<article
-		class={`max-w-[60ch] prose md:prose-xl mt-4  dark:prose-p:text-white prose-a:text-secondary  dark:prose-a:text-secondaryDark `}
+		class={`max-w-[60ch] prose md:prose-xl mt-4  dark:prose-p:text-white prose-a:text-secondary  dark:prose-a:text-secondaryDark pb-12`}
 	>
 		<p>Hi! I'm Conor Barnes, a developer and writer living in Halifax.</p>
 		<p>

@@ -24,7 +24,7 @@
 
 <form
 	on:submit|preventDefault={subscribe}
-	class="flex flex-col max-w-lg border-2 rounded-lg border-primary dark:border-primaryDark px-6 pb-4"
+	class="flex flex-col max-w-lg bg-primaryXLight border-primary dark:border-primaryDark px-6 pb-4"
 >
 	<label class="invisible" for="email-input"> Email address </label>
 	<input

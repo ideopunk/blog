@@ -20,7 +20,7 @@
 </svelte:head>
 
 <section
-	class="flex flex-col-reverse md:flex-row items-center justify-between relative bg-primaryLight dark:bg-gray-800 bg-opacity-30 px-6 lg:pl-12 py-12"
+	class="flex flex-col-reverse md:flex-row items-center justify-between relative bg-primaryXLight dark:bg-gray-800 px-6 lg:pl-12 py-12"
 >
 	<div class="w-full  justify-around  z-10  md:ml-8 mb-10 md:mb-0">
 		<!-- <Link > -->
