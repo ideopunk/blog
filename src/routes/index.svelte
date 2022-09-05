@@ -8,7 +8,6 @@
 
 <script lang="ts">
 	import Date from "../lib/components/Date.svelte";
-
 	export let latestPost: Post;
 </script>
 
@@ -24,13 +23,16 @@
 >
 	<div class="w-full  justify-around  z-10  md:ml-8 mb-10 md:mb-0">
 		<!-- <Link > -->
-		<a sveltekit:prefetch href="/work" class="group flex text-secondary">
+		<a sveltekit:prefetch href="/work" class="group flex text-secondary hover:text-secondary">
 			<div class="py-4 flex">
-				<div class="group-hover:scale-y-100 scale-y-0 transition-transform origin-top h-full w-0.5 bg-secondary mr-4" />
+				<div
+					class="group-hover:scale-y-100 scale-y-0 transition-transform origin-top h-full w-0.5 bg-secondary mr-4"
+				/>
 				<div>
-					<h1 class="pt-4 md:py-0 text-3xl font-bold md:text-4xl mb-2 md:relative">Conor Barnes</h1>
-					<p class="text-xl font-medium">
-						Hi there! I'm a web developer and a writer. Get in touch!
+					<h1 class="pt-4 md:py-0 text-3xl font-bold md:text-4xl mb-2 md:relative">Hi there!</h1>
+					<p class="text-xl font-medium max-w-lg">
+						I'm a web developer and a writer. Sometimes I freelance and sometimes I write
+						non-fiction.
 					</p>
 				</div>
 			</div>
@@ -59,12 +61,4 @@
 		</a>
 	</div>
 
-	<!-- <div class="marquee-container">
-		<div class="marquee" aria-hidden="true">
-			<span>Showreel</span>
-			<span>Showreel</span>
-			<span>Showreel</span>
-			<span>Showreel</span>
-		</div>
-	</div> -->
 </section>

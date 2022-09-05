@@ -57,7 +57,7 @@
 	>
 		<div class="flex items-center">
 			<HeaderLink>
-				<h1 class="italic text-xl">Conor Barnes</h1>
+				<h1 class="italic text-xl lg:ml-4">Conor Barnes</h1>
 			</HeaderLink>
 			<!-- <button
 				aria-label="Toggle Theme"
@@ -79,7 +79,6 @@
 			<HeaderLink text="About" />
 			<HeaderLink text="Work" />
 			<HeaderLink text="Blog" />
-			<HeaderLink href="#contact" text="Contact" />
 			<HeaderLink href="/rss.xml" text="RSS" />
 		</div>
 	</header>
