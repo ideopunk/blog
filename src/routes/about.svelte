@@ -5,15 +5,16 @@
 	<meta property="og:description" content="About me" />
 </svelte:head>
 
-<div class="sm:mx-auto text-xl  max-w-[60ch] px-2">
+<div class="sm:mx-auto text-xl  max-w-[60ch] mt-8 px-2">
 	<!-- <NextSeo
         title={"Conor Barnes"}
         description={"About me"}
         openGraph={{ title: "Conor Barnes", description: "About me" }}
     /> -->
-	<div class="border-b-2 border-b-stone-500">
+	<div >
 		<h1 class="text-xl font-bold md:text-2xl mb-4 md:mb-6">About Me</h1>
 	</div>
+	<hr />
 
 	<article
 		class={`max-w-[60ch] prose md:prose-xl mt-4  dark:prose-p:text-white prose-a:text-secondary  dark:prose-a:text-secondaryDark pb-12`}
