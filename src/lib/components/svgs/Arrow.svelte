@@ -1,8 +1,8 @@
-<svg viewBox="0 0 512 512" stroke="white">
+<svg viewBox="0 0 512 512" stroke="currentColor">
 	<title>Chevron Down</title>
 	<path
 		fill="none"
-		stroke="white"
+		stroke="currentColor"
 		stroke-linecap="round"
 		stroke-linejoin="round"
 		stroke-width="48"

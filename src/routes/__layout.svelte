@@ -4,14 +4,14 @@
 	import Subscribe from "../lib/components/Subscribe.svelte";
 
 	import "../app.css";
-	import "../marquee.css";
+	// import "../marquee.css";
 	import Contact from "../lib/components/Contact.svelte";
 	import HeaderLink from "../lib/components/HeaderLink.svelte";
 
 	// import themeStore, { setTheme } from "svelte-themes";
-	import Sun from "../lib/components/svgs/Sun.svelte";
-	import Moon from "../lib/components/svgs/Moon.svelte";
-	import Home from "../lib/components/svgs/Home.svelte";
+	// import Sun from "../lib/components/svgs/Sun.svelte";
+	// import Moon from "../lib/components/svgs/Moon.svelte";
+	// import Home from "../lib/components/svgs/Home.svelte";
 	import { onMount } from "svelte";
 	import Toast from "$lib/components/Toast.svelte";
 

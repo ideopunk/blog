@@ -53,6 +53,6 @@
 		</div>
 	</a>
 	{#if size > 600}
-		<ScrollArrow to={id + 1} {bottom} />
+		<ScrollArrow dark={!dark} to={id + 1} {bottom} />
 	{/if}
 </div>
