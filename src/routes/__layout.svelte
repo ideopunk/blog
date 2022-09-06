@@ -76,6 +76,7 @@
 			</button> -->
 		</div>
 		<div class="divide-x-8 flex items-center md:divide-x-[2rem] divide-transparent">
+			<HeaderLink text="Stories" />
 			<HeaderLink text="About" />
 			<HeaderLink text="Work" />
 			<HeaderLink text="Blog" />
