@@ -37,6 +37,7 @@
 				<li><BlogLink href="theagent">The Agent</BlogLink></li>
 				<li><BlogLink href="whitestag">The White Stag</BlogLink></li>
 				<li><BlogLink href="kind">Kind</BlogLink></li>
+				<li><BlogLink href="like-the-setting-sun">Like The Setting Sun</BlogLink></li>
 			</ul>
 
 			<div class="pt-4 pb-1">
