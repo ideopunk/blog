@@ -1,4 +1,5 @@
 <script>
+	import { fly, slide } from "svelte/transition";
 	import SvelteTheme from "svelte-themes/SvelteTheme.svelte";
 
 	import Subscribe from "../lib/components/Subscribe.svelte";
@@ -15,30 +16,10 @@
 	import { onMount } from "svelte";
 	import Toast from "$lib/components/Toast.svelte";
 
-	// let mounted = false;
-	// onMount(() => {
-	// 	mounted = true;
-	// });
-
-	// function updateTheme() {
-	// 	setTheme($themeStore.theme === "light" ? "dark" : "light");
-	// }
+	let open = false;
 </script>
 
-<!-- <SvelteTheme attribute="class" /> -->
-
 <svelte:head>
-	<!-- <link
-		href="https://fonts.googleapis.com/css2?family=Merriweather&family=Merriweather+Sans:wght@500;800&display=swap&text=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-%3D%21%40%23%24%25%5E%26*%28%29_%2B%5B%5D%5C%7B%7D%7C%3B%27%3A%22%3C%3E%3F%2C.%2F"
-		rel="stylesheet"
-	/>
-	<noscript>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Merriweather&family=Merriweather+Sans:wght@500;800&display=swap&text=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-%3D%21%40%23%24%25%5E%26*%28%29_%2B%5B%5D%5C%7B%7D%7C%3B%27%3A%22%3C%3E%3F%2C.%2F"
-			rel="stylesheet"
-		/>
-	</noscript> -->
-
 	<meta property="og:type" content="website" />
 	<meta property="og:locale" content="en_CA" />
 	<meta property="og:url" content="https://www.conorbarnes.com" />
@@ -53,9 +34,9 @@
 <div class="min-h-screen  dark:bg-slate-900  flex flex-col">
 	<header
 		id="top"
-		class="flex text-lg static sm:sticky w-full h-10 top-0 left-0 z-20 justify-between font-semibold backdrop-opacity-80 py-8 px-2 md:px-8 items-center bg-white dark:bg-opacity-100 dark:bg-slate-900 bg-opacity-50"
+		class={`flex text-lg static sm:sticky w-full h-16  lg:h-10 top-0 left-0 z-20 justify-between font-semibold lg:bg-opacity-50 lg:p-8 items-center bg-white dark:bg-opacity-100 dark:bg-slate-900 ${!open && "bg-opacity-50"}`}
 	>
-		<div class="flex items-center">
+		<div class="items-center hidden lg:flex">
 			<HeaderLink>
 				<h1 class="italic text-xl lg:ml-4">Conor Barnes</h1>
 			</HeaderLink>
@@ -75,13 +56,63 @@
 				{/if}
 			</button> -->
 		</div>
-		<div class="divide-x-8 flex items-center md:divide-x-[2rem] divide-transparent">
-			<HeaderLink text="Stories" />
+		<div class="divide-x-8 items-center md:divide-x-[2rem] divide-transparent hidden lg:flex">
 			<HeaderLink text="About" />
+			<HeaderLink text="Stories" />
 			<HeaderLink text="Work" />
 			<HeaderLink text="Blog" />
 			<HeaderLink href="/rss.xml" text="RSS" />
 		</div>
+		<div class="lg:hidden z-10 relative flex items-center self-center  justify-end w-full ">
+			<button
+				class="rounded-full hover:bg-secondary-grey p-2 mr-4"
+				on:click={() => {
+					open = !open;
+				}}
+			>
+				{#if open}
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="w-6 h-6"
+					>
+						<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+					</svg>
+				{:else}
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="w-6 h-6"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+						/>
+					</svg>
+				{/if}
+			</button>
+		</div>
+		{#if open}
+			<div
+				transition:slide
+				class="lg:hidden absolute bg-white top-16 left-0 w-full p-8 pt-4  shadow-secondary-grey shadow-lg z-0"
+			>
+				<div class="w-1/2 flex flex-col gap-4">
+					<HeaderLink text="About" />
+					<HeaderLink text="Stories" />
+					<HeaderLink text="Work" />
+					<HeaderLink text="Blog" />
+					<HeaderLink href="/rss.xml" text="RSS" />
+				</div>
+			</div>
+		{/if}
 	</header>
 	<main class="flex-1">
 		<slot />

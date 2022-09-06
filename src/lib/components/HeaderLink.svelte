@@ -13,14 +13,14 @@
 	$: curr = lowerCaseText ? pathname.includes(lowerCaseText) : pathname === "/";
 </script>
 
-<div class={`group relative ${text && "top-1"}`}>
+<div class={`group relative w-min ${text && "top-1"}`}>
 	<a
 		sveltekit:prefetch
 		href={href || nextref}
-		class={`ease-out block  outline-inherit ${
+		class={`ease-out block w-max  outline-inherit  text-2xl lg:text-lg ${
 			curr
 				? "text-primary hover:text-primary"
-				: "text-secondary dark:text-secondaryDark transition-colors group-hover:text-primary dark:group-hover:text-primaryDark focus:text-primary dark:focus:text-primaryDark"
+				: "text-secondary dark:text-secondaryDark transition-colors group-hover:text-primary dark:group-hover:text-primaryDark focus:text-primary dark:focus:text-primaryDark "
 		}`}
 	>
 		{#if text}

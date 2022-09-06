@@ -15,14 +15,15 @@
 		<h1 class="text-xl font-bold md:text-2xl mb-4 md:mb-6">Stories</h1>
 
 		<article
-			class={`prose  mt-4 prose-h4:mt-8  prose-a:text-secondary prose-p:mt-2 prose-p:mb-2 prose-li:mb-1 dark:prose-a:text-secondaryDark pb-12`}
+			class={`prose  mt-2 prose-h4:mt-8  prose-a:text-secondary prose-p:mt-2 prose-p:mb-2 prose-li:mb-1 dark:prose-a:text-secondaryDark pb-12`}
 		>
 			<hr />
 
-			I'm writing 100 stories for fun this year. As of September 6, I'm at 79. They are usually
-			quite short. I have put some on this blog, and published some in magazines. If you're a
-			chapbook publisher, give me a shout.
-
+			<p>
+				I'm writing 100 stories for fun this year. As of September 6, I'm at 79. They are usually
+				quite short. I have put some on this blog, and published some in magazines. If you're a
+				chapbook publisher, give me a shout.
+			</p>
 			<div class="pt-4">
 				<h3>Blogposts</h3>
 			</div>
