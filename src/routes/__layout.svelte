@@ -38,7 +38,7 @@
 	>
 		<div class="items-center hidden lg:flex">
 			<HeaderLink>
-				<h1 class="italic text-xl lg:ml-4">Conor Barnes</h1>
+				<h1 class="italic text-xl lg:mx-4">Conor Barnes</h1>
 			</HeaderLink>
 			<!-- <button
 				aria-label="Toggle Theme"

@@ -23,10 +23,10 @@
 >
 	<div class="w-full  justify-around  z-10  md:ml-8 mb-10 md:mb-0">
 		<!-- <Link > -->
-		<a sveltekit:prefetch href="/work" class="group flex text-secondary hover:text-secondary">
+		<a sveltekit:prefetch href="/work" class="group flex text-secondary hover:text-secondary outline-none ">
 			<div class="py-4 flex">
 				<div
-					class="group-hover:scale-y-100 scale-y-0 transition-transform origin-top h-full w-0.5 bg-secondary mr-4"
+					class="group-hover:scale-y-100 group-focus:scale-y-100 scale-y-0 transition-transform origin-top h-full w-0.5 bg-secondary mr-4"
 				/>
 				<div>
 					<h1 class="pt-4 md:py-0 text-3xl font-bold md:text-4xl mb-2 md:relative">Hi there!</h1>
@@ -39,10 +39,10 @@
 		</a>
 		<!-- </Link> -->
 
-		<a href={latestPost.path} class="group text-secondaryDark flex">
+		<a href={latestPost.path} class="group text-secondaryDark flex outline-none">
 			<div class="flex mt-8 mb-4">
 				<div
-					class="scale-y-0 group-hover:scale-y-100 origin-top transition-transform h-full w-0.5 mr-4 bg-secondaryDark"
+					class="scale-y-0 group-hover:scale-y-100 group-focus:scale-y-100 origin-top transition-transform h-full w-0.5 mr-4 bg-secondaryDark"
 				/>
 
 				<div>
