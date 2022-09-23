@@ -99,6 +99,13 @@
 
 			<p>Blink Ink (Sept 1, 2022)</p>
 			<ul class="pb-4"><li>The Genie (Print)</li></ul>
+
+			<p>The Bookends Review (Sept 23, 2022)</p>
+			<ul class="pb-4">
+				<li>
+					<XLink href="http://thebookendsreview.com/2022/09/23/the-fountain/">The Fountain</XLink>
+				</li>
+			</ul>
 		</article>
 	</div>
 </div>
