@@ -1,10 +1,7 @@
 <script>
 	import { page } from "$app/stores";
 	$: pathname = $page.url.pathname;
-
-	$: {
-		console.log({ pathname });
-	}
+	
 	// let itsAString = typeof children === "string";
 	export let text = "";
 	$: lowerCaseText = text.toLowerCase();
