@@ -20,7 +20,7 @@
 			<hr />
 
 			<p>
-				I'm writing 100 stories for fun this year. As of October 8, I'm at 87. They are usually
+				I'm writing 100 stories for fun this year. As of October 18, I'm at 89. They are usually
 				quite short. I have put some on this blog, and published some in magazines. If you're a
 				chapbook publisher, give me a shout.
 			</p>
@@ -125,6 +125,14 @@
 					<XLink
 						href="https://thechambermagazine.com/2022/10/07/three-works-of-flash-fiction-by-conor-barnes-the-dream-eater-the-duel-and-void/"
 						>Void</XLink
+					>
+				</li>
+			</ul>
+
+			<p>The Apple Valley Review (Oct 18, 2022)</p>
+			<ul class="pb-4">
+				<li>
+					<XLink href="https://www.applevalleyreview.org/fall-2022/conor-barnes">The Partisan</XLink
 					>
 				</li>
 			</ul>
