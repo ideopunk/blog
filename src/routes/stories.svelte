@@ -136,6 +136,23 @@
 					>
 				</li>
 			</ul>
+
+			<p>The Parliament Literary Journal (Oct 29, 2022)</p>
+			<ul class="pb-4">
+				<li>
+					<XLink href="https://www.parliamentlit.com/conor-barnes-in-a-nightmare"
+						>In a Nightmare</XLink
+					>
+				</li>
+				<li>
+					<XLink href="https://www.parliamentlit.com/conor-barnes-once-beautiful"
+						>Somebody You Once Found Beautiful Isn't Anymore</XLink
+					>
+				</li>
+				<li>
+					<XLink href="https://www.parliamentlit.com/conor-barnes-tell-them">Tell Them</XLink>
+				</li>
+			</ul>
 		</article>
 	</div>
 </div>
