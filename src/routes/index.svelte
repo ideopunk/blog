@@ -23,7 +23,11 @@
 >
 	<div class="w-full  justify-around  z-10  md:ml-8 mb-10 md:mb-0">
 		<!-- <Link > -->
-		<a sveltekit:prefetch href="/work" class="group flex text-secondary hover:text-secondary outline-none ">
+		<a
+			sveltekit:prefetch
+			href="/work"
+			class="group flex text-secondary hover:text-secondary outline-none "
+		>
 			<div class="py-4 flex">
 				<div
 					class="group-hover:scale-y-100 group-focus:scale-y-100 scale-y-0 transition-transform origin-top h-full w-0.5 bg-secondary mr-4"
@@ -54,11 +58,10 @@
 						<Date dateString={latestPost.meta.date} />
 					</p>
 					<p>
-						{latestPost.meta.preview}
+						{latestPost.meta?.preview || ""}
 					</p>
 				</div>
 			</div>
 		</a>
 	</div>
-
 </section>
