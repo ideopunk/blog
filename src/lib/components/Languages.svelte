@@ -26,31 +26,31 @@
 			style={"width: " + (size / (mobileRatio / 3) + 20)}
 		> -->
 
-			<div class="w-1/4">
+			<div class="w-[30%]">
 				<Html size={size / mobileRatio} />
 			</div>
-			<div class="w-1/4">
+			<div class="w-[30%]">
 				<Css size={size / mobileRatio} />
 			</div>
-			<div class="w-1/4">
+			<div class="w-[30%]">
 				<Js size={size / mobileRatio} />
 			</div>
-			<div class="w-1/4">
+			<div class="w-[30%]">
 				<React size={size / mobileRatio} />
 			</div>
-			<div class="w-1/4">
+			<div class="w-[30%]">
 				<Next size={size / mobileRatio} />
 			</div>
-			<div class="w-1/4">
+			<div class="w-[30%]">
 				<Ts size={size / mobileRatio} />
 			</div>
-			<div class="w-1/4">
+			<div class="w-[30%]">
 				<Node size={size / mobileRatio} />
 			</div>
-			<div class="w-1/4">
+			<div class="w-[30%]">
 				<Go size={size / mobileRatio} />
 			</div>
-			<div class="w-1/4">
+			<div class="w-[30%]">
 				<Rust size={size / mobileRatio} />
 			</div>
 		</div>
