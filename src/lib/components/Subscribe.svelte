@@ -65,7 +65,7 @@
 		/>
 	</div>
 
-	<p class="mt-4 text-primary dark:text-secondaryDark">
+	<p class="mt-4 text-base lg:text-lg text-primary dark:text-secondaryDark">
 		Receive notifications about new blog posts.
 	</p>
 	<button

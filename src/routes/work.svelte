@@ -16,9 +16,8 @@
 	<Project
 		id={0}
 		dark={$themeStore.theme === "dark"}
-		title="Resume"
-		link="conor_barnes_resume.pdf"
-		text="I'm always down to hear about freelancing opportunities! Click here to download my resume."
+		title="Work"
+		text="I'm always happy to hear about freelancing opportunities! My contact information is below."
 		flip><Languages /></Project
 	>
 	<Project

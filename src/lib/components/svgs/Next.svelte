@@ -2,7 +2,7 @@
 	export let size: number;
 </script>
 
-<div style="{`width: ${size}; height: ${size};`}}" class="bg-white rounded-full outline">
+<div style="{`width: ${size}; height: ${size};`}}" class="bg-white rounded-full">
 	<svg
 		width={size}
 		height={size}
