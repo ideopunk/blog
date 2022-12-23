@@ -40,9 +40,11 @@ export default function treemapify(id: string) {
 	const subjectData = toSubjectCount(data);
 	const root = d3.hierarchy({ children: subjectData }).sum((d) => d.count);
 
+	console.log(root);
+
 	// Then d3.treemap computes the position of each element of the hierarchy
 	// The coordinates are added to the root object above
-	d3.treemap().size([width, height]).padding(4)(root);
+	d3.treemap<{ children: subjectData[] }>().size([width, height]).padding(4)(root);
 
 	// TOOLTIP
 	const tooltip = svg
@@ -74,7 +76,7 @@ export default function treemapify(id: string) {
 		tooltip.style("opacity", 1);
 
 		ttTitle.text(d.title);
-		ttCount.text(d.count + " instances").attr("font-size", 16);
+		ttCount.text(d.count + " instance" + (d.count > 1 ? "s" : "")).attr("font-size", 16);
 	};
 
 	const hideTooltip = function () {
@@ -89,12 +91,8 @@ export default function treemapify(id: string) {
 		.selectAll("rect")
 		.data(root.leaves())
 		.join("g")
-		.attr("width", function (d) {
-			return d.x1 - d.x0;
-		})
-		.attr("height", function (d) {
-			return d.y1 - d.y0;
-		})
+		.attr("width", (d) => d.x1 - d.x0)
+		.attr("height", (d) => d.y1 - d.y0)
 		.on("mouseover", function (e, d) {
 			showTooltip(d.data);
 		})
@@ -102,35 +100,33 @@ export default function treemapify(id: string) {
 			hideTooltip();
 		});
 
+	// RECTANGLES
 	groups
 		.append("rect")
-		.attr("x", function (d) {
-			return d.x0;
-		})
-		.attr("y", function (d) {
-			return d.y0;
-		})
-		.attr("width", function (d) {
-			return d.x1 - d.x0;
-		})
-		.attr("height", function (d) {
-			return d.y1 - d.y0;
-		})
+		.attr("x", (d) => d.x0)
+		.attr("y", (d) => d.y0)
+		.attr("width", (d) => d.x1 - d.x0)
+		.attr("height", (d) => d.y1 - d.y0)
 		.style("stroke", "black")
-		.style("fill", (d) => stringToColor(d.data.title));
+		.style("fill", (d) => stringToColor(d.data.count.toString(2)));
 
+	// TEXT
 	groups
+		.append("svg")
+		.attr("x", (d) => d.x0 + 5)
+		.attr("y", (d) => d.y0)
+
+		.attr("width", (d) => d.x1 - d.x0 - 5)
+		.attr("height", (d) => d.y1 - d.y0)
 		.append("text")
-		.attr("x", function (d) {
-			return d.x0 + 5;
-		}) // +10 to adjust position (more right)
+		.attr("x", 0)
 		.attr("y", function (d) {
-			return d.y0 + 10;
+			if (d.y1 - d.y0 < 24) {
+				return 10;
+			}
+			return 15;
 		}) // +20 to adjust position (lower)
-		.text(function (d) {
-			console.log(d);
-			return d.data.title;
-		})
+		.text((d) => d.data.title)
 		.attr("font-size", "9px")
 		.attr("fill", "black");
 }
