@@ -10,12 +10,13 @@
 	export let id = "";
 	export let trend = false;
 	export let param: "wordcount" | "subject" = "wordcount";
+	export let properties = []
 
 	onMount(() => {
 		if (param === "wordcount") {
 			chartify(id, trend);
 		} else {
-			treemapify(id);
+			treemapify(id, properties);
 		}
 	});
 </script>

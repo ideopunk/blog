@@ -1,6 +1,7 @@
 import * as d3 from "d3";
 import data from "../../data.json";
 import { stringToColor } from "./toPastel";
+import toTitleCase from "./toTitleCase";
 const width = 800;
 const height = 600;
 const margin = { left: 40, right: 40, top: 40, bottom: 40 };
@@ -8,28 +9,66 @@ const margin = { left: 40, right: 40, top: 40, bottom: 40 };
 type ArrElement<ArrType> = ArrType extends readonly (infer ElementType)[] ? ElementType : never;
 type datum = ArrElement<typeof data>;
 
-type subjectData = { title: string; count: number };
-function toSubjectCount(data: datum[]): subjectData[] {
+type countData = { title: string; count: number };
+
+function toCount(data: datum[], key: keyof datum): countData[] {
 	const obj: { [title: string]: number } = {};
 
 	for (const datum of data) {
-		for (const subject of datum.subject_tags) {
-			if (!(subject in obj)) {
-				obj[subject] = 1;
+		if (Array.isArray(datum[key])) {
+			for (const subject of datum[key]) {
+				if (!(subject in obj)) {
+					obj[subject] = 1;
+				} else {
+					obj[subject] = obj[subject] + 1;
+				}
+			}
+		} else {
+			const k = datum[key];
+			if (!(k in obj)) {
+				obj[k] = 1;
 			} else {
-				obj[subject] = obj[subject] + 1;
+				obj[k] = obj[k] + 1;
 			}
 		}
 	}
 
-	const arr: subjectData[] = [];
+	const arr: countData[] = [];
 	for (const [key, val] of Object.entries(obj)) {
-		arr.push({ title: key.charAt(0).toUpperCase() + key.slice(1), count: val });
+		arr.push({ title: toTitleCase(key), count: val });
 	}
 	return arr;
 }
 
-export default function treemapify(id: string) {
+function toCountCombined(data: datum[], key1: keyof datum, key2: keyof datum): countData[] {
+	const obj: { [title: string]: number } = {};
+
+	for (const datum of data) {
+		let tempArr1 = Array.isArray(datum[key1]) ? datum[key1] : [datum[key1]];
+		tempArr1 = tempArr1.map((x) => toTitleCase(x));
+		for (const val1 of tempArr1) {
+			let tempArr2 = Array.isArray(datum[key2]) ? datum[key2] : [datum[key2]];
+			tempArr2 = tempArr2.map((x) => toTitleCase(x));
+
+			for (const val2 of tempArr2) {
+				const subject = val1 + " | " + val2;
+				if (!(subject in obj)) {
+					obj[subject] = 1;
+				} else {
+					obj[subject] = obj[subject] + 1;
+				}
+			}
+		}
+	}
+
+	const arr: countData[] = [];
+	for (const [key, val] of Object.entries(obj)) {
+		arr.push({ title: key, count: val });
+	}
+	return arr;
+}
+
+export default function treemapify(id: string, params: (keyof datum)[]) {
 	// LAYOUT
 	const svg = d3
 		.select("#" + id)
@@ -37,14 +76,19 @@ export default function treemapify(id: string) {
 		.attr("width", width + margin.left + margin.right)
 		.attr("height", height + margin.top + margin.bottom);
 
-	const subjectData = toSubjectCount(data);
-	const root = d3.hierarchy({ children: subjectData }).sum((d) => d.count);
+	const combined = params.length > 1;
+	let subjectData = [];
+	if (combined) {
+		subjectData = toCountCombined(data, params[0], params[1]);
+	} else {
+		subjectData = toCount(data, params[0]);
+	}
 
-	console.log(root);
+	const root = d3.hierarchy({ children: subjectData }).sum((d) => d.count);
 
 	// Then d3.treemap computes the position of each element of the hierarchy
 	// The coordinates are added to the root object above
-	d3.treemap<{ children: subjectData[] }>().size([width, height]).padding(4)(root);
+	d3.treemap<{ children: countData[] }>().size([width, height]).padding(4)(root);
 
 	// TOOLTIP
 	const tooltip = svg
@@ -71,7 +115,7 @@ export default function treemapify(id: string) {
 	const ttTitle = tooltip.append("tspan").attr("x", 5).attr("y", 0);
 	const ttCount = tooltip.append("tspan").attr("x", 5).attr("y", 20);
 
-	const showTooltip = function (d: subjectData) {
+	const showTooltip = function (d: countData) {
 		tooltip.transition().duration(200);
 		tooltip.style("opacity", 1);
 
@@ -108,7 +152,11 @@ export default function treemapify(id: string) {
 		.attr("width", (d) => d.x1 - d.x0)
 		.attr("height", (d) => d.y1 - d.y0)
 		.style("stroke", "black")
-		.style("fill", (d) => stringToColor(d.data.count.toString(2)));
+		.style("fill", (d) =>
+			stringToColor(
+				combined ? d.data.title.substr(0, d.data.title.indexOf("-")) : d.data.count.toString(2)
+			)
+		);
 
 	// TEXT
 	groups

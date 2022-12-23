@@ -16,4 +16,6 @@ I wrote my first piece on December 12th, 2021 (I'm counting it!). I wrote my las
 
 <StoryChart id='wordlengthtrend' trend/>
 
-<StoryChart id='subjects' param="subject"/>
+<StoryChart id='subjects' param="subject" properties={["subject_tags"]}/>
+
+<StoryChart id='subjects' param="subject" properties={["grammatical_person", "tenses"]}/>
