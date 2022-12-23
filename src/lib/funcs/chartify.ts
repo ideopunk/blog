@@ -7,24 +7,45 @@ const margin = { left: 40, right: 40, top: 40, bottom: 40 };
 type ArrElement<ArrType> = ArrType extends readonly (infer ElementType)[] ? ElementType : never;
 // type datum = ArrElement<typeof data>;
 
+type datum = ArrElement<typeof data>;
+type d3Datum = Omit<datum, "date"> & { date: Date };
+
 function sortByDateAscending(a: { date: Date }, b: { date: Date }) {
 	return a.date.getTime() - b.date.getTime();
 }
 
-export default function chartify(id: string) {
+function toLine(data: d3Datum[]) {
+	// const arr = Array.from({ length: 12 }).map(() => ({ entries: 0, total: 0 }));
+	const obj: { [key: string]: { entries: number; total: number } } = {};
+	for (const datum of data) {
+		const m = datum.date.getMonth();
+		const y = datum.date.getFullYear();
+		const accessor = `${y}-${m + 1}-15`;
+		if (!(accessor in obj)) {
+			obj[accessor] = { entries: 0, total: 0 };
+		}
+		obj[accessor].entries += 1;
+		obj[accessor].total += datum.wordcount;
+	}
+
+	const a = [];
+	for (const [key, val] of Object.entries(obj)) {
+		a.push({ value: val.total / val.entries, date: new Date(key) });
+	}
+	a.sort(sortByDateAscending);
+
+	return a;
+}
+
+export default function chartify(id: string, trend?: boolean) {
 	// DATA MANIPULATION
-	const d3Data = data
-		.map((d) => {
-			const parsedDate = d3.timeParse("%e %b %g")(d.date);
-			if (!parsedDate) {
-				throw new Error("could not parse date: " + d.date);
-			}
-			return { ...d, date: parsedDate };
-		})
-		.filter(
-			(d) =>
-				d.date.getFullYear() === 2022 || (d.date.getFullYear() === 2021 && d.date.getMonth() > 6)
-		);
+	const d3Data = data.map((d) => {
+		const parsedDate = d3.timeParse("%e %b %g")(d.date);
+		if (!parsedDate) {
+			throw new Error("could not parse date: " + d.date);
+		}
+		return { ...d, date: parsedDate };
+	});
 	type datum = ArrElement<typeof d3Data>;
 
 	d3Data.sort(sortByDateAscending);
@@ -87,7 +108,7 @@ export default function chartify(id: string) {
 		tooltip.style("opacity", 1);
 
 		ttTitle.text(d.title);
-		ttDate.text(d.date.toDateString()).attr("font-size", 16);
+		ttDate.text(d.date.toLocaleDateString()).attr("font-size", 16);
 
 		ttWordcount.text(d.wordcount + " words").attr("font-size", 16);
 	};
@@ -95,6 +116,33 @@ export default function chartify(id: string) {
 	const hideTooltip = function () {
 		tooltip.transition().duration(200).style("opacity", 0);
 	};
+
+	// LINE
+	if (trend) {
+		const line = toLine(d3Data);
+		const lineGenerator = d3
+			.line()
+			.curve(d3.curveNatural)
+			.x(function (d) {
+				return x(d.date);
+			})
+			.y(function (d) {
+				return y(d.value);
+			});
+
+		const lineStretched = lineGenerator(line);
+
+		svg
+			.append("path")
+			.datum(line)
+			.attr("fill", "none")
+			.attr("stroke", "#137f94")
+			.attr("opacity", 0.8)
+			.attr("transform", `translate(${margin.left}, ${margin.top})`)
+
+			.attr("stroke-width", 1.5)
+			.attr("d", lineStretched);
+	}
 
 	// DOTS
 	const dotContainers = svg

@@ -3,19 +3,17 @@
 	import { onMount } from "svelte";
 	import data from "../../data.json";
 
-	const totalLength = data.reduce((prev, curr) => prev + curr.wordcount, 0);
-	const avgLength = Math.round(totalLength / data.length);
+	// const totalLength = data.reduce((prev, curr) => prev + curr.wordcount, 0);
+	// const avgLength = Math.round(totalLength / data.length);
 
 	export let id = "";
+	export let trend = false;
 
 	onMount(() => {
-		chartify(id);
+		chartify(id, trend);
 	});
 </script>
 
 <div class="text-black">
-	<p>TOTAL LENGTH: {totalLength}</p>
-	<p>AVG LENGTH: {avgLength} words</p>
-
 	<div {id} />
 </div>
