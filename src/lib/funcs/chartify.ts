@@ -5,8 +5,6 @@ const height = 600;
 const margin = { left: 40, right: 40, top: 40, bottom: 40 };
 
 type ArrElement<ArrType> = ArrType extends readonly (infer ElementType)[] ? ElementType : never;
-// type datum = ArrElement<typeof data>;
-
 type datum = ArrElement<typeof data>;
 type d3Datum = Omit<datum, "date"> & { date: Date };
 
