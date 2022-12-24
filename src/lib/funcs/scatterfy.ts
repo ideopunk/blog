@@ -1,23 +1,16 @@
 import * as d3 from "d3";
 import data from "../../data.json";
-const width = 800;
-const height = 600;
-const margin = { left: 40, right: 40, top: 40, bottom: 40 };
+import { height, margin, width, type d3Datum, type datum } from "./storyDataUtils";
+import { sortByDateAscending } from "./storyDataUtils";
 
-type ArrElement<ArrType> = ArrType extends readonly (infer ElementType)[] ? ElementType : never;
-type datum = ArrElement<typeof data>;
-type d3Datum = Omit<datum, "date"> & { date: Date };
-
-function sortByDateAscending(a: { date: Date }, b: { date: Date }) {
-	return a.date.getTime() - b.date.getTime();
-}
-
-function toLine(data: d3Datum[]) {
+function toWordcountLine(data: d3Datum[]) {
 	// const arr = Array.from({ length: 12 }).map(() => ({ entries: 0, total: 0 }));
 	const obj: { [key: string]: { entries: number; total: number } } = {};
 	for (const datum of data) {
+		const d = datum.date.getDate();
 		const m = datum.date.getMonth();
 		const y = datum.date.getFullYear();
+
 		const accessor = `${y}-${m + 1}-15`;
 		if (!(accessor in obj)) {
 			obj[accessor] = { entries: 0, total: 0 };
@@ -44,7 +37,6 @@ export default function chartify(id: string, trend?: boolean) {
 		}
 		return { ...d, date: parsedDate };
 	});
-	type datum = ArrElement<typeof d3Data>;
 
 	d3Data.sort(sortByDateAscending);
 
@@ -55,7 +47,8 @@ export default function chartify(id: string, trend?: boolean) {
 		.select("#" + id)
 		.append("svg")
 		.attr("width", width + margin.left + margin.right)
-		.attr("height", height + margin.top + margin.bottom);
+		.attr("height", height + margin.top + margin.bottom)
+		.attr("transform", `translate(${-margin.left}, 0)`);
 
 	// AXES
 
@@ -101,7 +94,7 @@ export default function chartify(id: string, trend?: boolean) {
 	const ttDate = tooltip.append("tspan").attr("x", 5).attr("y", 30);
 	const ttWordcount = tooltip.append("tspan").attr("x", 5).attr("y", 54);
 
-	const showTooltip = function (d: datum) {
+	const showTooltip = function (d: d3Datum) {
 		tooltip.transition().duration(200);
 		tooltip.style("opacity", 1);
 
@@ -115,9 +108,9 @@ export default function chartify(id: string, trend?: boolean) {
 		tooltip.transition().duration(200).style("opacity", 0);
 	};
 
-	// LINE
+	// // LINE
 	if (trend) {
-		const line = toLine(d3Data);
+		const line = toWordcountLine(d3Data);
 		const lineGenerator = d3
 			.line()
 			.curve(d3.curveNatural)
@@ -154,7 +147,17 @@ export default function chartify(id: string, trend?: boolean) {
 
 		.attr("stroke", "white")
 		.attr("stroke-width", 1)
-		.attr("fill", "#df5c61")
+		.attr("fill", (d) => {
+			// if (!condition) {
+			return "#df5c61";
+			// }
+
+			// if (condition(d, conditionSpecification)) {
+			// 	return "#df5c61";
+			// } else {
+			// 	return "#aaaaaa";
+			// }
+		})
 		.attr("title", (d) => d.title)
 		.attr("cx", (d) => x(d.date))
 		.attr("cy", (d) => y(d.wordcount))

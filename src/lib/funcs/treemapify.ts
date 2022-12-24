@@ -1,10 +1,8 @@
 import * as d3 from "d3";
 import data from "../../data.json";
+import { height, margin, padding, width } from "./storyDataUtils";
 import { stringToColor } from "./toPastel";
 import toTitleCase from "./toTitleCase";
-const width = 800;
-const height = 600;
-const margin = { left: 40, right: 40, top: 40, bottom: 40 };
 
 type ArrElement<ArrType> = ArrType extends readonly (infer ElementType)[] ? ElementType : never;
 type datum = ArrElement<typeof data>;
@@ -24,7 +22,13 @@ function toCount(data: datum[], key: keyof datum): countData[] {
 				}
 			}
 		} else {
-			const k = datum[key];
+			let k = "";
+			const prop = datum[key];
+			if (typeof prop === "boolean") {
+				k = prop ? toTitleCase(key) : "Not " + key;
+			} else {
+				k = toTitleCase(prop);
+			}
 			if (!(k in obj)) {
 				obj[k] = 1;
 			} else {
@@ -44,11 +48,25 @@ function toCountCombined(data: datum[], key1: keyof datum, key2: keyof datum): c
 	const obj: { [title: string]: number } = {};
 
 	for (const datum of data) {
-		let tempArr1 = Array.isArray(datum[key1]) ? datum[key1] : [datum[key1]];
-		tempArr1 = tempArr1.map((x) => toTitleCase(x));
+		const prop1 = datum[key1];
+		let tempArr1 = Array.isArray(prop1) ? prop1 : [prop1];
+		tempArr1 = tempArr1.map((x) => {
+			if (typeof x === "boolean") {
+				return x ? toTitleCase(key1) : "Not " + key1;
+			} else {
+				return toTitleCase(x);
+			}
+		});
 		for (const val1 of tempArr1) {
-			let tempArr2 = Array.isArray(datum[key2]) ? datum[key2] : [datum[key2]];
-			tempArr2 = tempArr2.map((x) => toTitleCase(x));
+			const prop2 = datum[key2];
+			let tempArr2 = Array.isArray(prop2) ? prop2 : [prop2];
+			tempArr2 = tempArr2.map((x) => {
+				if (typeof x === "boolean") {
+					return x ? toTitleCase(key2) : "Not " + key2;
+				} else {
+					return toTitleCase(x);
+				}
+			});
 
 			for (const val2 of tempArr2) {
 				const subject = val1 + " | " + val2;
@@ -89,19 +107,18 @@ export default function treemapify(id: string, params: (keyof datum)[]) {
 
 	// Then d3.treemap computes the position of each element of the hierarchy
 	// The coordinates are added to the root object above
-	d3.treemap<{ children: countData[] }>().size([width, height]).padding(4)(root);
+	d3.treemap<{ children: countData[] }>().size([width, height]).padding(padding)(root);
 
 	// TOOLTIP
 	const tooltip = svg
 		.append("g")
 		.append("text")
-		.attr("transform", `translate(${margin.left}, 20)`)
-		// .attr("transform", `translate(${margin.left + 16}, -${margin.top + 20})`)
+		.attr("transform", `translate(${-padding}, ${margin.top * 0.75})`)
 		.attr("paint-order", "stroke")
 		.attr("text-anchor", "start")
 		.attr("stroke", "white")
 		.attr("font-family", "Merriweather Sans")
-		.attr("font-size", 24)
+		.attr("font-size", 20)
 		.style("opacity", 1)
 		.attr("width", 100)
 		.attr("height", 100)
@@ -131,7 +148,7 @@ export default function treemapify(id: string, params: (keyof datum)[]) {
 	// RECTANGLES
 	const groups = svg
 		.append("g")
-		.attr("transform", `translate(${margin.left}, ${margin.top})`)
+		.attr("transform", `translate(${-padding}, ${margin.top * 1.5})`)
 
 		.selectAll("rect")
 		.data(root.leaves())

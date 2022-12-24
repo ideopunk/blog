@@ -1,5 +1,14 @@
 <script lang="ts">
-	import chartify from "$lib/funcs/chartify";
+	import chartify from "$lib/funcs/scatterfy";
+	import {
+		hasSubject,
+		hasTense,
+		isChapters,
+		isFavourite,
+		isNamed,
+		isPerson
+	} from "$lib/funcs/conditions";
+	import multiLine from "$lib/funcs/multiLine";
 	import treemapify from "$lib/funcs/treemapify";
 	import { onMount } from "svelte";
 	import data from "../../data.json";
@@ -8,15 +17,14 @@
 	// const avgLength = Math.round(totalLength / data.length);
 
 	export let id = "";
-	export let trend = false;
-	export let type: "scatter" | "treemap" = "scatter";
+	export let title = "";
 	export let readOnlyProperties: string[] = [];
 
 	let property1 = readOnlyProperties.length ? readOnlyProperties[0] : "grammatical_person";
 	let property2 = readOnlyProperties.length >= 2 ? readOnlyProperties[1] : "tenses";
 
 	// if we've been supplied what properties to look at, don't supply a form for choosing them.
-	let editable = !readOnlyProperties.length && type === "treemap";
+	let editable = !readOnlyProperties.length;
 	let mounted = false;
 
 	let options = [
@@ -24,38 +32,42 @@
 		{ value: "grammatical_person", label: "Grammatical person" },
 		{ value: "tenses", label: "Tense" },
 		{ value: "subject_tags", label: "Subject tags" },
-		{ value: "form_and_genre", label: "Form and genre tags" }
+		{ value: "form_and_genre", label: "Form and genre tags" },
+		{ value: "chapters", label: "Chaptered" },
+		{ value: "favourite", label: "Favourites" },
+		{ value: "named", label: "Named" }
 	];
 
 	onMount(() => {
-		if (type === "scatter") {
-			chartify(id, trend);
+		if (
+			property1 !== "" &&
+			(readOnlyProperties.length === 1 || property2 === "" || property1 === property2)
+		) {
+			treemapify(id, [property1 as any]);
 		} else {
-			if (readOnlyProperties.length === 1 || property2 === "") {
-				treemapify(id, [property1]);
-			} else {
-				treemapify(id, [property1, property2]);
-			}
+			treemapify(id, [property1 as any, property2 as any]);
 		}
 
 		mounted = true;
 	});
 
-	$: console.log(property1);
 	$: {
-		if (mounted && type !== "scatter" && editable) {
-			console.log("REACT");
-			console.log(property1);
-			console.log(property2);
-			if (readOnlyProperties.length === 1 || property2 === "") {
-				treemapify(id, [property1]);
+		if (mounted && editable) {
+			if (
+				property1 !== "" &&
+				(readOnlyProperties.length === 1 || property2 === "" || property1 === property2)
+			) {
+				treemapify(id, [property1 as any]);
 			} else {
-				treemapify(id, [property1, property2]);
+				treemapify(id, [property1 as any, property2 as any]);
 			}
 		}
 	}
 </script>
 
+<div class="not-prose">
+	<h3 class="font-sans text-3xl mt-8">{title}</h3>
+</div>
 {#if editable}
 	<form>
 		<select
