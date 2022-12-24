@@ -14,8 +14,8 @@ Last week I shared general reflections on my 100 stories project. This week I wa
 
 I wrote my first piece on December 12th, 2021 (I'm counting it!). I wrote my last piece on November 30. I originally intended for these to be very short, perhaps less than 500 words. You can see that I instantly violate that rule.
 
-<StoryChart id='wordlengthtrend' trend/>
+<!-- <StoryChart id='wordlengthtrend' trend/> -->
 
-<StoryChart id='subjects' param="subject" properties={["subject_tags"]}/>
+<StoryChart id='subjects' type="treemap" readOnlyProperties={["subject_tags"]}/>
 
-<StoryChart id='subjects' param="subject" properties={["grammatical_person", "tenses"]}/>
+<StoryChart id='general' type="treemap"/>

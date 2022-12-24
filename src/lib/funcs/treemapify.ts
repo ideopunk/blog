@@ -69,6 +69,7 @@ function toCountCombined(data: datum[], key1: keyof datum, key2: keyof datum): c
 }
 
 export default function treemapify(id: string, params: (keyof datum)[]) {
+	d3.select("#" + id).html("");
 	// LAYOUT
 	const svg = d3
 		.select("#" + id)
@@ -99,7 +100,7 @@ export default function treemapify(id: string, params: (keyof datum)[]) {
 		.attr("paint-order", "stroke")
 		.attr("text-anchor", "start")
 		.attr("stroke", "white")
-		.attr("font-family", "sans-serif")
+		.attr("font-family", "Merriweather Sans")
 		.attr("font-size", 24)
 		.style("opacity", 1)
 		.attr("width", 100)
@@ -154,7 +155,7 @@ export default function treemapify(id: string, params: (keyof datum)[]) {
 		.style("stroke", "black")
 		.style("fill", (d) =>
 			stringToColor(
-				combined ? d.data.title.substr(0, d.data.title.indexOf("-")) : d.data.count.toString(2)
+				combined ? d.data.title.substr(0, d.data.title.indexOf("|")) : d.data.count.toString(2)
 			)
 		);
 
@@ -176,5 +177,6 @@ export default function treemapify(id: string, params: (keyof datum)[]) {
 		}) // +20 to adjust position (lower)
 		.text((d) => d.data.title)
 		.attr("font-size", "9px")
+		.attr("font-family", "Merriweather Sans")
 		.attr("fill", "black");
 }

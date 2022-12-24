@@ -84,7 +84,7 @@ export default function chartify(id: string, trend?: boolean) {
 		.attr("paint-order", "stroke")
 		.attr("text-anchor", "start")
 		.attr("stroke", "white")
-		.attr("font-family", "sans-serif")
+		.attr("font-family", "Merriweather Sans")
 		.attr("font-size", 24)
 		.style("opacity", 1)
 		.attr("width", 100)
