@@ -153,6 +153,25 @@
 					<XLink href="https://www.parliamentlit.com/conor-barnes-tell-them">Tell Them</XLink>
 				</li>
 			</ul>
+
+			<p>Harpy Hybrid Review (Dec 8, 2022)</p>
+			<ul class="pb-4">
+				<li>
+					<XLink href="http://www.harpyhybridreview.org/issues/issue-9-5-winter-2022/#"
+						>Ten Minutes After Close In The Cafe Washroom</XLink
+					>
+				</li>
+				<li>
+					<XLink href="http://www.harpyhybridreview.org/issues/issue-9-5-winter-2022/#"
+						>The Minotaur Is Chastised By Ariadne</XLink
+					>
+				</li>
+				<li>
+					<XLink href="http://www.harpyhybridreview.org/issues/issue-9-5-winter-2022/#"
+						>The Host</XLink
+					>
+				</li>
+			</ul>
 		</article>
 	</div>
 </div>
