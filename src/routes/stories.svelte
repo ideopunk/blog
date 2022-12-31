@@ -20,9 +20,9 @@
 			<hr />
 
 			<p>
-				I'm writing 100 stories for fun this year. As of October 18, I'm at 89. They are usually
-				quite short. I have put some on this blog, and published some in magazines. If you're a
-				chapbook publisher, give me a shout.
+				In 2022, I wrote 100 stories for fun and experience. They are mostly quite short. I have put
+				some on this blog, and published some in magazines. If you're a chapbook publisher, give me
+				a shout.
 			</p>
 			<div class="pt-4">
 				<h3>Blogposts</h3>
@@ -151,6 +151,15 @@
 				</li>
 				<li>
 					<XLink href="https://www.parliamentlit.com/conor-barnes-tell-them">Tell Them</XLink>
+				</li>
+			</ul>
+
+			<p>Sleet Magazine (Nov 2022)</p>
+			<ul class="pb-4">
+				<li>
+					<XLink href="http://www.harpyhybridreview.org/issues/issue-9-5-winter-2022/#"
+						>You Believe Several Things</XLink
+					>
 				</li>
 			</ul>
 
