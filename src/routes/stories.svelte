@@ -181,6 +181,38 @@
 					>
 				</li>
 			</ul>
+
+			<p>Flash Boulevard (Dec 31, 2022)</p>
+			<ul class="pb-4">
+				<li>
+					<XLink
+						href="https://flashboulevard.wordpress.com/2022/12/31/conor-barnes-all-the-digital-humans-are-kind-of-buggy/"
+						>Uninstall and Reinstall</XLink
+					>
+				</li>
+				<li>
+					<XLink
+						href="https://flashboulevard.wordpress.com/2022/12/31/conor-barnes-all-the-digital-humans-are-kind-of-buggy/"
+						>Peregrinations</XLink
+					>
+				</li>
+				<li>
+					<XLink
+						href="https://flashboulevard.wordpress.com/2022/12/31/conor-barnes-all-the-digital-humans-are-kind-of-buggy/"
+						>Earth-FA8</XLink
+					>
+				</li>
+			</ul>
+
+			<p>Corvus Review (Dec 31, 2022)</p>
+			<ul class="pb-4">
+				<li>
+					<XLink
+						href="https://img1.wsimg.com/blobby/go/611fabd3-8220-45e3-bf9d-d2a394260000/downloads/Issue%2019%20Corvus%20Winter%2022.pdf?ver=1672546732293"
+						>The Subway Operator</XLink
+					>
+				</li>
+			</ul>
 		</article>
 	</div>
 </div>
