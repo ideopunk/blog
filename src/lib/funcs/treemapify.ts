@@ -27,7 +27,7 @@ function toCount(data: datum[], key: keyof datum): countData[] {
 			if (typeof prop === "boolean") {
 				k = prop ? toTitleCase(key) : "Not " + key;
 			} else {
-				k = toTitleCase(prop);
+				k = toTitleCase(String(prop));
 			}
 			if (!(k in obj)) {
 				obj[k] = 1;

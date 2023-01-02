@@ -1,13 +1,14 @@
 <script>
 	import { page } from "$app/stores";
+	const re = /\/\w*/;
 	$: pathname = $page.url.pathname;
-	
+	$: subdomain = (pathname.match(re) || [""])[0];
 	// let itsAString = typeof children === "string";
 	export let text = "";
 	$: lowerCaseText = text.toLowerCase();
 	export let href = "";
 	$: nextref = text ? `/${lowerCaseText}` : "/";
-	$: curr = lowerCaseText ? pathname.includes(lowerCaseText) : pathname === "/";
+	$: curr = lowerCaseText ? subdomain.includes(lowerCaseText) : subdomain === "/";
 </script>
 
 <div class={`group relative w-min ${text && "top-1"}`}>

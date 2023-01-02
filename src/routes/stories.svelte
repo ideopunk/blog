@@ -20,9 +20,9 @@
 			<hr />
 
 			<p>
-				I'm writing 100 stories for fun this year. As of October 18, I'm at 89. They are usually
-				quite short. I have put some on this blog, and published some in magazines. If you're a
-				chapbook publisher, give me a shout.
+				In 2022, I wrote 100 stories for fun and experience. They are mostly quite short. I have put
+				some on this blog, and published some in magazines. If you're a chapbook publisher, give me
+				a shout.
 			</p>
 			<div class="pt-4">
 				<h3>Blogposts</h3>
@@ -151,6 +151,66 @@
 				</li>
 				<li>
 					<XLink href="https://www.parliamentlit.com/conor-barnes-tell-them">Tell Them</XLink>
+				</li>
+			</ul>
+
+			<p>Sleet Magazine (Nov 2022)</p>
+			<ul class="pb-4">
+				<li>
+					<XLink href="http://www.harpyhybridreview.org/issues/issue-9-5-winter-2022/#"
+						>You Believe Several Things</XLink
+					>
+				</li>
+			</ul>
+
+			<p>Harpy Hybrid Review (Dec 8, 2022)</p>
+			<ul class="pb-4">
+				<li>
+					<XLink href="http://www.harpyhybridreview.org/issues/issue-9-5-winter-2022/#"
+						>Ten Minutes After Close In The Cafe Washroom</XLink
+					>
+				</li>
+				<li>
+					<XLink href="http://www.harpyhybridreview.org/issues/issue-9-5-winter-2022/#"
+						>The Minotaur Is Chastised By Ariadne</XLink
+					>
+				</li>
+				<li>
+					<XLink href="http://www.harpyhybridreview.org/issues/issue-9-5-winter-2022/#"
+						>The Host</XLink
+					>
+				</li>
+			</ul>
+
+			<p>Flash Boulevard (Dec 31, 2022)</p>
+			<ul class="pb-4">
+				<li>
+					<XLink
+						href="https://flashboulevard.wordpress.com/2022/12/31/conor-barnes-all-the-digital-humans-are-kind-of-buggy/"
+						>Uninstall and Reinstall</XLink
+					>
+				</li>
+				<li>
+					<XLink
+						href="https://flashboulevard.wordpress.com/2022/12/31/conor-barnes-all-the-digital-humans-are-kind-of-buggy/"
+						>Peregrinations</XLink
+					>
+				</li>
+				<li>
+					<XLink
+						href="https://flashboulevard.wordpress.com/2022/12/31/conor-barnes-all-the-digital-humans-are-kind-of-buggy/"
+						>Earth-FA8</XLink
+					>
+				</li>
+			</ul>
+
+			<p>Corvus Review (Dec 31, 2022)</p>
+			<ul class="pb-4">
+				<li>
+					<XLink
+						href="https://img1.wsimg.com/blobby/go/611fabd3-8220-45e3-bf9d-d2a394260000/downloads/Issue%2019%20Corvus%20Winter%2022.pdf?ver=1672546732293"
+						>The Subway Operator</XLink
+					>
 				</li>
 			</ul>
 		</article>
