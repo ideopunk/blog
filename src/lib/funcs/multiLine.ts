@@ -5,14 +5,16 @@ import { sortByDateAscending } from "./storyDataUtils";
 
 const domain = [0, 40];
 function toLine(data: d3Datum[], condition?: (data: d3Datum, cS?: string) => boolean, cs?: string) {
-	console.log(condition);
 	// const arr = Array.from({ length: 12 }).map(() => ({ entries: 0, total: 0 }));
 	const obj: { [key: string]: { entries: number; total: number } } = {};
 	for (const datum of data) {
 		const m = datum.date.getMonth();
 		const y = datum.date.getFullYear();
 
-		const accessor = `${y}-${m + 1}-15`;
+		const oldD = datum.date.getDate();
+		const d = oldD >= 15 ? 28 : 14;
+
+		const accessor = `${y}-${m + 1}-${d}`;
 		if (!(accessor in obj)) {
 			obj[accessor] = { entries: 0, total: 0 };
 		}
@@ -124,7 +126,7 @@ export default function multiLine(
 	const line = toLine(d3Data, condition, conditionSpecification);
 	const lineGenerator = d3
 		.line()
-		.curve(d3.curveNatural)
+		.curve(d3.curveBumpX)
 		.x(function (d) {
 			return x(d.date);
 		})

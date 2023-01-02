@@ -7,11 +7,13 @@ function toWordcountLine(data: d3Datum[]) {
 	// const arr = Array.from({ length: 12 }).map(() => ({ entries: 0, total: 0 }));
 	const obj: { [key: string]: { entries: number; total: number } } = {};
 	for (const datum of data) {
-		const d = datum.date.getDate();
 		const m = datum.date.getMonth();
 		const y = datum.date.getFullYear();
 
-		const accessor = `${y}-${m + 1}-15`;
+		const oldD = datum.date.getDate();
+		const d = oldD >= 15 ? 28 : 14;
+
+		const accessor = `${y}-${m + 1}-${d}`;
 		if (!(accessor in obj)) {
 			obj[accessor] = { entries: 0, total: 0 };
 		}
@@ -113,7 +115,7 @@ export default function chartify(id: string, trend?: boolean) {
 		const line = toWordcountLine(d3Data);
 		const lineGenerator = d3
 			.line()
-			.curve(d3.curveNatural)
+			.curve(d3.curveBumpX)
 			.x(function (d) {
 				return x(d.date);
 			})

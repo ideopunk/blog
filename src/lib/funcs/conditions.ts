@@ -13,7 +13,11 @@ export function isNamed(data: d3Datum) {
 }
 
 export function hasSubject(data: d3Datum, subject: string) {
-	return data.subject_tags.includes(subject);
+	return data.subject_and_method.includes(subject);
+}
+
+export function hasGenre(data: d3Datum, genre: string) {
+	return data.genre.includes(genre);
 }
 
 export function hasTense(data: d3Datum, tense: string) {

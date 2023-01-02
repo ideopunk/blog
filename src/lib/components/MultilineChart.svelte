@@ -1,6 +1,6 @@
 <script lang="ts">
-	import chartify from "$lib/funcs/scatterfy";
 	import {
+		hasGenre,
 		hasSubject,
 		hasTense,
 		isChapters,
@@ -8,11 +8,11 @@
 		isNamed,
 		isPerson
 	} from "$lib/funcs/conditions";
-	import { grammaticalPersons, subjects, tenses } from "$lib/funcs/storyDataUtils";
+	import { genres, grammaticalPersons, subjects, tenses } from "$lib/funcs/storyDataUtils";
 	import multiLine from "$lib/funcs/multiLine";
-	import treemapify from "$lib/funcs/treemapify";
 	import { onMount } from "svelte";
 	import data from "../../data.json";
+	import toTitleCase from "$lib/funcs/toTitleCase";
 
 	// const totalLength = data.reduce((prev, curr) => prev + curr.wordcount, 0);
 	// const avgLength = Math.round(totalLength / data.length);
@@ -38,11 +38,16 @@
 			innerOptions: grammaticalPersons
 		},
 		{ value: "tenses", condition: hasTense, label: "Tense", innerOptions: tenses },
-		{ value: "subject_tags", condition: hasSubject, label: "Subject tags", innerOptions: [] },
-		{ value: "form_and_genre", label: "Form and genre tags", innerOptions: [] },
-		{ value: "chapters", condition: isChapters, label: "Chaptered", innerOptions: [] },
-		{ value: "favourite", condition: isFavourite, label: "Favourites", innerOptions: [] },
-		{ value: "named", condition: isNamed, label: "Named", innerOptions: [] }
+		{
+			value: "subject_and_method",
+			condition: hasSubject,
+			label: "Subject and Method",
+			innerOptions: subjects
+		},
+		{ value: "genre", condition: hasGenre, label: "Genre", innerOptions: genres },
+		{ value: "chapters", condition: isChapters, label: "Chaptered" },
+		{ value: "favourite", condition: isFavourite, label: "Favourites" },
+		{ value: "named", condition: isNamed, label: "Named" }
 	];
 
 	$: selected = options.find((o) => o.value === property);
@@ -54,7 +59,6 @@
 
 	$: {
 		if (mounted && editable && selected?.value) {
-			console.log(selected);
 			multiLine(id, selected?.condition, innerProperty);
 		}
 	}
@@ -75,16 +79,18 @@
 				</option>
 			{/each}
 		</select>
-		<select
-			bind:value={innerProperty}
-			class="outline-none peer border-2 bg-transparent border-secondary text-xl rounded-sm  transition-all px-2 h-[42px]"
-		>
-			{#each selected.innerOptions as option}
-				<option value={option}>
-					{option}
-				</option>
-			{/each}
-		</select>
+		{#if selected?.innerOptions}
+			<select
+				bind:value={innerProperty}
+				class="outline-none peer border-2 bg-transparent border-secondary text-xl rounded-sm  transition-all px-2 h-[42px]"
+			>
+				{#each selected.innerOptions as option}
+					<option value={option}>
+						{toTitleCase(option)}
+					</option>
+				{/each}
+			</select>
+		{/if}
 	</form>
 {/if}
 <div class="text-black">

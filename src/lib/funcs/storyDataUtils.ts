@@ -8,7 +8,8 @@ export function sortByDateAscending(a: { date: Date }, b: { date: Date }) {
 	return a.date.getTime() - b.date.getTime();
 }
 
-export const subjects = [...new Set(data.map((d) => d.subject_tags).flat())];
+export const subjects = [...new Set(data.map((d) => d.subject_and_method).flat())].sort();
+export const genres = [...new Set(data.map((d) => d.genre).flat())].sort();
 export const tenses = [...new Set(data.map((d) => d.tenses).flat())];
 export const grammaticalPersons = [...new Set(data.map((d) => d.grammatical_person))];
 

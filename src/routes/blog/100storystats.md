@@ -18,7 +18,7 @@ I wrote my first piece on December 12th, 2021 (I'm counting it!). I wrote my las
 
 <!-- <StoryChart id='wordlengthtrend' trend/> -->
 
-<Treemap id='subjects' type="treemap" readOnlyProperties={["subject_tags"]} title="Subjects"/>
+<Treemap id='subjects' readOnlyProperties={["subject_and_method"]} title="Subjects"/>
 
 These are the themes from the stories! Hover to see the cut-off ones.
 
@@ -26,6 +26,6 @@ Some stuff surprised me. I didn't expect jobs and work to be such a prominent th
 
 Note that there are recurring themes that don't quite make it as subject. The sun as a figure is frequently mentioned, but isn't quite a subject.
 
-<Treemap id='general' type="treemap" title="More"/>
+<Treemap id='general'  title="More"/>
 
 <MultilineChart id="multiline" title="Trends"/>

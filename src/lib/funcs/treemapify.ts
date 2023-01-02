@@ -54,7 +54,7 @@ function toCountCombined(data: datum[], key1: keyof datum, key2: keyof datum): c
 			if (typeof x === "boolean") {
 				return x ? toTitleCase(key1) : "Not " + key1;
 			} else {
-				return toTitleCase(x);
+				return toTitleCase(String(x));
 			}
 		});
 		for (const val1 of tempArr1) {
@@ -103,6 +103,7 @@ export default function treemapify(id: string, params: (keyof datum)[]) {
 		subjectData = toCount(data, params[0]);
 	}
 
+	console.log({ subjectData });
 	const root = d3.hierarchy({ children: subjectData }).sum((d) => d.count);
 
 	// Then d3.treemap computes the position of each element of the hierarchy

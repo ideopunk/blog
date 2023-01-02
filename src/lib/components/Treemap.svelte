@@ -1,20 +1,6 @@
 <script lang="ts">
-	import chartify from "$lib/funcs/scatterfy";
-	import {
-		hasSubject,
-		hasTense,
-		isChapters,
-		isFavourite,
-		isNamed,
-		isPerson
-	} from "$lib/funcs/conditions";
-	import multiLine from "$lib/funcs/multiLine";
 	import treemapify from "$lib/funcs/treemapify";
 	import { onMount } from "svelte";
-	import data from "../../data.json";
-
-	// const totalLength = data.reduce((prev, curr) => prev + curr.wordcount, 0);
-	// const avgLength = Math.round(totalLength / data.length);
 
 	export let id = "";
 	export let title = "";
@@ -31,8 +17,8 @@
 		{ value: "", label: "" },
 		{ value: "grammatical_person", label: "Grammatical person" },
 		{ value: "tenses", label: "Tense" },
-		{ value: "subject_tags", label: "Subject tags" },
-		{ value: "form_and_genre", label: "Form and genre tags" },
+		{ value: "subject_and_method", label: "Subject and Method" },
+		{ value: "genre", label: "Genre" },
 		{ value: "chapters", label: "Chaptered" },
 		{ value: "favourite", label: "Favourites" },
 		{ value: "named", label: "Named" }
