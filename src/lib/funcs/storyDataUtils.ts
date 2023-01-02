@@ -14,6 +14,10 @@ export const tenses = [...new Set(data.map((d) => d.tenses).flat())];
 export const grammaticalPersons = [...new Set(data.map((d) => d.grammatical_person))];
 
 export const width = 800;
-export const height = 600;
+export const height = 500;
 export const margin = { left: 40, right: 40, top: 40, bottom: 40 };
 export const padding = 4;
+
+export function getLastDayOfMonth(y: number, m: number) {
+	return new Date(y, m + 1, 0).getDate();
+}

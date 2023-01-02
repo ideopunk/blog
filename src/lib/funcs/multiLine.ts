@@ -1,9 +1,9 @@
 import * as d3 from "d3";
 import data from "../../data.json";
 import { height, margin, width, type d3Datum, type datum } from "./storyDataUtils";
-import { sortByDateAscending } from "./storyDataUtils";
+import { sortByDateAscending, getLastDayOfMonth } from "./storyDataUtils";
 
-const domain = [0, 40];
+const domain = [0, 15];
 function toLine(data: d3Datum[], condition?: (data: d3Datum, cS?: string) => boolean, cs?: string) {
 	// const arr = Array.from({ length: 12 }).map(() => ({ entries: 0, total: 0 }));
 	const obj: { [key: string]: { entries: number; total: number } } = {};
@@ -11,8 +11,12 @@ function toLine(data: d3Datum[], condition?: (data: d3Datum, cS?: string) => boo
 		const m = datum.date.getMonth();
 		const y = datum.date.getFullYear();
 
+		const lastDay = getLastDayOfMonth(y, m);
+		const halfwayThroughMonth = lastDay / 2;
+
 		const oldD = datum.date.getDate();
-		const d = oldD >= 15 ? 28 : 14;
+
+		const d = oldD >= halfwayThroughMonth ? lastDay : Math.floor(halfwayThroughMonth);
 
 		const accessor = `${y}-${m + 1}-${d}`;
 		if (!(accessor in obj)) {

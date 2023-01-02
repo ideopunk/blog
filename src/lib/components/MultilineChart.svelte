@@ -30,7 +30,6 @@
 	let mounted = false;
 
 	let options = [
-		{ value: "", label: "", innerOptions: [] },
 		{
 			value: "grammatical_person",
 			condition: isPerson,
@@ -71,7 +70,7 @@
 	<form>
 		<select
 			bind:value={property}
-			class="outline-none peer border-2 bg-transparent border-secondary text-xl rounded-sm  transition-all px-2 h-[42px]"
+			class="outline-none peer border-2 bg-transparent border-secondary text-xl rounded-sm  transition-all px-2 h-[42px] focus:border-primary"
 		>
 			{#each options as option}
 				<option value={option.value}>
@@ -82,7 +81,7 @@
 		{#if selected?.innerOptions}
 			<select
 				bind:value={innerProperty}
-				class="outline-none peer border-2 bg-transparent border-secondary text-xl rounded-sm  transition-all px-2 h-[42px]"
+				class="outline-none peer border-2 bg-transparent border-secondary text-xl rounded-sm  transition-all px-2 h-[42px] focus:border-primary"
 			>
 				{#each selected.innerOptions as option}
 					<option value={option}>
