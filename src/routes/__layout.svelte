@@ -34,10 +34,12 @@
 <div class="min-h-screen  dark:bg-slate-900  flex flex-col">
 	<header
 		id="top"
-		class={`flex text-lg static sm:sticky w-full h-16  lg:h-10 top-0 left-0 z-20 justify-between font-semibold lg:bg-opacity-50 lg:p-8 items-center bg-white dark:bg-opacity-100 dark:bg-slate-900 ${!open && "bg-opacity-50"}`}
+		class={`flex text-lg static sm:sticky w-full h-16  lg:h-10 top-0 left-0 z-20 justify-between font-semibold lg:bg-opacity-50 lg:p-8 items-center bg-white dark:bg-opacity-100 dark:bg-slate-900 ${
+			!open && "bg-opacity-50"
+		}`}
 	>
 		<div class="items-center hidden lg:flex">
-			<HeaderLink>
+			<HeaderLink href="/">
 				<h1 class="italic text-xl lg:mx-4">Conor Barnes</h1>
 			</HeaderLink>
 			<!-- <button
