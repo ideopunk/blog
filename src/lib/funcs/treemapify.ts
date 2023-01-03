@@ -103,7 +103,6 @@ export default function treemapify(id: string, params: (keyof datum)[]) {
 		subjectData = toCount(data, params[0]);
 	}
 
-	console.log({ subjectData });
 	const root = d3.hierarchy({ children: subjectData }).sum((d) => d.count);
 
 	// Then d3.treemap computes the position of each element of the hierarchy
