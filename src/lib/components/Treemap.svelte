@@ -5,6 +5,7 @@
 	export let id = "";
 	export let title = "";
 	export let readOnlyProperties: string[] = [];
+	export let notes: string[] = [];
 
 	let property1 = readOnlyProperties.length ? readOnlyProperties[0] : "grammatical_person";
 	let property2 = readOnlyProperties.length >= 2 ? readOnlyProperties[1] : "tenses";
@@ -58,7 +59,7 @@
 	<form>
 		<select
 			bind:value={property1}
-			class="outline-none peer border-2 bg-transparent border-secondary text-xl rounded-sm  transition-all px-2 h-[42px]"
+			class="outline-none peer border-2 bg-transparent border-secondary text-xl rounded-sm  transition-all px-2 h-[42px]  focus:border-primary"
 		>
 			{#each options as option}
 				<option value={option.value}>
@@ -68,7 +69,7 @@
 		</select>
 		<select
 			bind:value={property2}
-			class="outline-none peer border-2 bg-transparent border-secondary text-xl rounded-sm  transition-all px-2 h-[42px]"
+			class="outline-none peer border-2 bg-transparent border-secondary text-xl rounded-sm  transition-all px-2 h-[42px]  focus:border-primary"
 		>
 			{#each options as option}
 				<option value={option.value}>
@@ -80,4 +81,7 @@
 {/if}
 <div class="text-black">
 	<div {id} />
+	{#each notes as note}
+		<small class="text-xs mb-1 w-full text-center block italic">{note}</small>
+	{/each}
 </div>

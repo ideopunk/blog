@@ -8,6 +8,7 @@
 	export let id = "";
 	export let title = "";
 	export let trend = false;
+	export let notes: string[] = [];
 
 	onMount(() => {
 		chartify(id, trend);
@@ -20,4 +21,7 @@
 
 <div class="text-black">
 	<div {id} />
+	{#each notes as note}
+		<small class="text-xs mb-1 w-full text-center block italic">{note}</small>
+	{/each}
 </div>

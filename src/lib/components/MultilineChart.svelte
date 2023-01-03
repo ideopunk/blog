@@ -20,9 +20,11 @@
 	export let id = "";
 	export let title = "";
 	export let readOnlyProperties: string[] = [];
+	export let notes: string[] = [];
 
 	let property = readOnlyProperties.length ? readOnlyProperties[0] : "grammatical_person";
-	let innerProperty = readOnlyProperties.length >= 2 ? readOnlyProperties[1] : "tenses";
+	let innerProperty =
+		readOnlyProperties.length >= 2 ? readOnlyProperties[1] : "second-person singular";
 
 	// if we've been supplied what properties to look at, don't supply a form for choosing them.
 	let editable = !readOnlyProperties.length;
@@ -94,4 +96,7 @@
 {/if}
 <div class="text-black">
 	<div {id} />
+	{#each notes as note}
+		<small class="text-xs mb-1 w-full text-center block italic">{note}</small>
+	{/each}
 </div>
