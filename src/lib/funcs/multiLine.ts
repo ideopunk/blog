@@ -69,8 +69,18 @@ export default function multiLine(
 		.attr("width", `100%`)
 		.attr("style", `max-width: 100%;`);
 
-	// x
+	svg
+		.append("mask")
+		.attr("id", "msk")
+		.append("rect")
+		.attr("x", 0)
+		.attr("y", 0)
+		.attr("viewBox", [0, 0, width - margin.right, height + margin.top + margin.bottom])
+		.attr("width", `95%`)
+		.attr("height", `100%`)
+		.attr("fill", "white");
 
+	// x
 	// y
 	const y = d3.scaleLinear().domain(domain).range([height, 0]);
 	const justDates = d3Data.map((d) => d.date);
@@ -101,7 +111,8 @@ export default function multiLine(
 		.attr("opacity", 0.8)
 		.attr("transform", `translate(${margin.left / 2}, ${margin.top})`)
 		.attr("stroke-width", 1.5)
-		.attr("d", lineStretched);
+		.attr("d", lineStretched)
+		.attr("mask", "url(#msk)");
 
 	const totalLine = toLine(d3Data);
 	const totalLineStretched = lineGenerator(totalLine);
@@ -114,7 +125,8 @@ export default function multiLine(
 		.attr("opacity", 0.8)
 		.attr("transform", `translate(${margin.left / 2}, ${margin.top})`)
 		.attr("stroke-width", 1.5)
-		.attr("d", totalLineStretched);
+		.attr("d", totalLineStretched)
+		.attr("mask", "url(#msk)");
 
 	// AXES
 

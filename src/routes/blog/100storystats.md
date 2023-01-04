@@ -1,7 +1,7 @@
 ---
 title: "100 Stories Reflection | Part Two: Statistics"
 date: "2023-01-04"
-preview: "Word length, trends, frequency!"
+preview: "Length, trends, frequency!"
 ---
 
 <script>
