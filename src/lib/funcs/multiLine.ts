@@ -66,7 +66,8 @@ export default function multiLine(
 		.append("svg")
 		.attr("width", width + margin.left + margin.right)
 		.attr("height", height + margin.top + margin.bottom)
-		.attr("transform", `translate(${-margin.left}, 0)`);
+		.attr("transform", `translate(${-margin.left}, 0)`)
+		.attr("style", "max-width: 100%;  height: intrinsic;");
 
 	// AXES
 

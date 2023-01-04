@@ -93,7 +93,8 @@ export default function treemapify(id: string, params: (keyof datum)[]) {
 		.select("#" + id)
 		.append("svg")
 		.attr("width", width + margin.left + margin.right)
-		.attr("height", height + margin.top + margin.bottom);
+		.attr("height", height + margin.top + margin.bottom)
+		.attr("style", "max-width: 100%;  height: intrinsic;");
 
 	const combined = params.length > 1;
 	let subjectData = [];
