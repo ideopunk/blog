@@ -48,12 +48,10 @@ export default function chartify(id: string, trend?: boolean) {
 	const svg = d3
 		.select("#" + id)
 		.append("svg")
-		.attr("width", width)
-		// .attr("width", width + margin.left + margin.right)
-		.attr("height", height + margin.top + margin.bottom)
-		.attr("transform", `translate(${-margin.left}, 0)`)
-		.attr("style", `max-width: calc(100% + ${margin.left});  height: intrinsic;`);
-	// .attr("style", "max-width: 100%;  height: intrinsic;");
+		.attr("xmlns", "http://www.w3.org/2000/svg")
+		.attr("viewBox", [0, 0, width - margin.right / 2, height + margin.top + margin.bottom])
+		.attr("width", `100%`)
+		.attr("style", `max-width: 100%;`);
 
 	// AXES
 
@@ -63,17 +61,17 @@ export default function chartify(id: string, trend?: boolean) {
 		.scaleTime()
 		.domain([d3.min(justDates) as Date, d3.max(justDates) as Date])
 		.range([0, width - margin.left - margin.right]);
-		// .range([0, width]);
+
 	svg
 		.append("g")
-		.attr("transform", `translate(${margin.left}, ${height + margin.top})`)
+		.attr("transform", `translate(${margin.left}, ${height + margin.bottom})`)
 		.call(d3.axisBottom(x));
 
 	// y
 	const y = d3.scaleLinear().domain([0, maxWordCount]).range([height, 0]);
 	svg
 		.append("g")
-		.attr("transform", `translate(${margin.left}, ${margin.top})`)
+		.attr("transform", `translate(${margin.left}, ${margin.bottom})`)
 		.call(d3.axisLeft(y));
 
 	// tooltip
@@ -135,7 +133,7 @@ export default function chartify(id: string, trend?: boolean) {
 			.attr("fill", "none")
 			.attr("stroke", "#137f94")
 			.attr("opacity", 0.8)
-			.attr("transform", `translate(${margin.left}, ${margin.top})`)
+			.attr("transform", `translate(${margin.left}, ${margin.bottom})`)
 
 			.attr("stroke-width", 1.5)
 			.attr("d", lineStretched);
@@ -145,7 +143,7 @@ export default function chartify(id: string, trend?: boolean) {
 	const dotContainers = svg
 		.append("g")
 
-		.attr("transform", `translate(${margin.left}, ${margin.top})`)
+		.attr("transform", `translate(${margin.left}, ${margin.bottom})`)
 		.selectAll("dot")
 		.data(d3Data)
 		.join("circle")

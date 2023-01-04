@@ -12,11 +12,11 @@ preview: "Word length, trends, frequency!"
 
 Last week I shared [general reflections](/blog/100storiesreflection) on my 100 stories project. This week I want to share stats! I wrote out metadata for each of them into a JSON file and have used D3 to visualize it below.
 
-<!-- <Scatterplot id='wordlength' title="Word Length" trend notes={["Hover for title and word length", "Line tracks length, averaged over two-week sections"]}/> -->
+<Scatterplot id='wordlength' title="Word Length" trend notes={["Hover for title and word length", "Line tracks length, averaged over two-week sections"]}/>
 
 I wrote my first piece on December 12, 2021 (I'm counting it!). I finished my final piece on December 27, 2022. I originally intended for these to be very short, perhaps less than 500 words. You can see that I instantly jump beyond that.
 
-<!-- <MultilineChart id="multiline" title="Trends" notes={["The red line tracks story count, broken into two-week sections", "The blue line tracks stories that include this property, broken into two-week sections"]}/> -->
+<MultilineChart id="multiline" title="Trends" notes={["The red line tracks story count, broken into two-week sections", "The blue line tracks stories that include this property, broken into two-week sections"]}/>
 
 The red line tracks total stories written. As you can see, once the year began I always wrote at least two stories a week. There was one weekend in June where I wrote eleven stories, contributing to the bump in the middle.
 

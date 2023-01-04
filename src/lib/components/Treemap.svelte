@@ -15,7 +15,6 @@
 	let mounted = false;
 
 	let options = [
-		{ value: "", label: "" },
 		{ value: "grammatical_person", label: "Grammatical person" },
 		{ value: "tenses", label: "Tense" },
 		{ value: "subject_and_method", label: "Subject and Method" },
@@ -56,10 +55,10 @@
 	<h3 class="font-sans text-3xl mt-8">{title}</h3>
 </div>
 {#if editable}
-	<form class="flex gap-2">
+	<form>
 		<select
 			bind:value={property1}
-			class="outline-none peer border-2 bg-transparent border-secondary text-xl rounded-sm  transition-all px-2 h-[42px]  focus:border-primary"
+			class="outline-none peer border-2 my-2 block w-80 bg-transparent border-secondary text-xl rounded-sm  transition-all px-2 h-[42px]  focus:border-primary"
 		>
 			{#each options as option}
 				<option value={option.value}>
@@ -69,7 +68,7 @@
 		</select>
 		<select
 			bind:value={property2}
-			class="outline-none peer border-2 bg-transparent border-secondary text-xl rounded-sm  transition-all px-2 h-[42px]  focus:border-primary"
+			class="outline-none peer border-2 my-2 block w-80 bg-transparent border-secondary text-xl rounded-sm  transition-all px-2 h-[42px]  focus:border-primary"
 		>
 			{#each options as option}
 				<option value={option.value}>

@@ -19,8 +19,8 @@
 	<h3 class="font-sans text-3xl mt-8">{title}</h3>
 </div>
 
-<div class="text-black">
-	<div {id} />
+<div class="text-black w-full">
+	<div {id} class="max-w-full w-[95vw]" />
 	{#each notes as note}
 		<small class="text-xs mb-1 w-full text-center block italic">{note}</small>
 	{/each}

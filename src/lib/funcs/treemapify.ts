@@ -93,7 +93,6 @@ export default function treemapify(id: string, params: (keyof datum)[]) {
 		.select("#" + id)
 		.append("svg")
 		.attr("xmlns", "http://www.w3.org/2000/svg")
-		// .attr("viewBox", [0, 0, width, height])
 		.attr("viewBox", [0, 0, width, height + margin.top * 2 + margin.bottom * 2])
 		.attr("width", `100%`)
 		.attr("style", `max-width: 100%;`);

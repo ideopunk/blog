@@ -23,7 +23,7 @@
 </svelte:head>
 
 <div class="flex justify-center">
-	<div class="mx-2 sm:mx-8 text-xl max-w-[60ch] mt-8 px-2 min-h-screen">
+	<div class="mx-2 sm:mx-8 text-xl max-w-[60ch] mt-8 px-2 min-h-screen overflow-hidden">
 		<h1 class="text-xl font-bold md:text-2xl mb-4 md:mb-6">{title}</h1>
 		<div class="flex flex-col md:flex-row justify-between mb-4 ">
 			<DateText dateString={trueDate} />
@@ -36,7 +36,7 @@
 		<!-- for some reason we need both prose-invert and the themeStore stuff for dark mode to work ¯\_(ツ)_/¯ -->
 		<!-- ${	!$themeStore.theme ? "invisible" : $themeStore.theme === "dark" ? "text-white" : ""} -->
 		<article
-			class={`prose-lg dark:prose-invert mt-4 mb-8 group  prose-li:list-disc prose
+			class={`prose-lg dark:prose-invert mt-4 mb-8 group  prose-li:list-disc prose overflow-hidden
 		
 		`}
 		>

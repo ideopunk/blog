@@ -72,7 +72,7 @@
 	<form>
 		<select
 			bind:value={property}
-			class="outline-none peer border-2 bg-transparent border-secondary text-xl rounded-sm  transition-all px-2 h-[42px] focus:border-primary"
+			class="outline-none peer border-2 my-2 block w-80 bg-transparent border-secondary text-xl rounded-sm  transition-all px-2 h-[42px] focus:border-primary"
 		>
 			{#each options as option}
 				<option value={option.value}>
@@ -83,7 +83,7 @@
 		{#if selected?.innerOptions}
 			<select
 				bind:value={innerProperty}
-				class="outline-none peer border-2 bg-transparent border-secondary text-xl rounded-sm  transition-all px-2 h-[42px] focus:border-primary"
+				class="outline-none peer border-2 my-2 block w-80 bg-transparent border-secondary text-xl rounded-sm  transition-all px-2 h-[42px] focus:border-primary"
 			>
 				{#each selected.innerOptions as option}
 					<option value={option}>
@@ -94,8 +94,8 @@
 		{/if}
 	</form>
 {/if}
-<div class="text-black">
-	<div {id} />
+<div class="text-black w-full">
+	<div {id} class="max-w-full w-[95vw]" />
 	{#each notes as note}
 		<small class="text-xs mb-1 w-full text-center block italic">{note}</small>
 	{/each}

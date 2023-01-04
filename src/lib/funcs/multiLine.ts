@@ -64,29 +64,68 @@ export default function multiLine(
 	const svg = d3
 		.select("#" + id)
 		.append("svg")
-		.attr("width", width)
-		.attr("height", height + margin.top + margin.bottom)
-		.attr("transform", `translate(${-margin.left}, 0)`)
-		.attr("style", `max-width: calc(100% + ${margin.left});  height: intrinsic;`)
-
-	// AXES
+		.attr("xmlns", "http://www.w3.org/2000/svg")
+		.attr("viewBox", [0, 0, width - margin.right, height + margin.top + margin.bottom])
+		.attr("width", `100%`)
+		.attr("style", `max-width: 100%;`);
 
 	// x
+
+	// y
+	const y = d3.scaleLinear().domain(domain).range([height, 0]);
 	const justDates = d3Data.map((d) => d.date);
 	const x = d3
 		.scaleTime()
 		.domain([d3.min(justDates) as Date, d3.max(justDates) as Date])
 		.range([0, width - margin.left - margin.right]);
+
+	// // LINE
+	const line = toLine(d3Data, condition, conditionSpecification);
+	const lineGenerator = d3
+		.line()
+		.curve(d3.curveBumpX)
+		.x(function (d) {
+			return x(d.date);
+		})
+		.y(function (d) {
+			return y(d.value);
+		});
+
+	const lineStretched = lineGenerator(line);
+
+	svg
+		.append("path")
+		.datum(line)
+		.attr("fill", "none")
+		.attr("stroke", "#137f94")
+		.attr("opacity", 0.8)
+		.attr("transform", `translate(${margin.left / 2}, ${margin.top})`)
+		.attr("stroke-width", 1.5)
+		.attr("d", lineStretched);
+
+	const totalLine = toLine(d3Data);
+	const totalLineStretched = lineGenerator(totalLine);
+
+	svg
+		.append("path")
+		.datum(line)
+		.attr("fill", "none")
+		.attr("stroke", "#df5c61")
+		.attr("opacity", 0.8)
+		.attr("transform", `translate(${margin.left / 2}, ${margin.top})`)
+		.attr("stroke-width", 1.5)
+		.attr("d", totalLineStretched);
+
+	// AXES
+
 	svg
 		.append("g")
-		.attr("transform", `translate(${margin.left}, ${height + margin.top})`)
+		.attr("transform", `translate(${margin.left / 2}, ${height + margin.bottom})`)
 		.call(d3.axisBottom(x));
 
-	// y
-	const y = d3.scaleLinear().domain(domain).range([height, 0]);
 	svg
 		.append("g")
-		.attr("transform", `translate(${margin.left}, ${margin.top})`)
+		.attr("transform", `translate(${margin.left / 2}, ${margin.bottom})`)
 		.call(d3.axisLeft(y));
 
 	// tooltip
@@ -112,59 +151,6 @@ export default function multiLine(
 	const ttTitle = tooltip.append("tspan").attr("x", 5).attr("y", 0);
 	const ttDate = tooltip.append("tspan").attr("x", 5).attr("y", 30);
 	const ttWordcount = tooltip.append("tspan").attr("x", 5).attr("y", 54);
-
-	// const showTooltip = function (d: d3Datum) {
-	// 	tooltip.transition().duration(200);
-	// 	tooltip.style("opacity", 1);
-
-	// 	ttTitle.text(d.title);
-	// 	ttDate.text(d.date.toLocaleDateString()).attr("font-size", 16);
-
-	// 	ttWordcount.text(d.wordcount + " words").attr("font-size", 16);
-	// };
-
-	// const hideTooltip = function () {
-	// 	tooltip.transition().duration(200).style("opacity", 0);
-	// };
-
-	// // LINE
-	const line = toLine(d3Data, condition, conditionSpecification);
-	const lineGenerator = d3
-		.line()
-		.curve(d3.curveBumpX)
-		.x(function (d) {
-			return x(d.date);
-		})
-		.y(function (d) {
-			return y(d.value);
-		});
-
-	const lineStretched = lineGenerator(line);
-
-	svg
-		.append("path")
-		.datum(line)
-		.attr("fill", "none")
-		.attr("stroke", "#137f94")
-		.attr("opacity", 0.8)
-		.attr("transform", `translate(${margin.left}, ${margin.top})`)
-
-		.attr("stroke-width", 1.5)
-		.attr("d", lineStretched);
-
-	const totalLine = toLine(d3Data);
-	const totalLineStretched = lineGenerator(totalLine);
-
-	svg
-		.append("path")
-		.datum(line)
-		.attr("fill", "none")
-		.attr("stroke", "#df5c61")
-		.attr("opacity", 0.8)
-		.attr("transform", `translate(${margin.left}, ${margin.top})`)
-
-		.attr("stroke-width", 1.5)
-		.attr("d", totalLineStretched);
 
 	return svg.node();
 }
