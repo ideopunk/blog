@@ -93,9 +93,9 @@ export default function treemapify(id: string, params: (keyof datum)[]) {
 		.select("#" + id)
 		.append("svg")
 		.attr("xmlns", "http://www.w3.org/2000/svg")
+		// .attr("viewBox", [0, 0, width, height])
 		.attr("viewBox", [0, 0, width, height + margin.top * 2 + margin.bottom * 2])
 		.attr("width", `100%`)
-		.attr("height", `100%`)
 		.attr("style", `max-width: 100%;`);
 
 	const combined = params.length > 1;
@@ -112,7 +112,7 @@ export default function treemapify(id: string, params: (keyof datum)[]) {
 	// The coordinates are added to the root object above
 	d3
 		.treemap<{ children: countData[] }>()
-		.size([width - margin.left - margin.right, height])
+		.size([width, height + margin.top + margin.bottom])
 		.padding(padding)(root);
 
 	// TOOLTIP
@@ -159,8 +159,8 @@ export default function treemapify(id: string, params: (keyof datum)[]) {
 		.selectAll("rect")
 		.data(root.leaves())
 		.join("g")
-		.attr("width", (d) => d.x1 - d.x0 + margin.left + margin.right)
-		.attr("height", (d) => d.y1 - d.y0 + margin.bottom + margin.top)
+		.attr("width", (d) => d.x1 - d.x0)
+		.attr("height", (d) => d.y1 - d.y0)
 		.on("mouseover", function (e, d) {
 			showTooltip(d.data);
 		})
@@ -173,8 +173,8 @@ export default function treemapify(id: string, params: (keyof datum)[]) {
 		.append("rect")
 		.attr("x", (d) => d.x0)
 		.attr("y", (d) => d.y0)
-		.attr("width", (d) => d.x1 - d.x0 + margin.left + margin.right)
-		.attr("height", (d) => d.y1 - d.y0 + margin.bottom + margin.top)
+		.attr("width", (d) => d.x1 - d.x0)
+		.attr("height", (d) => d.y1 - d.y0)
 		.style("stroke", "black")
 		.style("fill", (d) =>
 			stringToColor(
@@ -188,7 +188,7 @@ export default function treemapify(id: string, params: (keyof datum)[]) {
 		.attr("x", (d) => d.x0 + 5)
 		.attr("y", (d) => d.y0)
 
-		.attr("width", (d) => d.x1 - d.x0 + margin.left + margin.right - 5)
+		.attr("width", (d) => d.x1 - d.x0 - 5)
 		.attr("height", (d) => d.y1 - d.y0)
 		.append("text")
 		.attr("x", 0)
