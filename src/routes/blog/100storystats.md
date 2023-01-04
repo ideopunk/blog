@@ -56,7 +56,7 @@ Note that there are recurring themes that don't quite make it as subjects. The s
 
 #### In Sum
 
-I hope you enjoyed my charts! A lot of it wasn't surprising for me. Love, family and friendship, and work, war, and violence, were frequent topics. There was a lot of past tense and a lot of tiny literary stories. However, some of it was neat to see, particularly the trends.
+I hope you enjoyed my charts! Most of it wasn't that surprising. Love, family and friendship, and work, war, and violence, were frequent topics. There was a lot of past tense and a lot of tiny literary stories. However, some of it was neat to see, particularly the trends. It'll be interesting to see if these continue into the writing I'm doing this [year](/blog/2023resolutions)!
 
 <div style="height: 24px;"/>
 
