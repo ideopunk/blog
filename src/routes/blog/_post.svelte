@@ -36,7 +36,7 @@
 		<!-- for some reason we need both prose-invert and the themeStore stuff for dark mode to work ¯\_(ツ)_/¯ -->
 		<!-- ${	!$themeStore.theme ? "invisible" : $themeStore.theme === "dark" ? "text-white" : ""} -->
 		<article
-			class={`prose-lg dark:prose-invert mt-4 mb-8 group  prose-li:list-disc prose border
+			class={`prose-lg dark:prose-invert mt-4 mb-8 group  prose-li:list-disc prose
 		
 		`}
 		>

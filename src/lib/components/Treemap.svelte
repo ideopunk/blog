@@ -56,7 +56,7 @@
 	<h3 class="font-sans text-3xl mt-8">{title}</h3>
 </div>
 {#if editable}
-	<form>
+	<form class="flex gap-2">
 		<select
 			bind:value={property1}
 			class="outline-none peer border-2 bg-transparent border-secondary text-xl rounded-sm  transition-all px-2 h-[42px]  focus:border-primary"
@@ -79,8 +79,8 @@
 		</select>
 	</form>
 {/if}
-<div class="text-black">
-	<div {id} />
+<div class="text-black w-full">
+	<div {id} class="w-[95vw] max-w-full" />
 	{#each notes as note}
 		<small class="text-xs mb-1 w-full text-center block italic">{note}</small>
 	{/each}

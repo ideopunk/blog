@@ -92,13 +92,11 @@ export default function treemapify(id: string, params: (keyof datum)[]) {
 	const svg = d3
 		.select("#" + id)
 		.append("svg")
-		.attr("width", width)
-		.attr("height", height + margin.top + margin.bottom)
-		.attr(
-			"style",
-			`max-width: calc(100% + ${margin.left});  height: intrinsic; border: 1px solid red;`
-		);
-	// .attr("style", "max-width: 100%;  height: intrinsic;");
+		.attr("xmlns", "http://www.w3.org/2000/svg")
+		.attr("viewBox", [0, 0, width, height + margin.top * 2 + margin.bottom * 2])
+		.attr("width", `100%`)
+		.attr("height", `100%`)
+		.attr("style", `max-width: 100%;`);
 
 	const combined = params.length > 1;
 	let subjectData = [];
@@ -156,13 +154,13 @@ export default function treemapify(id: string, params: (keyof datum)[]) {
 	// GROUP
 	const groups = svg
 		.append("g")
-		.attr("transform", `translate(${-padding}, ${margin.top * 1.5})`)
+		.attr("transform", `translate(0, ${margin.top * 1.5})`)
 
 		.selectAll("rect")
 		.data(root.leaves())
 		.join("g")
-		.attr("width", (d) => d.x1 - d.x0)
-		.attr("height", (d) => d.y1 - d.y0)
+		.attr("width", (d) => d.x1 - d.x0 + margin.left + margin.right)
+		.attr("height", (d) => d.y1 - d.y0 + margin.bottom + margin.top)
 		.on("mouseover", function (e, d) {
 			showTooltip(d.data);
 		})
@@ -175,8 +173,8 @@ export default function treemapify(id: string, params: (keyof datum)[]) {
 		.append("rect")
 		.attr("x", (d) => d.x0)
 		.attr("y", (d) => d.y0)
-		.attr("width", (d) => d.x1 - d.x0)
-		.attr("height", (d) => d.y1 - d.y0)
+		.attr("width", (d) => d.x1 - d.x0 + margin.left + margin.right)
+		.attr("height", (d) => d.y1 - d.y0 + margin.bottom + margin.top)
 		.style("stroke", "black")
 		.style("fill", (d) =>
 			stringToColor(
@@ -190,7 +188,7 @@ export default function treemapify(id: string, params: (keyof datum)[]) {
 		.attr("x", (d) => d.x0 + 5)
 		.attr("y", (d) => d.y0)
 
-		.attr("width", (d) => d.x1 - d.x0 - 5)
+		.attr("width", (d) => d.x1 - d.x0 + margin.left + margin.right - 5)
 		.attr("height", (d) => d.y1 - d.y0)
 		.append("text")
 		.attr("x", 0)
