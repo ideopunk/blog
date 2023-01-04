@@ -48,10 +48,12 @@ export default function chartify(id: string, trend?: boolean) {
 	const svg = d3
 		.select("#" + id)
 		.append("svg")
-		.attr("width", width + margin.left + margin.right)
+		.attr("width", width)
+		// .attr("width", width + margin.left + margin.right)
 		.attr("height", height + margin.top + margin.bottom)
 		.attr("transform", `translate(${-margin.left}, 0)`)
-		.attr("style", "max-width: 100%;  height: intrinsic;");
+		.attr("style", `max-width: calc(100% + ${margin.left});  height: intrinsic;`);
+	// .attr("style", "max-width: 100%;  height: intrinsic;");
 
 	// AXES
 
@@ -60,7 +62,8 @@ export default function chartify(id: string, trend?: boolean) {
 	const x = d3
 		.scaleTime()
 		.domain([d3.min(justDates) as Date, d3.max(justDates) as Date])
-		.range([0, width]);
+		.range([0, width - margin.left - margin.right]);
+		// .range([0, width]);
 	svg
 		.append("g")
 		.attr("transform", `translate(${margin.left}, ${height + margin.top})`)

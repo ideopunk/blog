@@ -92,9 +92,13 @@ export default function treemapify(id: string, params: (keyof datum)[]) {
 	const svg = d3
 		.select("#" + id)
 		.append("svg")
-		.attr("width", width + margin.left + margin.right)
+		.attr("width", width)
 		.attr("height", height + margin.top + margin.bottom)
-		.attr("style", "max-width: 100%;  height: intrinsic;");
+		.attr(
+			"style",
+			`max-width: calc(100% + ${margin.left});  height: intrinsic; border: 1px solid red;`
+		);
+	// .attr("style", "max-width: 100%;  height: intrinsic;");
 
 	const combined = params.length > 1;
 	let subjectData = [];
@@ -108,7 +112,10 @@ export default function treemapify(id: string, params: (keyof datum)[]) {
 
 	// Then d3.treemap computes the position of each element of the hierarchy
 	// The coordinates are added to the root object above
-	d3.treemap<{ children: countData[] }>().size([width, height]).padding(padding)(root);
+	d3
+		.treemap<{ children: countData[] }>()
+		.size([width - margin.left - margin.right, height])
+		.padding(padding)(root);
 
 	// TOOLTIP
 	const tooltip = svg
@@ -146,7 +153,7 @@ export default function treemapify(id: string, params: (keyof datum)[]) {
 		tooltip.transition().duration(200).style("opacity", 0);
 	};
 
-	// RECTANGLES
+	// GROUP
 	const groups = svg
 		.append("g")
 		.attr("transform", `translate(${-padding}, ${margin.top * 1.5})`)
