@@ -122,7 +122,7 @@
 
 	<footer class="mt-auto flex text-lg flex-col lg:flex-row justify-evenly py-6 px-20 items-center">
 		<Contact />
-		<Subscribe />
+		<!-- <Subscribe /> -->
 	</footer>
 
 	<Toast />
