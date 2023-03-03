@@ -122,6 +122,9 @@
 
 	<footer class="mt-auto flex text-lg flex-col lg:flex-row justify-evenly py-6 px-20 items-center">
 		<Contact />
+		<div>
+			<iframe src="https://parhelia.substack.com/embed" width="480" height="300" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+		</div>
 		<!-- <Subscribe /> -->
 	</footer>
 
