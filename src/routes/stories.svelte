@@ -24,22 +24,6 @@
 				some on this blog, and published some in magazines. If you're a chapbook publisher, give me
 				a shout.
 			</p>
-			<div class="pt-4">
-				<h3>Blogposts</h3>
-			</div>
-			<ul>
-				<li><BlogLink href="boycott">The Boycott</BlogLink></li>
-				<li><BlogLink href="mrsfields">Mrs. Fields</BlogLink></li>
-				<li><BlogLink href="parrhesia">Parrhesia</BlogLink></li>
-				<li><BlogLink href="medea">Medea</BlogLink></li>
-				<li><BlogLink href="thechristian">The Christian</BlogLink></li>
-				<li><BlogLink href="afterthefire">After The Fire</BlogLink></li>
-				<li><BlogLink href="theagent">The Agent</BlogLink></li>
-				<li><BlogLink href="whitestag">The White Stag</BlogLink></li>
-				<li><BlogLink href="kind">Kind</BlogLink></li>
-				<li><BlogLink href="like-the-setting-sun">Like The Setting Sun</BlogLink></li>
-			</ul>
-
 			<div class="pt-4 pb-1">
 				<h3>Publications</h3>
 			</div>
@@ -212,6 +196,25 @@
 						>The Subway Operator</XLink
 					>
 				</li>
+			</ul>
+
+			<p>Schuylkill Valley Journal (Volume 56, Spring/Summer 2023)</p>
+			<ul class="pb-4"><li>I Have Another Body (Print)</li></ul>
+
+			<div class="pt-4">
+				<h3>Blogposts</h3>
+			</div>
+			<ul>
+				<li><BlogLink href="boycott">The Boycott</BlogLink></li>
+				<li><BlogLink href="mrsfields">Mrs. Fields</BlogLink></li>
+				<li><BlogLink href="parrhesia">Parrhesia</BlogLink></li>
+				<li><BlogLink href="medea">Medea</BlogLink></li>
+				<li><BlogLink href="thechristian">The Christian</BlogLink></li>
+				<li><BlogLink href="afterthefire">After The Fire</BlogLink></li>
+				<li><BlogLink href="theagent">The Agent</BlogLink></li>
+				<li><BlogLink href="whitestag">The White Stag</BlogLink></li>
+				<li><BlogLink href="kind">Kind</BlogLink></li>
+				<li><BlogLink href="like-the-setting-sun">Like The Setting Sun</BlogLink></li>
 			</ul>
 		</article>
 	</div>
