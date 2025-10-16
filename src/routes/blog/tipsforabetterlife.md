@@ -105,7 +105,7 @@ _img html -w3_
 
 [40.](https://betterexplained.com/articles/an-intuitive-and-short-explanation-of-bayes-theorem/) Should you freak out upon seeing your symptoms on the worst diseases on WebMD? Probably not! Look up the base rates for the disease and then apply Bayes’ Theorem
 
-[41.](https://betterexplained.com/articles/an-intuitive-and-short-explanation-of-bayes-theorem/) Selfish people should listen to advice to be more selfless, selfless people should listen to advice to be more selfish. This applies to many things. Whenever you receive advice, consider its opposite as well. You might be filtering out the advice you need most.
+[41.](https://slatestarcodex.com/2014/03/24/should-you-reverse-any-advice-you-hear/) Selfish people should listen to advice to be more selfless, selfless people should listen to advice to be more selfish. This applies to many things. Whenever you receive advice, consider its opposite as well. You might be filtering out the advice you need most.
 
 42\. Common systems and tools have been designed so everybody can handle them. So don’t worry that you’re the only one who can’t! You can figure out doing laundry, baking, and driving on a highway.
 
